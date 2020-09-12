@@ -17,11 +17,11 @@ body{
 .nav a {
     color: #444444;
 }
-div.Titulo {
+div.titulo {
     width: 100%;
 }
 
-div.Titulo p {
+div.titulo p {
     display: flex;
     color: rgb(141, 23, 23);
     font-size: 30px;
@@ -29,6 +29,18 @@ div.Titulo p {
     justify-content: center;
 }
 
-.Detalle img{
-    width: 90px;
+.detalle img{
+    width: 150px;
+}
+
+div.detalle {
+    display: grid;
+    grid-template-columns: 150px 270%;
+
+}
+
+div.detalle div.texto div.titulopelicula {
+    display: flex;
+    color: grey;
+    justify-content: left;
 }
