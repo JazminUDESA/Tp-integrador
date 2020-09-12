@@ -1,15 +1,13 @@
-header {
-    display: flex;
-    width: 100%;
-    flex-direction: row;
+body{
     background-color: black;
-    justify-content: space-between;
-    align-items: center;
 }
 
 header img.logo{
     width: 300px;
-    height: 100px;
+    height: 80px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
 }
 
 nav.header_nav{
@@ -18,4 +16,23 @@ nav.header_nav{
     width: 100%;
     justify-content: space-evenly;
     align-items: center;
+}
+
+article.encabezado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+h2.titulo{
+    color: red;
+    text-align: left;
+    font-size: 15px;
+}
+
+h3{
+    color: red;
+    text-align: left;
+    font-size: 13px;
 }
