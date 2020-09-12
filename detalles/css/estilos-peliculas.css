@@ -1,0 +1,34 @@
+body{
+    background-color: #070707;
+
+
+}
+
+.logo img {
+    width: 405px;
+    }
+
+.nav { 
+    display: grid;
+    grid-template-rows: auto;
+    
+}
+
+.nav a {
+    color: #444444;
+}
+div.Titulo {
+    width: 100%;
+}
+
+div.Titulo p {
+    display: flex;
+    color: rgb(141, 23, 23);
+    font-size: 30px;
+    font-weight: bold;
+    justify-content: center;
+}
+
+.Detalle img{
+    width: 90px;
+}
