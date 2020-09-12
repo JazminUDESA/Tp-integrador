@@ -35,16 +35,23 @@ div.titulo p {
 
 div.detalle {
     display: grid;
-    grid-template-columns: 150px 270px;
+    grid-template-columns: 150px 262px;
 
 }
 
 div.detalle div.texto div.titulopelicula {
     display: flex;
-    width: 270px;
-    height: 50px;
     color: grey;
-    justify-content: start;
+    justify-content: flex-start;
+    align-items: stretch;
     font-size: 20px;
-    padding: 10px;
+    padding: 5px;
+}
+
+div.detalle div.texto div.resumen {
+    display: flex;
+    color: grey;
+    font-size: 8px;
+    padding: 5px;
+
 }
