@@ -1,0 +1,55 @@
+body{
+    background-color: #111111;
+}
+
+/* HEADER */
+    /* Logo */
+    .logo img {
+        width: 405px;
+        }
+
+    /* Menú */
+    div.menu {
+        display: flex;
+        flex-direction: column;
+        font-family: Helvetica;
+        padding-top: 5px;
+        background-color: rgb(36, 35, 35);
+        gap:10px;
+    }
+
+        /* Menú arriba*/
+        div.menu div.menu-arriba {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            font-size: 16px;
+        }
+        /* Alinear verticalmente imágenes y texto */
+        div.menu div.menu-arriba span {
+            display: flex;
+            align-items: center;
+        }
+        /* Color textos arriba */
+        div.menu div.menu-arriba a {
+            color: white;
+            text-decoration: none;
+        }
+        /* Tamaño iconos */
+        div.menu div.menu-arriba span img {
+            width: 25px;
+        }
+        
+        /* Menú abajo*/
+        div.menu div.menu-abajo {
+            display: flex;
+            justify-content: space-around;
+            font-size: 30px;
+            padding-bottom: 5px;
+        }
+        /* Color textos abajo */
+        div.menu div.menu-abajo span a {
+            font-family: Bebas Neue;
+            color: #e7442e;
+            text-decoration: none;
+        }
