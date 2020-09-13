@@ -25,15 +25,14 @@ body{
             justify-content: space-around;
             font-size: 16px;
         }
-        /* Alinear verticalmente imágenes y texto */
-        div.menu div.menu-arriba span {
-            display: flex;
-            align-items: center;
-        }
-        /* Color textos arriba */
+        /* Textos menú arriba (alinear con iconos y cambiar color) */
         div.menu div.menu-arriba a {
             color: white;
             text-decoration: none;
+            display: flex;
+            height: 25px;
+            align-items: center;
+            gap: 5px;
         }
         /* Tamaño iconos */
         div.menu div.menu-arriba span img {
