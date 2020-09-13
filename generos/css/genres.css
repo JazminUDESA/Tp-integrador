@@ -34,5 +34,10 @@ h2.titulo{
 h3{
     color: red;
     text-align: left;
-    font-size: 13px;
+    font-size: 15px;
+}
+
+img.pelicula {
+    width: 118px;
+    height: 175px;
 }
