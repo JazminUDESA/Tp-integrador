@@ -106,17 +106,22 @@ p {
 }
 
 .nav2 {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.nav2 .izquierda {
     display: flex;
     flex-direction: column;
     padding: 0px;
     justify-content: space-around;
 }
 
-.nav2 img {
+.nav2 .izquierda img {
     width: 12px;
 }
 
-.nav2 a {
+.nav2 .izquierda a {
     color: grey;
     padding: 5px;
     font-size: 12px;
@@ -125,7 +130,11 @@ p {
 
 }
 
-.trailer {
+.nav2 .derecha {
+    display: none;
+}
+
+.trailer2 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -134,7 +143,7 @@ p {
     height: 230px;
 }
 
-.trailer p {
+.trailer2 p {
     font-size: 40px;
 }
 
@@ -156,13 +165,13 @@ p {
     font-family: Helvetica;
 }
 
-.categorias .accion .lineauno {
+.categorias .accion .portadas .lineauno {
     display: flex;
     justify-content: space-around;
     padding: 5px;
 }
 
-.categorias .accion .lineados {
+.categorias .accion .portadas .lineados {
     display: flex;
     justify-content: space-around;
     padding: 5px;
@@ -180,13 +189,13 @@ img {
     font-family: Helvetica;
 }
 
-.categorias .argentinas .lineauno {
+.categorias .argentinas .portadas .lineauno {
     display: flex;
     justify-content: space-around;
     padding: 5px;
 }
 
-.categorias .argentinas .lineados {
+.categorias .argentinas .portadas .lineados {
     display: flex;
     justify-content: space-around;
     padding: 5px;
@@ -200,13 +209,13 @@ img {
     font-family: Helvetica;
 }
 
-.categorias .cienciaficcion .lineauno {
+.categorias .cienciaficcion .portadas .lineauno {
     display: flex;
     justify-content: space-around;
     padding: 5px;
 }
 
-.categorias .cienciaficcion .lineados {
+.categorias .cienciaficcion .portadas .lineados {
     display: flex;
     justify-content: space-around;
     padding: 5px;
@@ -220,13 +229,13 @@ img {
     font-family: Helvetica;
 }
 
-.categorias .comedia .lineauno {
+.categorias .comedia .portadas .lineauno {
     display: flex;
     justify-content: space-around;
     padding: 5px;
 }
 
-.categorias .comedia .lineados {
+.categorias .comedia .portadas .lineados {
     display: flex;
     justify-content: space-around;
     padding: 5px;
@@ -240,13 +249,13 @@ img {
     font-family: Helvetica;
 }
 
-.categorias .documentales .lineauno {
+.categorias .documentales .portadas .lineauno {
     display: flex;
     justify-content: space-around;
     padding: 5px;
 }
 
-.categorias .documentales .lineados {
+.categorias .documentales .portadas .lineados {
     display: flex;
     justify-content: space-around;
     padding: 5px;
@@ -260,13 +269,13 @@ img {
     font-family: Helvetica;
 }
 
-.categorias .dramas .lineauno {
+.categorias .dramas .portadas .lineauno {
     display: flex;
     justify-content: space-around;
     padding: 5px;
 }
 
-.categorias .dramas .lineados {
+.categorias .dramas .portadas .lineados {
     display: flex;
     justify-content: space-around;
     padding: 5px;
@@ -280,13 +289,13 @@ img {
     font-family: Helvetica;
 }
 
-.categorias .familiares .lineauno {
+.categorias .familiares .portadas .lineauno {
     display: flex;
     justify-content: space-around;
     padding: 5px;
 }
 
-.categorias .familiares .lineados {
+.categorias .familiares .portadas .lineados {
     display: flex;
     justify-content: space-around;
     padding: 5px;
@@ -300,13 +309,13 @@ img {
     font-family: Helvetica;
 }
 
-.categorias .romance .lineauno {
+.categorias .romance .portadas .lineauno {
     display: flex;
     justify-content: space-around;
     padding: 5px;
 }
 
-.categorias .romance .lineados {
+.categorias .romance .portadas .lineados {
     display: flex;
     justify-content: space-around;
     padding: 5px;
@@ -320,13 +329,13 @@ img {
     font-family: Helvetica;
 }
 
-.categorias .terror .lineauno {
+.categorias .terror .portadas .lineauno {
     display: flex;
     justify-content: space-around;
     padding: 5px;
 }
 
-.categorias .terror .lineados {
+.categorias .terror .portadas .lineados {
     display: flex;
     justify-content: space-around;
     padding: 5px;
@@ -340,13 +349,13 @@ img {
     font-family: Helvetica;
 }
 
-.categorias .thrillers .lineauno {
+.categorias .thrillers .portadas .lineauno {
     display: flex;
     justify-content: space-around;
     padding: 5px;
 }
 
-.categorias .thrillers .lineados {
+.categorias .thrillers .portadas .lineados {
     display: flex;
     justify-content: space-around;
     padding: 5px;
@@ -388,5 +397,456 @@ img {
 }
 
 @media (min-width: 1024px) {
+    div.titulo h2 {
+        display: flex;
+        color: #e7442e;
+        font-weight: bold;
+        justify-content: center;
+        padding: 25px;
+        font-family: Bebas Neue;
+        font-size: 70px;
+        margin: 0px;
+    }
 
+    div.detalle {
+        display: grid;
+        grid-template-columns: 300px 707px;
+    }
+    
+    .detalle .poster img {
+        width: 300px;
+    }
+
+    div.detalle div.texto {
+        display: grid;
+        grid-template-rows: 50px 100px 295px;
+    }
+
+    div.detalle div.texto div.titulopelicula {
+        display: flex;
+        color: grey;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 0px 0px 5px 5px;
+        font-family: Helvetica; 
+    }
+    
+    div.detalle div.texto div.titulopelicula h3 {
+        margin: 0px;
+        font-size: 25px;
+    }
+    
+    div.detalle div.texto div.resumen {
+        display: flex;
+        color: grey;
+        justify-content: center;
+        align-items: flex-start;
+        font-size: 17px;
+        padding: 5px;
+    
+    }
+    
+    p {
+        margin: 0px;
+        font-family: Helvetica;
+    }
+
+    .nav2 {
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    .nav2 .izquierda {
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+        justify-content: space-around;
+    }
+    
+    .nav2 .izquierda img {
+        width: 19px;
+    }
+    
+    .nav2 .izquierda a {
+        color: grey;
+        padding: 5px;
+        font-size: 25px;
+        text-decoration: none;
+        font-family: helvetica;
+    
+    }
+
+    .nav2 .derecha { 
+        display: flex
+    }
+
+    .nav2 .derecha .trailer1{
+        background-color: red;
+        width: 350px;
+        height: 50px;
+    }
+
+    .trailer2 {
+        display: none;
+    }
+
+    .categorias .accion {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .categorias .accion .tituloaccion {
+        display: flex;
+        justify-content: left;
+        color: white;
+        padding: 0px 0px 0px 21px;
+        font-family: Helvetica;
+    }
+
+    .categorias .accion .portadas {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .categorias .accion .lineauno {
+        display: flex;
+        justify-content: space-around;
+        padding: 5px;
+        gap: 10px;
+    }
+    
+    .categorias .accion .lineados {
+        display: flex;
+        justify-content: space-around;
+        padding: 5px;
+        gap: 10px;
+    }
+    
+    img {
+        width: 158px;
+    }
+
+    .categorias .argentinas {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .categorias .argentinas .tituloaccion {
+        display: flex;
+        justify-content: left;
+        color: white;
+        padding: 0px 0px 0px 21px;
+        font-family: Helvetica;
+    }
+
+    .categorias .argentinas .portadas {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .categorias .argentinas .lineauno {
+        display: flex;
+        justify-content: space-around;
+        padding: 5px;
+        gap: 10px;
+    }
+    
+    .categorias .argentinas .lineados {
+        display: flex;
+        justify-content: space-around;
+        padding: 5px;
+        gap: 10px;
+    }
+
+    .categorias .cienciaficcion {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .categorias .cienciaficcion .tituloaccion {
+        display: flex;
+        justify-content: left;
+        color: white;
+        padding: 0px 0px 0px 21px;
+        font-family: Helvetica;
+    }
+
+    .categorias .cienciaficcion .portadas {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .categorias .cienciaficcion .lineauno {
+        display: flex;
+        justify-content: space-around;
+        padding: 5px;
+        gap: 10px;
+    }
+    
+    .categorias .cienciaficcion .lineados {
+        display: flex;
+        justify-content: space-around;
+        padding: 5px;
+        gap: 10px;
+    }
+
+    .categorias .comedia {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .categorias .comedia .tituloaccion {
+        display: flex;
+        justify-content: left;
+        color: white;
+        padding: 0px 0px 0px 21px;
+        font-family: Helvetica;
+    }
+
+    .categorias .comedia .portadas {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .categorias .comedia .lineauno {
+        display: flex;
+        justify-content: space-around;
+        padding: 5px;
+        gap: 10px;
+    }
+    
+    .categorias .comedia .lineados {
+        display: flex;
+        justify-content: space-around;
+        padding: 5px;
+        gap: 10px;
+    }
+
+    .categorias .documentales {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .categorias .documentales .tituloaccion {
+        display: flex;
+        justify-content: left;
+        color: white;
+        padding: 0px 0px 0px 21px;
+        font-family: Helvetica;
+    }
+
+    .categorias .documentales .portadas {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .categorias .documentales .lineauno {
+        display: flex;
+        justify-content: space-around;
+        padding: 5px;
+        gap: 10px;
+    }
+    
+    .categorias .documentales .lineados {
+        display: flex;
+        justify-content: space-around;
+        padding: 5px;
+        gap: 10px;
+    }
+
+    .categorias .dramas {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .categorias .dramas .tituloaccion {
+        display: flex;
+        justify-content: left;
+        color: white;
+        padding: 0px 0px 0px 21px;
+        font-family: Helvetica;
+    }
+
+    .categorias .dramas .portadas {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .categorias .dramas .lineauno {
+        display: flex;
+        justify-content: space-around;
+        padding: 5px;
+        gap: 10px;
+    }
+    
+    .categorias .dramas .lineados {
+        display: flex;
+        justify-content: space-around;
+        padding: 5px;
+        gap: 10px;
+    }
+
+    .categorias .familiares {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .categorias .familiares .tituloaccion {
+        display: flex;
+        justify-content: left;
+        color: white;
+        padding: 0px 0px 0px 21px;
+        font-family: Helvetica;
+    }
+
+    .categorias .familiares .portadas {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .categorias .familiares .lineauno {
+        display: flex;
+        justify-content: space-around;
+        padding: 5px;
+        gap: 10px;
+    }
+    
+    .categorias .familiares .lineados {
+        display: flex;
+        justify-content: space-around;
+        padding: 5px;
+        gap: 10px;
+    }
+
+    .categorias .romance {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .categorias .romance .tituloaccion {
+        display: flex;
+        justify-content: left;
+        color: white;
+        padding: 0px 0px 0px 21px;
+        font-family: Helvetica;
+    }
+
+    .categorias .romance .portadas {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .categorias .romance .lineauno {
+        display: flex;
+        justify-content: space-around;
+        padding: 5px;
+        gap: 10px;
+    }
+    
+    .categorias .romance .lineados {
+        display: flex;
+        justify-content: space-around;
+        padding: 5px;
+        gap: 10px;
+    }
+
+    .categorias .terror {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .categorias .terror .tituloaccion {
+        display: flex;
+        justify-content: left;
+        color: white;
+        padding: 0px 0px 0px 21px;
+        font-family: Helvetica;
+    }
+
+    .categorias .terror .portadas {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .categorias .terror .lineauno {
+        display: flex;
+        justify-content: space-around;
+        padding: 5px;
+        gap: 10px;
+    }
+    
+    .categorias .terror .lineados {
+        display: flex;
+        justify-content: space-around;
+        padding: 5px;
+        gap: 10px;
+    }
+
+    .categorias .thrillers {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .categorias .thrillers .tituloaccion {
+        display: flex;
+        justify-content: left;
+        color: white;
+        padding: 0px 0px 0px 21px;
+        font-family: Helvetica;
+    }
+
+    .categorias .thrillers .portadas {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .categorias .thrillers .lineauno {
+        display: flex;
+        justify-content: space-around;
+        padding: 5px;
+        gap: 10px;
+    }
+    
+    .categorias .thrillers .lineados {
+        display: flex;
+        justify-content: space-around;
+        padding: 5px;
+        gap: 10px;
+    }
+    
+    .piedepagina {
+        display: grid;
+        grid-template-columns: 703px 300px;
+    }
+    
+    .piedepagina .legales {
+        display: flex;
+        flex-direction: row;
+        color: grey;
+        justify-content: space-evenly;
+        padding: 50px 0px 20px 0px;
+    }
+    
+    .piedepagina .legales a {
+        margin: 0px;
+        padding: 5px;
+        color: grey;
+        font-size: 12px;
+        font-family: Helvetica;
+        text-decoration: none;
+    
+    }
+    
+    .piedepagina .redes {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 50px 10px 20px 10px;
+    }
+    
+    .redes img {
+        width: 25px;
+    }
+    
 }
