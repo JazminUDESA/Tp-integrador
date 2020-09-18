@@ -6,31 +6,49 @@ body{
 
 .logo img {
     width: 405px;
+}
+
+nav.nav {
+    display: flex;
+    flex-direction: column;
+    font-family: Helvetica;
+    padding-top: 5px;
+    background-color: rgb(36, 35, 35);
+    gap:10px;
+}
+
+    nav.nav div.navarriba {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        font-size: 16px;
     }
-
-.nav { 
-    display: flex;
-    flex-direction: column;
-    color: grey;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.nav .opciones {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.nav a {
-    color: grey;
-    font-size: 15px;
-    padding: 5px;
-}
-
-.nav .cuenta img {
-    display: none;
-}
+    
+    nav.nav div.navarriba a {
+        color: white;
+        text-decoration: none;
+        display: flex;
+        height: 25px;
+        align-items: center;
+        gap: 5px;
+    }
+    
+    nav.nav div.navarriba div img {
+        width: 25px;
+    }
+    
+    nav.nav div.navabajo {
+        display: flex;
+        justify-content: space-around;
+        font-size: 30px;
+        padding-bottom: 5px;
+    }
+    
+    nav.nav div.navabajo div a {
+        font-family: Bebas Neue;
+        color: #e7442e;
+        text-decoration: none;
+    }
 
 div.titulo {
     width: 100%;
@@ -38,10 +56,11 @@ div.titulo {
 
 div.titulo h2 {
     display: flex;
-    color: red;
+    color: #e7442e;
     font-weight: bold;
     justify-content: center;
     padding: 10px;
+    font-family: Bebas Neue;
 }
 
 div.detalle {
@@ -55,7 +74,7 @@ div.detalle {
 
 div.detalle div.texto {
     display: grid;
-    grid-template-rows: 60px 100px 394px;
+    grid-template-rows: auto
 }
 
 div.detalle div.texto div.titulopelicula {
@@ -64,6 +83,7 @@ div.detalle div.texto div.titulopelicula {
     justify-content: flex-start;
     align-items: flex-start;
     padding: 0px 0px 5px 5px;
+    font-family: Helvetica; 
 }
 
 div.detalle div.texto div.titulopelicula h3 {
@@ -82,20 +102,26 @@ div.detalle div.texto div.resumen {
 
 p {
     margin: 0px;
+    font-family: Helvetica;
 }
 
 .nav2 {
     display: flex;
     flex-direction: column;
     padding: 0px;
-    height: 136px;
     justify-content: space-around;
+}
+
+.nav2 img {
+    width: 12px;
 }
 
 .nav2 a {
     color: grey;
-    padding: 40px;
+    padding: 5px;
     font-size: 12px;
+    text-decoration: none;
+    font-family: helvetica;
 
 }
 
@@ -127,6 +153,7 @@ p {
     justify-content: left;
     color: white;
     padding: 0px 0px 0px 21px;
+    font-family: Helvetica;
 }
 
 .categorias .accion .lineauno {
@@ -150,6 +177,7 @@ img {
     justify-content: left;
     color: white;
     padding: 0px 0px 0px 21px;
+    font-family: Helvetica;
 }
 
 .categorias .argentinas .lineauno {
@@ -169,6 +197,7 @@ img {
     justify-content: left;
     color: white;
     padding: 0px 0px 0px 21px;
+    font-family: Helvetica;
 }
 
 .categorias .cienciaficcion .lineauno {
@@ -188,6 +217,7 @@ img {
     justify-content: left;
     color: white;
     padding: 0px 0px 0px 21px;
+    font-family: Helvetica;
 }
 
 .categorias .comedia .lineauno {
@@ -207,6 +237,7 @@ img {
     justify-content: left;
     color: white;
     padding: 0px 0px 0px 21px;
+    font-family: Helvetica;
 }
 
 .categorias .documentales .lineauno {
@@ -226,6 +257,7 @@ img {
     justify-content: left;
     color: white;
     padding: 0px 0px 0px 21px;
+    font-family: Helvetica;
 }
 
 .categorias .dramas .lineauno {
@@ -245,6 +277,7 @@ img {
     justify-content: left;
     color: white;
     padding: 0px 0px 0px 21px;
+    font-family: Helvetica;
 }
 
 .categorias .familiares .lineauno {
@@ -264,6 +297,7 @@ img {
     justify-content: left;
     color: white;
     padding: 0px 0px 0px 21px;
+    font-family: Helvetica;
 }
 
 .categorias .romance .lineauno {
@@ -283,6 +317,7 @@ img {
     justify-content: left;
     color: white;
     padding: 0px 0px 0px 21px;
+    font-family: Helvetica;
 }
 
 .categorias .terror .lineauno {
@@ -302,6 +337,7 @@ img {
     justify-content: left;
     color: white;
     padding: 0px 0px 0px 21px;
+    font-family: Helvetica;
 }
 
 .categorias .thrillers .lineauno {
@@ -334,6 +370,8 @@ img {
     padding: 5px;
     color: grey;
     font-size: 12px;
+    font-family: Helvetica;
+    text-decoration: none;
 
 }
 
@@ -346,113 +384,9 @@ img {
 }
 
 .redes img {
-    width: 40px;
-    height: 40px;
+    width: 25px;
 }
 
 @media (min-width: 1024px) {
-    body {
-        width: 1024px;
-        margin: 0px;
-    }
-
-    header.encabezado {
-        display: grid;
-        grid-template-columns: 250px 700px;
-        margin: 0px;
-    }
-
-    .logo img {
-        width: 250px;
-    }
-    
-    .nav { 
-        color: grey;
-        display: grid;
-        grid-template-columns: 244px 400px 55px;
-    }
-
-    .nav .buscar {
-        display: flex;
-        justify-content: left;
-    }
-
-    .nav .opciones {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 0px 5px 0px 0px;
-    }
-
-    .nav .cuenta {
-        display: flex;
-        justify-content: flex-end;
-    }
-
-    .nav .cuenta img {
-        display: flex;
-        width: 55px;
-    }
-
-    .nav .cuenta a {
-        display: none;
-    }
-
-    .nav a {
-        color: grey;
-        font-size: 15px;
-        padding: 5px;
-    }
-
-    div.detalle {
-        display: grid;
-        grid-template-columns: 370px 600px;
-    }
-    
-    .detalle img{
-        width: 370px;
-    }
-
-    div.detalle div.texto div.titulopelicula {
-        display: flex;
-        color: grey;
-        justify-content: flex-start;
-        align-items: flex-start;
-        padding: 0px 0px 20px 5px;
-    }
-    
-    div.detalle div.texto div.titulopelicula h4 {
-        margin: 0px;
-    }
-    
-    div.detalle div.texto div.resumen {
-        display: flex;
-        color: grey;
-        justify-content: center;
-        align-items: flex-start;
-        font-size: 17px;
-        padding: 5px;
-    
-    }
-    
-    p {
-        margin: 0px;
-    }
-    
-    .nav2 {
-        display: flex;
-        flex-direction: column;
-        padding: 0px;
-        height: 136px;
-        align-items: center;
-        justify-content: space-around;
-    }
-    
-    .nav2 a {
-        color: grey;
-        padding: 5px;
-        font-size: 20px;
-    
-    }
 
 }
