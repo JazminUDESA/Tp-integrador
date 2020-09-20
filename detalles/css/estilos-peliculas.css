@@ -107,7 +107,7 @@ p {
 
 .nav2 {
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: 1fr 1fr;
 }
 
 .nav2 .izquierda {
@@ -157,7 +157,7 @@ p {
     flex-direction: column;
 }
 
-.categorias .accion .tituloaccion {
+.titulos {
     display: flex;
     justify-content: left;
     color: white;
@@ -165,200 +165,18 @@ p {
     font-family: Helvetica;
 }
 
-.categorias .accion .portadas .lineauno {
-    display: flex;
-    justify-content: space-around;
-    padding: 5px;
-}
-
-.categorias .accion .portadas .lineados {
-    display: flex;
-    justify-content: space-around;
-    padding: 5px;
-}
-
-img {
+.portadas img {
     width: 100px;
+    padding: 5px 0px 5px 0px;
 }
 
-.categorias .argentinas .tituloargentinas {
+.portadas {
     display: flex;
-    justify-content: left;
-    color: white;
-    padding: 0px 0px 0px 21px;
-    font-family: Helvetica;
-}
-
-.categorias .argentinas .portadas .lineauno {
-    display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     padding: 5px;
-}
+    gap: 10px;
 
-.categorias .argentinas .portadas .lineados {
-    display: flex;
-    justify-content: space-around;
-    padding: 5px;
-}
-
-.categorias .cienciaficcion .titulocienciaficcion {
-    display: flex;
-    justify-content: left;
-    color: white;
-    padding: 0px 0px 0px 21px;
-    font-family: Helvetica;
-}
-
-.categorias .cienciaficcion .portadas .lineauno {
-    display: flex;
-    justify-content: space-around;
-    padding: 5px;
-}
-
-.categorias .cienciaficcion .portadas .lineados {
-    display: flex;
-    justify-content: space-around;
-    padding: 5px;
-}
-
-.categorias .comedia .titulocomedia {
-    display: flex;
-    justify-content: left;
-    color: white;
-    padding: 0px 0px 0px 21px;
-    font-family: Helvetica;
-}
-
-.categorias .comedia .portadas .lineauno {
-    display: flex;
-    justify-content: space-around;
-    padding: 5px;
-}
-
-.categorias .comedia .portadas .lineados {
-    display: flex;
-    justify-content: space-around;
-    padding: 5px;
-}
-
-.categorias .documentales .titulodocumentales {
-    display: flex;
-    justify-content: left;
-    color: white;
-    padding: 0px 0px 0px 21px;
-    font-family: Helvetica;
-}
-
-.categorias .documentales .portadas .lineauno {
-    display: flex;
-    justify-content: space-around;
-    padding: 5px;
-}
-
-.categorias .documentales .portadas .lineados {
-    display: flex;
-    justify-content: space-around;
-    padding: 5px;
-}
-
-.categorias .dramas .titulodramas {
-    display: flex;
-    justify-content: left;
-    color: white;
-    padding: 0px 0px 0px 21px;
-    font-family: Helvetica;
-}
-
-.categorias .dramas .portadas .lineauno {
-    display: flex;
-    justify-content: space-around;
-    padding: 5px;
-}
-
-.categorias .dramas .portadas .lineados {
-    display: flex;
-    justify-content: space-around;
-    padding: 5px;
-}
-
-.categorias .familiares .titulofamiliares {
-    display: flex;
-    justify-content: left;
-    color: white;
-    padding: 0px 0px 0px 21px;
-    font-family: Helvetica;
-}
-
-.categorias .familiares .portadas .lineauno {
-    display: flex;
-    justify-content: space-around;
-    padding: 5px;
-}
-
-.categorias .familiares .portadas .lineados {
-    display: flex;
-    justify-content: space-around;
-    padding: 5px;
-}
-
-.categorias .romance .tituloromance {
-    display: flex;
-    justify-content: left;
-    color: white;
-    padding: 0px 0px 0px 21px;
-    font-family: Helvetica;
-}
-
-.categorias .romance .portadas .lineauno {
-    display: flex;
-    justify-content: space-around;
-    padding: 5px;
-}
-
-.categorias .romance .portadas .lineados {
-    display: flex;
-    justify-content: space-around;
-    padding: 5px;
-}
-
-.categorias .terror .tituloterror {
-    display: flex;
-    justify-content: left;
-    color: white;
-    padding: 0px 0px 0px 21px;
-    font-family: Helvetica;
-}
-
-.categorias .terror .portadas .lineauno {
-    display: flex;
-    justify-content: space-around;
-    padding: 5px;
-}
-
-.categorias .terror .portadas .lineados {
-    display: flex;
-    justify-content: space-around;
-    padding: 5px;
-}
-
-.categorias .thrillers .titulothrillers {
-    display: flex;
-    justify-content: left;
-    color: white;
-    padding: 0px 0px 0px 21px;
-    font-family: Helvetica;
-}
-
-.categorias .thrillers .portadas .lineauno {
-    display: flex;
-    justify-content: space-around;
-    padding: 5px;
-}
-
-.categorias .thrillers .portadas .lineados {
-    display: flex;
-    justify-content: space-around;
-    padding: 5px;
 }
 
 .piedepagina {
@@ -442,7 +260,7 @@ img {
         justify-content: center;
         align-items: flex-start;
         font-size: 17px;
-        padding: 5px;
+        padding: 10px;
     
     }
     
@@ -453,13 +271,13 @@ img {
 
     .nav2 {
         display: grid;
-        grid-template-columns: auto;
+        grid-template-columns: 1fr 1fr;
     }
 
     .nav2 .izquierda {
         display: flex;
         flex-direction: column;
-        padding: 0px;
+        padding: 10px;
         justify-content: space-around;
     }
     
@@ -480,6 +298,7 @@ img {
         display: flex
     }
 
+    
     .nav2 .derecha .trailer1{
         background-color: red;
         width: 350px;
@@ -488,330 +307,6 @@ img {
 
     .trailer2 {
         display: none;
-    }
-
-    .categorias .accion {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .categorias .accion .tituloaccion {
-        display: flex;
-        justify-content: left;
-        color: white;
-        padding: 0px 0px 0px 21px;
-        font-family: Helvetica;
-    }
-
-    .categorias .accion .portadas {
-        display: flex;
-        flex-direction: row;
-    }
-    
-    .categorias .accion .lineauno {
-        display: flex;
-        justify-content: space-around;
-        padding: 5px;
-        gap: 10px;
-    }
-    
-    .categorias .accion .lineados {
-        display: flex;
-        justify-content: space-around;
-        padding: 5px;
-        gap: 10px;
-    }
-    
-    img {
-        width: 158px;
-    }
-
-    .categorias .argentinas {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .categorias .argentinas .tituloaccion {
-        display: flex;
-        justify-content: left;
-        color: white;
-        padding: 0px 0px 0px 21px;
-        font-family: Helvetica;
-    }
-
-    .categorias .argentinas .portadas {
-        display: flex;
-        flex-direction: row;
-    }
-    
-    .categorias .argentinas .lineauno {
-        display: flex;
-        justify-content: space-around;
-        padding: 5px;
-        gap: 10px;
-    }
-    
-    .categorias .argentinas .lineados {
-        display: flex;
-        justify-content: space-around;
-        padding: 5px;
-        gap: 10px;
-    }
-
-    .categorias .cienciaficcion {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .categorias .cienciaficcion .tituloaccion {
-        display: flex;
-        justify-content: left;
-        color: white;
-        padding: 0px 0px 0px 21px;
-        font-family: Helvetica;
-    }
-
-    .categorias .cienciaficcion .portadas {
-        display: flex;
-        flex-direction: row;
-    }
-    
-    .categorias .cienciaficcion .lineauno {
-        display: flex;
-        justify-content: space-around;
-        padding: 5px;
-        gap: 10px;
-    }
-    
-    .categorias .cienciaficcion .lineados {
-        display: flex;
-        justify-content: space-around;
-        padding: 5px;
-        gap: 10px;
-    }
-
-    .categorias .comedia {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .categorias .comedia .tituloaccion {
-        display: flex;
-        justify-content: left;
-        color: white;
-        padding: 0px 0px 0px 21px;
-        font-family: Helvetica;
-    }
-
-    .categorias .comedia .portadas {
-        display: flex;
-        flex-direction: row;
-    }
-    
-    .categorias .comedia .lineauno {
-        display: flex;
-        justify-content: space-around;
-        padding: 5px;
-        gap: 10px;
-    }
-    
-    .categorias .comedia .lineados {
-        display: flex;
-        justify-content: space-around;
-        padding: 5px;
-        gap: 10px;
-    }
-
-    .categorias .documentales {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .categorias .documentales .tituloaccion {
-        display: flex;
-        justify-content: left;
-        color: white;
-        padding: 0px 0px 0px 21px;
-        font-family: Helvetica;
-    }
-
-    .categorias .documentales .portadas {
-        display: flex;
-        flex-direction: row;
-    }
-    
-    .categorias .documentales .lineauno {
-        display: flex;
-        justify-content: space-around;
-        padding: 5px;
-        gap: 10px;
-    }
-    
-    .categorias .documentales .lineados {
-        display: flex;
-        justify-content: space-around;
-        padding: 5px;
-        gap: 10px;
-    }
-
-    .categorias .dramas {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .categorias .dramas .tituloaccion {
-        display: flex;
-        justify-content: left;
-        color: white;
-        padding: 0px 0px 0px 21px;
-        font-family: Helvetica;
-    }
-
-    .categorias .dramas .portadas {
-        display: flex;
-        flex-direction: row;
-    }
-    
-    .categorias .dramas .lineauno {
-        display: flex;
-        justify-content: space-around;
-        padding: 5px;
-        gap: 10px;
-    }
-    
-    .categorias .dramas .lineados {
-        display: flex;
-        justify-content: space-around;
-        padding: 5px;
-        gap: 10px;
-    }
-
-    .categorias .familiares {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .categorias .familiares .tituloaccion {
-        display: flex;
-        justify-content: left;
-        color: white;
-        padding: 0px 0px 0px 21px;
-        font-family: Helvetica;
-    }
-
-    .categorias .familiares .portadas {
-        display: flex;
-        flex-direction: row;
-    }
-    
-    .categorias .familiares .lineauno {
-        display: flex;
-        justify-content: space-around;
-        padding: 5px;
-        gap: 10px;
-    }
-    
-    .categorias .familiares .lineados {
-        display: flex;
-        justify-content: space-around;
-        padding: 5px;
-        gap: 10px;
-    }
-
-    .categorias .romance {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .categorias .romance .tituloaccion {
-        display: flex;
-        justify-content: left;
-        color: white;
-        padding: 0px 0px 0px 21px;
-        font-family: Helvetica;
-    }
-
-    .categorias .romance .portadas {
-        display: flex;
-        flex-direction: row;
-    }
-    
-    .categorias .romance .lineauno {
-        display: flex;
-        justify-content: space-around;
-        padding: 5px;
-        gap: 10px;
-    }
-    
-    .categorias .romance .lineados {
-        display: flex;
-        justify-content: space-around;
-        padding: 5px;
-        gap: 10px;
-    }
-
-    .categorias .terror {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .categorias .terror .tituloaccion {
-        display: flex;
-        justify-content: left;
-        color: white;
-        padding: 0px 0px 0px 21px;
-        font-family: Helvetica;
-    }
-
-    .categorias .terror .portadas {
-        display: flex;
-        flex-direction: row;
-    }
-    
-    .categorias .terror .lineauno {
-        display: flex;
-        justify-content: space-around;
-        padding: 5px;
-        gap: 10px;
-    }
-    
-    .categorias .terror .lineados {
-        display: flex;
-        justify-content: space-around;
-        padding: 5px;
-        gap: 10px;
-    }
-
-    .categorias .thrillers {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .categorias .thrillers .tituloaccion {
-        display: flex;
-        justify-content: left;
-        color: white;
-        padding: 0px 0px 0px 21px;
-        font-family: Helvetica;
-    }
-
-    .categorias .thrillers .portadas {
-        display: flex;
-        flex-direction: row;
-    }
-    
-    .categorias .thrillers .lineauno {
-        display: flex;
-        justify-content: space-around;
-        padding: 5px;
-        gap: 10px;
-    }
-    
-    .categorias .thrillers .lineados {
-        display: flex;
-        justify-content: space-around;
-        padding: 5px;
-        gap: 10px;
     }
     
     .piedepagina {
