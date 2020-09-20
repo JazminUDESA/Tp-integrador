@@ -5,9 +5,6 @@ body{
 
 header img.logo{
     width: 405px;
-    display: flex;
-    width: 100%;
-    justify-content: center;
 }
 
 article.encabezado{
@@ -16,17 +13,13 @@ article.encabezado{
     align-items: center;
 }
 
-img.icono {
-    width: 25px;
-}
-
-nav.header_nav{
+nav.header_nav {
     display: flex;
     flex-direction: column;
     font-family: Helvetica;
     padding-top: 5px;
-    background-color: rgb(36,35,35);
-    gap: 10px;
+    background-color: rgb(36, 35, 35);
+    gap:10px;
 }
 
 div.iconos {
@@ -37,25 +30,28 @@ div.iconos {
 }
 
 div.iconos a {
-    display: flex;
-    align-items: center;
     color: white;
     text-decoration: none;
+    display: flex;
     height: 25px;
+    align-items: center;
     gap: 5px;
+}
+
+img.icono {
+    width: 25px;
 }
 
 div.listado {
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
-    font-size: 30px;
     padding-bottom: 5px;
 }
 
-div.listado a {
+nav.header_nav div.listado a {
     font-family: Bebas Neue;
     color: #e7442e;
+    font-size: 30px;
     text-decoration: none;
 }
 
@@ -73,39 +69,27 @@ img.portada{
     border: 1px solid white;   
 }
 
-.footer{
-    display: grid;
-    grid-template-columns: 170px 250px;
-    margin-top: 30px;
-    padding: 5px;
-}
-
 h2.titulo{
-    color: white;
-    text-align: left;
-    font-size: 15px;
-    margin-top: 25px;
+    color: #e7442e;
+    font-weight: bold;
+    text-align: center;
+    font-size: 25px;
+    padding: 10px;
+    font-family: Bebas Neue;
 }
 
 h3{
     color: white;
     text-align: left;
-    font-size: 15px;
-    margin-top: 25px;
+    font-size: 20px;
+    font-family: Helvetica;
 }
 
-img.red {
-    width: 30px;
-    height: 30px;
-}
-
-div.redes {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: flex-end;
-    margin-bottom: 10px;
-    
+.footer{
+    display: grid;
+    grid-template-columns: 170px 250px;
+    margin-top: 30px;
+    padding: 5px;
 }
 
 div.piedepagina {
@@ -114,13 +98,29 @@ div.piedepagina {
     margin-bottom: 10px;
 }
 
-div.piedepagina a{
-    color: white;
+div.piedepagina a {
+    color: grey;
+    font-size: 12px;
+    text-decoration: none;
+    font-family: Helvetica;
+    padding: 2px;
 }
 
-nav.header_nav a{
-    color: white;
-    font-size: 15px;
+div.redes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center; 
+}
+
+img.red {
+    width: 25px;
+}
+
+
+div.autores {
+    color: grey;
+    font-size: 12px;
 }
 
 
@@ -195,13 +195,4 @@ nav.header_nav a{
         margin-bottom: 10px;
     }
 
-    div.piedepagina a{
-        color: white;
-        font-size: 15px;
-    }
-
-    nav.header_nav a{
-        color: white;
-        font-size: 20px;
-    }
 }
