@@ -6,31 +6,49 @@ body{
 
 .logo img {
     width: 405px;
+}
+
+nav.nav {
+    display: flex;
+    flex-direction: column;
+    font-family: Helvetica;
+    padding-top: 5px;
+    background-color: rgb(36, 35, 35);
+    gap:10px;
+}
+
+    nav.nav div.navarriba {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        font-size: 16px;
     }
-
-.nav { 
-    display: flex;
-    flex-direction: column;
-    color: grey;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.nav .opciones {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.nav a {
-    color: grey;
-    font-size: 15px;
-    padding: 5px;
-}
-
-.nav .cuenta img {
-    display: none;
-}
+    
+    nav.nav div.navarriba a {
+        color: white;
+        text-decoration: none;
+        display: flex;
+        height: 25px;
+        align-items: center;
+        gap: 5px;
+    }
+    
+    nav.nav div.navarriba div img {
+        width: 25px;
+    }
+    
+    nav.nav div.navabajo {
+        display: flex;
+        justify-content: space-around;
+        font-size: 30px;
+        padding-bottom: 5px;
+    }
+    
+    nav.nav div.navabajo div a {
+        font-family: Bebas Neue;
+        color: #e7442e;
+        text-decoration: none;
+    }
 
 div.titulo {
     width: 100%;
@@ -38,10 +56,11 @@ div.titulo {
 
 div.titulo h2 {
     display: flex;
-    color: red;
+    color: #e7442e;
     font-weight: bold;
     justify-content: center;
     padding: 10px;
+    font-family: Bebas Neue;
 }
 
 div.detalle {
@@ -55,7 +74,7 @@ div.detalle {
 
 div.detalle div.texto {
     display: grid;
-    grid-template-rows: 60px 100px 394px;
+    grid-template-rows: auto
 }
 
 div.detalle div.texto div.titulopelicula {
@@ -64,6 +83,7 @@ div.detalle div.texto div.titulopelicula {
     justify-content: flex-start;
     align-items: flex-start;
     padding: 0px 0px 5px 5px;
+    font-family: Helvetica; 
 }
 
 div.detalle div.texto div.titulopelicula h3 {
@@ -82,24 +102,39 @@ div.detalle div.texto div.resumen {
 
 p {
     margin: 0px;
+    font-family: Helvetica;
 }
 
 .nav2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.nav2 .izquierda {
     display: flex;
     flex-direction: column;
     padding: 0px;
-    height: 136px;
     justify-content: space-around;
 }
 
-.nav2 a {
+.nav2 .izquierda img {
+    width: 12px;
+}
+
+.nav2 .izquierda a {
     color: grey;
-    padding: 40px;
+    padding: 5px;
     font-size: 12px;
+    text-decoration: none;
+    font-family: helvetica;
 
 }
 
-.trailer {
+.nav2 .derecha {
+    display: none;
+}
+
+.trailer2 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -108,7 +143,7 @@ p {
     height: 230px;
 }
 
-.trailer p {
+.trailer2 p {
     font-size: 40px;
 }
 
@@ -122,198 +157,26 @@ p {
     flex-direction: column;
 }
 
-.categorias .accion .tituloaccion {
+.titulos {
     display: flex;
     justify-content: left;
     color: white;
     padding: 0px 0px 0px 21px;
+    font-family: Helvetica;
 }
 
-.categorias .accion .lineauno {
-    display: flex;
-    justify-content: space-around;
-    padding: 5px;
-}
-
-.categorias .accion .lineados {
-    display: flex;
-    justify-content: space-around;
-    padding: 5px;
-}
-
-img {
+.portadas img {
     width: 100px;
+    padding: 5px 0px 5px 0px;
 }
 
-.categorias .argentinas .tituloargentinas {
+.portadas {
     display: flex;
-    justify-content: left;
-    color: white;
-    padding: 0px 0px 0px 21px;
-}
-
-.categorias .argentinas .lineauno {
-    display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     padding: 5px;
-}
+    gap: 10px;
 
-.categorias .argentinas .lineados {
-    display: flex;
-    justify-content: space-around;
-    padding: 5px;
-}
-
-.categorias .cienciaficcion .titulocienciaficcion {
-    display: flex;
-    justify-content: left;
-    color: white;
-    padding: 0px 0px 0px 21px;
-}
-
-.categorias .cienciaficcion .lineauno {
-    display: flex;
-    justify-content: space-around;
-    padding: 5px;
-}
-
-.categorias .cienciaficcion .lineados {
-    display: flex;
-    justify-content: space-around;
-    padding: 5px;
-}
-
-.categorias .comedia .titulocomedia {
-    display: flex;
-    justify-content: left;
-    color: white;
-    padding: 0px 0px 0px 21px;
-}
-
-.categorias .comedia .lineauno {
-    display: flex;
-    justify-content: space-around;
-    padding: 5px;
-}
-
-.categorias .comedia .lineados {
-    display: flex;
-    justify-content: space-around;
-    padding: 5px;
-}
-
-.categorias .documentales .titulodocumentales {
-    display: flex;
-    justify-content: left;
-    color: white;
-    padding: 0px 0px 0px 21px;
-}
-
-.categorias .documentales .lineauno {
-    display: flex;
-    justify-content: space-around;
-    padding: 5px;
-}
-
-.categorias .documentales .lineados {
-    display: flex;
-    justify-content: space-around;
-    padding: 5px;
-}
-
-.categorias .dramas .titulodramas {
-    display: flex;
-    justify-content: left;
-    color: white;
-    padding: 0px 0px 0px 21px;
-}
-
-.categorias .dramas .lineauno {
-    display: flex;
-    justify-content: space-around;
-    padding: 5px;
-}
-
-.categorias .dramas .lineados {
-    display: flex;
-    justify-content: space-around;
-    padding: 5px;
-}
-
-.categorias .familiares .titulofamiliares {
-    display: flex;
-    justify-content: left;
-    color: white;
-    padding: 0px 0px 0px 21px;
-}
-
-.categorias .familiares .lineauno {
-    display: flex;
-    justify-content: space-around;
-    padding: 5px;
-}
-
-.categorias .familiares .lineados {
-    display: flex;
-    justify-content: space-around;
-    padding: 5px;
-}
-
-.categorias .romance .tituloromance {
-    display: flex;
-    justify-content: left;
-    color: white;
-    padding: 0px 0px 0px 21px;
-}
-
-.categorias .romance .lineauno {
-    display: flex;
-    justify-content: space-around;
-    padding: 5px;
-}
-
-.categorias .romance .lineados {
-    display: flex;
-    justify-content: space-around;
-    padding: 5px;
-}
-
-.categorias .terror .tituloterror {
-    display: flex;
-    justify-content: left;
-    color: white;
-    padding: 0px 0px 0px 21px;
-}
-
-.categorias .terror .lineauno {
-    display: flex;
-    justify-content: space-around;
-    padding: 5px;
-}
-
-.categorias .terror .lineados {
-    display: flex;
-    justify-content: space-around;
-    padding: 5px;
-}
-
-.categorias .thrillers .titulothrillers {
-    display: flex;
-    justify-content: left;
-    color: white;
-    padding: 0px 0px 0px 21px;
-}
-
-.categorias .thrillers .lineauno {
-    display: flex;
-    justify-content: space-around;
-    padding: 5px;
-}
-
-.categorias .thrillers .lineados {
-    display: flex;
-    justify-content: space-around;
-    padding: 5px;
 }
 
 .piedepagina {
@@ -334,6 +197,8 @@ img {
     padding: 5px;
     color: grey;
     font-size: 12px;
+    font-family: Helvetica;
+    text-decoration: none;
 
 }
 
@@ -346,71 +211,33 @@ img {
 }
 
 .redes img {
-    width: 40px;
-    height: 40px;
+    width: 25px;
 }
 
 @media (min-width: 1024px) {
-    body {
-        width: 1024px;
+    div.titulo h2 {
+        display: flex;
+        color: #e7442e;
+        font-weight: bold;
+        justify-content: center;
+        padding: 25px;
+        font-family: Bebas Neue;
+        font-size: 70px;
         margin: 0px;
-    }
-
-    header.encabezado {
-        display: grid;
-        grid-template-columns: 250px 700px;
-        margin: 0px;
-    }
-
-    .logo img {
-        width: 250px;
-    }
-    
-    .nav { 
-        color: grey;
-        display: grid;
-        grid-template-columns: 244px 400px 55px;
-    }
-
-    .nav .buscar {
-        display: flex;
-        justify-content: left;
-    }
-
-    .nav .opciones {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 0px 5px 0px 0px;
-    }
-
-    .nav .cuenta {
-        display: flex;
-        justify-content: flex-end;
-    }
-
-    .nav .cuenta img {
-        display: flex;
-        width: 55px;
-    }
-
-    .nav .cuenta a {
-        display: none;
-    }
-
-    .nav a {
-        color: grey;
-        font-size: 15px;
-        padding: 5px;
     }
 
     div.detalle {
         display: grid;
-        grid-template-columns: 370px 600px;
+        grid-template-columns: 300px 707px;
     }
     
-    .detalle img{
-        width: 370px;
+    .detalle .poster img {
+        width: 300px;
+    }
+
+    div.detalle div.texto {
+        display: grid;
+        grid-template-rows: 50px 100px 295px;
     }
 
     div.detalle div.texto div.titulopelicula {
@@ -418,11 +245,13 @@ img {
         color: grey;
         justify-content: flex-start;
         align-items: flex-start;
-        padding: 0px 0px 20px 5px;
+        padding: 0px 0px 5px 5px;
+        font-family: Helvetica; 
     }
     
-    div.detalle div.texto div.titulopelicula h4 {
+    div.detalle div.texto div.titulopelicula h3 {
         margin: 0px;
+        font-size: 25px;
     }
     
     div.detalle div.texto div.resumen {
@@ -431,28 +260,88 @@ img {
         justify-content: center;
         align-items: flex-start;
         font-size: 17px;
-        padding: 5px;
+        padding: 10px;
     
     }
     
     p {
         margin: 0px;
+        font-family: Helvetica;
     }
-    
+
     .nav2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .nav2 .izquierda {
         display: flex;
         flex-direction: column;
-        padding: 0px;
-        height: 136px;
-        align-items: center;
+        padding: 10px;
         justify-content: space-around;
     }
     
-    .nav2 a {
+    .nav2 .izquierda img {
+        width: 19px;
+    }
+    
+    .nav2 .izquierda a {
         color: grey;
         padding: 5px;
-        font-size: 20px;
+        font-size: 25px;
+        text-decoration: none;
+        font-family: helvetica;
     
     }
 
+    .nav2 .derecha { 
+        display: flex
+    }
+
+    
+    .nav2 .derecha .trailer1{
+        background-color: red;
+        width: 350px;
+        height: 50px;
+    }
+
+    .trailer2 {
+        display: none;
+    }
+    
+    .piedepagina {
+        display: grid;
+        grid-template-columns: 703px 300px;
+    }
+    
+    .piedepagina .legales {
+        display: flex;
+        flex-direction: row;
+        color: grey;
+        justify-content: space-evenly;
+        padding: 50px 0px 20px 0px;
+    }
+    
+    .piedepagina .legales a {
+        margin: 0px;
+        padding: 5px;
+        color: grey;
+        font-size: 12px;
+        font-family: Helvetica;
+        text-decoration: none;
+    
+    }
+    
+    .piedepagina .redes {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 50px 10px 20px 10px;
+    }
+    
+    .redes img {
+        width: 25px;
+    }
+    
 }
