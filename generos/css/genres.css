@@ -3,14 +3,8 @@ body{
 }
 
 
-header img.logo{
-    width: 405px;
-}
-
-article.encabezado{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.encabezado img{
+    width: 100%;
 }
 
 nav.header_nav {
@@ -42,18 +36,23 @@ img.icono {
     width: 25px;
 }
 
+div.barra-buscadora {
+    display: none;
+}
+
 div.listado {
     display: flex;
     justify-content: space-around;
     padding-bottom: 5px;
+    font-size: 30px;
 }
 
 nav.header_nav div.listado a {
     font-family: Bebas Neue;
     color: #e7442e;
-    font-size: 30px;
     text-decoration: none;
 }
+
 
 .listas {
     display: flex;
@@ -126,73 +125,93 @@ div.autores {
 
 /*Desktop*/
 @media only screen and (min-width:1024px){
-    header img.logo{
-        width: 300px;
+    header.header {
         display: flex;
-        width: 100%;
-        justify-content: left;
-    }
-
-    article.encabezado{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: black;
-    }
-
-    nav.header_nav{
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        justify-content: space-evenly;
-        align-items: center;
-    }
-
-    img.portada{
-        width: 140px;
-        height: 195px;
-        border: 1px solid white;   
+        align-items: flex-start;
     }
     
-    .footer{
+    article.encabezado {
+        width: 25%;
+    }
+    
+    nav.header_nav {
+        width: 75%;
+        height: 50px;
+        flex-wrap: wrap;
+        background-color: rgb(238, 255, 4);
+        justify-content: center;
+        padding: 10px;
+    }
+
+    div.barra-buscadora {
+        display: flex;
+        width: 250px;
+        height: 20px;
+        background-color: red;
+        margin-left: 15px;
+        margin-right: 15px;
+        order: 2;
+    }
+
+    div.iconos a.buscar {
+        order: 1;
+    }
+
+    div.iconos a.inicio {
+        order: 3;
+    }
+
+    div.listado a.peliculas {
+        order: 4;
+    }
+
+    div.listado a.series {
+        order: 5;
+    }
+
+    div.listado a.estrenos {
+        order: 6;
+    }
+
+    div.iconos a.cuenta {
+        order: 7;
+    }
+    
+    nav.header_nav div.listado a {
+        font-size: 16px;
+        font-family: Helvetica;
+        color: white;
+    }
+
+    .footer {
         display: grid;
-        grid-template-columns: 415px 609px;
+        grid-template-columns: 70% 30%;
         margin-top: 30px;
         padding: 5px;
     }
 
-    h2.titulo{
-        color: white;
-        text-align: left;
-        font-size: 22px;
-        margin-top: 35px;
-    }
-
-    h3{
-        color: white;
-        text-align: left;
-        font-size: 20px;
-        margin-top: 35px;
-    }
-
-    img.red {
-        width: 50px;
-        height: 50px;
+    div.piedepagina {
+        display: flex;
+        flex-direction: row;
+        gap: 13px;
     }
 
     div.redes {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
-        align-items: center;
-        margin-bottom: 10px;
-        
+        align-items: center; 
     }
 
-    div.piedepagina {
+    ul.nombres {
         display: flex;
-        flex-direction: column;
-        margin-bottom: 10px;
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        gap: 60px;
+        color: grey;
+        font-size: 12px;
+
     }
 
 }
