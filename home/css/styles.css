@@ -5,7 +5,7 @@ body{
 /* HEADER */
     /* Logo */
     .logo img {
-        width: 405px;
+        width: 100%;
         }
 
     /* Menú */
@@ -38,7 +38,11 @@ body{
         div.menu div.menu-arriba span img {
             width: 25px;
         }
-        
+        /* No visualizar la barra buscadora */
+        header div.menu div.menu-arriba div.barra-buscadora {
+            display: none;
+        }
+
         /* Menú abajo*/
         div.menu div.menu-abajo {
             display: flex;
@@ -52,3 +56,66 @@ body{
             color: #e7442e;
             text-decoration: none;
         }
+
+
+/* DESKTOP */
+@media only screen and (min-width: 1024px) {
+    header {
+        display: flex;
+        align-items: flex-start;
+    }
+    /* Logo */
+    div.logo {
+        width: 25%;
+    }
+    /* Menú */
+    div.menu {
+        width: 75%;
+        height: 50px;
+        flex-wrap: wrap;
+        background-color: rgb(238, 255, 4);
+        justify-content: center;
+        padding: 10px;
+    }
+
+    /* Barra buscadora */
+    header div.menu div.menu-arriba div.barra-buscadora {
+        display: flex;
+        width: 250px;
+        height: 20px;
+        background-color: red;
+        margin-left: 15px;
+        margin-right: 15px;
+        order: 2;
+    }
+
+    header div.menu div.menu-arriba span.buscar {
+        order: 1;
+    }
+
+    header div.menu div.menu-arriba span.inicio {
+        order: 3;
+    }
+
+    header div.menu div.menu-abajo span.peliculas {
+        order: 4;
+    }
+
+    header div.menu div.menu-abajo span.series {
+        order: 5;
+    }
+
+    header div.menu div.menu-abajo span.estrenos {
+        order: 6;
+    }
+
+    header div.menu div.menu-arriba span.cuenta {
+        order: 7;
+    }
+    
+    header div.menu div.menu-abajo span a {
+        font-size: 16px;
+        font-family: Helvetica;
+        color: white;
+    }
+}
