@@ -161,7 +161,7 @@ p {
     display: flex;
     justify-content: left;
     color: white;
-    padding: 0px 0px 0px 21px;
+    padding-left: 15px;
     font-family: Helvetica;
 }
 
