@@ -1,5 +1,6 @@
 body{
     background-color: black;
+    margin: 0px;
 }
 
 /* HEADER */
@@ -60,6 +61,11 @@ body{
                 color: #e7442e;
                 text-decoration: none;
             }
+
+/* BANNER (no mostrar en mobile) */
+div.banner img {
+    display: none;
+}
 
 /* FOOTER */
     /* Footer arriba (legales y redes) */
