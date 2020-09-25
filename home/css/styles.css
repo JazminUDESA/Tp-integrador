@@ -10,9 +10,11 @@ body{
         }
     /* Logo */
     header div.logo img {
+        display: flex;
         width: 100%;
         justify-content: center;
     }
+    
     /* Menú */
     header div.menu {
         display: flex;
@@ -25,14 +27,14 @@ body{
         flex-wrap: wrap;
     }
         /* Menú arriba */
-        header div.menu section.menu-arriba {
+        header div.menu div.menu-arriba {
             display: flex;
             justify-content: center;
             gap: 40px;
             margin: 5px;
         }
             /* Textos menú arriba (alinear con iconos y cambiar color) */
-            header div.menu section.menu-arriba span a {
+            header div.menu div.menu-arriba span a {
                 color: white;
                 font-family: Helvetica;
                 text-decoration: none;
@@ -41,92 +43,71 @@ body{
                 display: flex;
             }
             /* Tamaño iconos */
-            header div.menu section.menu-arriba span img {
+            header div.menu div.menu-arriba span img {
                 width: 25px;
             }
 
         /* Menú abajo*/
-        header div.menu section.menu-abajo {
+        header div.menu div.menu-abajo {
             display: flex;
             justify-content: space-around;
             font-size: 30px;
             padding-bottom: 5px;
         }
             /* Color textos abajo */
-            header div.menu section.menu-abajo span.estrenos a, div.menu section.menu-abajo span.peliculas a, div.menu section.menu-abajo span.series a {
+            header div.menu div.menu-abajo span.estrenos a, div.menu div.menu-abajo span.peliculas a, div.menu div.menu-abajo span.series a {
                 font-family: Bebas Neue;
                 color: #e7442e;
                 text-decoration: none;
             }
 
-
-/* DESKTOP */
-    @media only screen and (min-width: 1024px) {
-        header {
-            display: flex;
-            position: fixed;
-            background-color: black;
-            justify-content: space-between;
-            padding: 10px;
-        }
-        /* Logo */
-        header div.logo {
-            width: 20%;
-        }
-        /* Menú (VER CÓMO ENCAJAR BIEN EN PANTALLA) */
-        header div.menu {
-            width: 75%;
-            background-color: transparent;
-            flex-direction: row;
-            justify-content: center;
-            align-items: flex-start;
-            gap: 0px;
-        }
-            /* Menú arriba*/ 
-                header div.menu section.menu-arriba {
-                    width: 100%;
-                    justify-content: space-between;
-                    margin: 0px;
-                    padding-left: 5px;
-                    padding-right: 5px;
-                }
-
-                header div.menu section.menu-arriba span a {
-
-                /* Barra buscadora */
-                header div.menu section.menu-arriba span.buscar div.barra-buscadora {
-                    display: flex;
-                    width: 30px;
-                    height: 20px;
-                    border: 1px solid white;
-                }
-
-                header div.menu section.menu-arriba span.buscar  {
-                    display: flex;
-                    gap: 10px;
-                }
-                /* Alinear cuenta a la derecha */
-                header div.menu section.menu-arriba div.cuenta-contenedor {
-                    display: flex;
-                    justify-self: flex-end;
-                }
-
-            /* Línea (NO SE VE) */
-            header div.menu div.linea-header {
-                display: flex;
-                width: 100%;
-                border: 1px solid white;
-                margin-top: 10px;
-            }
-            /* Menú abajo */
-                header div.menu section.menu-abajo {
-                    gap: 30px;
-                }
-                /* Ajustar tamaño texto hipervínculos (NO FUNCIONA) */
-                header div.menu section.menu-abajo span.estrenos a, div.menu section.menu-abajo span.peliculas a, div.menu section.menu-abajo span.series a {
-                    font-size: 16px;
-                    font-family: Helvetica;
-                    color:white;
-                }    
-        }
+/* FOOTER */
+    /* Footer arriba (legales y redes) */
+    footer div.footer-arriba {
+        display: grid;
+        grid-template-columns: 150px 262px;
     }
+        /* Legales */
+        footer div.legales {
+            display: flex;
+            flex-direction: column;
+            color: grey;
+            justify-content: space-evenly;
+            padding: 50px 0px 20px 0px;
+        }
+            /* Texto hipervínculo legales */
+            footer div.legales a {
+                margin: 0px;
+                padding: 5px;
+                color: grey;
+                font-size: 12px;
+                font-family: Helvetica;
+                text-decoration: none;
+            }
+        /* Redes */
+        footer div.redes {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 50px 10px 20px 10px;
+        }
+            /* Tamaño iconos redes */   
+            footer div.redes img {
+                width: 25px;
+            }
+    
+    /* Nombres alumnas */
+    footer div.nombres-alumnas {
+        display: flex;
+        justify-content: center;
+    }
+        /* Texto hipervínculo de los nombres */
+        footer div.nombres-alumnas a {
+            margin: 0px;
+            padding: 5px;
+            color: grey;
+            font-size: 12px;
+            font-family: Helvetica;
+            text-decoration: none;
+        }
