@@ -182,6 +182,19 @@ section div.trailer2 iframe.video-trailer {
     flex-direction: column;
 }
 
+div.originalescw .portadas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 5px;
+    gap: 0px;
+}
+
+div.originalescw .portadas img {
+    width: 99px;
+    padding: 5px 0px 5px 0px;
+}
+
 .titulos {
     display: flex;
     justify-content: left;
