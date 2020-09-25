@@ -61,6 +61,11 @@ body{
                 text-decoration: none;
             }
 
+/* BANNER (no mostrar en mobile) */
+div.banner img {
+    display: none;
+}
+
 /* FOOTER */
     /* Footer arriba (legales y redes) */
     footer div.footer-arriba {
