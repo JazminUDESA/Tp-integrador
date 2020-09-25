@@ -1,54 +1,67 @@
 body{
     background-color: #111111;
-
-
 }
 
-.logo img {
-    width: 405px;
+/* HEADER */
+header {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-bottom: 35px;
+    }
+/* Logo */
+header div.logo img {
+    display: flex;
+    width: 100%;
+    justify-content: center;
 }
 
-nav.nav {
+/* Menú */
+header div.menu {
     display: flex;
     flex-direction: column;
-    font-family: Helvetica;
+    width: 100%;
     padding-top: 5px;
     background-color: rgb(36, 35, 35);
     gap:10px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
+    /* Menú arriba */
+    header div.menu div.menu-arriba {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        margin: 5px;
+    }
+        /* Textos menú arriba (alinear con iconos y cambiar color) */
+        header div.menu div.menu-arriba span a {
+            color: white;
+            font-family: Helvetica;
+            text-decoration: none;
+            align-items: center;
+            gap: 5px;
+            display: flex;
+        }
+        /* Tamaño iconos */
+        header div.menu div.menu-arriba span img {
+            width: 25px;
+        }
 
-    nav.nav div.navarriba {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        font-size: 16px;
-    }
-    
-    nav.nav div.navarriba a {
-        color: white;
-        text-decoration: none;
-        display: flex;
-        height: 25px;
-        align-items: center;
-        gap: 5px;
-    }
-    
-    nav.nav div.navarriba div img {
-        width: 25px;
-    }
-    
-    nav.nav div.navabajo {
+    /* Menú abajo*/
+    header div.menu div.menu-abajo {
         display: flex;
         justify-content: space-around;
         font-size: 30px;
         padding-bottom: 5px;
     }
-    
-    nav.nav div.navabajo div a {
-        font-family: Bebas Neue;
-        color: #e7442e;
-        text-decoration: none;
-    }
+        /* Color textos abajo */
+        header div.menu div.menu-abajo span.estrenos a, div.menu div.menu-abajo span.peliculas a, div.menu div.menu-abajo span.series a {
+            font-family: Bebas Neue;
+            color: #e7442e;
+            text-decoration: none;
+        }
+
 
 div.titulo {
     width: 100%;
@@ -59,8 +72,9 @@ div.titulo h2 {
     color: #e7442e;
     font-weight: bold;
     justify-content: center;
-    padding: 10px;
+    padding: 10px 10px 0px 10px;
     font-family: Bebas Neue;
+    margin: 40px 0px 0px 0px;
 }
 
 div.detalle {
@@ -134,7 +148,7 @@ p {
     display: none;
 }
 
-.trailer2 {
+/*.trailer2 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -142,9 +156,20 @@ p {
     width: 405px;
     height: 230px;
 }
-
 .trailer2 p {
     font-size: 40px;
+}*/
+
+section div.trailer2 {
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+    height: 225px;
+}
+
+section div.trailer2 iframe.video-trailer {
+    display: flex;
+    width: 100%;
 }
 
 .categorias {
@@ -183,40 +208,59 @@ p {
 
 }
 
-.piedepagina {
-    display: grid;
-    grid-template-columns: 150px 262px;
-}
+/* FOOTER */
+    /* Footer arriba (legales y redes) */
+    footer div.footer-arriba {
+        display: grid;
+        grid-template-columns: 150px 262px;
+    }
+        /* Legales */
+        footer div.legales {
+            display: flex;
+            flex-direction: column;
+            color: grey;
+            justify-content: space-evenly;
+            padding: 50px 0px 20px 0px;
+        }
+            /* Texto hipervínculo legales */
+            footer div.legales a {
+                margin: 0px;
+                padding: 5px;
+                color: grey;
+                font-size: 12px;
+                font-family: Helvetica;
+                text-decoration: none;
+            }
+        /* Redes */
+        footer div.redes {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 50px 10px 20px 10px;
+        }
+            /* Tamaño iconos redes */   
+            footer div.redes img {
+                width: 25px;
+            }
+    
+    /* Nombres alumnas */
+    footer div.nombres-alumnas {
+        display: flex;
+        justify-content: center;
+    }
+        /* Texto hipervínculo de los nombres */
+        footer div.nombres-alumnas a {
+            margin: 0px;
+            padding: 5px;
+            color: grey;
+            font-size: 12px;
+            font-family: Helvetica;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-.piedepagina .legales {
-    display: flex;
-    flex-direction: column;
-    color: grey;
-    justify-content: space-evenly;
-    padding: 50px 0px 20px 0px;
-}
 
-.piedepagina .legales a {
-    margin: 0px;
-    padding: 5px;
-    color: grey;
-    font-size: 12px;
-    font-family: Helvetica;
-    text-decoration: none;
-
-}
-
-.piedepagina .redes {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 50px 10px 20px 10px;
-}
-
-.redes img {
-    width: 25px;
-}
 
 @media (min-width: 1024px) {
     div.titulo h2 {

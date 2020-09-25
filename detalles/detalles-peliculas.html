@@ -3,44 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Avengers: Endgame</title>
     <link rel="stylesheet" href="css/estilos-peliculas.css">
 </head>
 
 <body>
-    <header class="encabezado">
+    <!-- HEADER -->
+    <header>
         <div class="logo"> 
-            <img src="../img/logo-transparente-cinemaweb.png" alt=""> 
+            <img src="../img/logo-transparente-cinemaweb.png" alt="logo"> 
         </div>
-        <nav class="nav">
-            <div class="navarriba">
-                <div class="inicio">
-                    <a href=""><img src="../img/img-iconos/icono-inicio.png" alt=""> Inicio</a>
-                </div>
-                <div class="buscar">
-                    <a href=""><img src="../img/img-iconos/icono-buscar.png" alt="">Buscar</a>
-                </div>
-                <div class="cuenta">
-                    <a href=""><img src="../img/img-iconos/icono-cuenta.png" alt="">Cuenta</a>
-                </div>
+        <!-- Menú -->
+        <div class="menu">
+            <!-- Menú arriba -->
+            <div class="menu-arriba">
+                <span class="inicio">
+                    <a href=""><img src="../img/img-iconos/icono-inicio.png" alt="inicio"> Inicio</a>
+                </span>
+                <!-- Buscar -->
+                <span class="buscar">
+                    <a href=""><img src="../img/img-iconos/icono-buscar.png" alt="buscar">Buscar</a>
+                    <div class="barra-buscadora"></div>
+                </span>
+                <!-- Cuenta -->
+                <span class="cuenta">
+                    <a href=""><img src="../img/img-iconos/icono-cuenta.png" alt="cuenta">Cuenta</a>
+                </span>
             </div>
-            <div class="navabajo">
-                <div class="estrenos">
+
+            <!-- Menú abajo -->
+            <div class="menu-abajo">
+                <!-- Estrenos -->
+                <span class="estrenos">
                     <a href="">Estrenos</a>
-                </div>
-                <div class="peliculas">
+                </span>
+                <!-- Películas -->
+                <span class="peliculas">
                     <a href="">Películas</a>
-                </div>
-                <div class="series">
+                </span>
+                <!-- Series -->
+                <span class="series">
                     <a href="">Series</a>
-                </div>
+                </span>
             </div>
-        </nav>
-    </header> 
-    <section>
-        <div class="titulo">
-            <h2>Películas</h2>
         </div>
+    </header>  
+    <section>
         <div class="detalle">
             <div class="poster">
                 <img src="../img/img-peliculas/accion-avengersendgame.png" alt="Avengers Endgame"> 
@@ -69,10 +77,12 @@
                     </div>
                 </div>
             </div>
-            <div class="trailer2">
-                <p>Trailer</p>
-            </div>
-
+        </div>
+        <div class="trailer2">
+            <iframe class="video-trailer" src="https://www.youtube.com/embed/PyakRSni-c0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="titulo">
+            <h2>Películas</h2>
         </div>
         <div class="categorias">
             <div class="originalescw">
@@ -221,8 +231,10 @@
         </div>
 
     </section> 
+    
+    <!-- FOOTER -->
     <footer>
-        <div class="piedepagina">
+        <div class="footer-arriba">
             <div class="legales">
                 <a href="">Terminos y condiciones</a>
                 <a href="">Contacto</a>
@@ -233,6 +245,11 @@
                 <img src="../img/iconos prog rojo-07.png" alt="">
                 <img src="../img/iconos prog rojo-05.png" alt="">
             </div>
+        </div>
+        <div class="nombres-alumnas">
+            <a href="">© María Paula Herrera</a>
+            <a href="">© Catalina Soncini Viola</a>
+            <a href="">© Jazmín Suárez</a>
         </div>
     </footer>
 </body>
