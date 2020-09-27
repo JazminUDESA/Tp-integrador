@@ -83,19 +83,20 @@ h3{
     text-align: left;
     font-size: 20px;
     font-family: Helvetica;
+    margin-left: 10px;
 }
 
-.footer{
+article.footer-arriba {
     display: grid;
-    grid-template-columns: 170px 250px;
-    margin-top: 30px;
-    padding: 5px;
+    grid-template-columns: 150px 270px;
 }
 
 div.piedepagina {
     display: flex;
     flex-direction: column;
-    margin-bottom: 10px;
+    justify-content: space-evenly;
+    padding: 50px 0px 20px 0px;
+    margin-left: 5px;
 }
 
 div.piedepagina a {
@@ -103,7 +104,8 @@ div.piedepagina a {
     font-size: 12px;
     text-decoration: none;
     font-family: Helvetica;
-    padding: 2px;
+    padding: 5px;
+    margin: 0px;
 }
 
 div.redes {
@@ -111,6 +113,7 @@ div.redes {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center; 
+    padding: 50px 0px 20px 50px;
 }
 
 img.red {
@@ -121,6 +124,22 @@ img.red {
 div.autores {
     color: grey;
     font-size: 12px;
+}
+
+div.autores {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+div.autores a {
+    margin: 0px;
+    padding: 5px;
+    color: grey;
+    font-size: 12px;
+    font-family: Helvetica;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 
@@ -204,15 +223,18 @@ div.autores {
         align-items: center; 
     }
 
-    ul.nombres {
+    div.autores {
         display: flex;
-        width: 100%;
-        flex-direction: row;
         justify-content: center;
-        gap: 60px;
-        color: grey;
-        font-size: 12px;
-
     }
 
+    div.autores a {
+        margin: 0px;
+        padding: 5px;
+        color: grey;
+        font-size: 12px;
+        font-family: Helvetica;
+        text-decoration: none;
+        font-weight: bold;
+    }
 }
