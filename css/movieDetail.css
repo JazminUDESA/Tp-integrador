@@ -193,7 +193,7 @@ div.originalescw .portadas {
 }
 
 div.originalescw .portadas img {
-    width: 101px;
+    width: 100px;
     height: 187px;
     padding: 5px 0px 5px 0px;
 }
@@ -326,9 +326,7 @@ div.originalescw .portadas img {
     }
     
     /* Alinear horizontalmente títulos de géneros a las películas */
-    div.categorias div.titulos {
-        padding-left: 16%;
-    }
+    
 
     div.detalle div.texto div.resumen {
         display: flex;
@@ -425,7 +423,7 @@ div.originalescw .portadas img {
         flex-direction: row;
         color: grey;
         justify-content: flex-start;
-        padding: 40px 0px 30px 110px;
+        padding: 40px 0px 30px 105px;
         gap: 70px;
     }
     
@@ -434,7 +432,7 @@ div.originalescw .portadas img {
         flex-direction: row;
         justify-content: flex-end;
         align-items: center;
-        padding: 40px 110px 30px 0px;
+        padding: 40px 105px 30px 0px;
         gap: 70px;
     }
 
