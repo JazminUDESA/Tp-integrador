@@ -155,7 +155,7 @@ p {
     display: none;
 }
 
-/*.trailer2 {
+/*.trailermobile {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -163,18 +163,18 @@ p {
     width: 405px;
     height: 230px;
 }
-.trailer2 p {
+.trailermobile p {
     font-size: 40px;
 }*/
 
-section div.trailer2 {
+section div.trailermobile {
     display: flex;
     width: 100%;
     margin-top: 10px;
     height: 225px;
 }
 
-section div.trailer2 iframe.video-trailer {
+section div.trailermobile iframe.video-trailer {
     display: flex;
     width: 100%;
 }
@@ -372,13 +372,12 @@ div.originalescw .portadas img {
     }
 
     
-    .nav2 .derecha .trailer1{
-        background-color: red;
+    .nav2 .derecha .trailerdesktop iframe {
         width: 460px;
-        height: 240px;
+        height: 258px;
     }
 
-    section div.trailer2 {
+    section div.trailermobile {
         display: none;
     }
     
@@ -408,6 +407,36 @@ div.originalescw .portadas img {
         justify-content: center;
         padding: 5px;
         gap: 22px;
+    }
+
+    footer div.footer-arriba {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    
+    }
+
+    footer div.legales {
+        display: flex;
+        flex-direction: row;
+        color: grey;
+        justify-content: flex-start;
+        padding: 40px 0px 30px 110px;
+        gap: 70px;
+    }
+    
+    footer div.redes {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 40px 110px 30px 0px;
+        gap: 70px;
+    }
+
+    footer div.nombres-alumnas {
+        display: flex;
+        justify-content: center;
+        padding: 30px;
     }
 
     .piedepagina {
