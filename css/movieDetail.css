@@ -325,6 +325,11 @@ div.originalescw .portadas img {
         font-size: 25px;
     }
     
+    /* Alinear horizontalmente títulos de géneros a las películas */
+    div.categorias div.titulos {
+        padding-left: 16%;
+    }
+
     div.detalle div.texto div.resumen {
         display: flex;
         color: grey;
