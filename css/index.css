@@ -79,8 +79,9 @@ div.banner img {
 /* FOOTER */
     /* Footer arriba (legales y redes) */
     footer div.footer-arriba {
-        display: grid;
-        grid-template-columns: 150px 262px;
+        display: flex;
+        justify-content: space-between;
+        padding: 0% 10% 0% 10%;
     }
         /* Legales */
         footer div.legales {
@@ -102,10 +103,11 @@ div.banner img {
         /* Redes */
         footer div.redes {
             display: flex;
+            width: 35%;
             flex-direction: row;
-            justify-content: space-evenly;
+            justify-content: space-between;
             align-items: center;
-            padding: 50px 10px 20px 10px;
+            padding: 50px 0px 20px 0px;
         }
             /* Tamaño iconos redes */   
             footer div.redes img {
@@ -220,5 +222,16 @@ div.banner img {
             header div.menu div.menu-abajo span.cuenta-desktop a img {
                 width: 25px;
             }
+
+/* FOOTER */
+    /* Reducir padding costados */
+    footer div.footer-arriba {
+        padding: 0% 2.5% 0% 2.5%;
+    }
+    /* Reducir tamaño del contenedor de redes */
+    footer div.redes {
+        width: 20%;
+    }
+
 }
             
