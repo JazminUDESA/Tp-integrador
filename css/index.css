@@ -47,6 +47,10 @@ body{
             header div.menu div.menu-arriba span img {
                 width: 25px;
             }
+            /* Ocultar barra buscadora */
+            header div.menu div.menu-arriba span.buscar div.barra-buscadora {
+                display: none;
+            }
 
         /* Menú abajo*/
         header div.menu div.menu-abajo {
@@ -118,3 +122,62 @@ div.banner img {
             text-decoration: none;
             font-weight: bold;
         }
+
+/* DESKTOP */
+@media only screen and (min-width: 1024px) {
+    /* HEADER */
+    header {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    /* Logo */
+    header div.logo {
+        width: 20%;
+    }
+    
+    /* Menú */
+    header div.menu {
+        width: 80%;
+        padding: 0px;
+        gap: 0px;
+        justify-content: flex-end;
+        background-color: transparent;
+        flex-direction: column-reverse;
+
+    }
+        /* Menú arriba */
+        header div.menu div.menu-arriba {
+            width: 54%;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 15px;
+        }
+            /* Ordenar elementos: inicio, buscar, cuenta -> buscar, inicio, cuenta */
+            header div.menu div.menu-arriba span.buscar {
+                order: -1;
+                display: flex;
+                gap: 10px;
+                align-items: center;
+            }
+            /* Barra buscadora */
+            header div.menu div.menu-arriba span.buscar div.barra-buscadora {
+                display: flex;
+                width: 170px;
+                height: 17px;
+                border: 1px solid white;
+            }
+
+        /* Menú abajo*/
+        header div.menu div.menu-abajo {
+            width: 46%;
+            justify-content: flex-start;
+            font-size: 25px;
+            gap: 20px;
+            padding: 15px 0px 0px 15px;
+        }
+            /* Color textos series, películas y estrenos */
+            header div.menu div.menu-abajo span.estrenos a, div.menu div.menu-abajo span.peliculas a, div.menu div.menu-abajo span.series a {
+                color: white;
+            }
+}
+            
