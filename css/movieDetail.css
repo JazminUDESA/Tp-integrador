@@ -184,21 +184,16 @@ section div.trailer2 iframe.video-trailer {
     grid-template-rows: auto;
 }
 
-.categorias .accion {
-    display: flex;
-    flex-direction: column;
-}
-
 div.originalescw .portadas {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: 5px;
-    gap: 0px;
+    gap: 3px;
 }
 
 div.originalescw .portadas img {
-    width: 103px;
+    width: 101px;
     height: 187px;
     padding: 5px 0px 5px 0px;
 }
@@ -225,7 +220,7 @@ div.originalescw .portadas img {
 .portadas {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     padding: 5px;
     gap: 10px;
 
@@ -237,53 +232,58 @@ div.originalescw .portadas img {
         display: grid;
         grid-template-columns: 150px 262px;
     }
-        /* Legales */
-        footer div.legales {
-            display: flex;
-            flex-direction: column;
-            color: grey;
-            justify-content: space-evenly;
-            padding: 50px 0px 20px 0px;
-        }
-            /* Texto hipervínculo legales */
-            footer div.legales a {
-                margin: 0px;
-                padding: 5px;
-                color: grey;
-                font-size: 12px;
-                font-family: Helvetica;
-                text-decoration: none;
-            }
-        /* Redes */
-        footer div.redes {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            align-items: center;
-            padding: 50px 10px 20px 10px;
-        }
-            /* Tamaño iconos redes */   
-            footer div.redes img {
-                width: 25px;
-            }
+    
+    /* Legales */
+    footer div.legales {
+        display: flex;
+        flex-direction: column;
+        color: grey;
+        justify-content: space-evenly;
+        padding: 50px 0px 20px 0px;
+    }
+
+    /* Texto hipervínculo legales */
+    footer div.legales a {
+        margin: 0px;
+        padding: 5px;
+        color: grey;
+        font-size: 12px;
+        font-family: Helvetica;
+        text-decoration: none;
+    }
+
+    /* Redes */
+    footer div.redes {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 50px 10px 20px 10px;
+    }
+
+    /* Tamaño iconos redes */   
+    footer div.redes img {
+        width: 25px;
+    }
     
     /* Nombres alumnas */
     footer div.nombres-alumnas {
         display: flex;
         justify-content: center;
     }
-        /* Texto hipervínculo de los nombres */
-        footer div.nombres-alumnas a {
-            margin: 0px;
-            padding: 5px;
-            color: grey;
-            font-size: 12px;
-            font-family: Helvetica;
-            text-decoration: none;
-            font-weight: bold;
-        }
 
+    /* Texto hipervínculo de los nombres */
+    footer div.nombres-alumnas a {
+        margin: 0px;
+        padding: 5px;
+        color: grey;
+        font-size: 12px;
+        font-family: Helvetica;
+        text-decoration: none;
+        font-weight: bold;
+    }
 
+/**/
 
 @media (min-width: 1024px) {
     div.titulo h2 {
@@ -291,10 +291,10 @@ div.originalescw .portadas img {
         color: #e7442e;
         font-weight: bold;
         justify-content: center;
-        padding: 25px;
+        padding: 10px 10px 0px 10px;
         font-family: Bebas Neue;
         font-size: 70px;
-        margin: 0px;
+        margin: 70px 0px 15px 0px;
     }
 
     div.detalle {
@@ -342,7 +342,7 @@ div.originalescw .portadas img {
 
     .nav2 {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 2fr;
     }
 
     .nav2 .izquierda {
@@ -359,27 +359,57 @@ div.originalescw .portadas img {
     .nav2 .izquierda a {
         color: grey;
         padding: 5px;
-        font-size: 25px;
+        font-size: 20px;
         text-decoration: none;
         font-family: helvetica;
     
     }
 
     .nav2 .derecha { 
-        display: flex
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     
     .nav2 .derecha .trailer1{
         background-color: red;
-        width: 350px;
-        height: 50px;
+        width: 460px;
+        height: 240px;
     }
 
-    .trailer2 {
+    section div.trailer2 {
         display: none;
     }
     
+    div.originalescw .portadas {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 5px;
+        gap: 10px;
+    }
+    
+    div.originalescw .portadas img {
+        width: 220px;
+        height: 390px;
+        padding: 5px 0px 5px 0px;
+    }
+
+    .portadas img {
+        width: 147px;
+        height: 204px;
+        padding: 5px 0px 5px 0px;
+    }
+
+    .portadas {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 5px;
+        gap: 22px;
+    }
+
     .piedepagina {
         display: grid;
         grid-template-columns: 703px 300px;
