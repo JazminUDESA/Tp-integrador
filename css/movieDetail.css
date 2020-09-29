@@ -192,13 +192,14 @@ section div.trailer2 iframe.video-trailer {
 div.originalescw .portadas {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
     padding: 5px;
     gap: 0px;
 }
 
 div.originalescw .portadas img {
-    width: 99px;
+    width: 103px;
+    height: 187px;
     padding: 5px 0px 5px 0px;
 }
 
