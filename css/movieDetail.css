@@ -224,10 +224,6 @@ div.titulo h2 {
 }
 
 /*CATEGORIAS DE LAS PELÍCULAS*/
-.categorias {
-    display: grid;
-    grid-template-rows: auto;
-}
 
 div.originalescw .portadas {
     display: flex;
@@ -237,13 +233,12 @@ div.originalescw .portadas {
     gap: 3px;
 }
 
-div.originalescw .portadas img {
-    width: 100px;
-    height: 187px;
+div.originalescw div.portadas a img {
     padding: 5px 0px 5px 0px;
+    width: 100px;
 }
 
-div.categorias div.originalescw div.portadas #oculta {
+div.originalescw div.portadas a#oculta {
     display: none;
 }
 
@@ -545,13 +540,13 @@ div.categorias div.originalescw div.portadas #oculta {
         gap: 10px;
     }
     
-    div.originalescw .portadas img {
+    div.originalescw div.portadas a img {
         padding: 5px 0px 5px 0px;
-        height: 15%;
-        width: 15%;
+        width: 157px;
+        height: 261px;
     }
-
-    div.categorias div.originalescw div.portadas #oculta {
+    
+    div.originalescw div.portadas a#oculta {
         display: flex;
     }
 
