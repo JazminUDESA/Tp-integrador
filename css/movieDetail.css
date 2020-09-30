@@ -225,7 +225,7 @@ div.titulo h2 {
 
 /*CATEGORIAS DE LAS PELÍCULAS*/
 
-div.originalescw .portadas {
+div.categorias .portadas {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -233,12 +233,12 @@ div.originalescw .portadas {
     gap: 3px;
 }
 
-div.originalescw div.portadas a img {
+div.categorias div.portadascw a img {
     padding: 5px 0px 5px 0px;
     width: 100px;
 }
 
-div.originalescw div.portadas a#oculta {
+div.categorias div.portadascw a#oculta {
     display: none;
 }
 
@@ -532,25 +532,31 @@ div.originalescw div.portadas a#oculta {
     }
     
     /*CATEGORIAS DE LAS PELÍCULAS*/
-    div.originalescw .portadas {
+    div.categorias {
+    display: grid;
+    grid-template-rows: auto;
+    justify-content: center;
+    }
+
+    div.categorias .portadas {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         padding: 5px;
         gap: 10px;
     }
-    
-    div.originalescw div.portadas a img {
+
+    div.categorias div.portadascw a img {
         padding: 5px 0px 5px 0px;
         width: 157px;
         height: 261px;
     }
     
-    div.originalescw div.portadas a#oculta {
+    div.categorias div.portadascw a#oculta {
         display: flex;
     }
 
-    .portadas img {
+    .portadascw img {
         width: 147px;
         height: 204px;
         padding: 5px 0px 5px 0px;
