@@ -1,6 +1,6 @@
 body{
     background-color: black;
-    margin: 0px;
+    margin: 0px; 
 }
 
 /* HEADER */
@@ -123,6 +123,7 @@ div.detalle {
     display: grid;
     grid-template-columns: 150px 262px;
     padding-top: 40px;
+    justify-content: center;
 }
 
 /*poster película detalle*/
