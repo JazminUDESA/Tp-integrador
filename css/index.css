@@ -77,7 +77,7 @@ div.banner img {
 }
 
 /* LISTAS (no mostrar en mobile) */
-div.listas {
+div.misListas {
     display: none;
 }
 
@@ -237,17 +237,21 @@ div.banner img {
 }
 
 /* LISTAS */
-div.listas {
+div.misListas {
     display: flex;
-    width: 80%;
+    flex-direction: column;
+}
+div.misListas div.listas {
+    display: flex;
+    width: 100%;
     padding-left: 20px;
     flex-direction: row;
-    justify-content: space-around;
+    gap: 50px;
     align-items: center;
     margin: 0px;
 }
     /* Título "Mis listas" */
-    h2.misListas {
+    div.misListas h2.tituloMisListas {
         font-family: Helvetica;
         font-size: 24px;
         color: white;
@@ -257,15 +261,15 @@ div.listas {
         justify-content: center;
     }
     /* Imagen lista*/
-    div.listas a img {
+    div.misListas div.listas a img {
         width: 200px;
         margin-top: 10px;
     }
-    div.listas a {
+    div.misListas div.listas a {
         text-decoration: none;
     }
     /* Título lista */
-    div.listas a h5 {
+    div.misListas div.listas a h5 {
         font-family: Helvetica;
         font-size: 16px;
         font-weight: lighter;
@@ -276,21 +280,25 @@ div.listas {
     }
 
     /* Crear nueva lista */
-    div.listas a.crearNuevaLista {
+    div.misListas div.listas a.crearNuevaLista {
         display: flex;
         flex-direction: column;
         border: 0.5px solid white;
-        height: 100px;
+        height: 120px;
+        width: 150px;
         justify-content: center;
         align-items: center;
+        opacity: 60%;
     }
-    div.listas a.crearNuevaLista img {
-        width: 30px;
-    }
-    div.listas a.crearNuevaLista h5 {
-        margin: 0px;
-        padding: 10px;
-    }
+        /* Imagen "+" */
+        div.misListas div.listas a.crearNuevaLista img {
+            width: 30px;
+        }
+        /* Texto */
+        div.misListas div.listas a.crearNuevaLista h5 {
+            margin: 0px;
+            padding: 10px;
+        }
 
 /* FOOTER */
     /* Reducir padding costados */
@@ -301,6 +309,5 @@ div.listas {
     footer div.redes {
         width: 20%;
     }
-
 }
             
