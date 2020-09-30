@@ -546,9 +546,13 @@ div.categorias div.originalescw div.portadas #oculta {
     }
     
     div.originalescw .portadas img {
-        width: 220px;
-        height: 390px;
         padding: 5px 0px 5px 0px;
+        height: 15%;
+        width: 15%;
+    }
+
+    div.categorias div.originalescw div.portadas #oculta {
+        display: flex;
     }
 
     .portadas img {
