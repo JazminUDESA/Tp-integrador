@@ -82,7 +82,7 @@ div.misListas {
     width: 100%;
     flex-wrap: wrap;
 }
-    /* Título mis listas */
+    /* Título "Mis listas" */
     div.misListas h2 {
         display: flex;
         width: 100%;
@@ -90,29 +90,26 @@ div.misListas {
         font-family: Helvetica;
         color: white;
         font-size: 20px;
+        margin: 30px 0px 15px 0px;
     }
-    /* Columnas listas */
+    /* Contenedor de listas */
     div.misListas div.listas {
         display: flex;
-        flex-wrap: wrap;
         width: 100%;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
+        flex-wrap: wrap;
+        padding: 0px 15px 15px 15px;
+        justify-content: space-around;    
     }
-    /* Contenedor listas individuales */
+    /* Contenedor de cada lista */
     div.misListas div.listas a {
         display: flex;
-        width: 34%;
+        flex-wrap: wrap;
         flex-direction: column;
         text-decoration: none;
-        justify-content: center;
-        align-items: center;
     }
     /* Tamaño imágenes listas */
     div.misListas div.listas a img {
-        display: flex;
-        width: 108%;
+        width: 140px;
         margin: 0px;
     }
     /* Títulos de listas */
@@ -128,6 +125,8 @@ div.misListas {
     div.misListas div.listas a.crearNuevaLista {
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
         opacity: 60%;
     }
         /* Imagen "+" */
@@ -140,6 +139,61 @@ div.misListas {
             padding: 5px;
         }
 
+/* MÁS VISTAS */
+        div.masVistas {
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+        /* Título "Más vistas" */
+        div.masVistas h2.tituloMasVistas {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            font-family: Helvetica;
+            color: white;
+            font-size: 20px;
+            margin: 30px 0px 0px 0px;
+        }
+        /* Título "Películas" y "Series"*/
+        div.masVistas h3{
+            display: flex;
+            width: 100%;
+            margin: 0px 0px 10px 0px;
+            padding: 5px 0px 0px 23px;
+            font-size: 18px;
+            font-family: Helvetica;
+            color: rgb(209, 209, 209);  
+        }
+        /* Contenedor todas las películas y contenedor de todas las series */
+        div.masVistas div.peliculas, div.masVistas div.series {
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+            padding: 0px 15px 15px 15px;
+            justify-content: space-around;
+        }
+        /* Contenedor de cada película y de cada serie */
+        div.masVistas div.peliculas a, div.masVistas div.series a {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            text-decoration: none;
+        }
+        /* Imágenes películas y series */
+        div.masVistas a img {
+            width: 118px;
+            height: 185px;
+        }
+        /* Título de cada película y de cada serie*/
+        div.masVistas a h4 {
+            font-size: 12px;
+            font-family: Helvetica;
+            color: rgb(209, 209, 209);
+            font-weight: lighter; 
+            margin: 0px;
+            padding: 5px 0px 20px 0px;
+        }
 /* FOOTER */
     /* Footer arriba (legales y redes) */
     footer div.footer-arriba {
