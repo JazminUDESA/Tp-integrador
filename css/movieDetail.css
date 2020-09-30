@@ -243,6 +243,10 @@ div.originalescw .portadas img {
     padding: 5px 0px 5px 0px;
 }
 
+div.categorias div.originalescw div.portadas #oculta {
+    display: none;
+}
+
 .titulos {
     display: flex;
     justify-content: left;
