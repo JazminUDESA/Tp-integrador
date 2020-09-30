@@ -98,7 +98,8 @@ div.misListas {
         width: 100%;
         flex-wrap: wrap;
         padding: 0px 15px 15px 15px;
-        justify-content: space-around;    
+        justify-content: space-around; 
+        align-items: center;   
     }
     /* Contenedor de cada lista */
     div.misListas div.listas a {
@@ -195,6 +196,9 @@ div.misListas {
             padding: 5px 0px 20px 0px;
         }
 /* FOOTER */
+    footer {
+        padding-bottom: 20px;
+    }
     /* Footer arriba (legales y redes) */
     footer div.footer-arriba {
         display: flex;
@@ -247,6 +251,8 @@ div.misListas {
             text-decoration: none;
             font-weight: bold;
         }
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
 
 /* DESKTOP */
 @media only screen and (min-width: 1024px) {
@@ -350,69 +356,25 @@ div.banner img {
 }
 
 /* LISTAS */
-div.misListas {
-    display: flex;
-    flex-direction: column;
-}
-div.misListas div.listas {
-    display: flex;
-    width: 100%;
-    padding-left: 20px;
-    flex-direction: row;
-    gap: 50px;
-    align-items: center;
-    margin: 0px;
-}
     /* Título "Mis listas" */
     div.misListas h2.tituloMisListas {
-        font-family: Helvetica;
-        font-size: 24px;
-        color: white;
-        padding: 30px 0px 10px 0px;
-        margin: 0px;
-        display: flex;
-        justify-content: center;
+        justify-content: flex-start;
+        padding-left: 54px;
     }
-    /* Imagen lista*/
+    /* Tamaño imágenes listas */
     div.misListas div.listas a img {
-        width: 200px;
-        margin-top: 10px;
-    }
-    div.misListas div.listas a {
-        text-decoration: none;
-    }
-    /* Título lista */
-    div.misListas div.listas a h5 {
-        font-family: Helvetica;
-        font-size: 16px;
-        font-weight: lighter;
-        color: rgb(209, 209, 209);
-        margin: 10px 0px 0px 0px;
-        display: flex;
-        padding-left: 45px;
+        width: 180px;
     }
 
-    /* Crear nueva lista */
-    div.misListas div.listas a.crearNuevaLista {
-        display: flex;
-        flex-direction: column;
-        border: 0.5px solid white;
-        height: 120px;
-        width: 150px;
-        justify-content: center;
-        align-items: center;
-        opacity: 60%;
+/* MÁS VISTAS */
+    div.masVistas h2.tituloMasVistas {
+        justify-content: flex-start;
+        padding: 0px 0px 10px 40px;
     }
-        /* Imagen "+" */
-        div.misListas div.listas a.crearNuevaLista img {
-            width: 30px;
-        }
-        /* Texto */
-        div.misListas div.listas a.crearNuevaLista h5 {
-            margin: 0px;
-            padding: 10px;
-        }
-
+    /* Ajuste padding títulos "Películas" y "Series" */
+    div.masVistas h3 {
+        padding-left: 40px;
+    }
 /* FOOTER */
     /* Reducir padding costados */
     footer div.footer-arriba {
@@ -423,4 +385,3 @@ div.misListas div.listas {
         width: 20%;
     }
 }
-            
