@@ -78,8 +78,67 @@ div.banner img {
 
 /* LISTAS (no mostrar en mobile) */
 div.misListas {
-    display: none;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
 }
+    /* Título mis listas */
+    div.misListas h2 {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        font-family: Helvetica;
+        color: white;
+        font-size: 20px;
+    }
+    /* Columnas listas */
+    div.misListas div.listas {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    /* Contenedor listas individuales */
+    div.misListas div.listas a {
+        display: flex;
+        width: 34%;
+        flex-direction: column;
+        text-decoration: none;
+        justify-content: center;
+        align-items: center;
+    }
+    /* Tamaño imágenes listas */
+    div.misListas div.listas a img {
+        display: flex;
+        width: 108%;
+        margin: 0px;
+    }
+    /* Títulos de listas */
+    div.misListas div.listas a h5 {
+        margin: 0px 0px 20px 0px ;
+        padding-top: 5px;
+        font-size: 15px;
+        font-family: Helvetica;
+        color: rgb(209, 209, 209);
+        font-weight: lighter;
+    }
+    /* Crear nueva lista */
+    div.misListas div.listas a.crearNuevaLista {
+        display: flex;
+        flex-direction: column;
+        opacity: 60%;
+    }
+        /* Imagen "+" */
+        div.misListas div.listas a.crearNuevaLista img {
+            width: 30px;
+        }
+        /* Texto */
+        div.misListas div.listas a.crearNuevaLista h5 {
+            margin: 0px;
+            padding: 5px;
+        }
 
 /* FOOTER */
     /* Footer arriba (legales y redes) */
