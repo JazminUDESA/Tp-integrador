@@ -218,15 +218,15 @@ div.titulo {
     display: flex;
     justify-content: left;
     margin: 50px 0px 5px 0px;
+    padding-left: 14px;
 }
 
-div.titulo h2.pelicula {
+div.titulo h2.tituloSeries {
     display: flex;
     justify-content: left;
     color: white;
     font-weight: bold;
     justify-content: left;
-    padding: 0px 0px 0px 7px;
     font-family: Helvetica;
     font-size: 20px;
     margin-bottom: 0px;
@@ -237,7 +237,7 @@ div.titulo h2.pelicula {
 div.categorias div.portadascw {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     padding: 5px;
     gap: 3px;
 }
@@ -247,16 +247,18 @@ div.categorias div.portadascw a img {
     width: 100px;
 }
 
+/* VER
 div.categorias div.portadascw a#oculto {
     display: none;
 }
+*/
 
 /*los títulos de cada categoría*/
 div.titulos {
     display: flex;
     justify-content: left;
     color: rgb(209, 209, 209);
-    padding-left: 8px;
+    padding-left: 14px;
     font-family: Helvetica;
 }
 
@@ -269,10 +271,8 @@ div.titulos h3 {
 div.categorias div.portadas {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    padding: 5px;
-    gap: 10px;
-
+    justify-content: space-around;
+    padding: 14px;
 }
 
 div.categorias div.portadas img {
@@ -343,7 +343,7 @@ div.categorias div.portadas img {
     }
 
 
-
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - */
 @media only screen and (min-width: 1024px) {
     /*HEADER*/
     header {
@@ -562,12 +562,11 @@ div.categorias div.portadas img {
     div.categorias div.portadascw a img {
         padding: 5px 0px 5px 0px;
         width: 157px;
-        height: 261px;
         }
     
-    /*dos portadas de peliculas originales de cinemaweb que SI se muestran en desktop*/
+    /*no mostrar dos portadas de peliculas originales CW*/
     div.categorias div.portadascw a#oculto {
-        display: flex;
+        display: none;
     }
         
     /*FOOTER*/
