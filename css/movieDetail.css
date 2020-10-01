@@ -213,20 +213,16 @@ div.trailermobile iframe.video-trailer {
 
 /*TITULO: "PELICULA"*/
 div.titulo h2 {
-    display: flex;
     color: white;
     font-weight: bold;
-    justify-content: left;
-    padding: 0px 0px 0px 0px;
+    font-size: 23px;
+    text-align: left;
+    padding: 25px 0px 0px 10px;
     font-family: Helvetica;
-    font-size: 20px;
-    margin: 50px 0px 5px 0px;
+    margin: 0px;
 }
 
-div.titulo h2.pelicula {
-    display: flex;
-    justify-content: left;
-}
+
 
 /*CATEGORIAS DE LAS PELÍCULAS*/
 
@@ -247,18 +243,15 @@ div.categorias div.portadascw a#oculto {
     display: none;
 }
 
-.titulos {
-    display: flex;
-    justify-content: left;
+.titulos h3 {
+    text-align: left;
     color: rgb(209, 209, 209);
-    padding-left: 8px;
+    font-size: 18px;
+    padding-left: 15px;
     font-family: Helvetica;
+    margin-bottom: 0px;
 }
 
-.titulos h3 {
-    margin-bottom: 0px;
-    font-size: 18px;
-}
 
 .portadas img {
     width: 118px;
@@ -524,21 +517,7 @@ div.categorias div.portadas {
     }
 
     /*TITULO: "PELICULA"*/
-    div.titulo {
-        display: flex;
-        justify-content: center;
-    }
     
-    div.titulo h2.peliculas {
-        display: flex;
-        color: white;
-        font-weight: bold;
-        justify-content: flex-start;
-        padding: 10px 10px 0px 10px;
-        font-family: helvetica;
-        font-size: 20px;
-        margin: 70px 0px 15px 0px;
-    }
 
     /*CATEGORIAS DE LAS PELÍCULAS*/
     /*categorias (es un class comun a todas las categorias: orginalescw, acción, argentinas, etc)*/
