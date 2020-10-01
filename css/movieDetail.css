@@ -275,16 +275,15 @@ div.categorias div.portadas {
     footer div.footer-arriba {
         display: flex;
         justify-content: space-between;
-        padding: 0% 10% 0% 10%;
+        padding: 0% 3.5% 0% 3%;
     }
     
     /* Legales */
     footer div.legales {
         display: flex;
         flex-direction: column;
-        color: grey;
         justify-content: space-evenly;
-        padding: 50px 0px 20px 0px;
+        padding: 30px 0px 20px 0px;
     }
 
     /* Texto hipervínculo legales */
@@ -304,7 +303,7 @@ div.categorias div.portadas {
         width: 35%;
         justify-content: space-between;
         align-items: center;
-        padding: 50px 0px 20px 0px;
+        padding: 30px 0px 20px 0px;
 
     }
 
@@ -578,7 +577,6 @@ div.categorias div.portadas {
     footer div.legales {
         display: flex;
         flex-direction: row;
-        color: grey;
         justify-content: flex-start;
         padding: 40px 0px 30px 0px;
         gap: 70px;
@@ -588,9 +586,6 @@ div.categorias div.portadas {
     footer div.redes {
         width: 20%;
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
         padding: 40px 0px 30px 0px;
         
     }
