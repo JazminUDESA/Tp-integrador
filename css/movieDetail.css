@@ -138,7 +138,7 @@ div.detalle div.texto {
 }
 
 /*titulo de la película a detallar*/
-div.detalle div.texto div.titulopelicula {
+div.detalle div.texto div.titulopys {
     display: flex;
     color: grey;
     justify-content: flex-start;
@@ -561,7 +561,7 @@ div.categorias div.portadas img {
         flex-wrap: wrap;
         justify-content: center;
         padding: 5px;
-        gap: 73px;
+        gap: 14px;
     }
 
     div.categorias div.portadascw a img {
