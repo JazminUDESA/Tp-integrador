@@ -77,10 +77,27 @@ span.cuenta-desktop {
     gap: 10px;
 }
 
+.listas-originales {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5px;
+    gap: 3px;
+}
+
 img.portada {
     width: 118px;
     height: 175px;
     padding: 5px 0px 5px 0px; 
+}
+
+img.portada-original {
+    width: 100px;
+    padding: 5px 0px 5px 0px;
+}
+
+div.listas-originales a#oculto {
+    display: none;
 }
 
 h2.titulo{
@@ -243,6 +260,14 @@ div.autores a {
 
     div.listado span.cuenta-desktop a img{
         width: 25px;
+    }
+
+    .listas {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding: 0px;
+        padding: 5px 0px 5px 0px;
     }
 
     img.portada {
