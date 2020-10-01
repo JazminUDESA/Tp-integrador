@@ -72,27 +72,28 @@ span.cuenta-desktop {
     display: flex;
     flex-wrap: wrap;
     padding: 0px;
-    justify-content: space-around;
-    gap: 8px;
+    justify-content: center;
+    padding: 5px;
+    gap: 10px;
 }
 
 img.portada {
     width: 118px;
     height: 175px;
-    border: 1px solid white;  
+    padding: 5px 0px 5px 0px; 
 }
 
 h2.titulo{
-    color: #e7442e;
+    color: white;
     font-weight: bold;
-    text-align: center;
+    text-align: left;
     font-size: 25px;
-    padding: 10px;
-    font-family: Bebas Neue;
+    padding: 25px 0px 0px 10px;
+    font-family: Helvetica;
 }
 
 h3{
-    color: white;
+    color: rgb(209,209,209);
     text-align: left;
     font-size: 20px;
     font-family: Helvetica;
