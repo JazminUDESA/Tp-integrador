@@ -271,6 +271,10 @@ div.autores a {
         display: flex;
     }
 
+    h3.titulo-originales {
+        padding-left: 15px;
+    }
+
     .listas {
         display: flex;
         flex-wrap: wrap;
@@ -306,7 +310,6 @@ div.autores a {
         justify-content: flex-start;
         padding: 40px 0px 30px 0px;
         gap: 70px;
-        color: grey;
     }
 
     div.redes {
