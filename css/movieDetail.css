@@ -252,27 +252,28 @@ div.categorias div.portadascw a#oculto {
 }
 
 /*los títulos de cada categoría*/
-div.titulos {
+h3.titulos {
     display: flex;
     justify-content: left;
     color: rgb(209, 209, 209);
     padding-left: 8px;
     font-family: Helvetica;
-}
-
-div.titulos h3 {
     margin-bottom: 0px;
     font-size: 18px;
 }
+
+/*div.titulos h3 {
+    margin-bottom: 0px;
+    font-size: 18px;
+}*/
 
 /*para portadas de todas las categorias MENOS la de "originales de cinemaweb")*/
 div.categorias div.portadas {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     padding: 5px;
-    gap: 10px;
-
+    gap: 20px;
 }
 
 div.categorias div.portadas img {
@@ -533,16 +534,16 @@ div.categorias div.portadas img {
     /*CATEGORIAS DE LAS PELÍCULAS*/
     /*categorias (engloba todas las categorias: orginalescw, acción, argentinas, etc)*/
     div.categorias {
-    display: grid;
-    grid-template-rows: auto;
-    justify-content: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
     }
     
     /*para portadas de todas las categorias MENOS la de "originales de cinemaweb")*/
     div.categorias div.portadas {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-evenly;
         padding: 5px;
         gap: 20px;
     }
@@ -554,6 +555,15 @@ div.categorias div.portadas img {
     }
 
     /*solo para portadas de la categoría "originales de cinemaweb"*/
+    
+    div.categorias div.portadascw {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 5px;
+        gap: 73px;
+    }
+
     div.categorias div.portadascw a img {
         padding: 5px 0px 5px 0px;
         width: 157px;
