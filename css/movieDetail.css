@@ -561,13 +561,12 @@ div.categorias div.portadas img {
         flex-wrap: wrap;
         justify-content: center;
         padding: 5px;
-        gap: 14px;
+        gap: 8px;
     }
 
     div.categorias div.portadascw a img {
         padding: 5px 0px 5px 0px;
         width: 157px;
-        height: 261px;
     }
 
     /*dos portadas de peliculas originales de cinemaweb que SI se muestran en desktop*/

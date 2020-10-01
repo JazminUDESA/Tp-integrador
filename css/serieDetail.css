@@ -239,12 +239,12 @@ div.categorias div.portadascw {
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 5px;
-    gap: 3px;
+    gap: 8px;
 }
 
 div.categorias div.portadascw a img {
     padding: 5px 0px 5px 0px;
-    width: 100px;
+    width: 157px;
 }
 
 
