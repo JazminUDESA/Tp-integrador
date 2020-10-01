@@ -64,6 +64,9 @@ nav.header_nav div.listado a {
     font-size: 30px;
 }
 
+span.cuenta-desktop {
+    display: none;
+}
 
 .listas {
     display: flex;
@@ -156,7 +159,6 @@ div.autores a {
 /*Desktop*/
 @media only screen and (min-width:1024px){
     header.header {
-        display: flex;
         width: 100%;
         flex-wrap: wrap;
     }
@@ -177,7 +179,7 @@ div.autores a {
         background-color: transparent;
     }
 
-    div.iconos {
+    nav.header_nav div.iconos {
         width: 44%;
         display: flex;
         flex-wrap: wrap;
@@ -202,35 +204,48 @@ div.autores a {
         border: 1px solid white;
     }
 
-
-    div.iconos a.buscar {
-        order: 1;
-    }
-
-    div.iconos a.inicio {
-        order: 3;
-    }
-
-    div.listado a.peliculas {
-        order: 4;
-    }
-
-    div.listado a.series {
-        order: 5;
-    }
-
-    div.listado a.estrenos {
-        order: 6;
-    }
-
-    div.iconos a.cuenta {
-        order: 7;
+    div.iconos span.inicio {
+        padding-left: 10px;
     }
     
-    nav.header_nav div.listado a {
+    div.iconos span.cuenta {
+        display: none;
+    }
+
+    div.listado {
+        display: flex;
+        flex-wrap: wrap;
+        width: 40%;
+        justify-content: space-between;
+        font-size: 16px;
+        gap: 20px;
+        padding: 0px 20px 0px 0px;
+        font-family: Helvetica;
+        align-items: center;
+        margin: 0px;
+    }
+    
+    div.listado span.estrenos a, div.listado span.peliculas a, div.listado span.series a, div.listado span.cuenta-desktop a{
         font-size: 16px;
         font-family: Helvetica;
         color: white;
+    }
+
+    div.listado span.cuenta-desktop {
+        display: flex;
+    }
+
+    div.listado span.cuenta-desktop a{
+        color: white;
+        font-family: Helvetica;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    div.listado span.cuenta-desktop a img{
+        width: 25px;
     }
 
     img.portada {
