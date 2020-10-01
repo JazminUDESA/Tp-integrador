@@ -1,34 +1,43 @@
 body{
-    background-color: #111111;
+    background-color: black;
     margin: 0px;
 }
 
+header {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
 
 .encabezado img{
+    display: flex;
     width: 100%;
+    justify-content: center;
 }
 
 nav.header_nav {
     display: flex;
     flex-direction: column;
-    font-family: Helvetica;
+    width: 100%;
     padding-top: 5px;
     background-color: rgb(36, 35, 35);
     gap:10px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 div.iconos {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    font-size: 16px;
+    justify-content: center;
+    gap: 40px;
+    margin: 5px;
 }
 
 div.iconos a {
     color: white;
+    font-family: Helvetica;
     text-decoration: none;
     display: flex;
-    height: 25px;
     align-items: center;
     gap: 5px;
 }
@@ -52,51 +61,79 @@ nav.header_nav div.listado a {
     font-family: Bebas Neue;
     color: #e7442e;
     text-decoration: none;
+    font-size: 30px;
 }
 
+span.cuenta-desktop {
+    display: none;
+}
 
 .listas {
     display: flex;
     flex-wrap: wrap;
     padding: 0px;
-    justify-content: space-around;
-    gap: 8px;
+    justify-content: center;
+    padding: 5px;
+    gap: 10px;
+}
+
+.listas-originales {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5px;
+    gap: 3px;
 }
 
 img.portada {
     width: 118px;
     height: 175px;
-    border: 1px solid white;  
+    padding: 5px 0px 5px 0px; 
+}
+
+img.portada-original {
+    width: 100px;
+    padding: 5px 0px 5px 0px;
+}
+
+div.listas-originales a#oculto {
+    display: none;
 }
 
 h2.titulo{
-    color: #e7442e;
+    color: white;
     font-weight: bold;
-    text-align: center;
-    font-size: 25px;
-    padding: 10px;
-    font-family: Bebas Neue;
+    text-align: left;
+    font-size: 23px;
+    padding: 25px 0px 0px 10px;
+    font-family: Helvetica;
 }
 
 h3{
-    color: white;
+    color: rgb(209,209,209);
     text-align: left;
-    font-size: 20px;
+    font-size: 18px;
     font-family: Helvetica;
-    margin-left: 10px;
+    margin-bottom: 0px;
+    padding-left: 15px;
 }
 
+h3.titulo-originales {
+    padding-left: 5px;
+}
+
+/* FOOTER*/
 article.footer-arriba {
-    display: grid;
-    grid-template-columns: 150px 270px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0% 3.5% 0% 3%;
 }
 
 div.piedepagina {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    padding: 50px 0px 20px 0px;
-    margin-left: 5px;
+    padding: 30px 0px 20px 0px;
 }
 
 div.piedepagina a {
@@ -111,25 +148,20 @@ div.piedepagina a {
 div.redes {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    width: 35%;
+    justify-content: space-between;
     align-items: center; 
-    padding: 50px 0px 20px 50px;
+    padding: 30px 0px 20px 0px;
 }
 
 img.red {
     width: 25px;
 }
 
-
-div.autores {
-    color: grey;
-    font-size: 12px;
-}
-
 div.autores {
     display: flex;
     justify-content: center;
-    margin-bottom: 5px;
+    padding: 0px 0px 30px 0px;
 }
 
 div.autores a {
@@ -146,103 +178,141 @@ div.autores a {
 /*Desktop*/
 @media only screen and (min-width:1024px){
     header.header {
-        display: flex;
-        align-items: flex-start;
+        width: 100%;
+        flex-wrap: wrap;
     }
     
     article.encabezado {
-        width: 25%;
+        width: 20%;
     }
     
     nav.header_nav {
-        width: 75%;
-        height: 50px;
-        flex-wrap: wrap;
-
-        justify-content: center;
-        padding: 10px;
-    }
-
-    div.barra-buscadora {
+        width: 80%;
+        padding: 0px;
         display: flex;
-        width: 250px;
-        height: 20px;
-        background-color: red;
-        margin-left: 15px;
-        margin-right: 15px;
-        order: 2;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin: 0px;
+        justify-content: center;
+        gap: 91px;
+        background-color: transparent;
     }
 
-    div.iconos a.buscar {
-        order: 1;
+    nav.header_nav div.iconos {
+        width: 44%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin: 0px;
+        align-items: center;
+        padding-left: 20px;
     }
 
-    div.iconos a.inicio {
-        order: 3;
+    div.iconos span.buscar {
+        order: -1;
+        display: flex;
+        gap: 10px;
+        align-items: center;
     }
 
-    div.listado a.peliculas {
-        order: 4;
+    div.iconos span.buscar div.barra-buscadora {
+        display: flex;
+        width: 170px;
+        height: 17px;
+        border: 1px solid white;
     }
 
-    div.listado a.series {
-        order: 5;
-    }
-
-    div.listado a.estrenos {
-        order: 6;
-    }
-
-    div.iconos a.cuenta {
-        order: 7;
+    div.iconos span.inicio {
+        padding-left: 10px;
     }
     
-    nav.header_nav div.listado a {
+    div.iconos span.cuenta {
+        display: none;
+    }
+
+    div.listado {
+        display: flex;
+        flex-wrap: wrap;
+        width: 40%;
+        justify-content: space-between;
+        font-size: 16px;
+        gap: 20px;
+        padding: 0px 20px 0px 0px;
+        font-family: Helvetica;
+        align-items: center;
+        margin: 0px;
+    }
+    
+    div.listado span.estrenos a, div.listado span.peliculas a, div.listado span.series a, div.listado span.cuenta-desktop a{
         font-size: 16px;
         font-family: Helvetica;
         color: white;
     }
 
+    div.listado span.cuenta-desktop {
+        display: flex;
+    }
+
+    div.listado span.cuenta-desktop a{
+        color: white;
+        font-family: Helvetica;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    div.listado span.cuenta-desktop a img{
+        width: 25px;
+    }
+
+    div.listas-originales a#oculto {
+        display: flex;
+    }
+
+    .listas {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding: 0px;
+        padding: 5px 0px 5px 0px;
+    }
+
+    .listas-originales {
+        gap: 10px;
+    }
+
     img.portada {
         width: 147px;
-        height: 204px; 
+        height: 212px; 
+    }
+
+    img.portada-original {
+        width: 157px;
+        height: 261px;
+        padding: 5px 0px 5px 0px;
     }
 
     article.footer-arriba {
-        display: grid;
-        grid-template-columns: 60% 40%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0% 2.5% 0% 2.5%;
     }
 
     div.piedepagina {
         display: flex;
         flex-direction: row;
-        justify-content: left;
-        align-items: center;
-        gap: 20px;
-        margin-left: 10px;
-    }
-
-    div.piedepagina a {
+        justify-content: flex-start;
+        padding: 40px 0px 30px 0px;
+        gap: 70px;
         color: grey;
-        font-size: 13px;
-        text-decoration: none;
-        font-family: Helvetica;
-        padding: 5px;
-        margin: 0px;
     }
 
-    div.autores {
+    div.redes {
         display: flex;
-        justify-content: center;
+        width: 20%;
+        padding: 40px 0px 30px 0px;
     }
 
-    div.autores a {
-        margin: 0px;
-        padding: 5px;
-        color: grey;
-        font-size: 12px;
-        font-family: Helvetica;
-        text-decoration: none;
-        font-weight: bold;
-    }
 }

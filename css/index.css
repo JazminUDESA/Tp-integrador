@@ -186,32 +186,20 @@ div.misListas {
             width: 118px;
             height: 185px;
         }
-        /* Título de cada película y de cada serie*/
-        div.masVistas a h4 {
-            font-size: 12px;
-            font-family: Helvetica;
-            color: rgb(209, 209, 209);
-            font-weight: lighter; 
-            margin: 0px;
-            padding: 5px 0px 20px 0px;
-        }
+       
 /* FOOTER */
-    footer {
-        padding-bottom: 20px;
-    }
     /* Footer arriba (legales y redes) */
     footer div.footer-arriba {
         display: flex;
         justify-content: space-between;
-        padding: 0% 10% 0% 10%;
+        padding: 0% 3.5% 0% 3%;
     }
         /* Legales */
         footer div.legales {
             display: flex;
             flex-direction: column;
-            color: grey;
             justify-content: space-evenly;
-            padding: 50px 0px 20px 0px;
+            padding: 30px 0px 20px 0px;
         }
             /* Texto hipervínculo legales */
             footer div.legales a {
@@ -229,7 +217,7 @@ div.misListas {
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
-            padding: 50px 0px 20px 0px;
+            padding: 30px 0px 20px 0px;
         }
             /* Tamaño iconos redes */   
             footer div.redes img {
@@ -240,6 +228,7 @@ div.misListas {
     footer div.nombres-alumnas {
         display: flex;
         justify-content: center;
+        padding: 0px 0px 30px 0px;
     }
         /* Texto hipervínculo de los nombres */
         footer div.nombres-alumnas a {
@@ -382,6 +371,17 @@ div.banner img {
     }
     /* Reducir tamaño del contenedor de redes */
     footer div.redes {
+        display: flex;
         width: 20%;
+        padding: 40px 0px 30px 0px;
     }
+
+    footer div.legales {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 40px 0px 30px 0px;
+        gap: 70px;
+    }
+
 }
