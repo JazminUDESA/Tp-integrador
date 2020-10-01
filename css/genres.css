@@ -104,7 +104,7 @@ h2.titulo{
     color: white;
     font-weight: bold;
     text-align: left;
-    font-size: 25px;
+    font-size: 23px;
     padding: 25px 0px 0px 10px;
     font-family: Helvetica;
 }
@@ -112,9 +112,14 @@ h2.titulo{
 h3{
     color: rgb(209,209,209);
     text-align: left;
-    font-size: 20px;
+    font-size: 18px;
     font-family: Helvetica;
-    margin-left: 10px;
+    margin-bottom: 0px;
+    padding-left: 15px;
+}
+
+h3.titulo-originales {
+    padding-left: 5px;
 }
 
 /* FOOTER*/
@@ -262,6 +267,10 @@ div.autores a {
         width: 25px;
     }
 
+    div.listas-originales a#oculto {
+        display: flex;
+    }
+
     .listas {
         display: flex;
         flex-wrap: wrap;
@@ -270,9 +279,19 @@ div.autores a {
         padding: 5px 0px 5px 0px;
     }
 
+    .listas-originales {
+        gap: 10px;
+    }
+
     img.portada {
         width: 147px;
-        height: 204px; 
+        height: 212px; 
+    }
+
+    img.portada-original {
+        width: 157px;
+        height: 261px;
+        padding: 5px 0px 5px 0px;
     }
 
     article.footer-arriba {
