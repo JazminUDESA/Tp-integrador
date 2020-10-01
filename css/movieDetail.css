@@ -140,10 +140,10 @@ div.detalle div.texto {
 /*titulo de la película a detallar*/
 div.detalle div.texto div.titulopys {
     display: flex;
-    color: grey;
+    color: white;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 0px 0px 5px 5px;
+    padding: 0px 0px 5px 10px;
     font-family: Helvetica; 
 }
 
