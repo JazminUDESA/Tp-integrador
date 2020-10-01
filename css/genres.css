@@ -1,34 +1,43 @@
 body{
-    background-color: #111111;
+    background-color: black;
     margin: 0px;
 }
 
+header {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
 
 .encabezado img{
+    display: flex;
     width: 100%;
+    justify-content: center;
 }
 
 nav.header_nav {
     display: flex;
     flex-direction: column;
-    font-family: Helvetica;
+    width: 100%;
     padding-top: 5px;
     background-color: rgb(36, 35, 35);
     gap:10px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 div.iconos {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    font-size: 16px;
+    justify-content: center;
+    gap: 40px;
+    margin: 5px;
 }
 
 div.iconos a {
     color: white;
+    font-family: Helvetica;
     text-decoration: none;
     display: flex;
-    height: 25px;
     align-items: center;
     gap: 5px;
 }
@@ -52,6 +61,7 @@ nav.header_nav div.listado a {
     font-family: Bebas Neue;
     color: #e7442e;
     text-decoration: none;
+    font-size: 30px;
 }
 
 
