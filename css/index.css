@@ -141,11 +141,6 @@ div.misListas {
         }
 
 /* MÁS VISTAS */
-        div.masVistas {
-            display: flex;
-            width: 100%;
-            flex-wrap: wrap;
-        }
         /* Título "Más vistas" */
         div.masVistas h2.tituloMasVistas {
             display: flex;
@@ -158,12 +153,11 @@ div.misListas {
         }
         /* Título "Películas" y "Series"*/
         div.masVistas h3{
-            display: flex;
-            width: 100%;
-            margin: 0px 0px 10px 0px;
-            padding: 5px 0px 0px 23px;
+            margin-bottom: 0px;
+            padding-left: 15px;
             font-size: 18px;
             font-family: Helvetica;
+            text-align: left;
             color: rgb(209, 209, 209);  
         }
         /* Contenedor todas las películas y contenedor de todas las series */
@@ -171,8 +165,8 @@ div.misListas {
             display: flex;
             width: 100%;
             flex-wrap: wrap;
-            padding: 0px 15px 15px 15px;
-            justify-content: space-around;
+            justify-content: center;
+            gap: 10px;
         }
         /* Contenedor de cada película y de cada serie */
         div.masVistas div.peliculas a, div.masVistas div.series a {
@@ -184,7 +178,8 @@ div.misListas {
         /* Imágenes películas y series */
         div.masVistas a img {
             width: 118px;
-            height: 185px;
+            height: 175px;
+            padding: 5px 0px 5px 0px;
         }
        
 /* FOOTER */
@@ -360,10 +355,7 @@ div.banner img {
         justify-content: flex-start;
         padding: 0px 0px 10px 40px;
     }
-    /* Ajuste padding títulos "Películas" y "Series" */
-    div.masVistas h3 {
-        padding-left: 40px;
-    }
+    
 /* FOOTER */
     /* Reducir padding costados */
     footer div.footer-arriba {
@@ -382,6 +374,18 @@ div.banner img {
         justify-content: flex-start;
         padding: 40px 0px 30px 0px;
         gap: 70px;
+    }
+
+    div.masVistas div.peliculas, div.masVistas div.series {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding: 5px 0px 5px 0px;
+    }
+
+    div.masVistas a img {
+        width: 147px;
+        height: 212px;
     }
 
 }
