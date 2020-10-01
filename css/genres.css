@@ -100,10 +100,10 @@ div.listas-originales a#oculto {
 }
 
 h2.titulo{
-    color: white;
+    color: red;
     font-weight: bold;
-    text-align: left;
-    font-size: 23px;
+    text-align: center;
+    font-size: 25px;
     padding: 25px 0px 0px 10px;
     font-family: Helvetica;
 }
