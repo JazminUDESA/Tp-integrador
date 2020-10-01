@@ -211,25 +211,29 @@ div.trailermobile iframe.video-trailer {
     width: 100%;
 }
 
-/*TITULO: "PELICULA"*/
-div.titulo h2 {
+/*CATEGORIAS DE LAS PELÍCULAS*/
+
+/*titulo: "películas"*/
+div.titulo {
     display: flex;
-    color: white;
-    font-weight: bold;
     justify-content: left;
-    padding: 0px 0px 0px 0px;
-    font-family: Helvetica;
-    font-size: 20px;
     margin: 50px 0px 5px 0px;
 }
 
 div.titulo h2.pelicula {
     display: flex;
     justify-content: left;
+    color: white;
+    font-weight: bold;
+    justify-content: left;
+    padding: 0px 0px 0px 7px;
+    font-family: Helvetica;
+    font-size: 20px;
+    margin-bottom: 0px;
 }
 
-/*CATEGORIAS DE LAS PELÍCULAS*/
-
+/*originales de CinemaWeb*/
+/*solo para portadas de la categoría "originales de cinemaweb"*/
 div.categorias div.portadascw {
     display: flex;
     flex-wrap: wrap;
@@ -247,7 +251,8 @@ div.categorias div.portadascw a#oculto {
     display: none;
 }
 
-.titulos {
+/*los títulos de cada categoría*/
+div.titulos {
     display: flex;
     justify-content: left;
     color: rgb(209, 209, 209);
@@ -255,17 +260,12 @@ div.categorias div.portadascw a#oculto {
     font-family: Helvetica;
 }
 
-.titulos h3 {
+div.titulos h3 {
     margin-bottom: 0px;
     font-size: 18px;
 }
 
-.portadas img {
-    width: 118px;
-    height: 175px;
-    padding: 5px 0px 5px 0px;
-}
-
+/*para portadas de todas las categorias MENOS la de "originales de cinemaweb")*/
 div.categorias div.portadas {
     display: flex;
     flex-wrap: wrap;
@@ -273,6 +273,12 @@ div.categorias div.portadas {
     padding: 5px;
     gap: 10px;
 
+}
+
+div.categorias div.portadas img {
+    width: 118px;
+    height: 175px;
+    padding: 5px 0px 5px 0px;
 }
 
 /* FOOTER */
@@ -524,25 +530,8 @@ div.categorias div.portadas {
         display: none;
     }
 
-    /*TITULO: "PELICULA"*/
-    div.titulo {
-        display: flex;
-        justify-content: center;
-    }
-    
-    div.titulo h2.peliculas {
-        display: flex;
-        color: white;
-        font-weight: bold;
-        justify-content: flex-start;
-        padding: 10px 10px 0px 10px;
-        font-family: helvetica;
-        font-size: 20px;
-        margin: 70px 0px 15px 0px;
-    }
-
     /*CATEGORIAS DE LAS PELÍCULAS*/
-    /*categorias (es un class comun a todas las categorias: orginalescw, acción, argentinas, etc)*/
+    /*categorias (engloba todas las categorias: orginalescw, acción, argentinas, etc)*/
     div.categorias {
     display: grid;
     grid-template-rows: auto;
@@ -558,7 +547,7 @@ div.categorias div.portadas {
         gap: 20px;
     }
 
-    .portadas img {
+    div.categorias div.portadas img {
         width: 147px;
         height: 204px;
         padding: 5px 0px 5px 0px;

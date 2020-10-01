@@ -123,6 +123,7 @@ div.detalle {
     display: grid;
     grid-template-columns: 150px 262px;
     padding-top: 40px;
+    justify-content: center;
 }
 
 /*poster película detalle*/
@@ -210,25 +211,30 @@ div.trailermobile iframe.video-trailer {
     width: 100%;
 }
 
-/*PELÍCULA (TITULO)*/
-div.titulo h2 {
-    display: flex;
-    color: #e7442e;
-    font-weight: bold;
-    justify-content: center;
-    padding: 10px 10px 0px 10px;
-    font-family: Bebas Neue;
-    font-size: 35px;
-    margin: 45px 0px 15px 0px;
-}
-
 /*CATEGORIAS DE LAS PELÍCULAS*/
-.categorias {
-    display: grid;
-    grid-template-rows: auto;
+
+/*titulo: "películas"*/
+div.titulo {
+    display: flex;
+    justify-content: left;
+    margin: 50px 0px 5px 0px;
 }
 
-div.originalescw .portadas {
+div.titulo h2.pelicula {
+    display: flex;
+    justify-content: left;
+    color: white;
+    font-weight: bold;
+    justify-content: left;
+    padding: 0px 0px 0px 7px;
+    font-family: Helvetica;
+    font-size: 20px;
+    margin-bottom: 0px;
+}
+
+/*originales de CinemaWeb*/
+/*solo para portadas de la categoría "originales de cinemaweb"*/
+div.categorias div.portadascw {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -236,38 +242,43 @@ div.originalescw .portadas {
     gap: 3px;
 }
 
-div.originalescw .portadas img {
-    width: 100px;
-    height: 187px;
+div.categorias div.portadascw a img {
     padding: 5px 0px 5px 0px;
+    width: 100px;
 }
 
-.titulos {
+div.categorias div.portadascw a#oculto {
+    display: none;
+}
+
+/*los títulos de cada categoría*/
+div.titulos {
     display: flex;
     justify-content: left;
-    color: white;
-    padding-left: 25px;
+    color: rgb(209, 209, 209);
+    padding-left: 8px;
     font-family: Helvetica;
 }
 
-.titulos h3 {
+div.titulos h3 {
     margin-bottom: 0px;
     font-size: 18px;
 }
 
-.portadas img {
-    width: 118px;
-    height: 175px;
-    padding: 5px 0px 5px 0px;
-}
-
-.portadas {
+/*para portadas de todas las categorias MENOS la de "originales de cinemaweb")*/
+div.categorias div.portadas {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: 5px;
     gap: 10px;
 
+}
+
+div.categorias div.portadas img {
+    width: 118px;
+    height: 175px;
+    padding: 5px 0px 5px 0px;
 }
 
 /* FOOTER */
@@ -524,47 +535,41 @@ div.originalescw .portadas img {
         display: none;
     }
 
-    /*PELÍCULA (TITULO)*/        
-    div.titulo h2 {
-        display: flex;
-        color: #e7442e;
-        font-weight: bold;
-        justify-content: center;
-        padding: 10px 10px 0px 10px;
-        font-family: Bebas Neue;
-        font-size: 70px;
-        margin: 70px 0px 15px 0px;
-    }
-    
     /*CATEGORIAS DE LAS PELÍCULAS*/
-    div.originalescw .portadas {
+    /*categorias (engloba todas las categorias: orginalescw, acción, argentinas, etc)*/
+    div.categorias {
+    display: grid;
+    grid-template-rows: auto;
+    justify-content: center;
+    }
+        
+    /*para portadas de todas las categorias MENOS la de "originales de cinemaweb")*/
+    div.categorias div.portadas {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         padding: 5px;
-        gap: 10px;
+        gap: 20px;
     }
     
-    div.originalescw .portadas img {
-        width: 220px;
-        height: 390px;
-        padding: 5px 0px 5px 0px;
-    }
-
-    .portadas img {
+    div.categorias div.portadas img {
         width: 147px;
         height: 204px;
         padding: 5px 0px 5px 0px;
     }
-
-    .portadas {
+    
+    /*solo para portadas de la categoría "originales de cinemaweb"*/
+    div.categorias div.portadascw a img {
+        padding: 5px 0px 5px 0px;
+        width: 157px;
+        height: 261px;
+        }
+    
+    /*dos portadas de peliculas originales de cinemaweb que SI se muestran en desktop*/
+    div.categorias div.portadascw a#oculto {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 5px;
-        gap: 22px;
     }
-
+        
     /*FOOTER*/
     /*legales y alumnas*/
     footer div.footer-arriba {
