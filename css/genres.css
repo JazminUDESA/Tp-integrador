@@ -9,7 +9,7 @@ header {
     flex-wrap: wrap;
 }
 
-.encabezado img{
+.logo img{
     display: flex;
     width: 100%;
     justify-content: center;
@@ -181,7 +181,7 @@ div.autores a {
         flex-wrap: wrap;
     }
     
-    article.encabezado {
+    a.logo {
         width: 20%;
     }
     

@@ -10,7 +10,7 @@ header {
         flex-wrap: wrap;
         }
     /* Logo */
-    header div.logo img {
+    header a.logo img {
         display: flex;
         width: 100%;
         justify-content: center;
@@ -351,7 +351,7 @@ div.categorias div.portadas img {
         flex-wrap: wrap;
     }
     /* Logo */
-    header div.logo {
+    header a.logo {
         width: 20%;
     }
     
