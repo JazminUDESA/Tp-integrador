@@ -198,12 +198,12 @@ p {
     display: none;
 }
 
-/*trailer afuera del manu de detalles (el que si se muestra en mobile y no en desktop)*/
+/*trailer afuera del menu de detalles (el que si se muestra en mobile y no en desktop)*/
 div.trailermobile {
     display: flex;
     width: 100%;
-    margin-top: 10px;
-    height: 225px;
+    padding-top: 10px;
+    height: 266px;
 }
 
 div.trailermobile iframe.video-trailer {
