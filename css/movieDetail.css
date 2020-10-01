@@ -211,21 +211,21 @@ div.trailermobile iframe.video-trailer {
     width: 100%;
 }
 
-/*PELÍCULA (TITULO)*/
+/*TITULO: "PELICULA"*/
 div.titulo h2 {
     display: flex;
     color: #e7442e;
     font-weight: bold;
     justify-content: center;
-    padding: 10px 10px 0px 10px;
-    font-family: Bebas Neue;
+    padding: 10px 0px 0px 10px;
+    font-family: Helvetica;
     font-size: 35px;
     margin: 45px 0px 15px 0px;
 }
 
 /*CATEGORIAS DE LAS PELÍCULAS*/
 
-div.categorias .portadas {
+div.categorias div.portadascw {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -238,7 +238,7 @@ div.categorias div.portadascw a img {
     width: 100px;
 }
 
-div.categorias div.portadascw a#oculta {
+div.categorias div.portadascw a#oculto {
     display: none;
 }
 
@@ -256,12 +256,12 @@ div.categorias div.portadascw a#oculta {
 }
 
 .portadas img {
-    width: 147px;
-    height: 204px;
+    width: 118px;
+    height: 175px;
     padding: 5px 0px 5px 0px;
 }
 
-.portadas {
+div.categorias div.portadas {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -519,7 +519,7 @@ div.categorias div.portadascw a#oculta {
         display: none;
     }
 
-    /*PELÍCULA (TITULO)*/        
+    /*TITULO: "PELICULA"*/        
     div.titulo h2 {
         display: flex;
         color: #e7442e;
@@ -532,42 +532,38 @@ div.categorias div.portadascw a#oculta {
     }
     
     /*CATEGORIAS DE LAS PELÍCULAS*/
+    /*categorias (es un class comun a todas las categorias: orginalescw, acción, argentinas, etc)*/
     div.categorias {
     display: grid;
     grid-template-rows: auto;
     justify-content: center;
     }
-
-    div.categorias .portadas {
+    
+    /*para portadas de todas las categorias MENOS la de "originales de cinemaweb")*/
+    div.categorias div.portadas {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         padding: 5px;
-        gap: 10px;
+        gap: 20px;
     }
 
-    div.categorias div.portadascw a img {
-        padding: 5px 0px 5px 0px;
-        width: 157px;
-        height: 261px;
-    }
-    
-    div.categorias div.portadascw a#oculta {
-        display: flex;
-    }
-
-    .portadascw img {
+    .portadas img {
         width: 147px;
         height: 204px;
         padding: 5px 0px 5px 0px;
     }
 
-    .portadas {
+    /*solo para portadas de la categoría "originales de cinemaweb"*/
+    div.categorias div.portadascw a img {
+        padding: 5px 0px 5px 0px;
+        width: 157px;
+        height: 261px;
+    }
+
+    /*dos portadas de peliculas originales de cinemaweb que SI se muestran en desktop*/
+    div.categorias div.portadascw a#oculto {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 5px;
-        gap: 22px;
     }
 
     /*FOOTER*/
