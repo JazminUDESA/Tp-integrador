@@ -247,11 +247,11 @@ div.categorias div.portadascw a img {
     width: 100px;
 }
 
-/* VER
+
 div.categorias div.portadascw a#oculto {
     display: none;
 }
-*/
+
 
 /*los títulos de cada categoría*/
 div.titulos {
@@ -566,7 +566,7 @@ div.categorias div.portadas img {
     
     /*no mostrar dos portadas de peliculas originales CW*/
     div.categorias div.portadascw a#oculto {
-        display: none;
+        display: flex;
     }
         
     /*FOOTER*/
