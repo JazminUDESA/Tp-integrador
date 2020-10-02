@@ -285,9 +285,10 @@ div.categorias div.portadas img {
 /* FOOTER */
     /* Footer arriba (legales y redes) */
     footer div.footer-arriba {
-        display: flex;
+        display: grid;
+        grid-template-columns: 50% 48% 2%;
         justify-content: space-between;
-        padding: 0% 10% 0% 10%;
+        padding: 0% 2% 0% 2.5%;
     }
     
     /* Legales */
@@ -296,7 +297,7 @@ div.categorias div.portadas img {
         flex-direction: column;
         color: grey;
         justify-content: space-evenly;
-        padding: 50px 0px 20px 0px;
+        padding: 30px 0px 20px 0px;
     }
 
     /* Texto hipervínculo legales */
@@ -313,10 +314,11 @@ div.categorias div.portadas img {
     footer div.redes {
         display: flex;
         flex-direction: row;
-        width: 35%;
-        justify-content: space-between;
+        width: 90%;
+        justify-content: space-around;
         align-items: center;
-        padding: 50px 0px 20px 0px;
+        padding: 30px 0px 20px 0px;
+        margin-left: 20px;
 
     }
 
@@ -325,6 +327,18 @@ div.categorias div.portadas img {
         width: 25px;
     }
     
+    div.volver-inicio a img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25px;
+        height: 20x;
+    }
+    
+    div.volver-inicio {
+        padding: 30px 0px 20px 0px;
+    }
+
     /* Nombres alumnas */
     footer div.nombres-alumnas {
         display: flex;
@@ -577,9 +591,10 @@ div.categorias div.portadas img {
     /*FOOTER*/
     /*legales y alumnas*/
     footer div.footer-arriba {
-        display: flex;
+        display: grid;
+        grid-template-columns: 55% 42% 3%;
         justify-content: space-between;
-        padding: 0% 2.5% 0% 2.5%;
+        padding: 0% 2% 0% 2.5%;
     }
 
     /*legales*/
@@ -594,13 +609,24 @@ div.categorias div.portadas img {
 
     /*redes*/
     footer div.redes {
-        width: 20%;
+        width: 90%;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+        justify-content: space-around;
         padding: 40px 0px 30px 0px;
-        
+        margin-left: 70px;
+    }
+
+    div.volver-inicio {
+        padding: 40px 0px 30px 0px;
     }
     
+    div.volver-inicio a img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 25x;
+    }
+  
 }

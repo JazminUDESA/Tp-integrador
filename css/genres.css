@@ -310,6 +310,7 @@ div.autores a {
         padding: 5px 0px 5px 0px;
     }
 
+    /*FOOTER*/
     article.footer-arriba {
         display: grid;
         grid-template-columns: 55% 42% 3%;
@@ -344,6 +345,5 @@ div.autores a {
         width: 30px;
         height: 25x;
     }
-    
 
 }
