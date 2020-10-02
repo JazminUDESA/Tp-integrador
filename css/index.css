@@ -185,9 +185,10 @@ div.misListas {
 /* FOOTER */
     /* Footer arriba (legales y redes) */
     footer div.footer-arriba {
-        display: flex;
+        display: grid;
+        grid-template-columns: 2fr 1fr 2fr;
         justify-content: space-between;
-        padding: 0% 3.5% 0% 3%;
+        padding: 0% 3% 0% 3%;
     }
         /* Legales */
         footer div.legales {
@@ -208,9 +209,8 @@ div.misListas {
         /* Redes */
         footer div.redes {
             display: flex;
-            width: 35%;
             flex-direction: row;
-            justify-content: space-between;
+            justify-content: space-around;
             align-items: center;
             padding: 30px 0px 20px 0px;
         }
@@ -219,6 +219,22 @@ div.misListas {
                 width: 25px;
             }
     
+            div.volver-inicio {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 30px 0px 20px 0px;
+            }
+
+            div.volver-inicio a img {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 25px;
+                height: 20x;
+            }
+    
+
     /* Nombres alumnas */
     footer div.nombres-alumnas {
         display: flex;
@@ -355,26 +371,6 @@ div.banner img {
         justify-content: flex-start;
         padding: 0px 0px 10px 40px;
     }
-    
-/* FOOTER */
-    /* Reducir padding costados */
-    footer div.footer-arriba {
-        padding: 0% 2.5% 0% 2.5%;
-    }
-    /* Reducir tamaño del contenedor de redes */
-    footer div.redes {
-        display: flex;
-        width: 20%;
-        padding: 40px 0px 30px 0px;
-    }
-
-    footer div.legales {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        padding: 40px 0px 30px 0px;
-        gap: 70px;
-    }
 
     div.masVistas div.peliculas, div.masVistas div.series {
         display: flex;
@@ -386,6 +382,37 @@ div.banner img {
     div.masVistas a img {
         width: 147px;
         height: 212px;
+    }
+    
+/* FOOTER */
+    /* Reducir padding costados */
+    footer div.footer-arriba {
+        grid-template-columns: 50% 10% 40%;
+        justify-content: space-between;
+    }
+    /* Reducir tamaño del contenedor de redes */
+    footer div.redes {
+        display: flex;
+        justify-content: flex-end;
+        padding: 40px 0px 30px 0px;
+        gap: 80px;
+    }
+
+    footer div.legales {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 40px 0px 30px 0px;
+        gap: 70px;
+    }
+
+    div.volver-inicio {
+        padding: 40px 0px 30px 0px;
+    }
+    
+    div.volver-inicio a img {
+        width: 30px;
+        height: 25x;
     }
 
 }

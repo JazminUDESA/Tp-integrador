@@ -122,12 +122,11 @@ h3.titulo-originales {
 }
 
 /* FOOTER*/
-
 article.footer-arriba {
     display: grid;
-    grid-template-columns: 50% 48% 2%;
+    grid-template-columns: 2fr 1fr 2fr;
     justify-content: space-between;
-    padding: 0% 2% 0% 2.5%;
+    padding: 0% 3% 0% 3%;
 }
 
 div.piedepagina {
@@ -149,15 +148,20 @@ div.piedepagina a {
 div.redes {
     display: flex;
     flex-direction: row;
-    width: 90%;
     justify-content: space-around;
     align-items: center; 
     padding: 30px 0px 20px 0px;
-    margin-left: 20px;
 }
 
 img.red {
     width: 25px;
+}
+
+div.volver-inicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0px 20px 0px;
 }
 
 div.volver-inicio a img {
@@ -166,10 +170,6 @@ div.volver-inicio a img {
     align-items: center;
     width: 25px;
     height: 20x;
-}
-
-div.volver-inicio {
-    padding: 30px 0px 20px 0px;
 }
 
 div.autores {
@@ -312,10 +312,8 @@ div.autores a {
 
     /*FOOTER*/
     article.footer-arriba {
-        display: grid;
-        grid-template-columns: 55% 42% 3%;
+        grid-template-columns: 50% 10% 40%;
         justify-content: space-between;
-        padding: 0% 2% 0% 2.5%;
     }
 
     div.piedepagina {
@@ -328,10 +326,9 @@ div.autores a {
 
     div.redes {
         display: flex;
-        width: 90%;
-        justify-content: space-around;
+        justify-content: flex-end;
+        gap: 80px;
         padding: 40px 0px 30px 0px;
-        margin-left: 70px;
     }
 
     div.volver-inicio {
@@ -339,9 +336,6 @@ div.autores a {
     }
     
     div.volver-inicio a img {
-        display: flex;
-        justify-content: center;
-        align-items: center;
         width: 30px;
         height: 25x;
     }

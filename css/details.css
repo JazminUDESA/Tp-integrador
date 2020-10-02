@@ -286,16 +286,15 @@ div.categorias div.portadas img {
     /* Footer arriba (legales y redes) */
     footer div.footer-arriba {
         display: grid;
-        grid-template-columns: 50% 48% 2%;
+        grid-template-columns: 2fr 1fr 2fr;
         justify-content: space-between;
-        padding: 0% 2% 0% 2.5%;
+        padding: 0% 3% 0% 3%;
     }
     
     /* Legales */
     footer div.legales {
         display: flex;
         flex-direction: column;
-        color: grey;
         justify-content: space-evenly;
         padding: 30px 0px 20px 0px;
     }
@@ -314,12 +313,9 @@ div.categorias div.portadas img {
     footer div.redes {
         display: flex;
         flex-direction: row;
-        width: 90%;
         justify-content: space-around;
         align-items: center;
         padding: 30px 0px 20px 0px;
-        margin-left: 20px;
-
     }
 
     /* Tamaño iconos redes */   
@@ -327,6 +323,13 @@ div.categorias div.portadas img {
         width: 25px;
     }
     
+    div.volver-inicio {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 0px 20px 0px;
+    }
+
     div.volver-inicio a img {
         display: flex;
         justify-content: center;
@@ -334,10 +337,7 @@ div.categorias div.portadas img {
         width: 25px;
         height: 20x;
     }
-    
-    div.volver-inicio {
-        padding: 30px 0px 20px 0px;
-    }
+
 
     /* Nombres alumnas */
     footer div.nombres-alumnas {
@@ -591,17 +591,14 @@ div.categorias div.portadas img {
     /*FOOTER*/
     /*legales y alumnas*/
     footer div.footer-arriba {
-        display: grid;
-        grid-template-columns: 55% 42% 3%;
+        grid-template-columns: 50% 10% 40%;
         justify-content: space-between;
-        padding: 0% 2% 0% 2.5%;
     }
 
     /*legales*/
     footer div.legales {
         display: flex;
         flex-direction: row;
-        color: grey;
         justify-content: flex-start;
         padding: 40px 0px 30px 0px;
         gap: 70px;
@@ -609,12 +606,10 @@ div.categorias div.portadas img {
 
     /*redes*/
     footer div.redes {
-        width: 90%;
         display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+        justify-content: flex-end;
         padding: 40px 0px 30px 0px;
-        margin-left: 70px;
+        gap: 80px;
     }
 
     div.volver-inicio {
@@ -622,9 +617,6 @@ div.categorias div.portadas img {
     }
     
     div.volver-inicio a img {
-        display: flex;
-        justify-content: center;
-        align-items: center;
         width: 30px;
         height: 25x;
     }
