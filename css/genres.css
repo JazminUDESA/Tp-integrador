@@ -42,12 +42,14 @@ div.iconos a {
     gap: 5px;
 }
 
-img.icono {
-    width: 25px;
+/*BARRA BUSCADORA*/
+
+form.uk-search.uk-search-default {
+    width: 120px;
 }
 
-div.barra-buscadora {
-    display: none;
+img.icono {
+    width: 25px;
 }
 
 div.listado {
@@ -230,11 +232,10 @@ div.autores a {
         align-items: center;
     }
 
-    div.iconos span.buscar div.barra-buscadora {
-        display: flex;
-        width: 170px;
-        height: 17px;
-        border: 1px solid white;
+    form.uk-search.uk-search-default {
+    display: flex;
+    align-items: center;
+    width: 200px;
     }
 
     div.iconos span.inicio {
