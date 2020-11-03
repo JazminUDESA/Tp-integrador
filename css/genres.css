@@ -45,7 +45,7 @@ div.iconos a {
 /*BARRA BUSCADORA*/
 
 form.uk-search.uk-search-default {
-    width: 120px;
+    width: 130px;
 }
 
 img.icono {
@@ -133,9 +133,9 @@ article.footer-arriba {
 
 div.piedepagina {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-evenly;
-    padding: 30px 0px 20px 0px;
+    padding: 30px 0px 10px 0px;
 }
 
 div.piedepagina a {
@@ -159,6 +159,17 @@ img.red {
     width: 25px;
 }
 
+div.logos {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-left: 10px;
+}
+
+div.logos img {
+    width: 35px;
+}
+
 div.volver-inicio {
     display: flex;
     justify-content: center;
@@ -174,10 +185,11 @@ div.volver-inicio a img {
     height: 20x;
 }
 
+
 div.autores {
     display: flex;
     justify-content: center;
-    padding: 0px 0px 30px 0px;
+    padding: 10px 0px 30px 0px;
 }
 
 div.autores a {
@@ -189,6 +201,8 @@ div.autores a {
     text-decoration: none;
     font-weight: bold;
 }
+
+
 
 
 /*Desktop*/
@@ -232,10 +246,12 @@ div.autores a {
         align-items: center;
     }
 
+    /*BARRA BUSCADORA*/
     form.uk-search.uk-search-default {
     display: flex;
     align-items: center;
-    width: 200px;
+    width: 220px;
+    border: 1px solid white;
     }
 
     div.iconos span.inicio {
@@ -311,6 +327,7 @@ div.autores a {
         padding: 5px 0px 5px 0px;
     }
 
+
     /*FOOTER*/
     article.footer-arriba {
         grid-template-columns: 50% 10% 40%;
@@ -320,25 +337,32 @@ div.autores a {
     div.piedepagina {
         display: flex;
         flex-direction: row;
-        justify-content: flex-start;
-        padding: 40px 0px 30px 0px;
-        gap: 70px;
+        padding: 40px 0px 20px 0px;
+        justify-content: space-around;
     }
 
     div.redes {
         display: flex;
         justify-content: flex-end;
-        gap: 80px;
         padding: 40px 0px 30px 0px;
+        gap: 70px;
     }
 
     div.volver-inicio {
         padding: 40px 0px 30px 0px;
+        margin-right: 70px;
     }
     
     div.volver-inicio a img {
         width: 30px;
         height: 25x;
+    }
+
+    div.logos {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 70px;
     }
 
 }

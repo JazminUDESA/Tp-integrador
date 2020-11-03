@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Series</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/css/uikit.min.css">
     <link rel="stylesheet" href="css/genres.css">
 </head>
 
@@ -18,8 +19,10 @@
                     <a href="index.html"><img class="icono" src="img/img-iconos/icono-inicio.png" alt=""> Inicio</a>
                 </span>
                 <span class="buscar">
-                    <a href=""><img class="icono" src="img/img-iconos/icono-buscar.png" alt="">Buscar</a>
-                    <div class="barra-buscadora"></div>
+                    <img class="icono" src="img/img-iconos/icono-buscar.png" alt="">
+                    <form class="uk-search uk-search-default" style="height: 20px;">
+                        <input class="uk-search-input" type="search" placeholder="" style="height: 24px;">
+                    </form>
                 </span>
                 <span class="cuenta">
                     <a href=""><img class="icono" src="img/img-iconos/icono-cuenta.png" alt="">Cuenta</a>
@@ -178,14 +181,19 @@
     </article>
 
     <footer class="footer">
-        <article class="footer-arriba">
-             <div class="piedepagina">
-                 <a href="">Términos y Condiciones</a>
-                 <a href="">Contacto</a>
-                 <a href="">Copyright</a>
-             </div>
-     
-             <div class="volver-inicio">
+        <div class="piedepagina">
+            <a href="">Términos y Condiciones</a>
+            <a href="">Contacto</a>
+            <a href="">Copyright</a>
+        </div>
+
+        <article class="footer-arriba"> 
+            <div class="logos">
+                <img src="img/logo-transparente-cuadrado-cinemaweb.png" alt="logo CinemaWeb">
+                <img src="img/logo-tmdb.png" alt="">
+            </div>
+
+            <div class="volver-inicio">
                 <a href="#ancla"><img src="img/Flecha-arriba.png" alt=""></a>
             </div>
             
@@ -201,7 +209,7 @@
              <a href="">© Catalina Soncini Viola</a>
              <a href="">© Jazmín Suárez</a>
         </div>
-     </footer>
+    </footer>
 
 </body>
 </html>
