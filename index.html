@@ -18,6 +18,115 @@
 
 <body>
 
+    <header>
+        <a name="ancla" class="logo" href="index.html"><img src="img/logo-transparente-cinemaweb.png" alt="logo"></a>
+        <!--Menú-->
+        <div class="menu">
+            <!--Menú arriba-->
+            <div class="menu-arriba">
+                <span class="inicio">
+                    <a href="index.html"><img src="img/img-iconos/icono-inicio.png" alt="inicio"> Inicio</a>
+                </span>
+                <!--Buscar-->
+                <span class="buscar">
+                    <a href=""><img src="img/img-iconos/icono-buscar.png" alt="buscar">Buscar</a>
+                    <div class="barra-buscadora"></div>
+                </span>
+                <!--Cuenta OCULTA EN DESKTOP-->
+                <span class="cuenta">
+                    <a href=""><img src="img/img-iconos/icono-cuenta.png" alt="cuenta">Cuenta</a>
+                </span>
+            </div>
+
+            <!--Menú abajo-->
+            <div class="menu-abajo">
+                <!--Estrenos-->
+                <span class="estrenos">
+                    <a href="moviesGenres.html">Estrenos</a>
+                </span>
+                <!--Películas-->
+                <span class="peliculas">
+                    <a href="moviesGenres.html">Películas</a>
+                </span>
+                <!--Series-->
+                <span class="series">
+                    <a href="seriesGenres.html">Series</a>
+                </span>
+                <!--Cuenta OCULTA EN MOBIL-->
+                <span class="cuenta-desktop">
+                    <a href=""><img src="img/img-iconos/icono-cuenta.png" alt="cuenta">Cuenta</a>
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <!--Carrusel-->
+
+    <!-- <div class="carrusel" tabindex="-1" uk-slideshow>
+
+        <ul id="holi" class="uk-slideshow-items">
+            
+        </ul>
+    
+        <a class="uk-slidenav-large uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+        <a class="uk-slidenav-large uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+    
+    </div> -->
+
+    <div class="carrusel" tabindex="-1" uk-slider>
+        <!--Por qué tuve que poner un id y no pude usar el class en el querySelector-->
+        <ul id="holi" class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m">
+            
+        </ul>
+    
+        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+    
+    </div>
+
+    <div class="misListas">
+        <h3>Mis listas</h3>
+    </div>
+
+    <div class="mejoresCalificadas"> 
+
+        <div class="peliculas">
+            <h2>Películas</h2>
+            <div class="uk-child-width-1-2@m" uk-grid>
+                <div>
+                    <div class="uk-card uk-card-default">
+                        <div class="uk-card-media-top">
+                            <img src="img/img-peliculas/accion-mazerunner.png" alt="">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">Calificación</h3>
+                            <p>3.2/5</p>
+                        </div>
+                    </div>
+                </div>
+            <div>
+        </div>
+
+        <div class="series"> <!--Por qué ubica series dentro de películas?-->
+            <h2>Series</h2>
+            <div class="uk-child-width-1-2@m" uk-grid>
+                <div>
+                    <div class="uk-card uk-card-default">
+                        <div class="uk-card-media-top">
+                            <img src="img/img-peliculas/accion-mazerunner.png" alt="">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">Calificación</h3>
+                            <p>3.2/5</p>
+                        </div>
+                    </div>
+                </div>
+            <div>
+        </div>
+
+    </div>
+
+    <!--
     <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
         <div class="uk-slider-container">
             <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m">
@@ -90,7 +199,7 @@
         </div>
         
     
-    </div> 
+    </div>-->
    
     
     

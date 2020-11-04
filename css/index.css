@@ -356,6 +356,55 @@ div.banner img {
     width: 100%;
 }
 
+/* CARRUSEL */
+
+div.carrusel {
+    padding: 15px;
+}
+
+div.carrusel ul#holi {
+    gap: 25px;
+}
+/* preguntar como modificar librerias tienen class largos, como modif las flechitas */
+div.carrusel ul#holi a.uk-slidenav {
+    color: white;
+}
+
+div.misListas {
+    border: solid 3px white;
+    width: 1320px;
+    height: 500px;
+    justify-content: center;
+}
+
+div.misListas h3 {
+    font-family: Helvetica;
+    color: white;
+    font-size: 30px;
+}
+
+div.mejoresCalificadas {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    width: 1325px;
+    gap: 20px;
+}
+
+div.mejoresCalificadas div.peliculas {
+    width: 300px;
+}
+
+
+div.mejoresCalificadas div.peliculas h2 {
+    justify-content: center;
+}
+
+div.mejoresCalificadas div.series {
+    width: 300px;
+}
+
+
 /* LISTAS */
     /* Título "Mis listas" */
     div.misListas h2.tituloMisListas {
