@@ -63,7 +63,7 @@ nav.header_nav div.listado a {
     font-family: Bebas Neue;
     color: #e7442e;
     text-decoration: none;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 span.cuenta-desktop {
@@ -134,8 +134,8 @@ article.footer-arriba {
 div.piedepagina {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    padding: 30px 0px 10px 0px;
+    justify-content: space-between;
+    padding: 30px 20px 0px 30px;
 }
 
 div.piedepagina a {
@@ -156,7 +156,7 @@ div.redes {
 }
 
 img.red {
-    width: 25px;
+    width: 20px;
 }
 
 div.logos {
@@ -167,7 +167,7 @@ div.logos {
 }
 
 div.logos img {
-    width: 35px;
+    width: 26px;
 }
 
 div.volver-inicio {
@@ -182,14 +182,14 @@ div.volver-inicio a img {
     justify-content: center;
     align-items: center;
     width: 25px;
-    height: 20x;
+    height: 20px;
 }
 
 
 div.autores {
     display: flex;
     justify-content: center;
-    padding: 10px 0px 30px 0px;
+    padding: 0px 0px 30px 0px;
 }
 
 div.autores a {
@@ -200,6 +200,16 @@ div.autores a {
     font-family: Helvetica;
     text-decoration: none;
     font-weight: bold;
+}
+
+hr.linea {
+    color: grey;
+    border-color: grey;
+    margin: 0%;
+}
+
+li.agregarImagen img {
+    height: 300px;
 }
 
 
@@ -337,7 +347,7 @@ div.autores a {
     div.piedepagina {
         display: flex;
         flex-direction: row;
-        padding: 40px 0px 20px 0px;
+        padding: 40px 0px 0px 0px;
         justify-content: space-around;
     }
 
@@ -364,5 +374,23 @@ div.autores a {
         justify-content: flex-start;
         gap: 70px;
     }
+
+    li.agregarImagen img {
+    height: 400px;
+    }
+
+    div.logos img {
+    width: 36px;
+    }
+
+    img.red {
+    width: 30px;
+    }
+
+    div.volver-inicio a img {
+    width: 35px;
+    height: 30px;
+    }
+
 
 }
