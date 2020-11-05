@@ -1,6 +1,5 @@
 body{
     background-color: black;
-    margin: 0px;
 }
 
 header {
@@ -106,8 +105,10 @@ h2.titulo{
     font-weight: bold;
     text-align: center;
     font-size: 25px;
-    padding: 25px 0px 0px 10px;
+    padding: 40px 0px 20px 0px;
     font-family: Helvetica;
+    justify-content: center;
+    margin: 0px;
 }
 
 h3{
@@ -115,12 +116,14 @@ h3{
     text-align: left;
     font-size: 18px;
     font-family: Helvetica;
-    margin-bottom: 0px;
-    padding-left: 15px;
+    margin: 0px;
+    padding: 15px 0px 10px 10px;
+
 }
 
-h3.titulo-originales {
-    padding-left: 5px;
+a#flechita {
+    color: white;
+    font-weight: bold;
 }
 
 /* FOOTER*/
@@ -189,7 +192,7 @@ div.volver-inicio a img {
 div.autores {
     display: flex;
     justify-content: center;
-    padding: 0px 0px 30px 0px;
+    padding: 0px 0px 20px 0px;
 }
 
 div.autores a {
@@ -207,11 +210,6 @@ hr.linea {
     border-color: grey;
     margin: 0%;
 }
-
-li.agregarImagen img {
-    height: 300px;
-}
-
 
 
 
@@ -373,10 +371,6 @@ li.agregarImagen img {
         align-items: center;
         justify-content: flex-start;
         gap: 70px;
-    }
-
-    li.agregarImagen img {
-    height: 400px;
     }
 
     div.logos img {

@@ -55,15 +55,16 @@
 
     <h2 class="titulo">Series</h2>
 
+    <!--MAS POPULARES - CARRUSEL-->
     <article>
-        <h3 class="titulo-originales">Originales de CinemaWeb</h3>
-        <div class="listas-originales">
-            <a href="serieDetail.html"><img class="portada-original" src="img/img-originales-cinemaweb/originales-eldespertar.png" alt="El despertar"></a>
-            <a href="serieDetail.html"><img class="portada-original" src="img/img-originales-cinemaweb/originales-lajugadamaestra.png" alt="La jugada maestra"></a>
-            <a href="serieDetail.html"><img class="portada-original" src="img/img-originales-cinemaweb/originales-maestrosdelaprogramacion.png" alt="Maestros de la programación"></a>
-            <a href="serieDetail.html"><img class="portada-original" src="img/img-originales-cinemaweb/originales-masalladelatranquera.png" alt="Más allá de la tranquera"></a>
-            <a id="oculto" href="serieDetail.html"><img class="portada-original" src="img/img-originales-cinemaweb/originales-otonoenparis.png" alt="Otoño en Paris"></a>
-            <a id="oculto" href="serieDetail.html"><img class="portada-original" src="img/img-originales-cinemaweb/originales-rapunzel.png" alt="Rapunzel"></a>
+        <h3>Más populares</h3>
+    
+        <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="center: true">
+    
+            <ul id="series-popular" class="uk-slider-items uk-grid"></ul>
+    
+            <a id="flechita" class="uk-position-center-left uk-position-small uk-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+            <a id="flechita" class="uk-position-center-right uk-position-small uk-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
         </div>
     </article>
 
