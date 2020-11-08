@@ -6,31 +6,25 @@ window.onload = function(){
         })
         .then(function(data) {
             console.log(data);
-            //consultar como hacer para que te aparezca un objeto del array por cada lista
-            //(y no todos los objetos dentro de una lista)
-            // for (let index = 0; index < 10; index++) {
-            //     const element = data.results[index].poster_path;
-            //     var li = document.querySelector(".agregarImagen");
-            //    li.innerHTML += `<img src="https://image.tmdb.org/t/p/original${element}">`
-                
-            // }
 
             for (let index = 0; index < 10; index++) {
-                const element = data.results[index].poster_path;
+                const element = data.results[index].backdrop_path;
+                var titulo = data.results[index].title;
                    var ul = document.querySelector("#holi");
                    ul.innerHTML += `
                        <li class="agregarImagen">
                            <img src="https://image.tmdb.org/t/p/original${element}">
-                           <div class="uk-position-center uk-panel"></div>
+                           <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+                                <h3 id="fondobanner" class="uk-margin-remove">${titulo}</h3>
+                            </div>
                        </li>
                        `
             }
+
 
         })        
         .catch(function(error) {
             console.log(`El error fue: ${error}`);
         }) 
-
-
 
 }
