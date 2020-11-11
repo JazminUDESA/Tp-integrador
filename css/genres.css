@@ -1,8 +1,8 @@
 body{
     background-color: black;
-    margin: 0px;
 }
 
+/*HEADER*/
 header {
     display: flex;
     width: 100%;
@@ -15,6 +15,7 @@ header {
     justify-content: center;
 }
 
+/*Menú*/
 nav.header_nav {
     display: flex;
     flex-direction: column;
@@ -42,8 +43,8 @@ div.iconos a {
     gap: 5px;
 }
 
-/*BARRA BUSCADORA*/
 
+/*BARRA BUSCADORA*/
 form.uk-search.uk-search-default {
     width: 130px;
 }
@@ -106,8 +107,10 @@ h2.titulo{
     font-weight: bold;
     text-align: center;
     font-size: 25px;
-    padding: 25px 0px 0px 10px;
+    padding: 40px 0px 20px 0px;
     font-family: Helvetica;
+    justify-content: center;
+    margin: 0px;
 }
 
 h3{
@@ -115,13 +118,15 @@ h3{
     text-align: left;
     font-size: 18px;
     font-family: Helvetica;
-    margin-bottom: 0px;
-    padding-left: 15px;
+    margin: 0px;
+    padding: 15px 0px 10px 10px;
 }
 
-h3.titulo-originales {
-    padding-left: 5px;
+a#flechita {
+    color: white;
+    font-weight: bold;
 }
+
 
 /* FOOTER*/
 article.footer-arriba {
@@ -133,9 +138,9 @@ article.footer-arriba {
 
 div.piedepagina {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
-    padding: 30px 0px 10px 0px;
+    padding: 30px 20px 0px 30px;
 }
 
 div.piedepagina a {
@@ -167,7 +172,7 @@ div.logos {
 }
 
 div.logos img {
-    width: 35px;
+    width: 26px;
 }
 
 div.volver-inicio {
@@ -202,11 +207,17 @@ div.autores a {
     font-weight: bold;
 }
 
+hr.linea {
+    color: grey;
+    border-color: grey;
+    margin: 0%;
+}
 
-
+/*----------------------------------------------------------------------------*/
 
 /*Desktop*/
 @media only screen and (min-width:1024px){
+    /*HEADER*/
     header.header {
         width: 100%;
         flex-wrap: wrap;
@@ -260,6 +271,16 @@ div.autores a {
     
     div.iconos span.cuenta {
         display: none;
+    }
+
+    /* CARRUSEL */
+
+    div.carrusel {
+        padding: 15px;
+    }
+
+    div.carrusel ul#holi {
+        gap: 25px;
     }
 
     div.listado {
@@ -337,7 +358,7 @@ div.autores a {
     div.piedepagina {
         display: flex;
         flex-direction: row;
-        padding: 40px 0px 20px 0px;
+        padding: 40px 0px 0px 0px;
         justify-content: space-around;
     }
 
@@ -363,6 +384,19 @@ div.autores a {
         align-items: center;
         justify-content: flex-start;
         gap: 70px;
+    }
+
+    div.logos img {
+    width: 36px;
+    }
+
+    img.red {
+    width: 30px;
+    }
+
+    div.volver-inicio a img {
+    width: 35px;
+    height: 30px;
     }
 
 }

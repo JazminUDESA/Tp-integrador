@@ -1,56 +1,33 @@
 window.onload = function () {
 
     var apiKey = "c3dcc0e9ef8f3864ee4f5ed844d151f8"
-
-    //CARRUSEL PELICULAS MAS POPULARES
-    fetch('https://api.themoviedb.org/3/movie/popular?api_key=c3dcc0e9ef8f3864ee4f5ed844d151f8')
+    
+    //FETCH DEL CARRUSEL (MÁS VISTAS)
+    fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`)
         .then(function (response) {
             return response.json();
         })
         .then(function (data) {
             console.log(data);
 
-            for (let index = 0; index < data.results.length; index++) {
+            for (let index = 0; index < 10; index++) {
                 const element = data.results[index].backdrop_path;
-
-                var ul = document.querySelector("#peliculas-popular");
-
+                var titulo = data.results[index].title;
+                var ul = document.querySelector("#holi");
                 ul.innerHTML += `
-                <li class="uk-panel">
-                    <img src="https://image.tmdb.org/t/p/w500${element}">
-                    <div class="uk-position-center uk-panel"></div>
-                </li>`
+                       <li class="agregarImagen">
+                           <img src="https://image.tmdb.org/t/p/original${element}">
+                           <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+                                <h3 id="fondobanner" class="uk-margin-remove">${titulo}</h3>
+                            </div>
+                       </li>
+                       `
             }
+
+
         })
         .catch(function (error) {
-            console.error(error);
-        });
-    
-
-    //CARRUSEL SERIES MAS POPULARES
-    fetch('https://api.themoviedb.org/3/tv/popular?api_key=c3dcc0e9ef8f3864ee4f5ed844d151f8&language=en-US&page=1')
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (data) {
-            console.log(data);
-
-            for (let index = 0; index < data.results.length; index++) {
-                const element = data.results[index].backdrop_path;
-
-                var ul = document.querySelector("#series-popular");
-
-                ul.innerHTML += `
-                <li class="uk-panel">
-                    <img src="https://image.tmdb.org/t/p/w500${element}">
-                    <div class="uk-position-center uk-panel"></div>
-                </li>`
-            }
-        })
-        .catch(function (error) {
-            console.error(error);
-        });
-
-    
+            console.log(`El error fue: ${error}`);
+        }) 
 
 }

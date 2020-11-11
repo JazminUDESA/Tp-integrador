@@ -13,8 +13,8 @@
 
     <header class="header">
         <a name="ancla" class="logo" href="index.html"><img src="img/logo-transparente-cinemaweb.png" alt="logo"></a>
-        
-        <nav class="header_nav">          
+    
+        <nav class="header_nav">
             <div class="iconos">
                 <span class="inicio">
                     <a href="index.html"><img class="icono" src="img/img-iconos/icono-inicio.png" alt=""> Inicio</a>
@@ -22,14 +22,14 @@
                 <span class="buscar">
                     <img class="icono" src="img/img-iconos/icono-buscar.png" alt="">
                     <form class="uk-search uk-search-default" style="height: 20px;">
-                        <input class="uk-search-input" type="search" placeholder="" style="height: 24px;">
+                        <input class="uk-search-input" type="search" placeholder="Buscar..." style="height: 24px;">
                     </form>
                 </span>
                 <span class="cuenta">
                     <a href=""><img class="icono" src="img/img-iconos/icono-cuenta.png" alt="">Cuenta</a>
                 </span>
             </div>
-
+    
             <div class="listado">
                 <span class="estrenos">
                     <a href="moviesGenres.html">Estrenos</a>
@@ -46,171 +46,228 @@
             </div>
         </nav>
     </header>
-
+    
     <h2 class="titulo">Películas</h2>
-
+    
+    
+    <!--MAS POPULARES - CARRUSEL-->
     <article>
-        <h3 class="titulo-originales">Originales de CinemaWeb</h3>
-        <div class="listas-originales">
-            <a href="movieDetail.html"><img class="portada-original" src="img/img-originales-cinemaweb/original_100citas1.png" alt="100 citas"></a>
-            <a href="movieDetail.html"><img class="portada-original" src="img/img-originales-cinemaweb/original_elnegocio2.png" alt="El negocio"></a>
-            <a href="movieDetail.html"><img class="portada-original" src="img/img-originales-cinemaweb/original_atraccion5.png" alt="Atracción"></a>
-            <a href="movieDetail.html"><img class="portada-original" src="img/img-originales-cinemaweb/original_caosperfecto6.png" alt="Caos Perfecto"></a>
-            <a id="oculto" href="movieDetail.html"><img class="portada-original" src="img/img-originales-cinemaweb/original_elanatomista3.png" alt="El Anatomista"></a>
-            <a id="oculto" href="movieDetail.html"><img class="portada-original" src="img/img-originales-cinemaweb/original_conamoryo4.png" alt="Con amor, yo"></a>
+        <h3>Más populares</h3>
+    
+        <div class="carrusel" tabindex="-1" uk-slideshow="ratio: 7:3; animation: push">
+        
+            <ul id="holi" class="uk-slideshow-items"></ul>
+        
+            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+        
         </div>
     </article>
+
+
     
     <article>
         <h3>Acción</h3>
         <div class="listas">
-            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/accion-avengersendgame.png" alt="Avengers End Game"></a>
+            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/accion-avengersendgame.png"
+                    alt="Avengers End Game"></a>
             <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/accion-batman.png" alt="Batman"></a>
-            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/accion-losangelesdecharlie.png" alt="Los Angeles de Charlie"></a>
+            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/accion-losangelesdecharlie.png"
+                    alt="Los Angeles de Charlie"></a>
             <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/accion-johnwick.png" alt="John Wick"></a>
-            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/accion-mazerunner.png" alt="Maze Runner"></a>
-            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/accion-tombraider.png" alt="Tomb Raider"></a>
+            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/accion-mazerunner.png"
+                    alt="Maze Runner"></a>
+            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/accion-tombraider.png"
+                    alt="Tomb Raider"></a>
         </div>
     </article>
-
+    
     <article>
         <h3>Argentinas</h3>
         <div class="listas">
-            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/argentinas-acusada.png" alt="Acusada"></a>
-            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/argentinas-elrobodelsiglo.png" alt="El Robo del Siglo"></a>
-            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/argentinas-relatossalvajes.png" alt="Relatos Salvajes"></a>
-            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/argentinas-elangel.png" alt="El Angel"></a>
-            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/argentinas-miobramaestra.png" alt="Mi Obra Maestra"></a>
-            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/argentinas-elciudadanoilustre.png" alt="El ciudadano ilustre"></a>
+            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/argentinas-acusada.png"
+                    alt="Acusada"></a>
+            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/argentinas-elrobodelsiglo.png"
+                    alt="El Robo del Siglo"></a>
+            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/argentinas-relatossalvajes.png"
+                    alt="Relatos Salvajes"></a>
+            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/argentinas-elangel.png"
+                    alt="El Angel"></a>
+            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/argentinas-miobramaestra.png"
+                    alt="Mi Obra Maestra"></a>
+            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/argentinas-elciudadanoilustre.png"
+                    alt="El ciudadano ilustre"></a>
         </div>
     </article>
-
+    
     <article>
         <h3>Ciencia Ficción</h3>
         <div class="listas">
-            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/cienciaficcion-laquintaola.png" alt="La Quinta Ola"></a>
-            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/cienciaficcion-quelepasoalunes.png" alt="Que le pasó a Lunes"></a>
-            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/cienciaficcion-interestelar.png" alt="Interestelar"></a>
-            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/cienciaficcion-elpreciodelmañana.png" alt="El precio del mañana"></a>
-            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/cienciaficcion-lallegada.png" alt="La llegada"></a>
-            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/cienciaficcion-misionrescate.png" alt="Misión Rescate"></a>
+            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/cienciaficcion-laquintaola.png"
+                    alt="La Quinta Ola"></a>
+            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/cienciaficcion-quelepasoalunes.png"
+                    alt="Que le pasó a Lunes"></a>
+            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/cienciaficcion-interestelar.png"
+                    alt="Interestelar"></a>
+            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/cienciaficcion-elpreciodelmañana.png"
+                    alt="El precio del mañana"></a>
+            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/cienciaficcion-lallegada.png"
+                    alt="La llegada"></a>
+            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/cienciaficcion-misionrescate.png"
+                    alt="Misión Rescate"></a>
         </div>
     </article>
     
-   <article>
-       <h3>Comedias</h3>
-       <div class="listas">
-            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/comedias-chicaspesadas.png" alt="Chicas Pesadas"></a>
-            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/comedias-maestrasdelengaño.png" alt="Maestras del Engaño"></a>
-            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/comedias-dondeestanlasrubias.png" alt="Donde están las rubias"></a>
-            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/comedias-habiaunavezenhollywood.png" alt="Había una vez en Hollywood"></a>
+    <article>
+        <h3>Comedias</h3>
+        <div class="listas">
+            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/comedias-chicaspesadas.png"
+                    alt="Chicas Pesadas"></a>
+            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/comedias-maestrasdelengaño.png"
+                    alt="Maestras del Engaño"></a>
+            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/comedias-dondeestanlasrubias.png"
+                    alt="Donde están las rubias"></a>
+            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/comedias-habiaunavezenhollywood.png"
+                    alt="Había una vez en Hollywood"></a>
             <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/comedias-jumanji.png" alt="Jumanji"></a>
-            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/comedias-ritmoperfecto.png" alt="Ritmo Perfecto"></a>
-       </div>
-   </article>
-
-   <article>
-       <h3>Documentales</h3>
-       <div class="listas">
-            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/documentales-nosoytunegro.png" alt="No soy tu negro"></a>
-            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/documentales-whatthehealth.png" alt="What the health"></a>
-            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/documentales-elactodematar.png" alt="El acto de matar"></a>
-            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/documentales-enmiendaxiii.png" alt="Enmienda xiii"></a>
-            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/documentales-cowspiracy.png" alt="Cowspiracy"></a>
-            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/documentales-amy.png" alt="Amy"></a>
-       </div>
-   </article>
+            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/comedias-ritmoperfecto.png"
+                    alt="Ritmo Perfecto"></a>
+        </div>
+    </article>
     
-   <article>
-       <h3>Dramas</h3>
-       <div class="listas">
-            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/dramas-aladeriva.png" alt="A la Deriva"></a>
-            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/dramas-extraordinario.png" alt="Extraordinario"></a>
+    <article>
+        <h3>Documentales</h3>
+        <div class="listas">
+            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/documentales-nosoytunegro.png"
+                    alt="No soy tu negro"></a>
+            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/documentales-whatthehealth.png"
+                    alt="What the health"></a>
+            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/documentales-elactodematar.png"
+                    alt="El acto de matar"></a>
+            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/documentales-enmiendaxiii.png"
+                    alt="Enmienda xiii"></a>
+            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/documentales-cowspiracy.png"
+                    alt="Cowspiracy"></a>
+            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/documentales-amy.png" alt="Amy"></a>
+        </div>
+    </article>
+    
+    <article>
+        <h3>Dramas</h3>
+        <div class="listas">
+            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/dramas-aladeriva.png"
+                    alt="A la Deriva"></a>
+            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/dramas-extraordinario.png"
+                    alt="Extraordinario"></a>
             <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/dramas-joker.png" alt="Joker"></a>
-            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/dramas-lashorasmasoscuras.png" alt="Las Horas más Oscuras"></a>
+            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/dramas-lashorasmasoscuras.png"
+                    alt="Las Horas más Oscuras"></a>
             <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/dramas-origenes.png" alt="Orígenes"></a>
-            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/dramas-sidecidoquedarme.png" alt="Si decido quedarme"></a>
-       </div>
-   </article>
-
-   <article>
-       <h3>Familiares</h3>
-       <div class="listas">
-            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/familiares-toystory4.png" alt="Toy Story 4"></a>
-            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/familiares-juegodegemelas.png" alt="Juego de Gemelas"></a>
+            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/dramas-sidecidoquedarme.png"
+                    alt="Si decido quedarme"></a>
+        </div>
+    </article>
+    
+    <article>
+        <h3>Familiares</h3>
+        <div class="listas">
+            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/familiares-toystory4.png"
+                    alt="Toy Story 4"></a>
+            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/familiares-juegodegemelas.png"
+                    alt="Juego de Gemelas"></a>
             <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/familiares-coco.png" alt="Coco"></a>
             <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/familiares-up.png" alt="Up"></a>
-            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/familiares-siempreatulado.png" alt="Siempre a tu lado"></a>
-            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/familiares-ratatouille.png" alt="Ratatouille"></a>
-       </div>
-   </article>
- 
-   <article>
-       <h3>Romance</h3>
-       <div class="listas">
-            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/romance-adosmetrosdeti.png" alt="A dos Metros de Ti"></a>
+            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/familiares-siempreatulado.png"
+                    alt="Siempre a tu lado"></a>
+            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/familiares-ratatouille.png"
+                    alt="Ratatouille"></a>
+        </div>
+    </article>
+    
+    <article>
+        <h3>Romance</h3>
+        <div class="listas">
+            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/romance-adosmetrosdeti.png"
+                    alt="A dos Metros de Ti"></a>
             <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/romance-cadadia.png" alt="Cada Día"></a>
-            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/romance-llamameportunombre.png" alt="Llámame por tu nombre"></a>
-            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/romance-elsoltambienesunaestrella.png" alt="El sol también es una estrella"></a>
-            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/romance-loverosie.png" alt="Love, Rosie"></a>
-            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/romance-yoantesdeti.png" alt="Yo antes de ti"></a>
-       </div>
-   </article>
-
-   <article>
-       <h3>Terror</h3>
-       <div class="listas">
-            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/terror-annabelle.png" alt="Annabelle"></a>
-            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/terror-lahoradetumuerte.png" alt="La hora de tu muerte"></a>
+            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/romance-llamameportunombre.png"
+                    alt="Llámame por tu nombre"></a>
+            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/romance-elsoltambienesunaestrella.png"
+                    alt="El sol también es una estrella"></a>
+            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/romance-loverosie.png"
+                    alt="Love, Rosie"></a>
+            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/romance-yoantesdeti.png"
+                    alt="Yo antes de ti"></a>
+        </div>
+    </article>
+    
+    <article>
+        <h3>Terror</h3>
+        <div class="listas">
+            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/terror-annabelle.png"
+                    alt="Annabelle"></a>
+            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/terror-lahoradetumuerte.png"
+                    alt="La hora de tu muerte"></a>
             <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/terror-madre.png" alt="Madre"></a>
             <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/terror-elfaro.png" alt="El faro"></a>
-            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/terror-unlugarensilencio.png" alt="Un lugar en silencio"></a>
-            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/terror-bodasangrienta.png" alt="Boda sangrienta"></a>
-       </div>
-   </article>
-
-   <article>
-       <h3>Thrillers</h3>
-       <div class="listas">
-            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/thrillers-fractura.png" alt="Fractura"></a>
-            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/thrillers-huye.png" alt="Huye"></a>
-            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/thrillers-parasitos.png" alt="Parásitos"></a>
-            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/thrillers-escapeimposible.png" alt="Escape Imposible"></a>
-            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/thrillers-elhombreinvisible.png" alt="El hombre invisible"></a>
-            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/thrillers-contratiempo.png" alt="Contratiempo"></a>
-       </div>
-   </article>
-
-   <footer class="footer">
-       <div class="piedepagina">
-            <a href="">Términos y Condiciones</a>
-            <a href="">Contacto</a>
-            <a href="">Copyright</a>
+            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/terror-unlugarensilencio.png"
+                    alt="Un lugar en silencio"></a>
+            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/terror-bodasangrienta.png"
+                    alt="Boda sangrienta"></a>
         </div>
-
-        <article class="footer-arriba"> 
+    </article>
+    
+    <article>
+        <h3>Thrillers</h3>
+        <div class="listas">
+            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/thrillers-fractura.png"
+                    alt="Fractura"></a>
+            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/thrillers-huye.png" alt="Huye"></a>
+            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/thrillers-parasitos.png"
+                    alt="Parásitos"></a>
+            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/thrillers-escapeimposible.png"
+                    alt="Escape Imposible"></a>
+            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/thrillers-elhombreinvisible.png"
+                    alt="El hombre invisible"></a>
+            <a href="movieDetail.html"><img class="portada" src="img/img-peliculas/thrillers-contratiempo.png"
+                    alt="Contratiempo"></a>
+        </div>
+    </article>
+    
+    <footer class="footer">
+        <div class="piedepagina">
+            <ul class="uk-breadcrumb">
+                <li><a href="">Términos y Condiciones</a></li>
+                <li><a href="">Contacto</a></li>
+                <li><a href="">Copyright</a></li>
+            </ul>
+        </div>
+        <div class="autores">
+            <a href="">© María Paula Herrera</a>
+            <a href="">© Catalina Soncini Viola</a>
+            <a href="">© Jazmín Suárez</a>
+        </div>
+    
+        <hr class="linea">
+    
+        <article class="footer-arriba">
             <div class="logos">
                 <img src="img/logo-transparente-cuadrado-cinemaweb.png" alt="logo CinemaWeb">
                 <img src="img/logo-tmdb.png" alt="">
             </div>
-
+    
             <div class="volver-inicio">
                 <a href="#ancla"><img src="img/Flecha-arriba.png" alt=""></a>
             </div>
-            
-             <div class="redes">
-                 <img class="red" src="img/iconos prog rojo-06.png" alt="Instagram">
-                 <img class="red" src="img/iconos prog rojo-07.png" alt="Facebook">
-                 <img class="red" src="img/iconos prog rojo-05.png" alt="Twitter">
-             </div>
+    
+            <div class="redes">
+                <img class="red" src="img/iconos prog rojo-06.png" alt="Instagram">
+                <img class="red" src="img/iconos prog rojo-07.png" alt="Facebook">
+                <img class="red" src="img/iconos prog rojo-05.png" alt="Twitter">
+            </div>
         </article>
- 
-        <div class="autores">
-             <a href="">© María Paula Herrera</a>
-             <a href="">© Catalina Soncini Viola</a>
-             <a href="">© Jazmín Suárez</a>
-        </div>
     </footer>
+
 
 </body>
 </html>
