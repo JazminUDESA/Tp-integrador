@@ -10,44 +10,42 @@
 <body>
     <!-- HEADER -->
     <header>
-        <a name="ancla" class="logo" href="index.html"><img src="img/logo-transparente-cinemaweb.png" alt="logo"></a>
-        <!-- Menú -->
-        <div class="menu">
-            <!-- Menú arriba -->
-            <div class="menu-arriba">
-                <span class="inicio">
-                    <a href="index.html"><img src="img/img-iconos/icono-inicio.png" alt="inicio"> Inicio</a>
-                </span>
-                <!-- Buscar -->
-                <span class="buscar">
-                    <a href=""><img src="img/img-iconos/icono-buscar.png" alt="buscar">Buscar</a>
-                    <div class="barra-buscadora"></div>
-                </span>
-                <!-- Cuenta OCULTA EN DESKTOP -->
-                <span class="cuenta">
-                    <a href=""><img src="img/img-iconos/icono-cuenta.png" alt="cuenta">Cuenta</a>
-                </span>
-            </div>
-
-            <!-- Menú abajo -->
-            <div class="menu-abajo">
-                <!-- Estrenos -->
-                <span class="estrenos">
-                    <a href="moviesGenres.html">Estrenos</a>
-                </span>
-                <!-- Películas -->
-                <span class="peliculas">
-                    <a href="moviesGenres.html">Películas</a>
-                </span>
-                <!-- Series -->
-                <span class="series">
-                    <a href="seriesGenres.html">Series</a>
-                </span>
-                <!-- Cuenta OCULTA EN MOBILE-->
-                <span class="cuenta-desktop">
-                    <a href=""><img src="img/img-iconos/icono-cuenta.png" alt="cuenta">Cuenta</a>
-                </span>
-            </div>
+        <div id="logo"><a href="index.html"><img src="img/logo-transparente-cinemaweb.png" alt="cinemaweb"></a></div>
+        <div id="buscar">
+            <a href="">
+                <img src="img/img-iconos/icono-buscar.png" alt="buscar">
+                <span>Buscar</span>
+            </a>
+            <form class="uk-search uk-search-default" style="height: 20px;">
+                <input class="uk-search-input" type="search" placeholder="Buscar..." style="height: 28px;">
+            </form>
+        </div>
+        <div id="inicio">
+            <a href="index.html">
+                <img src="img/img-iconos/icono-inicio.png" alt="ir a inicio">
+                Inicio
+            </a>
+        </div>
+        <div id="estrenos">
+            <a href="">
+                Estrenos
+            </a>
+        </div>
+        <div id="peliculas">
+            <a href="moviesGenres.html">
+                Películas
+            </a>
+        </div>
+        <div id="series">
+            <a href="seriesGenres.html">
+                Series
+            </a>
+        </div>
+        <div id="cuenta">
+            <a href="">
+                <img src="img/img-iconos/icono-cuenta.png" alt="ir a cuenta">
+                Cuenta
+            </a>
         </div>
     </header>
     
