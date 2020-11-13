@@ -7,6 +7,12 @@
     <title>Películas</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/css/uikit.min.css">
     <link rel="stylesheet" href="css/genres.css">
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit-icons.min.js"></script>
+    <script src="Javascript/atajos.js"></script>
+    <script src="Javascript/genres.js"></script>
 </head>
 
 <body>
@@ -56,16 +62,16 @@
     
         <div class="carrusel" tabindex="-1" uk-slideshow="ratio: 7:3; animation: push">
         
-            <ul id="holi" class="uk-slideshow-items"></ul>
+            <ul id="peliculas-populares" class="uk-slideshow-items"></ul>
         
-            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
-            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+            <a id="flechita" class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+            <a id="flechita" class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
         
         </div>
     </article>
 
 
-    
+
     <article>
         <h3>Acción</h3>
         <div class="listas">

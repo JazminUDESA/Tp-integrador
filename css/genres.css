@@ -279,8 +279,13 @@ hr.linea {
         padding: 15px;
     }
 
-    div.carrusel ul#holi {
+    div.carrusel ul#peliculas-populares {
         gap: 25px;
+    }
+
+    a#flechita {
+    color: white;
+    font-weight: bold;
     }
 
     div.listado {
