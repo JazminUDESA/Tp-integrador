@@ -45,7 +45,7 @@ window.onload = function(){
                 var div = document.querySelector(".califPelis");
                 div.innerHTML += `
                 <a href="">
-                        <img src="${element}" alt="peliculas mejor calificadas">
+                        <img src="https://image.tmdb.org/t/p/original${element}" alt="peliculas mejor calificadas">
                         <h4>${titulo}</h4>
                         <h5>Calificación: ${calificacion}</h5>
                     </a>
@@ -72,7 +72,7 @@ window.onload = function(){
                 var div = document.querySelector(".califSeries");
                 div.innerHTML += `
                 <a href="">
-                        <img src="${element}" alt="series mejor calificadas">
+                        <img src="https://image.tmdb.org/t/p/original${element}" alt="series mejor calificadas">
                         <h4>${titulo}</h4>
                         <h5>Calificación: ${calificacion}</h5>
                     </a>

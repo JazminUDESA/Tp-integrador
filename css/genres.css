@@ -150,13 +150,29 @@ h3{
     font-size: 18px;
     font-family: Helvetica;
     margin: 0px;
-    padding: 15px 0px 10px 10px;
+    padding: 25px 0px 10px 10px;
 }
 
+/*CARRUSEL*/
 a#flechita {
     color: white;
     font-weight: bold;
 }
+
+#titulo-banner{
+    color: red;
+    font-size: 20px;
+    text-align: left;
+    margin: 0px;
+    font-weight: 400;
+} 
+
+#titulo-pelicula {
+    text-align: left;
+    font-weight: bold;
+    font-size: 23px;
+}
+
 
 
 /* FOOTER*/
@@ -313,19 +329,22 @@ hr.linea {
     }
 
 
-    /* CARRUSEL */
 
-    div.carrusel {
-        padding: 15px;
+    /*CARRUSEL MÁS POPULARES*/
+
+    #titulos {
+        margin-top: 65px;
     }
+    #titulo-banner{
+        color: red;
+        font-size: 22px;
+        text-align: left;
+        margin: 0px;
+    } 
 
-    div.carrusel ul#peliculas-populares {
-        gap: 25px;
-    }
-
-    a#flechita {
-    color: white;
-    font-weight: bold;
+    #titulo-pelicula {
+        text-align: left;
+        font-weight: bold;
     }
 
     div.listado {

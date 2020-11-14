@@ -4,8 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Series</title>
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/css/uikit.min.css">
     <link rel="stylesheet" href="css/genres.css">
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit-icons.min.js"></script>
+    <script src="Javascript/atajos.js"></script>
+    <script src="Javascript/genres.js"></script>
 </head>
 
 <body>
@@ -52,17 +59,25 @@
 
     <h2 class="titulo">Series</h2>
 
+    <!--MAS POPULARES - CARRUSEL-->
     <article>
-        <h3 class="titulo-originales">Originales de CinemaWeb</h3>
-        <div class="listas-originales">
-            <a href="serieDetail.html"><img class="portada-original" src="img/img-originales-cinemaweb/originales-eldespertar.png" alt="El despertar"></a>
-            <a href="serieDetail.html"><img class="portada-original" src="img/img-originales-cinemaweb/originales-lajugadamaestra.png" alt="La jugada maestra"></a>
-            <a href="serieDetail.html"><img class="portada-original" src="img/img-originales-cinemaweb/originales-maestrosdelaprogramacion.png" alt="Maestros de la programación"></a>
-            <a href="serieDetail.html"><img class="portada-original" src="img/img-originales-cinemaweb/originales-masalladelatranquera.png" alt="Más allá de la tranquera"></a>
-            <a id="oculto" href="serieDetail.html"><img class="portada-original" src="img/img-originales-cinemaweb/originales-otonoenparis.png" alt="Otoño en Paris"></a>
-            <a id="oculto" href="serieDetail.html"><img class="portada-original" src="img/img-originales-cinemaweb/originales-rapunzel.png" alt="Rapunzel"></a>
+        <h3>Más populares</h3>
+    
+        <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1"
+            uk-slideshow="ratio: 10:3; animation: push">
+    
+            <ul id="seriesPopulares" class="uk-slideshow-items">
+    
+            </ul>
+    
+            <a id="flechita" class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous
+                uk-slideshow-item="previous"></a>
+            <a id="flechita" class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next
+                uk-slideshow-item="next"></a>
         </div>
     </article>
+
+    
 
     <article>
         <h3>Acción</h3>
