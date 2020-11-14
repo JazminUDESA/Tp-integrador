@@ -47,10 +47,17 @@ window.onload = function () {
                 
                 var ul = document.querySelector("#pelisAccion");
                 ul.innerHTML += `
-                    <li>
-                        <img src="https://image.tmdb.org/t/p/original${element}">
-                    </li>
+                                <li>
+                                    <img src="https://image.tmdb.org/t/p/original${element}">
+                                </li>    
                 `
+                        /*<div class="uk-animation-toggle" tabindex = "0" >
+                            <div class="uk-card uk-animation-scale-up">
+                                <li>
+                                    <img src="https://image.tmdb.org/t/p/original${element}">
+                                </li>    
+                            </div>
+                        </div>*/
             }
 
 
