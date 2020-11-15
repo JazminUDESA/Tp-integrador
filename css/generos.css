@@ -63,7 +63,7 @@ body{
     #peliculas a, #series a, #estrenos a {
         font-family: Bebas Neue;
         color: red;
-        font-size: 2rem;
+        font-size: 26px;
     }
 
     /* Iconos menú */
@@ -137,8 +137,8 @@ h2.titulo{
     color: red;
     font-weight: bold;
     text-align: center;
-    font-size: 25px;
-    padding: 40px 0px 20px 0px;
+    font-size: 22px;
+    padding: 35px 0px 20px 0px;
     font-family: Helvetica;
     justify-content: center;
     margin: 0px;
@@ -150,7 +150,7 @@ h3{
     font-size: 18px;
     font-family: Helvetica;
     margin: 0px;
-    padding: 25px 0px 10px 10px;
+    padding: 35px 0px 10px 10px;
 }
 
 /*CARRUSEL*/
@@ -187,7 +187,7 @@ div.piedepagina {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    padding: 30px 20px 0px 30px;
+    padding: 55px 20px 0px 30px;
 }
 
 div.piedepagina a {
@@ -260,6 +260,7 @@ hr.linea {
     margin: 0%;
 }
 
+
 /* DESKTOP ----------------------------------------------------- */
 @media only screen and (min-width: 1024px) {
 /* HEADER */
@@ -328,7 +329,9 @@ hr.linea {
         padding-right: 2vw;
     }
 
-
+    h2.titulo{
+    font-size: 24px;
+    }
 
     /*CARRUSEL MÁS POPULARES*/
 
@@ -422,7 +425,7 @@ hr.linea {
     div.piedepagina {
         display: flex;
         flex-direction: row;
-        padding: 40px 0px 0px 0px;
+        padding: 50px 0px 0px 0px;
         justify-content: space-around;
     }
 
