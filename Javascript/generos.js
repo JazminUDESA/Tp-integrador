@@ -48,7 +48,7 @@ window.onload = function () {
                 var ul = document.querySelector("#pelisAccion");
                 ul.innerHTML += `
                                 <li>
-                                    <img class="uk-animation-slide-top-small" src="https://image.tmdb.org/t/p/original${element}">
+                                    <a href="detalles.html"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                                 </li>    
                 `
                         /*<div class="uk-animation-toggle" tabindex = "0" >
@@ -80,7 +80,7 @@ window.onload = function () {
                 var ul = document.querySelector("#pelisAventura");
                 ul.innerHTML += `
                     <li>
-                        <img src="https://image.tmdb.org/t/p/original${element}">
+                        <a href="detalles.html"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                     </li>
                 `
             }
@@ -105,7 +105,7 @@ window.onload = function () {
                 var ul = document.querySelector("#pelisCs");
                 ul.innerHTML += `
                     <li>
-                        <img src="https://image.tmdb.org/t/p/original${element}">
+                        <a href="detalles.html"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                     </li>
                 `
             }
@@ -130,7 +130,7 @@ window.onload = function () {
                 var ul = document.querySelector("#pelisComedia");
                 ul.innerHTML += `
                     <li>
-                        <img src="https://image.tmdb.org/t/p/original${element}">
+                        <a href="detalles.html"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                     </li>
                 `
             }
@@ -155,7 +155,7 @@ window.onload = function () {
                 var ul = document.querySelector("#pelisDocu");
                 ul.innerHTML += `
                     <li>
-                        <img src="https://image.tmdb.org/t/p/original${element}">
+                        <a href="detalles.html"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                     </li>
                 `
             }
@@ -181,7 +181,7 @@ window.onload = function () {
                 var ul = document.querySelector("#pelisDrama");
                 ul.innerHTML += `
                     <li>
-                        <img src="https://image.tmdb.org/t/p/original${element}">
+                        <a href="detalles.html"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                     </li>
                 `
             }
@@ -206,7 +206,7 @@ window.onload = function () {
                 var ul = document.querySelector("#pelisFam");
                 ul.innerHTML += `
                     <li>
-                        <img src="https://image.tmdb.org/t/p/original${element}">
+                        <a href="detalles.html"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                     </li>
                 `
             }
@@ -231,7 +231,7 @@ window.onload = function () {
                 var ul = document.querySelector("#pelisRomance");
                 ul.innerHTML += `
                     <li>
-                        <img src="https://image.tmdb.org/t/p/original${element}">
+                        <a href="detalles.html"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                     </li>
                 `
             }
@@ -256,7 +256,7 @@ window.onload = function () {
                 var ul = document.querySelector("#pelisTerror");
                 ul.innerHTML += `
                     <li>
-                        <img src="https://image.tmdb.org/t/p/original${element}">
+                        <a href="detalles.html"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                     </li>
                 `
             }
@@ -281,7 +281,7 @@ window.onload = function () {
                 var ul = document.querySelector("#pelisThrillers");
                 ul.innerHTML += `
                     <li>
-                        <img src="https://image.tmdb.org/t/p/original${element}">
+                        <a href="detalles.html"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                     </li>
                 `
             }
@@ -340,7 +340,7 @@ window.onload = function () {
                 var ul = document.querySelector("#seriesAccion");
                 ul.innerHTML += `
                                 <li>
-                                    <img src="https://image.tmdb.org/t/p/w500${element}">
+                                    <a href="detalles.html"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                                 </li>    
                 `
             }
@@ -365,7 +365,7 @@ window.onload = function () {
                 var ul = document.querySelector("#seriesCs");
                 ul.innerHTML += `
                     <li>
-                        <img src="https://image.tmdb.org/t/p/original${element}">
+                        <a href="detalles.html"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                     </li>
                 `
             }
@@ -390,7 +390,7 @@ window.onload = function () {
                 var ul = document.querySelector("#seriesComedia");
                 ul.innerHTML += `
                     <li>
-                        <img src="https://image.tmdb.org/t/p/original${element}">
+                        <a href="detalles.html"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                     </li>
                 `
             }
@@ -415,7 +415,7 @@ window.onload = function () {
                 var ul = document.querySelector("#seriesCrimen");
                 ul.innerHTML += `
                     <li>
-                        <img src="https://image.tmdb.org/t/p/original${element}">
+                        <a href="detalles.html"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                     </li>
                 `
             }
@@ -440,7 +440,7 @@ window.onload = function () {
                 var ul = document.querySelector("#seriesDocu");
                 ul.innerHTML += `
                     <li>
-                        <img src="https://image.tmdb.org/t/p/original${element}">
+                        <a href="detalles.html"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                     </li>
                 `
             }
@@ -466,7 +466,7 @@ window.onload = function () {
                 var ul = document.querySelector("#seriesDrama");
                 ul.innerHTML += `
                     <li>
-                        <img src="https://image.tmdb.org/t/p/original${element}">
+                        <a href="detalles.html"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                     </li>
                 `
             }
@@ -491,7 +491,7 @@ window.onload = function () {
                 var ul = document.querySelector("#seriesFam");
                 ul.innerHTML += `
                     <li>
-                        <img src="https://image.tmdb.org/t/p/original${element}">
+                        <a href="detalles.html"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                     </li>
                 `
             }
@@ -516,7 +516,7 @@ window.onload = function () {
                 var ul = document.querySelector("#seriesMisterio");
                 ul.innerHTML += `
                     <li>
-                        <img src="https://image.tmdb.org/t/p/original${element}">
+                        <a href="detalles.html"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                     </li>
                 `
             }
@@ -541,7 +541,7 @@ window.onload = function () {
                 var ul = document.querySelector("#seriesReality");
                 ul.innerHTML += `
                     <li>
-                        <img src="https://image.tmdb.org/t/p/original${element}">
+                        <a href="detalles.html"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                     </li>
                 `
             }
@@ -566,7 +566,7 @@ window.onload = function () {
                 var ul = document.querySelector("#seriesTelenovela");
                 ul.innerHTML += `
                     <li>
-                        <img src="https://image.tmdb.org/t/p/original${element}">
+                        <a href="detalles.html"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                     </li>
                 `
             }
