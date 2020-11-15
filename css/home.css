@@ -2,92 +2,35 @@ body{
     background-color: black;
 }
 
-/* HEADER */
-    header {
-        display: grid;
-        width: 100%;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 7px;
-        grid-template-areas:
-            "logo logo logo"
-            "inicio buscar cuenta"
-            "estrenos peliculas series";
-        padding-bottom: 5px 0px;
-        box-sizing: border-box;
-        background-color: #1d1d1d;
-    }
+
+
     
-    #logo a img {
-        width: 100%;
+/* BANNER*/
+    /* Opacidad del banner */
+    .bannerImg img {
+        opacity: 35%;
     }
-    
-    /* Establecer area grid */
-    #logo {
-        grid-area: logo;
-        background-color: #0f0f0f;
-    }
-    #inicio {
-        grid-area: inicio;
-    }
-    #buscar {
-        grid-area: buscar;
-    }
-    #cuenta {
-        grid-area: cuenta;
-    }
-    #peliculas {
-        grid-area: peliculas;
-        padding-left: 6vw;
-    } 
-    #series {
-        grid-area: series;
-        padding-left: 2vw;
-    }
-    #estrenos {
-        grid-area: estrenos;
-        padding-left: 5vw;
-    }
-    
-    /* Texto hipervínculos */
-    #logo a, #inicio a, #buscar a, #cuenta a, #peliculas a, #series a, #estrenos a {
+    /* Flechitas */
+    a#flechita {
         color: white;
-        text-decoration: none;
-        display: flex;
-        flex-flow: wrap;
-        align-items: center;
-        justify-content: center;
-        font-family: Helvetica;
-        font-size: 1.2rem;
-        padding: 0px 5px 0px 5px;  
+        font-weight: bold;
     }
-    #peliculas a, #series a, #estrenos a {
-        font-family: Bebas Neue;
-        color: red;
-        font-size: 2rem;
+    /* Títulos */
+    div#titulosBanner {
+        padding-top: 20%;
     }
-
-    /* Iconos menú */
-    header div img {
-        width: 30px;
-        padding: 5px 5px 5px 0px;
+    #titulo-banner{
+        color: #e7442e;
+        font-size: 1rem;
+        text-align: left;
+        margin: 0px;
+        font-weight: bold;
+    } 
+    #titulo-pelicula {
+        text-align: left;
+        font-weight: bold;
+        font-size: 1.5rem;
     }
-    header div#buscar img {
-        padding-top: 7px;
-    }
-
-    #peliculas, #series, #estrenos {
-        padding-bottom: 8px;
-    }
-    /* Ocultar barra buscadora */
-    header div#buscar .uk-search-default {
-        display: none;
-    }
-
-    
-/* BANNER (no mostrar en mobile) */
-div.banner img {
-    display: none;
-}
 
 /* LISTAS (no mostrar en mobile) */
 div.misListas {
@@ -227,11 +170,8 @@ div.misListas {
             align-items: center;
             padding: 30px 0px 20px 0px;
         }
-            /* Tamaño iconos redes */   
-            footer div.redes img {
-                width: 25px;
-            }
     
+        /* Volver a arriba */
             div.volver-inicio {
                 display: flex;
                 justify-content: center;
@@ -267,81 +207,77 @@ div.misListas {
 
 /* DESKTOP ----------------------------------------------------- */
 @media only screen and (min-width: 1024px) {
+
 /* HEADER */
     header {
-        display: flex;
+        position: fixed;
+        width: 100%;
+    }
+    header ul{
+        display: grid;
+        width: 100%;
+        height: 80px;
+        grid-template-columns: 15% 5% 6% 4.5% 3.5% 55% 6%;
+        grid-gap: 7px;
+        grid-template-areas: "logo inicio pelis series favs buscar cuenta";
+        box-sizing: border-box;
+        background-color: rgba(0, 0, 0, 0.4);
+        margin: 0px;
+        padding: 0% 2%;
         align-items: center;
-        justify-content: space-between;
-        padding: 0px;
-        background-color: transparent;
+        
     }
 
-    #logo {
-        width: 20%;
-        background-color: transparent;
-    }
-    #logo a {
-        padding: 0px;
-    }
-    #logo a img {
-        padding: 0px;
+    header ul li {
+        display: flex;
+        justify-content: flex-end;
     }
 
-    /* Texto hipervínculos */
-    #logo a, #inicio a, #buscar a, #cuenta a, #peliculas a, #series a, #estrenos a {
-        color: white;
+    header ul li a {
         font-family: Helvetica;
-        font-size: 1rem;
-
-    }
-    /* Iconos menú */
-    header div img {
-        width: 25px;
-        padding: 5px 0px 5px 0px;
-        margin-right: 5px;
+        font-weight: lighter;
+        color: white;
+        text-decoration: none;
     }
 
-    /* Mostrar barra buscadora */
-    header div#buscar .uk-search-default {
-        display: flex;
-        width: 11rem;
+    /* Asignación área */
+    #logo {
+        grid-area: logo;
     }
-    header div#buscar .uk-search-input {
-        border: 0.5px solid rgba(255, 255, 255, 0.76);
+    #inicio {
+        grid-area: inicio;
     }
-    
+    #peliculas {
+        grid-area: pelis;
+    }
+    #series {
+        grid-area: series;
+    }
+    #favs {
+        grid-area: favs;
+        color: white;
+    }
     #buscar {
-        width: 23vw;
-        display: flex;
-        justify-content: center;
-        padding-left: 1vw;
+        grid-area: buscar;
+        color: white;
     }
-    
-    #buscar a span {
-        display: none;
-    }
-    
-    #peliculas, #series, #estrenos {
-        padding-bottom: 0px;
-        padding-left: 0px;
-    }
-    #estrenos {
-        padding-left: 5.5vw;
-    }
-
     #cuenta {
-        padding-right: 2vw;
+        grid-area: cuenta;
+        color: white;
     }
 
  
 /* BANNER */
-div.banner {
-    width: 100%;
-}
-div.banner img {
-    display: flex;
-    width: 100%;
-}
+    /* Títulos Banner */
+    div#titulosBanner {
+        padding-top: 26%;
+    }
+        #titulo-banner{
+            font-size: 2rem;
+        } 
+        #titulo-pelicula {
+            font-size: 3rem;
+        }
 
 /* CARRUSEL */
 
@@ -487,7 +423,7 @@ div.misListas h3 {
         padding: 40px 0px 30px 0px;
     }
     
-    div.volver-inicio a img {
+    div.volver-inicio a {
         width: 30px;
         height: 25x;
     }

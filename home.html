@@ -18,47 +18,44 @@
 
     <!-- HEADER -->
     <header>
-        <div id="logo"><a href="index.html"><img src="img/logo-transparente-cinemaweb.png" alt="cinemaweb"></a></div>
-        <div id="buscar">
-            <a href="">
-                <img src="img/img-iconos/icono-buscar.png" alt="buscar">
-                <span>Buscar</span>
-            </a>
-            <form class="uk-search uk-search-default" style="height: 20px;">
-                <input class="uk-search-input" type="search" placeholder="Buscar..." style="height: 28px;">
-            </form>
-        </div>
-        <div id="inicio">
-            <a href="index.html">
-                <img src="img/img-iconos/icono-inicio.png" alt="ir a inicio">
-                Inicio
-            </a>
-        </div>
-        <div id="estrenos">
-            <a href="">
-                Estrenos
-            </a>
-        </div>
-        <div id="peliculas">
-            <a href="moviesGenres.html">
-                Películas
-            </a>
-        </div>
-        <div id="series">
-            <a href="seriesGenres.html">
-                Series
-            </a>
-        </div>
-        <div id="cuenta">
-            <a href="">
-                <img src="img/img-iconos/icono-cuenta.png" alt="ir a cuenta">
-                Cuenta
-            </a>
-        </div>
+        <ul>
+            <li id="logo">
+                <a href="home.html"><img src="img/logo-transparente-cinemaweb.png" alt="ir a inicio"></a>
+            </li>
+            <li id="inicio">
+                <a href="home.html">Inicio</a>
+            </li>
+            <li id="peliculas">
+                <a href="generos.html">Películas</a>
+            </li>
+            <li id="series">
+                <a href="generos.html">Series</a>
+            </li>
+            <li id="favs">
+                <a href="favoritos.html" uk-icon="heart"></a>
+            </li>
+            <li id="buscar">
+                <a href="" uk-icon="search"></a>
+            </li>
+            <li id="cuenta">
+                <a href="" uk-icon="user"></a>
+            </li>
+        </ul>
     </header>
 
-    <!--Carrusel-->
-
+    <!-- BANNER -->
+    <article name="ancla">
+        <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="ratio: 8:3" ; animation:
+            push>
+            <ul id="pelisPopularesBanner" class="uk-slideshow-items">
+    
+            </ul>
+            <a id="flechita" class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous
+                uk-slideshow-item="previous"></a>
+            <a id="flechita" class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next
+                uk-slideshow-item="next"></a>
+        </div>
+    </article>
     
 
     
@@ -112,12 +109,12 @@
                 <a href="">Copyright</a>
             </div>
             <div class="volver-inicio">
-                <a href="#ancla"><img src="img/Flecha-arriba.png" alt=""></a>
+                <a href="#ancla" uk-icon="chevron-up"></a>
             </div>
             <div class="redes">
-                <img src="img/iconos prog rojo-06.png" alt="">
-                <img src="img/iconos prog rojo-07.png" alt="">
-                <img src="img/iconos prog rojo-05.png" alt="">
+                <a href="#ancla" uk-icon="instagram"></a>
+                <a href="#ancla" uk-icon="twitter"></a>
+                <a href="#ancla" uk-icon="facebook"></a>
             </div>
         </div>
         <div class="nombres-alumnas">
