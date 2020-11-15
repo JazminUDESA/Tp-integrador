@@ -4,9 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Favoritos</title>
-    <link rel="stylesheet" href="css/favoritos.css">
-</head>
-<body>
     
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/css/uikit.min.css">
+    <link rel="stylesheet" href="css/favoritos.css"> <!-- CSS local -->
+    
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit-icons.min.js"></script>
+    <script src="Javascript/favoritos.js"></script> <!-- JS local -->
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <div id="logo"><a href="index.html"><img src="img/logo-transparente-cinemaweb.png" alt="cinemaweb"></a></div>
+        <div id="buscar">
+            <a href="">
+                <img src="img/img-iconos/icono-buscar.png" alt="buscar">
+                <span>Buscar</span>
+            </a>
+            <form class="uk-search uk-search-default" style="height: 20px;">
+                <input class="uk-search-input" type="search" placeholder="Buscar..." style="height: 28px;">
+            </form>
+        </div>
+        <div id="inicio">
+            <a href="index.html"><img src="img/img-iconos/icono-inicio.png" alt="ir a inicio">Inicio</a>
+        </div>
+    
+        <div id="estrenos">
+            <a href="">Estrenos</a>
+        </div>
+    
+        <div id="peliculas">
+            <a href="moviesGenres.html">Películas</a>
+        </div>
+    
+        <div id="series">
+            <a href="seriesGenres.html">Series</a>
+        </div>
+    
+        <div id="cuenta">
+            <a href=""><img src="img/img-iconos/icono-cuenta.png" alt="ir a cuenta">Cuenta</a>
+        </div>
+    </header>
+
+    <!--FOOTER-->
+    <footer class="footer">
+        <div class="piedepagina">
+            <ul class="uk-breadcrumb">
+                <li><a href="">Términos y Condiciones</a></li>
+                <li><a href="">Contacto</a></li>
+                <li><a href="">Copyright</a></li>
+            </ul>
+        </div>
+        <div class="autores">
+            <a href="">© María Paula Herrera</a>
+            <a href="">© Catalina Soncini Viola</a>
+            <a href="">© Jazmín Suárez</a>
+        </div>
+    
+        <hr class="linea">
+    
+        <article class="footer-arriba">
+            <div class="logos">
+                <img src="img/logo-transparente-cuadrado-cinemaweb.png" alt="logo CinemaWeb">
+                <img src="img/logo-tmdb.png" alt="">
+            </div>
+    
+            <div class="volver-inicio">
+                <a href="#ancla"><img src="img/Flecha-arriba.png" alt=""></a>
+            </div>
+    
+            <div class="redes">
+                <img class="red" src="img/iconos prog rojo-06.png" alt="Instagram">
+                <img class="red" src="img/iconos prog rojo-07.png" alt="Facebook">
+                <img class="red" src="img/iconos prog rojo-05.png" alt="Twitter">
+            </div>
+        </article>
+    </footer>
 </body>
 </html>

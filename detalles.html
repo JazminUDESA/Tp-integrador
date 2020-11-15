@@ -5,10 +5,142 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalles</title>
     <link rel="stylesheet" href="css/detalles.css">
+    <script src="Javascript/detalles.js"></script>
+    
+    <!--uikit css-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/css/uikit.min.css" />
 
-    <script src="js/detalles.js"></script>
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit-icons.min.js"></script>
+
 </head>
 <body>
+    <!-- HEADER -->
+    <header class="header">
+        <div id="logo"><a href="index.html"><img src="img/logo-transparente-cinemaweb.png" alt="cinemaweb"></a></div>
+        <div id="buscar">
+            <a href="">
+                <img src="img/img-iconos/icono-buscar.png" alt="buscar">
+                <span>Buscar</span>
+            </a>
+            <form class="uk-search uk-search-default" style="height: 20px;">
+                <input class="uk-search-input" type="search" placeholder="Buscar..." style="height: 28px;">
+            </form>
+        </div>
+        <div id="inicio">
+            <a href="index.html">
+                <img src="img/img-iconos/icono-inicio.png" alt="ir a inicio">
+                Inicio
+            </a>
+        </div>
+        <div id="estrenos">
+            <a href="">
+                Estrenos
+            </a>
+        </div>
+        <div id="peliculas">
+            <a href="moviesGenres.html">
+                Películas
+            </a>
+        </div>
+        <div id="series">
+            <a href="seriesGenres.html">
+                Series
+            </a>
+        </div>
+        <div id="cuenta">
+            <a href="">
+                <img src="img/img-iconos/icono-cuenta.png" alt="ir a cuenta">
+                Cuenta
+            </a>
+        </div>
+    </header>
+
+    <!-- DETALLE PELÍCULA/SERIE-->
+    <!-- acerca de la peli/serie -->
+    <section class="detalleInfo">
+        <img src="img/img-peliculas/accion-batman.png" alt="">
+        <div class="info">
+            <h2>Batman</h2>
+            <h5>Accion</h5>
+            <ul id="pri" class="uk-subnav uk-subnav-divider" uk-margin> 
+                <li>8/10</li>
+                <li>2h 5min</li>
+                <li>2008</li>
+            </ul>
+            <ul class="seg">
+                <li type="none">Director: Christopher Nolan</li>
+                <li type="none">Actores: Christian Bale, Katie Holmes, Tu Vieja</li>
+            </ul>
+            <p>Un millonario busca venganza luego de la muerte de sus padres</p>
+        </div>
+        <div class="trailer">
+            <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/NLOp_6uPccQ" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen></iframe> -->
+        </div>
+
+        <!-- reviews -->
+        <div class="reviews">
+            <h2>Reviews</h2>
+            <article id="reseña" class="uk-comment uk-comment-primary">
+                <header id="paraReview" class="uk-comment-header">
+                    <div class="uk-grid-medium uk-flex-middle" uk-grid>
+                        <div class="uk-width-expand">
+                            <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">Author</a></h4>
+                        </div>
+                    </div>
+                </header>
+                <div class="uk-comment-body">
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- DETALLE GÉNERO -->
+    <section class="detalleGenero">
+        <h2>Acción</h2>
+        <div class="genero">
+            <img src="" alt="">
+        </div>
+    </section>
     
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="piedepagina">
+            <ul class="uk-breadcrumb">
+                <li><a href="">Términos y Condiciones</a></li>
+                <li><a href="">Contacto</a></li>
+                <li><a href="">Copyright</a></li>
+            </ul>
+        </div>
+        <div class="autores">
+            <a href="">© María Paula Herrera</a>
+            <a href="">© Catalina Soncini Viola</a>
+            <a href="">© Jazmín Suárez</a>
+        </div>
+    
+        <hr class="linea">
+    
+        <article class="footer-arriba">
+            <div class="logos">
+                <img src="img/logo-transparente-cuadrado-cinemaweb.png" alt="logo CinemaWeb">
+                <img src="img/logo-tmdb.png" alt="">
+            </div>
+    
+            <div class="volver-inicio">
+                <a href="#ancla"><img src="img/Flecha-arriba.png" alt=""></a>
+            </div>
+    
+            <div class="redes">
+                <img class="red" src="img/iconos prog rojo-06.png" alt="Instagram">
+                <img class="red" src="img/iconos prog rojo-07.png" alt="Facebook">
+                <img class="red" src="img/iconos prog rojo-05.png" alt="Twitter">
+            </div>
+        </article>
+    </footer>
+
 </body>
 </html>
