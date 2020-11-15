@@ -294,7 +294,7 @@ window.onload = function () {
 
 
 
-    
+//-----------------------------------------------------------------------------------------------------------    
 
     //FETCH DEL CARRUSEL (MÁS POPULARES - SERIES)
     fetch(`https://api.themoviedb.org/3/tv/popular?api_key=${apiKey}`)
@@ -324,5 +324,258 @@ window.onload = function () {
         .catch(function (error) {
             console.log(`El error fue: ${error}`);
         })
+
+
+    //FETCH PARA SERIES ACCION Y AVENTURAS
+    fetch(`https://api.themoviedb.org/3/discover/tv?api_key=c3dcc0e9ef8f3864ee4f5ed844d151f8&with_genres=10759&language=en`)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data);
+
+            for (let index = 0; index < 15; index++) {
+                const element = data.results[index].poster_path;
+
+                var ul = document.querySelector("#seriesAccion");
+                ul.innerHTML += `
+                                <li>
+                                    <img src="https://image.tmdb.org/t/p/w500${element}">
+                                </li>    
+                `
+            }
+
+
+        })
+        .catch(function (error) {
+            console.log(`El error fue: ${error}`);
+        })
+
+    //FETCH PARA SERIES CS FICCION
+    fetch(`https://api.themoviedb.org/3/discover/tv?api_key=c3dcc0e9ef8f3864ee4f5ed844d151f8&with_genres=10765&language=en`)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data);
+
+            for (let index = 0; index < 15; index++) {
+                const element = data.results[index].poster_path;
+
+                var ul = document.querySelector("#seriesCs");
+                ul.innerHTML += `
+                    <li>
+                        <img src="https://image.tmdb.org/t/p/original${element}">
+                    </li>
+                `
+            }
+
+
+        })
+        .catch(function (error) {
+            console.log(`El error fue: ${error}`);
+        })
+
+    //FETCH PARA SERIES COMEDIA
+    fetch(`https://api.themoviedb.org/3/discover/tv?api_key=c3dcc0e9ef8f3864ee4f5ed844d151f8&with_genres=35&language=en`)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data);
+
+            for (let index = 0; index < 15; index++) {
+                const element = data.results[index].poster_path;
+
+                var ul = document.querySelector("#seriesComedia");
+                ul.innerHTML += `
+                    <li>
+                        <img src="https://image.tmdb.org/t/p/original${element}">
+                    </li>
+                `
+            }
+
+
+        })
+        .catch(function (error) {
+            console.log(`El error fue: ${error}`);
+        })
+
+    //FETCH PARA SERIES CRIMEN
+    fetch(`https://api.themoviedb.org/3/discover/tv?api_key=c3dcc0e9ef8f3864ee4f5ed844d151f8&with_genres=80&language=en`)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data);
+
+            for (let index = 0; index < 15; index++) {
+                const element = data.results[index].poster_path;
+
+                var ul = document.querySelector("#seriesCrimen");
+                ul.innerHTML += `
+                    <li>
+                        <img src="https://image.tmdb.org/t/p/original${element}">
+                    </li>
+                `
+            }
+
+
+        })
+        .catch(function (error) {
+            console.log(`El error fue: ${error}`);
+        })
+
+    //FETCH PARA SERIES DOCUMENTALES
+    fetch(`https://api.themoviedb.org/3/discover/tv?api_key=c3dcc0e9ef8f3864ee4f5ed844d151f8&with_genres=99&language=en`)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data);
+
+            for (let index = 0; index < 15; index++) {
+                const element = data.results[index].poster_path;
+
+                var ul = document.querySelector("#seriesDocu");
+                ul.innerHTML += `
+                    <li>
+                        <img src="https://image.tmdb.org/t/p/original${element}">
+                    </li>
+                `
+            }
+
+
+        })
+        .catch(function (error) {
+            console.log(`El error fue: ${error}`);
+        })
+
+
+    //FETCH PARA SERIES DRAMA
+    fetch(`https://api.themoviedb.org/3/discover/tv?api_key=c3dcc0e9ef8f3864ee4f5ed844d151f8&with_genres=18&language=en`)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data);
+
+            for (let index = 0; index < 15; index++) {
+                const element = data.results[index].poster_path;
+
+                var ul = document.querySelector("#seriesDrama");
+                ul.innerHTML += `
+                    <li>
+                        <img src="https://image.tmdb.org/t/p/original${element}">
+                    </li>
+                `
+            }
+
+
+        })
+        .catch(function (error) {
+            console.log(`El error fue: ${error}`);
+        })
+
+    //FETCH PARA SERIES FAMILIARES
+    fetch(`https://api.themoviedb.org/3/discover/tv?api_key=c3dcc0e9ef8f3864ee4f5ed844d151f8&with_genres=10751&language=en`)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data);
+
+            for (let index = 0; index < 15; index++) {
+                const element = data.results[index].poster_path;
+
+                var ul = document.querySelector("#seriesFam");
+                ul.innerHTML += `
+                    <li>
+                        <img src="https://image.tmdb.org/t/p/original${element}">
+                    </li>
+                `
+            }
+
+
+        })
+        .catch(function (error) {
+            console.log(`El error fue: ${error}`);
+        })
+
+    //FETCH PARA SERIES MISTERIO
+    fetch(`https://api.themoviedb.org/3/discover/tv?api_key=c3dcc0e9ef8f3864ee4f5ed844d151f8&with_genres=9648&language=en`)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data);
+
+            for (let index = 0; index < 15; index++) {
+                const element = data.results[index].poster_path;
+
+                var ul = document.querySelector("#seriesMisterio");
+                ul.innerHTML += `
+                    <li>
+                        <img src="https://image.tmdb.org/t/p/original${element}">
+                    </li>
+                `
+            }
+
+
+        })
+        .catch(function (error) {
+            console.log(`El error fue: ${error}`);
+        })
+
+    //FETCH PARA SERIES REALITY TV Y ENTREVISTAS
+    fetch(`https://api.themoviedb.org/3/discover/tv?api_key=c3dcc0e9ef8f3864ee4f5ed844d151f8&with_genres=10767&language=en`)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data);
+
+            for (let index = 0; index < 15; index++) {
+                const element = data.results[index].poster_path;
+
+                var ul = document.querySelector("#seriesReality");
+                ul.innerHTML += `
+                    <li>
+                        <img src="https://image.tmdb.org/t/p/original${element}">
+                    </li>
+                `
+            }
+
+
+        })
+        .catch(function (error) {
+            console.log(`El error fue: ${error}`);
+        })
+
+    //FETCH PARA SERIES TELENOVELA
+    fetch(`https://api.themoviedb.org/3/discover/tv?api_key=c3dcc0e9ef8f3864ee4f5ed844d151f8&with_genres=10766&language=en`)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data);
+
+            for (let index = 0; index < 15; index++) {
+                const element = data.results[index].poster_path;
+
+                var ul = document.querySelector("#seriesTelenovela");
+                ul.innerHTML += `
+                    <li>
+                        <img src="https://image.tmdb.org/t/p/original${element}">
+                    </li>
+                `
+            }
+
+
+        })
+        .catch(function (error) {
+            console.log(`El error fue: ${error}`);
+        })
+
 
 }
