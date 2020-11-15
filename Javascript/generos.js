@@ -48,7 +48,7 @@ window.onload = function () {
                 var ul = document.querySelector("#pelisAccion");
                 ul.innerHTML += `
                                 <li>
-                                    <img src="https://image.tmdb.org/t/p/original${element}">
+                                    <img class="uk-animation-slide-top-small" src="https://image.tmdb.org/t/p/original${element}">
                                 </li>    
                 `
                         /*<div class="uk-animation-toggle" tabindex = "0" >
