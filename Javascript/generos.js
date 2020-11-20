@@ -44,11 +44,12 @@ window.onload = function () {
 
             for (let index = 0; index < 15; index++) {
                 const element = data.results[index].poster_path;
-                
+                var elId = data.results[index].id;
+
                 var ul = document.querySelector("#pelisAccion");
                 ul.innerHTML += `
                                 <li>
-                                    <a href="detalles.html"><img src="https://image.tmdb.org/t/p/original${element}"></a>
+                                    <a href="detalles.html?movies=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                                 </li>    
                 `
                         /*<div class="uk-animation-toggle" tabindex = "0" >
@@ -76,11 +77,12 @@ window.onload = function () {
 
             for (let index = 0; index < 15; index++) {
                 const element = data.results[index].poster_path;
-
+                var elId = data.results[index].id;
+                
                 var ul = document.querySelector("#pelisAventura");
                 ul.innerHTML += `
                     <li>
-                        <a href="detalles.html"><img src="https://image.tmdb.org/t/p/original${element}"></a>
+                        <a href="detalles.html?movies=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                     </li>
                 `
             }
@@ -101,11 +103,12 @@ window.onload = function () {
 
             for (let index = 0; index < 15; index++) {
                 const element = data.results[index].poster_path;
+                var elId = data.results[index].id;
 
                 var ul = document.querySelector("#pelisCs");
                 ul.innerHTML += `
                     <li>
-                        <a href="detalles.html"><img src="https://image.tmdb.org/t/p/original${element}"></a>
+                        <a href="detalles.html?movies=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                     </li>
                 `
             }
@@ -126,11 +129,12 @@ window.onload = function () {
 
             for (let index = 0; index < 15; index++) {
                 const element = data.results[index].poster_path;
+                var elId = data.results[index].id;
 
                 var ul = document.querySelector("#pelisComedia");
                 ul.innerHTML += `
                     <li>
-                        <a href="detalles.html"><img src="https://image.tmdb.org/t/p/original${element}"></a>
+                        <a href="detalles.html?movies=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                     </li>
                 `
             }
@@ -141,7 +145,7 @@ window.onload = function () {
             console.log(`El error fue: ${error}`);
         })
 
-    //FETCH PARA PELIS COMEDIA
+    //FETCH PARA PELIS DOCUMENTALES
     fetch(`https://api.themoviedb.org/3/discover/movie?api_key=c3dcc0e9ef8f3864ee4f5ed844d151f8&with_genres=99&language=en`)
         .then(function (response) {
             return response.json();
@@ -151,11 +155,12 @@ window.onload = function () {
 
             for (let index = 0; index < 15; index++) {
                 const element = data.results[index].poster_path;
+                var elId = data.results[index].id;
 
                 var ul = document.querySelector("#pelisDocu");
                 ul.innerHTML += `
                     <li>
-                        <a href="detalles.html"><img src="https://image.tmdb.org/t/p/original${element}"></a>
+                        <a href="detalles.html?movies=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                     </li>
                 `
             }
@@ -177,11 +182,12 @@ window.onload = function () {
 
             for (let index = 0; index < 15; index++) {
                 const element = data.results[index].poster_path;
+                var elId = data.results[index].id;
 
                 var ul = document.querySelector("#pelisDrama");
                 ul.innerHTML += `
                     <li>
-                        <a href="detalles.html"><img src="https://image.tmdb.org/t/p/original${element}"></a>
+                        <a href="detalles.html?movies=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                     </li>
                 `
             }
@@ -202,11 +208,12 @@ window.onload = function () {
 
             for (let index = 0; index < 15; index++) {
                 const element = data.results[index].poster_path;
+                var elId = data.results[index].id;
 
                 var ul = document.querySelector("#pelisFam");
                 ul.innerHTML += `
                     <li>
-                        <a href="detalles.html"><img src="https://image.tmdb.org/t/p/original${element}"></a>
+                        <a href="detalles.html?movies=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                     </li>
                 `
             }
@@ -227,11 +234,12 @@ window.onload = function () {
 
             for (let index = 0; index < 15; index++) {
                 const element = data.results[index].poster_path;
+                var elId = data.results[index].id;
 
                 var ul = document.querySelector("#pelisRomance");
                 ul.innerHTML += `
                     <li>
-                        <a href="detalles.html"><img src="https://image.tmdb.org/t/p/original${element}"></a>
+                        <a href="detalles.html?movies=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                     </li>
                 `
             }
@@ -252,11 +260,12 @@ window.onload = function () {
 
             for (let index = 0; index < 15; index++) {
                 const element = data.results[index].poster_path;
+                var elId = data.results[index].id;
 
                 var ul = document.querySelector("#pelisTerror");
                 ul.innerHTML += `
                     <li>
-                        <a href="detalles.html"><img src="https://image.tmdb.org/t/p/original${element}"></a>
+                        <a href="detalles.html?movies=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                     </li>
                 `
             }
@@ -277,11 +286,12 @@ window.onload = function () {
 
             for (let index = 0; index < 15; index++) {
                 const element = data.results[index].poster_path;
+                var elId = data.results[index].id;
 
                 var ul = document.querySelector("#pelisThrillers");
                 ul.innerHTML += `
                     <li>
-                        <a href="detalles.html"><img src="https://image.tmdb.org/t/p/original${element}"></a>
+                        <a href="detalles.html?movies=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                     </li>
                 `
             }
@@ -336,11 +346,12 @@ window.onload = function () {
 
             for (let index = 0; index < 15; index++) {
                 const element = data.results[index].poster_path;
+                var elId = data.results[index].id;
 
                 var ul = document.querySelector("#seriesAccion");
                 ul.innerHTML += `
                                 <li>
-                                    <a href="detalles.html"><img src="https://image.tmdb.org/t/p/original${element}"></a>
+                                    <a href="detalles.html?series=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                                 </li>    
                 `
             }
@@ -361,11 +372,12 @@ window.onload = function () {
 
             for (let index = 0; index < 15; index++) {
                 const element = data.results[index].poster_path;
+                var elId = data.results[index].id;
 
                 var ul = document.querySelector("#seriesCs");
                 ul.innerHTML += `
                     <li>
-                        <a href="detalles.html"><img src="https://image.tmdb.org/t/p/original${element}"></a>
+                        <a href="detalles.html?series=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                     </li>
                 `
             }
@@ -386,11 +398,12 @@ window.onload = function () {
 
             for (let index = 0; index < 15; index++) {
                 const element = data.results[index].poster_path;
+                var elId = data.results[index].id;
 
                 var ul = document.querySelector("#seriesComedia");
                 ul.innerHTML += `
                     <li>
-                        <a href="detalles.html"><img src="https://image.tmdb.org/t/p/original${element}"></a>
+                        <a href="detalles.html?series=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                     </li>
                 `
             }
@@ -411,11 +424,12 @@ window.onload = function () {
 
             for (let index = 0; index < 15; index++) {
                 const element = data.results[index].poster_path;
+                var elId = data.results[index].id;
 
                 var ul = document.querySelector("#seriesCrimen");
                 ul.innerHTML += `
                     <li>
-                        <a href="detalles.html"><img src="https://image.tmdb.org/t/p/original${element}"></a>
+                        <a href="detalles.html?series=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                     </li>
                 `
             }
@@ -436,11 +450,12 @@ window.onload = function () {
 
             for (let index = 0; index < 15; index++) {
                 const element = data.results[index].poster_path;
+                var elId = data.results[index].id;
 
                 var ul = document.querySelector("#seriesDocu");
                 ul.innerHTML += `
                     <li>
-                        <a href="detalles.html"><img src="https://image.tmdb.org/t/p/original${element}"></a>
+                        <a href="detalles.html?series=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                     </li>
                 `
             }
@@ -462,11 +477,12 @@ window.onload = function () {
 
             for (let index = 0; index < 15; index++) {
                 const element = data.results[index].poster_path;
+                var elId = data.results[index].id;
 
                 var ul = document.querySelector("#seriesDrama");
                 ul.innerHTML += `
                     <li>
-                        <a href="detalles.html"><img src="https://image.tmdb.org/t/p/original${element}"></a>
+                        <a href="detalles.html?series=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                     </li>
                 `
             }
@@ -487,11 +503,12 @@ window.onload = function () {
 
             for (let index = 0; index < 15; index++) {
                 const element = data.results[index].poster_path;
+                var elId = data.results[index].id;
 
                 var ul = document.querySelector("#seriesFam");
                 ul.innerHTML += `
                     <li>
-                        <a href="detalles.html"><img src="https://image.tmdb.org/t/p/original${element}"></a>
+                        <a href="detalles.html?series=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                     </li>
                 `
             }
@@ -512,11 +529,12 @@ window.onload = function () {
 
             for (let index = 0; index < 15; index++) {
                 const element = data.results[index].poster_path;
+                var elId = data.results[index].id;
 
                 var ul = document.querySelector("#seriesMisterio");
                 ul.innerHTML += `
                     <li>
-                        <a href="detalles.html"><img src="https://image.tmdb.org/t/p/original${element}"></a>
+                        <a href="detalles.html?series=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                     </li>
                 `
             }
@@ -537,11 +555,12 @@ window.onload = function () {
 
             for (let index = 0; index < 15; index++) {
                 const element = data.results[index].poster_path;
+                var elId = data.results[index].id;
 
                 var ul = document.querySelector("#seriesReality");
                 ul.innerHTML += `
                     <li>
-                        <a href="detalles.html"><img src="https://image.tmdb.org/t/p/original${element}"></a>
+                        <a href="detalles.html?series=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                     </li>
                 `
             }
@@ -562,11 +581,12 @@ window.onload = function () {
 
             for (let index = 0; index < 15; index++) {
                 const element = data.results[index].poster_path;
+                var elId = data.results[index].id;
 
                 var ul = document.querySelector("#seriesTelenovela");
                 ul.innerHTML += `
                     <li>
-                        <a href="detalles.html"><img src="https://image.tmdb.org/t/p/original${element}"></a>
+                        <a href="detalles.html?series=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                     </li>
                 `
             }
