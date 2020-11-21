@@ -362,7 +362,7 @@ hr.linea {
         padding: 0px 0px 10px 0px;
     }
     
-    section.detalleInfo div.info h5 {
+    section.detalleInfo div.info a.idGenero {
         margin: 0%;
         font-weight: bold;
         color: red;

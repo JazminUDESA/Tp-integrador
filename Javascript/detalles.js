@@ -11,8 +11,8 @@ window.onload = function() {
     //            (HARD)Reviews de la película - (ver pregunta)
     // 
     // SERIES: Imagen de la serie +
-    //         Nombre de la serie +
-    //         Nombre del género (hipervínculo al detalle del genero) +
+    //         Nombre de la serie +Nombre del género (h
+    //         ipervínculo al detalle del genero) +
     //         Fecha de salida + (de estreno?)
 
     
@@ -48,7 +48,7 @@ window.onload = function() {
                     <img src="https://image.tmdb.org/t/p/original/${data.poster_path}" alt="">
                     <div class="info">
                         <h2>${data.title}</h2>
-                        <h5>${data.genres[0].name}</h5> 
+                        <a class="idGenero" href="detalles.html?tipo=generos&id=${data.genres[0].name}">${data.genres[0].name}</a>
                         <ul id="pri" class="uk-subnav uk-subnav-divider" uk-margin> 
                             <li>Calificación: ${data.vote_average}/10</li>
                             <li>${data.runtime} min.</li>
