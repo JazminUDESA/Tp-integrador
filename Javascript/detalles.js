@@ -30,8 +30,9 @@ window.onload = function() {
             armarContenidoSeries (id)
         }
 
+
       // D E T A L L E S      P E L Í C U L A S  
-    function armarContenidoMovies (id) {
+    function armarContenidoMovies () {
         
         //FETCH DEL DETALLE DE LA PELI
         fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}&language=en-US`) 
@@ -47,7 +48,7 @@ window.onload = function() {
                     <img src="https://image.tmdb.org/t/p/original/${data.poster_path}" alt="">
                     <div class="info">
                         <h2>${data.title}</h2>
-                        <h5>${data.genres[0].name}, ${data.genres[1].name}, ${data.genres[2].name}</h5> 
+                        <h5>${data.genres[0].name}</h5> 
                         <ul id="pri" class="uk-subnav uk-subnav-divider" uk-margin> 
                             <li>Calificación: ${data.vote_average}/10</li>
                             <li>${data.runtime} min.</li>
@@ -69,7 +70,6 @@ window.onload = function() {
             })
 
         // FETCH REVIEWS PELIS
-
         fetch(`https://api.themoviedb.org/3/movie/${id}/reviews?api_key=${apiKey}&language=en-US&page=1`)
 
             .then(function(response) {
@@ -109,7 +109,7 @@ window.onload = function() {
     }
         
         // D E T A L L E S      S E R I E S 
-    function armarContenidoSeries (id) {
+    function armarContenidoSeries () {
         
         //FETCH DEL DETALLE DE LA SERIE
         fetch(`https://api.themoviedb.org/3/tv/${id}?api_key=${apiKey}&language=en-US`) 
