@@ -11,7 +11,6 @@
     <!-- UIkit JS -->    
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit-icons.min.js"></script>
-    <script src="Javascript/atajos.js"></script>
     <script src="Javascript/generos.js"></script> <!-- JS local -->
 </head>
 
@@ -37,11 +36,11 @@
         </div>
     
         <div id="peliculas">
-            <a href="moviesGenres.html">Películas</a>
+            <a id="secPelis" href="generos.html?tipo=peliculas">Películas</a>
         </div>
     
         <div id="series">
-            <a href="seriesGenres.html">Series</a>
+            <a id="secSerie" href="generos.html?tipo=series">Series</a>
         </div>
     
         <div id="cuenta">
@@ -51,8 +50,8 @@
     
 
     <!--SECCIÓN PELICULAS-->
-    <section class="seccion-peliculas">
-        <h2 class="titulo">Películas</h2>
+    <section id="secPel">
+        <h2 class="titulo"></h2>
         
         <!--MAS POPULARES - CARRUSEL-->
         <article>
@@ -261,8 +260,8 @@
     
 
     <!--SECCIÓN SERIES-->
-    <section class="seccion-series">
-        <h2 class="titulo">Series</h2>
+    <section id="secSer">
+        <h2 class="tituloSerie"></h2>
         
         <!--MAS POPULARES - CARRUSEL-->
         <article>

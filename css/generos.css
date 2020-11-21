@@ -133,7 +133,7 @@ div.listas-originales a#oculto {
     display: none;
 }
 
-h2.titulo{
+h2.titulo,h2.tituloSerie{
     color: red;
     font-weight: bold;
     text-align: center;
@@ -329,7 +329,7 @@ hr.linea {
         padding-right: 2vw;
     }
 
-    h2.titulo{
+    h2.titulo,h2.tituloSerie{
     font-size: 24px;
     }
 
