@@ -47,8 +47,13 @@ window.onload = function() {
                     section.innerHTML += `
                     <img src="https://image.tmdb.org/t/p/original/${data.poster_path}" alt="">
                     <div class="info">
-                        <h2>${data.title}</h2>
+                        <h2>
+                            ${data.title}
+                            <div id="agregarFav" class="uk-icon-link" uk-icon="heart"></div>
+                        </h2>
                         <a class="idGenero" href="detalles.html?tipo=generos&id=${data.genres[0].name}">${data.genres[0].name}</a>
+                        
+
                         <ul id="pri" class="uk-subnav uk-subnav-divider" uk-margin> 
                             <li>Calificación: ${data.vote_average}/10</li>
                             <li>${data.runtime} min.</li>
@@ -61,6 +66,20 @@ window.onload = function() {
                         <p>${data.overview}</p>
                     </div>
                         `
+
+                // WEB STORAGE
+                var agregarAFav = document.querySelector("#agregarFav");
+
+                agregarAFav.addEventListener("click", function () {
+                    this.style.color = "red";
+
+                    window.localStorage.getItem("peliculasFav");
+                    console.log(localStorage.getItem("peliculasFav"));
+                    var arrayPelisFavoritas = [];
+                    window.localStorage.setItem("peliculaFav", JSON.stringify(arrayPelisFavoritas));
+
+                    JSON.parse(window.localStorage.getItem("peliculasFav"));
+                });
                 // chequear el genero!
                 // No puedo poner actores ni director??
                 // Problema con pelis de horror, drama y thrillers
@@ -124,9 +143,11 @@ window.onload = function() {
                 section.innerHTML += `
                 <img src="https://image.tmdb.org/t/p/original/${data.poster_path}" alt="">
                 <div class="info">
-                    <h2>${data.title}</h2>
+                    <h2>
+                        ${data.title}
+                        <div id="agregarFav" class="uk-icon-link" uk-icon="heart"></div>
+                    </h2>
                     <a class="idGenero" href="detalles.html?tipo=generos&id=${data.genres[0].name}>${data.genres[0].name}</a> 
-                    <div id="agregarFav" class="uk-icon-link" uk-icon="heart"></div>
                     <ul id="pri" class="uk-subnav uk-subnav-divider" uk-margin> 
                         <li>Calificación: ${data.vote_average}/10</li>
                         <li>${data.number_of_seasons} temporadas</li>
