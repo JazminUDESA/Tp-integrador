@@ -1,8 +1,8 @@
 window.onload = function(){
-
+    
     var apiKey = `c3dcc0e9ef8f3864ee4f5ed844d151f8`;
 
-    // BANNER carrusel estrenos
+    // Banner carrusel estrenos (https://developers.themoviedb.org/3/movies/get-now-playing)
     fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}&language=en-US`) 
         .then(function(response) {
             return response.json();
@@ -32,11 +32,6 @@ window.onload = function(){
                         </div>
                     </li>
                 `
-                // VER!!
-                // if(desktop){
-                //     var contenedorBanner = document.querySelector("#contenedorBanner");
-                //     contenedorBanner.innerHTML = `<div id="contenedorBanner" class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="animation: push; autoplay: true; ratio: 8: 3">`
-                // }
             }        
         })
         .catch(function(error) {
@@ -44,7 +39,7 @@ window.onload = function(){
         }) 
 
         
-    // Carrusel trending
+    // Carrusel trending (https://developers.themoviedb.org/3/trending/get-trending)
     fetch(`https://api.themoviedb.org/3/trending/all/week?api_key=${apiKey}`)
         .then(function (response) {
             return response.json();
@@ -55,7 +50,7 @@ window.onload = function(){
             for (let i = 0; i < data.results.length; i++) {
                 const element = data.results[i];
                 var ulTrendingMovie = document.querySelector("#trendingMovies"); 
-                var ulTrendingTV = document.querySelector("#trendingTVs");
+                var ulTrendingTV = document.querySelector("#trendingTV");
                 
                 if ( element.media_type == "movie"){
                     ulTrendingMovie.innerHTML += 
@@ -67,7 +62,7 @@ window.onload = function(){
                 } else if ( element.media_type == "tv") {
                     ulTrendingTV.innerHTML +=
                         `<li>
-                            <a href="detalles.html?type=series&id=${element.id}">
+                            <a href="detalles.html?type=tv&id=${element.id}">
                                 <img src="https://image.tmdb.org/t/p/original${element.poster_path}">
                             </a>
                         </li>`
@@ -81,13 +76,86 @@ window.onload = function(){
                 console.log(`El error fue: ${error}`);
         }) 
 
-    // Películas alabadas por la crítica
-        // fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}`)
+    // Películas alabadas por la crítica (https://developers.themoviedb.org/3/movies/get-top-rated-movies)
+    fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}`)
+        .then(function(response){
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data);
+            var contenedorCriticaMovies = document.querySelector("#criticaMovies");
+            for (let i = 0; i < data.results.length; i++) {
+                const element = data.results[i];
+                
+                contenedorCriticaMovies.innerHTML += 
+                    `<li>
+                        <a href="detalles.html?type=movie&id=${element.id}">
+                            <img src="https://image.tmdb.org/t/p/original${element.poster_path}">
+                        </a>
+                    </li>`
+            }
+        })
+    
 
-    // Series alabadas por la crítica
-        // fetch(`https://api.themoviedb.org/3/tv/top_rated?api_key=${apiKey}`)
+    // Series alabadas por la crítica (https://developers.themoviedb.org/3/tv/get-top-rated-tv)
+    fetch(`https://api.themoviedb.org/3/tv/top_rated?api_key=${apiKey}`)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data);
+            var contenedorCriticaSeries = document.querySelector("#criticaTV");
+            for (let i = 0; i < data.results.length; i++) {
+                const element = data.results[i];
 
-    // Películas recomendadas para vos
+                contenedorCriticaSeries.innerHTML +=
+                    `<li>
+                            <a href="detalles.html?type=movie&id=${element.id}">
+                                <img src="https://image.tmdb.org/t/p/original${element.poster_path}">
+                            </a>
+                        </li>`
+            }
+        })
+        
 
-    // Series recomendadas para vos
+    // Recomendación películas con ID de Avengers (https://developers.themoviedb.org/3/movies/get-movie-recommendations)
+    fetch(`https://api.themoviedb.org/3/movie/299534/recommendations?api_key=${apiKey}`)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data);
+            var recomendadasMovies = document.querySelector("#recomendadasMovies");
+            for (let i = 0; i < data.results.length; i++) {
+                const element = data.results[i];
+
+                recomendadasMovies.innerHTML +=
+                    `<li>
+                            <a href="detalles.html?type=movie&id=${element.id}">
+                                <img src="https://image.tmdb.org/t/p/original${element.poster_path}">
+                            </a>
+                        </li>`
+            }
+        })
+
+    // Recomendación series con ID de Game Of Thrones (https://developers.themoviedb.org/3/tv/get-tv-recommendations)
+    fetch(`https://api.themoviedb.org/3/tv/1399/recommendations?api_key=${apiKey}`)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data);
+            var recomendadasTV = document.querySelector("#recomendadasTV");
+            for (let i = 0; i < data.results.length; i++) {
+                const element = data.results[i];
+
+                recomendadasTV.innerHTML +=
+                    `<li>
+                            <a href="detalles.html?type=movie&id=${element.id}">
+                                <img src="https://image.tmdb.org/t/p/original${element.poster_path}">
+                            </a>
+                        </li>`
+            }
+        })
+
 }

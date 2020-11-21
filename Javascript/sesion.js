@@ -1,13 +1,18 @@
-window.onload = function () {
-
-    var video = document.querySelector("#video");
+window.onload = function(){
+    
+    var submit = document.querySelector("#submit");
     var form = document.querySelector("form");
-    form.addEventListener("submit", function () {
-        video.innerHTML += `<source src="video/introVideoCW.mp4" type="video/mp4">
-                            <source src="video/introVideoCW.ogg" type="video/ogg">`
-        form.style.display = "none";
-    });
-    video.onended = function (){
-        window.location.replace("home.html");
-    };
+    var logo = document.querySelector("#logoCWSesion");
+    var video = document.querySelector("#video");
+    
+    video.style.display = "none";
+        submit.addEventListener("click", function () {
+            form.style.display = "none";
+            logo.style.display = "none";
+            video.style.display = "block";
+            video.onended = function () {
+                window.location.href = "home.html";
+            };
+        });
+        
 }

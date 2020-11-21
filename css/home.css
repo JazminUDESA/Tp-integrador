@@ -1,6 +1,93 @@
 body{
     background-color: black;
+    margin: 0px;
 }
+/* Inicio de sesión */
+    #bodyForm {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        background-color: black;
+        /* background-image: linear-gradient(to bottom, #e7442e, #b73227, #88221e, #5c1414, #330801); */
+    }
+    #form {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        color: white;
+        width: 60%;
+        padding: 0px 30px 30px 30px;
+    }
+    #bodyForm div {
+        background-image: linear-gradient(to bottom, #000000, #ffffff00);
+        height: 27vh;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        width: 100%;
+    }
+    #bodyForm div img {
+        padding-top: 60px;
+    }
+    #form h3 {
+        margin: 0px;
+        color: white;
+        font-family: Helvetica;
+        font-weight: lighter;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #form a {
+        font-family: Helvetica;
+        font-weight: lighter;
+        text-decoration: none;
+        color: #e7442e;
+        font-size: 1.2rem;
+        margin-bottom: 12%;
+    }
+    [name=email], [name=password] {
+        padding: 8px;
+        margin-top: 5px;
+        width: 90%;
+        font-family: Helvetica;
+        border: 1px solid white;
+        background-color: #ffffff1f;
+        font-size: 1.3rem;
+        color: white;
+    }
+    #form h3.password {
+        margin: 30px 0px;
+    }
+    .submit, .registrarse {
+        display: inline-block;
+        padding: 8px 19px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: black;
+        border: none;
+        border-radius: 8px;
+        background-color: #ffffffa8;
+        font-family: helvetica;
+        margin-bottom: 13%;
+        font-weight: lighter;
+
+    }
+    .submit:hover, .registrarse:hover {
+        color: white;
+        background-color: #e7442e;
+    }
+    
+/* Video intro CW */
+    #video {
+        width: 100%;
+    }
+
 
 /* HEADER */
     header {
@@ -176,6 +263,44 @@ body{
 
 /* DESKTOP ----------------------------------------------------- */
 @media only screen and (min-width: 1024px) {
+    
+/* Inicio sesión */
+    #form {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 7px;
+        grid-template-areas:    "email email password password"
+                                "submit registrarse a a"
+                                "olvide";
+        width: 100%;
+    }
+    div.logoCWSesion img {
+        width: 30%;
+        padding: 0px;
+    }
+    div.logoCWSesion {
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+
+    .email {
+        grid-area: email;
+    }
+    .password{
+        grid-area: password;
+    }
+    .submit {
+        grid-area: submit;
+    }
+    .registrarse{
+        grid-area: registrarse;
+    }
+    .olvidoPassword {
+        grid-area: olvide;
+    }
+    
 /* HEADER */
     header {
         position: fixed;
@@ -224,19 +349,17 @@ body{
         #titulo-pelicula {
             font-size: 3rem;
         }
-/* Contenedor VERRRRR!!!!!!*/
-    #contenedorBanner {
-        /* ratio: 8:3; */
-        
-    }
+
 
 /* Trending */
     .trending {
         display: grid;
         grid-template-columns: ;
     }
-    .contenedorTrendingMovies, .contenedorTrendingTV {
-
+    
+/* Tamaño carruseles */
+    #trendingMovies, #trendingTV, #criticaMovies, #criticaTV, #recomendadasMovies, #recomendadasTV {
+        width: 50vw;    
     }
 
 

@@ -287,4 +287,12 @@ hr.linea {
     height: 30px;
     }
 
+    .uk-grid-match {
+        width: 300px;
+        padding: 0px;
+    }
+    .uk-card-body{
+        color: transparent;
+        padding: 0px;
+    }
 }
