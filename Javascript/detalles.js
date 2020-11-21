@@ -24,7 +24,7 @@ window.onload = function() {
         
         if (tipo == "movies") {
             
-            armarContenidoMovies (id)
+            armarContenidoMovies ()
         }
         else {
             armarContenidoSeries (id)
