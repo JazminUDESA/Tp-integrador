@@ -597,5 +597,20 @@ window.onload = function () {
             console.log(`El error fue: ${error}`);
         })
 
+    
+
+    var peli = document.querySelector("#secPel");
+    var serie = document.querySelector("#secSer");
+    var click1 = document.querySelector ("#secPelis");
+    var click2 = document.querySelector ("#secSerie");
+   
+    if (click1.clickled == true) {
+        peli.style.display = "block";
+        serie.style.display = "none";
+    }
+       
+
+
+
 
 }
