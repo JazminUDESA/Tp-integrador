@@ -100,11 +100,12 @@ section.detalleInfo img {
 section.detalleInfo div.info {
     justify-content: center;
     align-items: center;
-    width: 100%px;
+    width: 100%;
 }
 
 section.detalleInfo div.info h2 {
     margin: 0%;
+    padding: 10px 0px ;
     font-size: 30px;
     color: white;
     font-family: helvetica;
@@ -138,22 +139,26 @@ section.detalleInfo p {
 
 /* REVIEWS */
 
+div.reviews {
+    padding: 0px 30px 30px 30px;
+}
+
 div.reviews h2 {
-    padding: 10px;
     font-family: helvetica;
     color: white;
     font-size: 20px;
     font-weight: bold;
     margin: 0%;
-
+    padding: 20px 0px 20px;
 }
 
-section.detalleInfo div.reviews article#reseña {
+div.reviews div.todaslasreseñas article#reseña {
     background-color: rgb(8, 8, 8);
-    
+    padding: 30px;
+    margin: 0px 0px 30px;
 }
 
-section.detalleInfo div.reviews article#reseña h4 {
+div.reviews div.todaslasreseñas article#reseña h4 {
     color: red;
 }
 
@@ -334,7 +339,7 @@ hr.linea {
     section.detalleInfo {
         display: flex;
         flex-wrap: wrap;
-        padding: 10px 100px 10px 100px;
+        padding: 20px 100px 10px 100px;
     }
     
     section.detalleInfo img {
@@ -381,6 +386,12 @@ hr.linea {
     section.detalleInfo p {
         font-family: helvetica;
         padding: 0px 0px 15px 0px;
+    }
+
+    /* REVIEWS */
+
+    div.reviews {
+        padding: 10px 100px 10px 100px;
     }
 
     /* DETALLE DE GÉNERO */
