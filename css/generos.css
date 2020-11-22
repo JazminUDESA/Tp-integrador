@@ -1,5 +1,6 @@
 body{
     background-color: black;
+    margin: 0px;
 }
 
 /* HEADER */
@@ -77,18 +78,7 @@ body{
     #favs a svg, #buscar a svg, #cuenta a svg {
         width: 31px;
     }
-    
-
-h2.titulo,h2.tituloSerie{
-    color: red;
-    font-weight: bold;
-    text-align: center;
-    font-size: 22px;
-    padding: 35px 0px 20px 0px;
-    font-family: Helvetica;
-    justify-content: center;
-    margin: 0px;
-}
+ 
 
 h3{
     color: rgb(209,209,209);
@@ -105,18 +95,27 @@ a#flechita {
     font-weight: bold;
 }
 
-#titulo-banner{
-    color: red;
-    font-size: 20px;
+/*Títulos*/
+#titulosBanner {
+    display: flex;
+    flex-direction: column;
+    padding-left: 3%;
+}
+
+#titulo-estrenos {
+    color: #e7442e;
+    font-size: 1rem;
     text-align: left;
     margin: 0px;
     font-weight: bold;
 } 
-
 #titulo-pelicula {
     text-align: left;
     font-weight: bold;
     font-size: 1.5rem;
+}
+a.linkTituloBanner {
+    text-decoration: none;
 }
 
 
@@ -248,24 +247,24 @@ hr.linea {
     #cuenta a svg{
         padding-right: 12px;
     }
- 
-
-    h2.titulo,h2.tituloSerie{
-    font-size: 24px;
-    }
 
     /*CARRUSEL MÁS POPULARES*/
-
-    #titulos {
-        margin-top: 65px;
-    }
-    #titulo-banner{
-        color: red;
-        font-size: 22px;
-        text-align: left;
-        margin: 0px;
+    #titulo-estrenos{
+        font-size: 1.5rem;
     } 
+    #titulo-pelicula {
+        font-size: 2.5rem;
+    }
+    
+    /*Tamaño carruseles pelis*/
+    #pelisAccion, #pelisAventura, #pelisCs, #pelisComedia, #pelisDocu, #pelisDrama, #pelisFam, #pelisRomance, #pelisTerror, #pelisThrillers {
+        width: 55vw;
+    }
 
+    /*Tamaño carruseles series*/
+    #seriesAccion, #seriesCs, #seriesComedia, #seriesCrimen, #seriesDocu, #seriesDrama, #seriesFam, #pelisRomance, #seriesMisterio, #seriesReality, #seriesTelenovela {
+        width: 55vw;
+    }
 
 
     /*FOOTER*/

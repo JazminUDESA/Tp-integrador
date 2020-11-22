@@ -12,7 +12,7 @@ window.onload = function () {
 
     // --------------------------------- PELICULAS ---------------------------------
     function armarPelis () {
-        h2.innerHTML = `<h2 class="titulo">pagina de peliculas</h2>`
+        //h2.innerHTML = `<h2 class="titulo">pagina de peliculas</h2>`
 
         //FETCH DEL CARRUSEL (MÁS POPULARES - PELICULAS)
             fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`)
@@ -30,10 +30,19 @@ window.onload = function () {
                     var ul = document.querySelector("#pelisPopulares");
                     ul.innerHTML += `
                         <li>
-                            <a href="detalles.html?tipo=generos&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
-                            <div id="titulos" class="uk-position-center-left uk-position-small uk-text-center uk-light">
-                                <h2 id="titulo-banner">Más vistas</h3>
-                                <h2 id="titulo-pelicula" class="uk-margin-remove">${titulo}</h2>
+                            <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-top-right">
+                                <img id="posterBanner" src="https://image.tmdb.org/t/p/original${element}" alt="más populares" uk-cover>
+                            </div>
+
+                            <div class="uk-position-cover" uk-slideshow-parallax="opacity: 0.7; backgroundColor: #000000"></div>
+
+                            <div class="uk-position-bottom uk-position-bottom uk-text-left">
+                                <div id="titulosBanner" uk-slideshow-parallax="scale: 1,1,0.8">
+                                    <h4 id="titulo-estrenos" uk-slideshow-parallax="x: 400,0,0;">Más vistas</h4>
+                                    <a class="linkTituloBanner" href="detalles.html?tipo=peliculas&id=${elId}">
+                                        <h2 id="titulo-pelicula" uk-slideshow-parallax="x: 200,0,0">${titulo}</h2>
+                                    </a>
+                                </div>
                             </div>
                         </li>
                     `
@@ -322,7 +331,7 @@ window.onload = function () {
     
     // --------------------------------- SERIES --------------------------------- 
     function armarSeries () {
-        h2Serie.innerHTML = `<h2 class="tituloSerie">pagina de series</h2>` 
+        //h2Serie.innerHTML = `<h2 class="tituloSerie">pagina de series</h2>` 
                 //FETCH DEL CARRUSEL (MÁS POPULARES - SERIES)
             fetch(`https://api.themoviedb.org/3/tv/popular?api_key=${apiKey}`)
             .then(function (response) {
@@ -338,10 +347,19 @@ window.onload = function () {
                     var ul = document.querySelector("#seriesPopulares");
                     ul.innerHTML += `
                         <li>
-                            <a href="detalles.html?tipo=generos&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
-                            <div id="titulos" class="uk-position-center-left uk-position-small uk-text-center uk-light">
-                                <h2 id="titulo-banner">Más vistas</h3>
-                                <h2 id="titulo-pelicula" class="uk-margin-remove">${titulo}</h2>
+                            <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-top-right">
+                                <img id="posterBanner" src="https://image.tmdb.org/t/p/original${element}" alt="más populares" uk-cover>
+                            </div>
+
+                            <div class="uk-position-cover" uk-slideshow-parallax="opacity: 0.7; backgroundColor: #000000"></div>
+
+                            <div class="uk-position-bottom uk-position-bottom uk-text-left">
+                                <div id="titulosBanner" uk-slideshow-parallax="scale: 1,1,0.8">
+                                    <h4 id="titulo-estrenos" uk-slideshow-parallax="x: 400,0,0;">Más vistas</h4>
+                                    <a class="linkTituloBanner" href="detalles.html?tipo=peliculas&id=${elId}">
+                                        <h2 id="titulo-pelicula" uk-slideshow-parallax="x: 200,0,0">${titulo}</h2>
+                                    </a>
+                                </div>
                             </div>
                         </li>
                     `
