@@ -14,7 +14,7 @@ window.onload = function () {
     function armarPelis () {
         h2.innerHTML = `<h2 class="titulo">pagina de peliculas</h2>`
 
-                    //FETCH DEL CARRUSEL (MÁS POPULARES - PELICULAS)
+        //FETCH DEL CARRUSEL (MÁS POPULARES - PELICULAS)
             fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`)
             .then(function (response) {
                 return response.json();
@@ -25,10 +25,12 @@ window.onload = function () {
                 for (let index = 0; index < data.results.length; index++) {
                     const element = data.results[index].backdrop_path;
                     var titulo = data.results[index].title;
+                    var elId = data.results[index].id;
+
                     var ul = document.querySelector("#pelisPopulares");
                     ul.innerHTML += `
                         <li>
-                            <img src="https://image.tmdb.org/t/p/original${element}">
+                            <a href="detalles.html?tipo=generos&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                             <div id="titulos" class="uk-position-center-left uk-position-small uk-text-center uk-light">
                                 <h2 id="titulo-banner">Más vistas</h3>
                                 <h2 id="titulo-pelicula" class="uk-margin-remove">${titulo}</h2>
@@ -36,7 +38,6 @@ window.onload = function () {
                         </li>
                     `
                 }
-
 
             })
             .catch(function (error) {
@@ -333,10 +334,11 @@ window.onload = function () {
                 for (let index = 0; index < 18; index++) {
                     const element = data.results[index].backdrop_path;
                     var titulo = data.results[index].name;
+                    var elId = data.results[index].id;
                     var ul = document.querySelector("#seriesPopulares");
                     ul.innerHTML += `
                         <li>
-                            <img src="https://image.tmdb.org/t/p/original${element}">
+                            <a href="detalles.html?tipo=generos&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                             <div id="titulos" class="uk-position-center-left uk-position-small uk-text-center uk-light">
                                 <h2 id="titulo-banner">Más vistas</h3>
                                 <h2 id="titulo-pelicula" class="uk-margin-remove">${titulo}</h2>

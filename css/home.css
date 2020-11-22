@@ -1,6 +1,5 @@
 body{
     background-color: black;
-    margin: 0px;
 }
 /* Inicio de sesión */
     #bodyForm {
@@ -354,7 +353,7 @@ body{
 /* Trending */
     .trending {
         display: grid;
-        grid-template-columns: ;
+        /*grid-template-columns: ;*/
     }
     
 /* Tamaño carruseles */

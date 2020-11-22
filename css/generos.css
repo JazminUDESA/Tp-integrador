@@ -4,134 +4,80 @@ body{
 
 /* HEADER */
     header {
+        padding-bottom: 30px;
+    }
+
+    header ul {
         display: grid;
-        width: 100%;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 7px;
-        grid-template-areas:
-            "logo logo logo"
-            "inicio buscar cuenta"
-            "estrenos peliculas series";
-        padding-bottom: 5px 0px;
+        grid-gap: 15px;
+        grid-template-areas: "logo logo logo"
+                             "inicio peliculas series"
+                             "favs buscar cuenta";
         box-sizing: border-box;
-        background-color: #1d1d1d;
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;            
     }
-    
-    #logo a img {
-        width: 100%;
+
+    header ul li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
-    
-    /* Establecer area grid */
+
+    /*Asignación áreas*/
     #logo {
         grid-area: logo;
-        background-color: #0f0f0f;
     }
     #inicio {
         grid-area: inicio;
     }
+    #peliculas {
+        grid-area: peliculas;
+    }
+    #series {
+        grid-area: series;
+    }
+    #favs {
+        grid-area: favs;
+        color: white;
+    }
     #buscar {
         grid-area: buscar;
+        color: white;
     }
     #cuenta {
         grid-area: cuenta;
+        color: white;
+        padding-right: 12px;
     }
-    #peliculas {
-        grid-area: peliculas;
-        padding-left: 6vw;
-    } 
-    #series {
-        grid-area: series;
-        padding-left: 2vw;
-    }
-    #estrenos {
-        grid-area: estrenos;
-        padding-left: 5vw;
+
+    /*Logo*/
+    #logo img {
+        width: 400px;
+        padding-top: 30px;
     }
     
-    /* Texto hipervínculos */
-    #logo a, #inicio a, #buscar a, #cuenta a, #peliculas a, #series a, #estrenos a {
-        color: white;
-        text-decoration: none;
+    header ul li#logo {
         display: flex;
-        flex-flow: wrap;
-        align-items: center;
         justify-content: center;
+    }
+    
+    /*Hipervínculos*/
+    header ul li a{
+        text-decoration: none;
         font-family: Helvetica;
-        font-size: 1.2rem;
-        padding: 0px 5px 0px 5px;  
-    }
-    #peliculas a, #series a, #estrenos a {
-        font-family: Bebas Neue;
-        color: red;
-        font-size: 26px;
+        font-size: 1.5rem;
+        font-weight: lighter;
+        color: white;
     }
 
-    /* Iconos menú */
-    header div img {
-        width: 30px;
-        padding: 5px 5px 5px 0px;
+    /*Iconos*/
+    #favs a svg, #buscar a svg, #cuenta a svg {
+        width: 31px;
     }
-    header div#buscar img {
-        padding-top: 7px;
-    }
-
-    #peliculas, #series, #estrenos {
-        padding-bottom: 8px;
-    }
-    /* Ocultar barra buscadora */
-    header div#buscar .uk-search-default {
-        display: none;
-    }
-
-
-div.listado {
-    display: flex;
-    justify-content: space-around;
-    padding-bottom: 5px;
-    font-size: 30px;
-}
-
-nav.header_nav div.listado a {
-    font-family: Bebas Neue;
-    color: #e7442e;
-    text-decoration: none;
-    font-size: 30px;
-}
-
-span.cuenta-desktop {
-    display: none;
-}
-
-.listas {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 5px;
-    gap: 10px;
-}
-
-.listas-originales {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 5px;
-    gap: 3px;
-}
-
-img.portada {
-    width: 118px;
-    height: 175px;
-    padding: 5px 0px 5px 0px; 
-}
-
-img.portada-original {
-    width: 100px;
-    padding: 5px 0px 5px 0px;
-}
-
-div.listas-originales a#oculto {
-    display: none;
-}
+    
 
 h2.titulo,h2.tituloSerie{
     color: red;
@@ -170,7 +116,7 @@ a#flechita {
 #titulo-pelicula {
     text-align: left;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 1.5rem;
 }
 
 
@@ -265,69 +211,44 @@ hr.linea {
 @media only screen and (min-width: 1024px) {
 /* HEADER */
     header {
-        display: flex;
+        position: fixed;
+        z-index: 1000;
+        width: 100%;
+    }
+
+    header ul{
+        height: 60px;
+         grid-template-columns: 15% 5% 7% 5.5% 3.5% 55% 6%;
+        grid-gap: 7px;
+        grid-template-areas: "logo inicio peliculas series favs buscar cuenta";
+        background-image: linear-gradient(to bottom, #000000, #ffffff00);
+        padding: 0% 2%;
         align-items: center;
-        justify-content: space-between;
-        padding: 0px;
-        background-color: transparent;
     }
 
-    #logo {
-        width: 20%;
-        background-color: transparent;
-    }
-    #logo a {
-        padding: 0px;
-    }
-    #logo a img {
-        padding: 0px;
+    header ul li{
+        justify-content: flex-end;
     }
 
-    /* Texto hipervínculos */
-    #logo a, #inicio a, #buscar a, #cuenta a, #peliculas a, #series a, #estrenos a {
-        color: white;
-        font-family: Helvetica;
+    header ul li a{
         font-size: 1rem;
-
-    }
-    /* Iconos menú */
-    header div img {
-        width: 25px;
-        padding: 5px 0px 5px 0px;
-        margin-right: 5px;
     }
 
-    /* Mostrar barra buscadora */
-    header div#buscar .uk-search-default {
-        display: flex;
-        width: 11rem;
-    }
-    header div#buscar .uk-search-input {
-        border: 0.5px solid rgba(255, 255, 255, 0.76);
-    }
-    
-    #buscar {
-        width: 23vw;
-        display: flex;
-        justify-content: center;
-        padding-left: 1vw;
-    }
-    
-    #buscar a span {
-        display: none;
-    }
-    
-    #peliculas, #series, #estrenos {
-        padding-bottom: 0px;
-        padding-left: 0px;
-    }
-    #estrenos {
-        padding-left: 5.5vw;
+    /*Logo*/
+    #logo img{
+        width: 200px;
+        padding: 0px;
     }
 
-    #cuenta {
-        padding-right: 2vw;
+    /*Iconos*/
+    #favs a svg, #buscar a svg,#cuenta a svg{
+        color: white;
+        width: auto;
     }
+    #cuenta a svg{
+        padding-right: 12px;
+    }
+ 
 
     h2.titulo,h2.tituloSerie{
     font-size: 24px;
@@ -345,75 +266,6 @@ hr.linea {
         margin: 0px;
     } 
 
-    #titulo-pelicula {
-        text-align: left;
-        font-weight: bold;
-    }
-
-    div.listado {
-        display: flex;
-        flex-wrap: wrap;
-        width: 40%;
-        justify-content: space-between;
-        font-size: 16px;
-        gap: 20px;
-        padding: 0px 20px 0px 0px;
-        font-family: Helvetica;
-        align-items: center;
-        margin: 0px;
-    }
-    
-    div.listado span.estrenos a, div.listado span.peliculas a, div.listado span.series a, div.listado span.cuenta-desktop a{
-        font-size: 16px;
-        font-family: Helvetica;
-        color: white;
-    }
-
-    div.listado span.cuenta-desktop {
-        display: flex;
-    }
-
-    div.listado span.cuenta-desktop a{
-        color: white;
-        font-family: Helvetica;
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        gap: 5px;
-    }
-
-    div.listado span.cuenta-desktop a img{
-        width: 25px;
-    }
-
-    div.listas-originales a#oculto {
-        display: flex;
-    }
-
-    h3.titulo-originales {
-        padding-left: 15px;
-    }
-
-    .listas {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        padding: 5px 0px 5px 0px;
-    }
-
-    .listas-originales {
-        gap: 10px;
-    }
-
-    img.portada {
-        width: 147px;
-        height: 212px; 
-    }
-
-    img.portada-original {
-        width: 157px;
-        padding: 5px 0px 5px 0px;
-    }
 
 
     /*FOOTER*/
