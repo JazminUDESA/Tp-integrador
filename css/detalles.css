@@ -179,6 +179,16 @@ section.detalleGenero h2 {
 
 }
 
+section.detalleGenero div.imagenesGeneros {
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+section.detalleGenero div.imagenesGeneros img {
+    width: 32%;
+    padding: 10px;
+}
+
 /* FOOTER */ 
 article.footer-arriba {
     display: grid;
@@ -396,9 +406,19 @@ hr.linea {
 
     /* DETALLE DE GÉNERO */
     section.detalleGenero {
-        display: none;
-        flex-wrap: wrap;
+        display: flex;
         padding: 10px 100px 10px 100px;
+        
+    }
+
+    section.detalleGenero div.imagenesGeneros {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    section.detalleGenero div.imagenesGeneros img {
+    width: 16%;
+    padding: 10px;
     }
 
     /* FOOTER */
@@ -428,7 +448,7 @@ hr.linea {
     
     div.volver-inicio a img {
         width: 30px;
-        height: 25x;
+        height: 25px;
     }
 
     div.logos {

@@ -1,13 +1,7 @@
 window.onload = function () {
 
     var apiKey = "c3dcc0e9ef8f3864ee4f5ed844d151f8"
-    
 
-
-
-//-----------------------------------------------------------------------------------------------------------    
-
-    
     
     
     var queryStringObj = new URLSearchParams(location.search);    
@@ -15,10 +9,12 @@ window.onload = function () {
     var h2 = document.querySelector (".titulo");
     var h2Serie = document.querySelector (".tituloSerie")
 
-    function armarPelis () {
-        h2.innerHTML = `<h2 class="titulo">pagina de peliculas</h2>`
 
-                    //FETCH DEL CARRUSEL (MÁS POPULARES - PELICULAS)
+    // --------------------------------- PELICULAS ---------------------------------
+    function armarPelis () {
+        //h2.innerHTML = `<h2 class="titulo">pagina de peliculas</h2>`
+
+        //FETCH DEL CARRUSEL (MÁS POPULARES - PELICULAS)
             fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`)
             .then(function (response) {
                 return response.json();
@@ -29,18 +25,28 @@ window.onload = function () {
                 for (let index = 0; index < data.results.length; index++) {
                     const element = data.results[index].backdrop_path;
                     var titulo = data.results[index].title;
+                    var elId = data.results[index].id;
+
                     var ul = document.querySelector("#pelisPopulares");
                     ul.innerHTML += `
                         <li>
-                            <img src="https://image.tmdb.org/t/p/original${element}">
-                            <div id="titulos" class="uk-position-center-left uk-position-small uk-text-center uk-light">
-                                <h2 id="titulo-banner">Más vistas</h3>
-                                <h2 id="titulo-pelicula" class="uk-margin-remove">${titulo}</h2>
+                            <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-top-right">
+                                <img id="posterBanner" src="https://image.tmdb.org/t/p/original${element}" alt="más populares" uk-cover>
+                            </div>
+
+                            <div class="uk-position-cover" uk-slideshow-parallax="opacity: 0.7; backgroundColor: #000000"></div>
+
+                            <div class="uk-position-bottom uk-position-bottom uk-text-left">
+                                <div id="titulosBanner" uk-slideshow-parallax="scale: 1,1,0.8">
+                                    <h4 id="titulo-estrenos" uk-slideshow-parallax="x: 400,0,0;">Más vistas</h4>
+                                    <a class="linkTituloBanner" href="detalles.html?tipo=peliculas&id=${elId}">
+                                        <h2 id="titulo-pelicula" uk-slideshow-parallax="x: 200,0,0">${titulo}</h2>
+                                    </a>
+                                </div>
                             </div>
                         </li>
                     `
                 }
-
 
             })
             .catch(function (error) {
@@ -65,7 +71,7 @@ window.onload = function () {
                     var ul = document.querySelector("#pelisAccion");
                     ul.innerHTML += `
                                     <li>
-                                        <a href="detalles.html?tipo=movies&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
+                                        <a href="detalles.html?tipo=peliculas&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                                     </li>    
                     `
                             /*<div class="uk-animation-toggle" tabindex = "0" >
@@ -98,7 +104,7 @@ window.onload = function () {
                     var ul = document.querySelector("#pelisAventura");
                     ul.innerHTML += `
                         <li>
-                            <a href="detalles.html?tipo=movies&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
+                            <a href="detalles.html?tipo=peliculas&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                         </li>
                     `
                 }
@@ -124,7 +130,7 @@ window.onload = function () {
                     var ul = document.querySelector("#pelisCs");
                     ul.innerHTML += `
                         <li>
-                            <a href="detalles.html?tipo=movies&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
+                            <a href="detalles.html?tipo=peliculas&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                         </li>
                     `
                 }
@@ -150,7 +156,7 @@ window.onload = function () {
                     var ul = document.querySelector("#pelisComedia");
                     ul.innerHTML += `
                         <li>
-                            <a href="detalles.html?tipo=movies&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
+                            <a href="detalles.html?tipo=peliculas&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                         </li>
                     `
                 }
@@ -176,7 +182,7 @@ window.onload = function () {
                     var ul = document.querySelector("#pelisDocu");
                     ul.innerHTML += `
                         <li>
-                            <a href="detalles.html?tipo=movies&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
+                            <a href="detalles.html?tipo=peliculas&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                         </li>
                     `
                 }
@@ -203,7 +209,7 @@ window.onload = function () {
                     var ul = document.querySelector("#pelisDrama");
                     ul.innerHTML += `
                         <li>
-                            <a href="detalles.html?tipo=movies&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
+                            <a href="detalles.html?tipo=peliculas&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                         </li>
                     `
                 }
@@ -229,7 +235,7 @@ window.onload = function () {
                     var ul = document.querySelector("#pelisFam");
                     ul.innerHTML += `
                         <li>
-                            <a href="detalles.html?tipo=movies&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
+                            <a href="detalles.html?tipo=peliculas&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                         </li>
                     `
                 }
@@ -255,7 +261,7 @@ window.onload = function () {
                     var ul = document.querySelector("#pelisRomance");
                     ul.innerHTML += `
                         <li>
-                            <a href="detalles.html?tipo=movies&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
+                            <a href="detalles.html?tipo=peliculas&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                         </li>
                     `
                 }
@@ -281,7 +287,7 @@ window.onload = function () {
                     var ul = document.querySelector("#pelisTerror");
                     ul.innerHTML += `
                         <li>
-                            <a href="detalles.html?tipo=movies&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
+                            <a href="detalles.html?tipo=peliculas&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                         </li>
                     `
                 }
@@ -307,7 +313,7 @@ window.onload = function () {
                     var ul = document.querySelector("#pelisThrillers");
                     ul.innerHTML += `
                         <li>
-                            <a href="detalles.html?tipo=movies&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
+                            <a href="detalles.html?tipo=peliculas&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                         </li>
                     `
                 }
@@ -322,9 +328,10 @@ window.onload = function () {
         sectionSeries.style.display = "none";
 
     }
-
+    
+    // --------------------------------- SERIES --------------------------------- 
     function armarSeries () {
-        h2Serie.innerHTML = `<h2 class="tituloSerie">pagina de series</h2>` 
+        //h2Serie.innerHTML = `<h2 class="tituloSerie">pagina de series</h2>` 
                 //FETCH DEL CARRUSEL (MÁS POPULARES - SERIES)
             fetch(`https://api.themoviedb.org/3/tv/popular?api_key=${apiKey}`)
             .then(function (response) {
@@ -336,13 +343,23 @@ window.onload = function () {
                 for (let index = 0; index < 18; index++) {
                     const element = data.results[index].backdrop_path;
                     var titulo = data.results[index].name;
+                    var elId = data.results[index].id;
                     var ul = document.querySelector("#seriesPopulares");
                     ul.innerHTML += `
                         <li>
-                            <img src="https://image.tmdb.org/t/p/original${element}">
-                            <div id="titulos" class="uk-position-center-left uk-position-small uk-text-center uk-light">
-                                <h2 id="titulo-banner">Más vistas</h3>
-                                <h2 id="titulo-pelicula" class="uk-margin-remove">${titulo}</h2>
+                            <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-top-right">
+                                <img id="posterBanner" src="https://image.tmdb.org/t/p/original${element}" alt="más populares" uk-cover>
+                            </div>
+
+                            <div class="uk-position-cover" uk-slideshow-parallax="opacity: 0.7; backgroundColor: #000000"></div>
+
+                            <div class="uk-position-bottom uk-position-bottom uk-text-left">
+                                <div id="titulosBanner" uk-slideshow-parallax="scale: 1,1,0.8">
+                                    <h4 id="titulo-estrenos" uk-slideshow-parallax="x: 400,0,0;">Más vistas</h4>
+                                    <a class="linkTituloBanner" href="detalles.html?tipo=peliculas&id=${elId}">
+                                        <h2 id="titulo-pelicula" uk-slideshow-parallax="x: 200,0,0">${titulo}</h2>
+                                    </a>
+                                </div>
                             </div>
                         </li>
                     `
