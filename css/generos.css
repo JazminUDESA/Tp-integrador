@@ -132,7 +132,7 @@ div.piedepagina {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    padding: 55px 20px 0px 30px;
+    padding: 10px 20px 0px 30px;
 }
 
 div.piedepagina a {
@@ -149,44 +149,33 @@ div.redes {
     flex-direction: row;
     justify-content: space-around;
     align-items: center; 
-    padding: 30px 0px 20px 0px;
+    padding: 20px 0px 10px 0px;
 }
 
-img.red {
-    width: 25px;
-}
 
 div.logos {
     display: flex;
     align-items: center;
     gap: 30px;
-    margin-left: 10px;
+    margin-left: 5px;
 }
 
 div.logos img {
-    width: 26px;
+    width: 20px;
 }
 
 div.volver-inicio {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 30px 0px 20px 0px;
-}
-
-div.volver-inicio a img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 25px;
-    height: 20x;
+    padding: 20px 0px 10px 0px;
 }
 
 
 div.autores {
     display: flex;
     justify-content: center;
-    padding: 10px 0px 30px 0px;
+    padding: 0px 0px 20px 0px;
 }
 
 div.autores a {
@@ -203,6 +192,7 @@ hr.linea {
     color: grey;
     border-color: grey;
     margin: 0%;
+    margin-top: 70px;
 }
 
 
@@ -276,26 +266,25 @@ hr.linea {
     div.piedepagina {
         display: flex;
         flex-direction: row;
-        padding: 50px 0px 0px 0px;
+        padding: 0px;
         justify-content: space-around;
     }
 
+    div.autores {
+        padding: 0px 0px 20px 0px;
+    }
     div.redes {
         display: flex;
         justify-content: flex-end;
-        padding: 40px 0px 30px 0px;
+        padding: 20px 0px 10px 0px;
         gap: 70px;
     }
 
     div.volver-inicio {
-        padding: 40px 0px 30px 0px;
+        padding: 10px 0px 10px 0px;
         margin-right: 70px;
     }
     
-    div.volver-inicio a img {
-        width: 30px;
-        height: 25x;
-    }
 
     div.logos {
         display: flex;
@@ -305,16 +294,8 @@ hr.linea {
     }
 
     div.logos img {
-    width: 36px;
+    width: 25px;
     }
 
-    img.red {
-    width: 30px;
-    }
-
-    div.volver-inicio a img {
-    width: 35px;
-    height: 30px;
-    }
 
 }
