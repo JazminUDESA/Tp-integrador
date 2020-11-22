@@ -7,8 +7,7 @@ body{
         display: flex;
         align-items: center;
         flex-direction: column;
-        height: 100vh;
-        background-color: black;
+        background-image: linear-gradient(to right bottom, #2a2b2b, #212222, #191919, #0f0f0f, #000000);
         /* background-image: linear-gradient(to bottom, #e7442e, #b73227, #88221e, #5c1414, #330801); */
     }
     #form {
@@ -20,12 +19,11 @@ body{
         padding: 0px 30px 30px 30px;
     }
     #bodyForm div {
-        background-image: linear-gradient(to bottom, #000000, #ffffff00);
-        height: 27vh;
         display: flex;
         align-items: flex-start;
         justify-content: center;
         width: 100%;
+        padding-bottom: 20px;
     }
     #bodyForm div img {
         padding-top: 60px;
@@ -235,15 +233,11 @@ body{
                 justify-content: center;
                 align-items: center;
                 padding: 30px 0px 20px 0px;
+                width: fit-content;
+                height: fit-content;
+                padding-left: 20px;
             }
 
-            div.volver-inicio a img {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 25px;
-                height: 20x;
-            }
     /* Nombres alumnas */
     footer div.nombres-alumnas {
         display: flex;
@@ -265,42 +259,37 @@ body{
 @media only screen and (min-width: 1024px) {
     
 /* Inicio sesión */
+    #bodyForm {
+        width: 100%;
+        min-height: 100%;
+    }
     #form {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-gap: 7px;
-        grid-template-areas:    "email email password password"
-                                "submit registrarse a a"
-                                "olvide";
         width: 100%;
     }
-    div.logoCWSesion img {
+    #bodyForm div img  {
         width: 30%;
         padding: 0px;
     }
-    div.logoCWSesion {
-        display: flex;
-        width: 100%;
-        align-items: center;
+    div#logoCWSesion {
+        padding: 80px;
+    }
+    #bodyForm #form h3 {
+        font-size: 1.1rem;
+    }
+    #bodyForm #form a {
+        font-size: 1rem;
+        margin: 10px;
+    }
+    #email, #contrasena{
+        font-size: 0.8rem;
+        padding: 6px 10px;
+        width: 150%;
+    }
+    .submit, .registrarse {
+        width: 160px;
+        margin: 10px;
     }
 
-    .email {
-        grid-area: email;
-    }
-    .password{
-        grid-area: password;
-    }
-    .submit {
-        grid-area: submit;
-    }
-    .registrarse{
-        grid-area: registrarse;
-    }
-    .olvidoPassword {
-        grid-area: olvide;
-    }
-    
 /* HEADER */
     header {
         position: fixed;
@@ -325,6 +314,11 @@ body{
     header ul li a {
         font-size: 1rem;
     }
+    header ul li a:hover {
+        color: #ffffffad;
+        text-decoration: none!important;
+    }
+   
 
     /* Logo */
     #logo img {
@@ -339,6 +333,18 @@ body{
     #cuenta a svg{
         padding-right: 12px;
     }
+    #favs a svg:hover {
+        color: #ffffffad;
+    }
+    #buscar span svg:hover {
+        color: #ffffffad;
+    }
+    #buscar span {
+        color: white
+    }
+    #cuenta a svg:hover {
+        color: #ffffffad;
+    }
 
  
 /* BANNER */
@@ -350,29 +356,17 @@ body{
             font-size: 3rem;
         }
 
-
-/* Trending */
-    .trending {
-        display: grid;
-        /*grid-template-columns: ;*/
-    }
-    
 /* Tamaño carruseles */
     #trendingMovies, #trendingTV, #criticaMovies, #criticaTV, #recomendadasMovies, #recomendadasTV {
         width: 50vw;    
     }
 
-
-
-
-
-
-
-
-
     
 /* FOOTER */
     /* Reducir padding costados */
+    footer {
+        margin-top: 40px;
+    }
     footer div.footer-arriba {
         grid-template-columns: 50% 10% 40%;
         justify-content: space-between;
@@ -394,12 +388,95 @@ body{
     }
 
     div.volver-inicio {
-        padding: 40px 0px 30px 0px;
+        padding: 10px 0px 30px 0px;
     }
     
     div.volver-inicio a {
         width: 30px;
         height: 25x;
     }
+
+.buscador {
+    /* float: right; */
+    width: 400px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.botonSearch {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    top: 20px;
+}
+
+.inputBuscador {
+    margin-right: 33px;
+    width: 343px;
+    background-color: #ffffff26;
+    border: none;
+    height: 27px;
+    padding: 0px 12px;
+    font-family: Helvetica;
+    font-size: 0.9rem;
+    font-weight: lighter;
+    color: white;
+    /* float: left; */
+}
+
+input:focus, textarea:focus, select:focus{
+        outline: none;
+    }
+/* .botonSearch {
+    height: 30px;
+    position: absolute;
+    right: 0;
+    top: 5px;
+    border: none;
+    background-color: transparent;
+} 
+ #search {
+    float: right;
+    margin-top: 9px;
+    width: 250px;
+    border: none;
+}
+
+.search {
+    padding: 5px 5px;
+    width: 230px;
+    height: 30px;
+    position: relative;
+    left: 10px;
+    float: left;
+    line-height: 22px;
+}
+
+    .input {
+        position: absolute;
+        width: 0px;
+        float: Left;
+        margin-left: 210px;
+        -webkit-transition: all 0.7s ease-in-out;
+        -moz-transition: all 0.7s ease-in-out;
+        -o-transition: all 0.7s ease-in-out;
+        transition: all 0.7s ease-in-out;
+        height: 30px;
+        line-height: 18px;
+        padding: 0 2px 0 2px;
+        background-color: transparent;
+        border: none;
+        color: white;
+        font-family: Helvetica;
+    }
+
+        .search:hover input, .search input:focus {
+            width: 200px;
+            margin-left: 0px;
+            margin-right: 20px;
+        }
+
+
+ */
 
 }

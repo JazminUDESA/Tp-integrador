@@ -1,4 +1,38 @@
 window.onload = function(){
+
+    var inputSearch = document.querySelector(".inputBuscador");
+    inputSearch.style.display = "none";
+    var lupa = document.querySelector("#lupa");
+    lupa.addEventListener("mouseover", function(){
+        inputSearch.style.display = "block";
+    })
+    // var cajaBuscador = document.querySelector(".buscador");
+    // cajaBuscador.addEventListener("mouseout", function () {
+    //     inputSearch.style.display = "none";
+    //     alert("mouseOUTTTT");
+    // })
+
+    // var iconos = document.querySelector("svg");
+
+    // iconos.addEventListener("mouseover", function () {
+    //     iconos.style.fill = "red";
+    // })
+    // Barra buscadora
+    // var lupa = document.querySelector("#lupa");
+    // lupa.addEventListener("mouseover", function () {
+    //     lupa.innerHTML = 
+    //     `div.container{:tabindex => "1"}
+    //         %div.search-container{:tabindex => "1"}
+    //             %input{:type => "text", :placeholder => "search"}
+    //             %a.button
+    //       %i.icon-search`
+    //     var searchInput = document.querySelector("#searchInput");
+    //     searchInput.style.fontSize = "16px";
+    //     searchInput.style.fontFamily = "Helvetica";
+    //     searchInput.style.fontWeight = "lighter";
+    //     searchInput.style.height = "33px"
+    // })
+    
     
     var apiKey = `c3dcc0e9ef8f3864ee4f5ed844d151f8`;
 
@@ -25,7 +59,7 @@ window.onload = function(){
                         <div class="uk-position-bottom uk-position-bottom uk-text-left">
                                 <div id="titulosBanner" uk-slideshow-parallax="scale: 1,1,0.8">
                                     <h4 id="titulo-estrenos" uk-slideshow-parallax="x: 400,0,0;">Estreno</h4>
-                                    <a class="linkTituloBanner" href="detalles.html?tipo=peliculas&id=${element.id}">
+                                    <a class="linkTituloBanner" href="detalles.html?tipo=movies&id=${element.id}">
                                         <h2 id="titulo-pelicula" uk-slideshow-parallax="x: 200,0,0">${element.title}</h2>
                                     </a>
                                 </div>
@@ -55,7 +89,7 @@ window.onload = function(){
                 if ( element.media_type == "movie"){
                     ulTrendingMovie.innerHTML += 
                     `<li>
-                        <a href="detalles.html?tipo=peliculas&id=${element.id}">
+                        <a href="detalles.html?tipo=movies&id=${element.id}">
                             <img src="https://image.tmdb.org/t/p/original${element.poster_path}">
                         </a>
                     </li>`
@@ -66,9 +100,6 @@ window.onload = function(){
                                 <img src="https://image.tmdb.org/t/p/original${element.poster_path}">
                             </a>
                         </li>`
-                }
-                else {
-                    ulTrendingMovie.style.backgroundColor = "white";
                 }
             }
         })
@@ -89,7 +120,7 @@ window.onload = function(){
                 
                 contenedorCriticaMovies.innerHTML += 
                     `<li>
-                        <a href="detalles.html?tipo=peliculas&id=${element.id}">
+                        <a href="detalles.html?tipo=movies&id=${element.id}">
                             <img src="https://image.tmdb.org/t/p/original${element.poster_path}">
                         </a>
                     </li>`
@@ -110,7 +141,7 @@ window.onload = function(){
 
                 contenedorCriticaSeries.innerHTML +=
                     `<li>
-                            <a href="detalles.html?tipo=peliculas&id=${element.id}">
+                            <a href="detalles.html?tipo=movies&id=${element.id}">
                                 <img src="https://image.tmdb.org/t/p/original${element.poster_path}">
                             </a>
                         </li>`
@@ -131,7 +162,7 @@ window.onload = function(){
 
                 recomendadasMovies.innerHTML +=
                     `<li>
-                            <a href="detalles.html?tipo=peliculas&id=${element.id}">
+                            <a href="detalles.html?tipo=movies&id=${element.id}">
                                 <img src="https://image.tmdb.org/t/p/original${element.poster_path}">
                             </a>
                         </li>`
@@ -151,7 +182,7 @@ window.onload = function(){
 
                 recomendadasTV.innerHTML +=
                     `<li>
-                            <a href="detalles.html?tipo=peliculas&id=${element.id}">
+                            <a href="detalles.html?tipo=movies&id=${element.id}">
                                 <img src="https://image.tmdb.org/t/p/original${element.poster_path}">
                             </a>
                         </li>`

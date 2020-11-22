@@ -13,28 +13,30 @@
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit-icons.min.js"></script>
     <script src="Javascript/sesion.js"></script> <!-- JS local-->
 </head>
-<body id="bodyForm">
-    <div id="logoCWSesion">
-        <img src="img/logo-transparente-cinemaweb.png" alt="">
+<body>
+    <div id="bodyForm">
+        <div id="logoCWSesion">
+            <img src="img/logo-transparente-cinemaweb.png" alt="">
+        </div>
+        <form id="form" action="home.html" method="get">
+            <h3 class="email">
+                <label for="email">Correo electrónico: </label>
+                <input type="email" name="email" id="email">
+            </h3>
+            <h3 class="password">
+                <label for="contrasena">Contraseña: </label>
+                <input type="password" name="password" id="contrasena">
+            </h3>
+    
+            <a class="olvidoPassword" href="">Olvidé mi contraseña</a>
+            <button type="button" class="submit" id="submit">Iniciar sesión</button>
+            <button type="button" class="registrarse">Registrarse</button>
+        </form>
+    
+        <video id="video" autoplay muted="muted" width=100%>
+            <source src="video/introVideoCW.mp4" type="video/mp4">
+            <source src="video/introVideoCW.ogg" type="video/ogg">
+        </video>
     </div>
-    <form id="form" action="" method="get">
-        <h3 class="email">
-            <label for="email">Correo electrónico: </label>
-            <input type="email" name="email" id="email">
-        </h3>
-        <h3 class="password">
-            <label for="contrasena">Contraseña: </label>
-            <input type="password" name="password" id="contrasena">
-        </h3>
-
-        <a class="olvidoPassword" href="">Olvidé mi contraseña</a>
-        <button type="button" class="submit" id="submit">Iniciar sesión</button>
-        <button type="button" class="registrarse">Registrarse</button>
-    </form>
-
-    <video id="video" autoplay muted="muted" width=100%>
-        <source src="video/introVideoCW.mp4" type="video/mp4">
-        <source src="video/introVideoCW.ogg" type="video/ogg">
-    </video>
 </body>
 </html>
