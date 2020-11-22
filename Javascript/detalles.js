@@ -17,22 +17,26 @@ window.onload = function() {
 
     
     var apiKey = `c3dcc0e9ef8f3864ee4f5ed844d151f8`
-   
     var queryStringObj = new URLSearchParams(location.search);    
     var id = queryStringObj.get(`id`);
     var tipo = queryStringObj.get(`tipo`);
         
-        if (tipo == "movies") {
+        if (tipo == "peliculas") {
             
-            armarContenidoMovies ()
+            contenidoMovies ()
+        }
+        else if (tipo == "series") {
+
+            contenidoSeries ()
         }
         else {
-            armarContenidoSeries (id)
+            contenidoGeneros ()
         }
+    
 
 
       // D E T A L L E S      P E L Í C U L A S  
-    function armarContenidoMovies () {
+    function contenidoMovies () {
         
         //FETCH DEL DETALLE DE LA PELI
         fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}&language=en-US`) 
@@ -128,7 +132,7 @@ window.onload = function() {
     }
         
         // D E T A L L E S      S E R I E S 
-    function armarContenidoSeries () {
+    function contenidoSeries () {
         
         //FETCH DEL DETALLE DE LA SERIE
         fetch(`https://api.themoviedb.org/3/tv/${id}?api_key=${apiKey}&language=en-US`) 
@@ -144,10 +148,10 @@ window.onload = function() {
                 <img src="https://image.tmdb.org/t/p/original/${data.poster_path}" alt="">
                 <div class="info">
                     <h2>
-                        ${data.title}
+                        ${data.name}
                         <div id="agregarFav" class="uk-icon-link" uk-icon="heart"></div>
                     </h2>
-                    <a class="idGenero" href="detalles.html?tipo=generos&id=${data.genres[0].name}>${data.genres[0].name}</a> 
+                    <a class="idGenero" href="detalles.html?tipo=generos&id=${data.genres[0].name}">${data.genres[0].name}</a> 
                     <ul id="pri" class="uk-subnav uk-subnav-divider" uk-margin> 
                         <li>Calificación: ${data.vote_average}/10</li>
                         <li>${data.number_of_seasons} temporadas</li>
@@ -159,7 +163,7 @@ window.onload = function() {
                     </ul>
                     <p>${data.overview}</p>
                 </div>
-                    `
+                `
                     // WEB STORAGE
                     var agregarAFav = document.querySelector("#agregarFav");
                         
@@ -215,6 +219,59 @@ window.onload = function() {
         .catch(function(error) {
             console.log(`El error fue: ${error}`);
         })
+
+    }
+
+        // D E T A L L E S      G E N E R O S
+    function contenidoGeneros () {
+
+        
+        
+        //FETCH DEL DETALLE DE GENEROS - no trae el nombre del genero, si hago genero por genero es un monton
+        fetch(`https://api.themoviedb.org/3/discover/tv?api_key=${apiKey}&with_genres=${id}&language=en`) 
+
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(data) {
+            console.log(data);
+
+            var sectionGenero = document.querySelector(".detalleGenero")
+            sectionGenero.innerHTML += `
+            <h2>Título género</h2>
+            <div class="imagenesGeneros">
+                <img src="https://image.tmdb.org/t/p/original/${data.results[0].poster_path}" alt="">
+                <img src="https://image.tmdb.org/t/p/original/${data.results[1].poster_path}" alt="">
+                <img src="https://image.tmdb.org/t/p/original/${data.results[2].poster_path}" alt="">
+                <img src="https://image.tmdb.org/t/p/original/${data.results[3].poster_path}" alt="">
+                <img src="https://image.tmdb.org/t/p/original/${data.results[4].poster_path}" alt="">
+                <img src="https://image.tmdb.org/t/p/original/${data.results[5].poster_path}" alt="">
+                <img src="https://image.tmdb.org/t/p/original/${data.results[6].poster_path}" alt="">
+                <img src="https://image.tmdb.org/t/p/original/${data.results[7].poster_path}" alt="">
+                <img src="https://image.tmdb.org/t/p/original/${data.results[8].poster_path}" alt="">
+                <img src="https://image.tmdb.org/t/p/original/${data.results[9].poster_path}" alt="">
+                <img src="https://image.tmdb.org/t/p/original/${data.results[10].poster_path}" alt="">
+                <img src="https://image.tmdb.org/t/p/original/${data.results[11].poster_path}" alt="">
+                <img src="https://image.tmdb.org/t/p/original/${data.results[12].poster_path}" alt="">
+                <img src="https://image.tmdb.org/t/p/original/${data.results[13].poster_path}" alt="">
+                <img src="https://image.tmdb.org/t/p/original/${data.results[15].poster_path}" alt="">
+                <img src="https://image.tmdb.org/t/p/original/${data.results[16].poster_path}" alt="">
+                <img src="https://image.tmdb.org/t/p/original/${data.results[17].poster_path}" alt="">
+                <img src="https://image.tmdb.org/t/p/original/${data.results[18].poster_path}" alt="">
+            </div>
+            `
+                
+        })
+
+        .catch(function(error) {
+            console.log(`El error fue: ${error}`);          
+        })
+
+        var divReviews = document.querySelector(".reviews");
+        divReviews.style.display = "none";
+
+        var section = document.querySelector(".detalleInfo") 
+        section.style.display = "none";
 
     }
 

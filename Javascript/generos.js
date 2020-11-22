@@ -2,13 +2,15 @@ window.onload = function () {
 
     var apiKey = "c3dcc0e9ef8f3864ee4f5ed844d151f8"
 
-    //-----------------------------------------------------------------------------------------------------------    
+    
     
     var queryStringObj = new URLSearchParams(location.search);    
     var tipo = queryStringObj.get(`tipo`);
     var h2 = document.querySelector (".titulo");
     var h2Serie = document.querySelector (".tituloSerie")
 
+
+    // --------------------------------- PELICULAS ---------------------------------
     function armarPelis () {
         h2.innerHTML = `<h2 class="titulo">pagina de peliculas</h2>`
 
@@ -59,7 +61,7 @@ window.onload = function () {
                     var ul = document.querySelector("#pelisAccion");
                     ul.innerHTML += `
                                     <li>
-                                        <a href="detalles.html?tipo=movies&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
+                                        <a href="detalles.html?tipo=peliculas&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                                     </li>    
                     `
                             /*<div class="uk-animation-toggle" tabindex = "0" >
@@ -92,7 +94,7 @@ window.onload = function () {
                     var ul = document.querySelector("#pelisAventura");
                     ul.innerHTML += `
                         <li>
-                            <a href="detalles.html?tipo=movies&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
+                            <a href="detalles.html?tipo=peliculas&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                         </li>
                     `
                 }
@@ -118,7 +120,7 @@ window.onload = function () {
                     var ul = document.querySelector("#pelisCs");
                     ul.innerHTML += `
                         <li>
-                            <a href="detalles.html?tipo=movies&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
+                            <a href="detalles.html?tipo=peliculas&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                         </li>
                     `
                 }
@@ -144,7 +146,7 @@ window.onload = function () {
                     var ul = document.querySelector("#pelisComedia");
                     ul.innerHTML += `
                         <li>
-                            <a href="detalles.html?tipo=movies&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
+                            <a href="detalles.html?tipo=peliculas&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                         </li>
                     `
                 }
@@ -170,7 +172,7 @@ window.onload = function () {
                     var ul = document.querySelector("#pelisDocu");
                     ul.innerHTML += `
                         <li>
-                            <a href="detalles.html?tipo=movies&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
+                            <a href="detalles.html?tipo=peliculas&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                         </li>
                     `
                 }
@@ -197,7 +199,7 @@ window.onload = function () {
                     var ul = document.querySelector("#pelisDrama");
                     ul.innerHTML += `
                         <li>
-                            <a href="detalles.html?tipo=movies&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
+                            <a href="detalles.html?tipo=peliculas&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                         </li>
                     `
                 }
@@ -223,7 +225,7 @@ window.onload = function () {
                     var ul = document.querySelector("#pelisFam");
                     ul.innerHTML += `
                         <li>
-                            <a href="detalles.html?tipo=movies&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
+                            <a href="detalles.html?tipo=peliculas&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                         </li>
                     `
                 }
@@ -249,7 +251,7 @@ window.onload = function () {
                     var ul = document.querySelector("#pelisRomance");
                     ul.innerHTML += `
                         <li>
-                            <a href="detalles.html?tipo=movies&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
+                            <a href="detalles.html?tipo=peliculas&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                         </li>
                     `
                 }
@@ -275,7 +277,7 @@ window.onload = function () {
                     var ul = document.querySelector("#pelisTerror");
                     ul.innerHTML += `
                         <li>
-                            <a href="detalles.html?tipo=movies&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
+                            <a href="detalles.html?tipo=peliculas&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                         </li>
                     `
                 }
@@ -301,7 +303,7 @@ window.onload = function () {
                     var ul = document.querySelector("#pelisThrillers");
                     ul.innerHTML += `
                         <li>
-                            <a href="detalles.html?tipo=movies&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
+                            <a href="detalles.html?tipo=peliculas&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element}"></a>
                         </li>
                     `
                 }
@@ -316,7 +318,8 @@ window.onload = function () {
         sectionSeries.style.display = "none";
 
     }
-
+    
+    // --------------------------------- SERIES --------------------------------- 
     function armarSeries () {
         h2Serie.innerHTML = `<h2 class="tituloSerie">pagina de series</h2>` 
                 //FETCH DEL CARRUSEL (MÁS POPULARES - SERIES)
