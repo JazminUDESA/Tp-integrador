@@ -71,22 +71,55 @@ window.onload = function() {
                     </div>
                         `
 
-                // WEB STORAGE
+                // WEB STORAGE 
                 var agregarAFav = document.querySelector("#agregarFav");
 
-                agregarAFav.addEventListener("click", function () {
+                agregarAFav.addEventListener("click", function agregarFAV() {
                     this.style.color = "red";
 
-                    window.localStorage.getItem("peliculasFav");
-                    console.log(localStorage.getItem("peliculasFav"));
-                    var arrayPelisFavoritas = [];
-                    window.localStorage.setItem("peliculaFav", JSON.stringify(arrayPelisFavoritas));
+                    // POSTER DE PELÍCULA FAV
+                    var posterPelisFavoritas = JSON.parse(localStorage.getItem("posterPelisFavs"));
+                    if (posterPelisFavoritas == null){
+                        posterPelisFavoritas = [];
+                    }
 
-                    JSON.parse(window.localStorage.getItem("peliculasFav"));
+                    posterPelisFavoritas.push(data.poster_path);
+                    localStorage.setItem("posterPelisFavs", JSON.stringify(posterPelisFavoritas));
+                    console.log(posterPelisFavoritas);
+
+                    // ID DE PELÍCULA FAV
+                    var idPelisFavoritas = JSON.parse(localStorage.getItem("idPelisFavs"));
+                    if (idPelisFavoritas == null){
+                        idPelisFavoritas = [];
+                    }
+                    idPelisFavoritas.push(data.id);
+                    localStorage.setItem("idPelisFavs", JSON.stringify(idPelisFavoritas));
+                    console.log(idPelisFavoritas);
                 });
+                
+                // removeEventListener('click', agregarFAV);
+
+                // traer el elemento con GET (para ver si hay elementos en el array)
+                    // si no hay: crear un array vacío
+                    // si hay algo: agregar el elemento al array: SET
+                // en la página de favs, recorrer el array y mostrar lo que hay adentro: GET
+
+  
+
+
                 // chequear el genero!
                 // No puedo poner actores ni director??
                 // Problema con pelis de horror, drama y thrillers
+                // window.localStorage.getItem("peliculasFav");
+                // console.log(localStorage.getItem("peliculasFav"));
+                // var arrayPelisFavoritas = ["avengers", "frozen"];
+                // window.localStorage.setItem("peliculaFav", JSON.stringify(arrayPelisFavoritas));
+                // var arrayTotalPelisFavoritas = JSON.parse(localStorage.getItem("peliculasFav"));
+                // console.log(arrayTotalPelisFavoritas);
+                
+                // arrayPelisFavoritas.push(data.poster_path);
+                // console.log(arrayPelisFavoritas);
+                // JSON.parse(window.localStorage.getItem("peliculasFav"));
             })
             .catch(function(error) {
                 console.log(`El error fue: ${error}`);          
@@ -164,7 +197,7 @@ window.onload = function() {
                     <p>${data.overview}</p>
                 </div>
                 `
-                    // WEB STORAGE
+                    // WEB STORAGE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                     var agregarAFav = document.querySelector("#agregarFav");
                         
                     agregarAFav.addEventListener("click", function () {
