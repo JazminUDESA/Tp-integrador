@@ -6,11 +6,9 @@ window.onload = function(){
     lupa.addEventListener("mouseover", function(){
         inputSearch.style.display = "block";
     })
-    // var cajaBuscador = document.querySelector(".buscador");
-    // cajaBuscador.addEventListener("mouseout", function () {
-    //     inputSearch.style.display = "none";
-    //     alert("mouseOUTTTT");
-    // })
+    inputSearch.addEventListener("mouseout", function () {
+        inputSearch.style.display = "none";
+    })
 
     // var iconos = document.querySelector("svg");
 
@@ -59,7 +57,7 @@ window.onload = function(){
                         <div class="uk-position-bottom uk-position-bottom uk-text-left">
                                 <div id="titulosBanner" uk-slideshow-parallax="scale: 1,1,0.8">
                                     <h4 id="titulo-estrenos" uk-slideshow-parallax="x: 400,0,0;">Estreno</h4>
-                                    <a class="linkTituloBanner" href="detalles.html?tipo=movies&id=${element.id}">
+                                    <a class="linkTituloBanner" href="detalles.html?tipo=peliculas&id=${element.id}">
                                         <h2 id="titulo-pelicula" uk-slideshow-parallax="x: 200,0,0">${element.title}</h2>
                                     </a>
                                 </div>
@@ -89,7 +87,7 @@ window.onload = function(){
                 if ( element.media_type == "movie"){
                     ulTrendingMovie.innerHTML += 
                     `<li>
-                        <a href="detalles.html?tipo=movies&id=${element.id}">
+                        <a href="detalles.html?tipo=peliculas&id=${element.id}">
                             <img src="https://image.tmdb.org/t/p/original${element.poster_path}">
                         </a>
                     </li>`
@@ -120,7 +118,7 @@ window.onload = function(){
                 
                 contenedorCriticaMovies.innerHTML += 
                     `<li>
-                        <a href="detalles.html?tipo=movies&id=${element.id}">
+                        <a href="detalles.html?tipo=peliculas&id=${element.id}">
                             <img src="https://image.tmdb.org/t/p/original${element.poster_path}">
                         </a>
                     </li>`
@@ -141,7 +139,7 @@ window.onload = function(){
 
                 contenedorCriticaSeries.innerHTML +=
                     `<li>
-                            <a href="detalles.html?tipo=movies&id=${element.id}">
+                            <a href="detalles.html?tipo=peliculas&id=${element.id}">
                                 <img src="https://image.tmdb.org/t/p/original${element.poster_path}">
                             </a>
                         </li>`
@@ -162,7 +160,7 @@ window.onload = function(){
 
                 recomendadasMovies.innerHTML +=
                     `<li>
-                            <a href="detalles.html?tipo=movies&id=${element.id}">
+                            <a href="detalles.html?tipo=peliculas&id=${element.id}">
                                 <img src="https://image.tmdb.org/t/p/original${element.poster_path}">
                             </a>
                         </li>`
@@ -182,7 +180,7 @@ window.onload = function(){
 
                 recomendadasTV.innerHTML +=
                     `<li>
-                            <a href="detalles.html?tipo=movies&id=${element.id}">
+                            <a href="detalles.html?tipo=peliculas&id=${element.id}">
                                 <img src="https://image.tmdb.org/t/p/original${element.poster_path}">
                             </a>
                         </li>`
