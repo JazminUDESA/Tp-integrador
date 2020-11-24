@@ -28,7 +28,7 @@ body{
     #bodyForm div img {
         padding-top: 60px;
     }
-    #form h3 {
+    #form h3 class="titulosGeneros" {
         margin: 0px;
         color: white;
         font-family: Helvetica;
@@ -56,7 +56,7 @@ body{
         font-size: 1.3rem;
         color: white;
     }
-    #form h3.password {
+    #form h3 class="titulosGeneros".password {
         margin: 30px 0px;
     }
     .submit, .registrarse {
@@ -196,7 +196,7 @@ body{
        
 /* FOOTER */
     /* Footer arriba (legales y redes) */
-    footer div.footer-arriba {
+    article.footer-arriba {
         display: grid;
         grid-template-columns: 2fr 1fr 2fr;
         justify-content: space-between;
@@ -207,7 +207,7 @@ body{
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
-            padding: 30px 0px 20px 0px;
+            padding: 10px 20px 0px 30px;
         }
             /* Texto hipervínculo legales */
             footer div.legales a {
@@ -224,25 +224,32 @@ body{
             flex-direction: row;
             justify-content: space-around;
             align-items: center;
-            padding: 30px 0px 20px 0px;
+            padding: 20px 0px 10px 0px;
         }
-    
+
+    div.logos {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-left: 5px;
+    }
+
+    div.logos img {
+    width: 20px;
+    }
         /* Volver a arriba */
             div.volver-inicio {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                padding: 30px 0px 20px 0px;
-                width: fit-content;
-                height: fit-content;
-                padding-left: 20px;
+                padding: 20px 0px 10px 0px;
             }
 
     /* Nombres alumnas */
     footer div.nombres-alumnas {
         display: flex;
         justify-content: center;
-        padding: 0px 0px 30px 0px;
+        padding: 0px 0px 20px 0px;
     }
         /* Texto hipervínculo de los nombres */
         footer div.nombres-alumnas a {
@@ -254,6 +261,13 @@ body{
             text-decoration: none;
             font-weight: bold;
         }
+
+    hr.linea {
+    color: grey;
+    border-color: grey;
+    margin: 0%;
+    margin-top: 70px;
+}
 
 /* DESKTOP ----------------------------------------------------- */
 @media only screen and (min-width: 1024px) {
@@ -273,7 +287,7 @@ body{
     div#logoCWSesion {
         padding: 80px;
     }
-    #bodyForm #form h3 {
+    #bodyForm #form h3 class="titulosGeneros" {
         font-size: 1.1rem;
     }
     #bodyForm #form a {
@@ -350,10 +364,10 @@ body{
 /* BANNER */
     /* Títulos Banner */
         #titulo-estrenos{
-            font-size: 2rem;
+            font-size: 1.5rem;
         } 
         #titulo-pelicula {
-            font-size: 3rem;
+            font-size: 2.5rem;
         }
 
 /* Tamaño carruseles */
@@ -363,38 +377,48 @@ body{
 
     
 /* FOOTER */
-    /* Reducir padding costados */
-    footer {
-        margin-top: 40px;
-    }
-    footer div.footer-arriba {
+    article.footer-arriba {
         grid-template-columns: 50% 10% 40%;
         justify-content: space-between;
     }
+    
+    
     /* Reducir tamaño del contenedor de redes */
     footer div.redes {
         display: flex;
         justify-content: flex-end;
-        padding: 40px 0px 30px 0px;
-        gap: 80px;
+        padding: 20px 0px 10px 0px;
+        gap: 70px;
+    }
+
+    div.nombres-alumnas {
+        padding: 0px 0px 20px 0px;
     }
 
     footer div.legales {
         display: flex;
         flex-direction: row;
-        justify-content: flex-start;
-        padding: 40px 0px 30px 0px;
-        gap: 70px;
+        justify-content: space-around;
+        padding: 0px;
     }
 
     div.volver-inicio {
         padding: 10px 0px 30px 0px;
+        margin-right: 70px;
     }
     
-    div.volver-inicio a {
-        width: 30px;
-        height: 25x;
+    div.logos {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 70px;
     }
+
+    div.logos img {
+    width: 25px;
+    }
+
+    
 
 .buscador {
     /* float: right; */

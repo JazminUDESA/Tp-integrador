@@ -1,5 +1,15 @@
 window.onload = function () {
     var apiKey = `c3dcc0e9ef8f3864ee4f5ed844d151f8`
+    
+    var inputSearch = document.querySelector(".inputBuscador");
+    inputSearch.style.display = "none";
+    var lupa = document.querySelector("#lupa");
+    lupa.addEventListener("mouseover", function () {
+        inputSearch.style.display = "block";
+    })
+    inputSearch.addEventListener("mouseout", function () {
+        inputSearch.style.display = "none";
+    })
     // ID PELI FAV
     var idPelisFavoritas = JSON.parse(localStorage.getItem("idPelisFavs"));
     console.log(idPelisFavoritas);
