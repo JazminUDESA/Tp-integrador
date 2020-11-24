@@ -110,6 +110,7 @@ section.detalleInfo div.info h2 {
     color: white;
     font-family: helvetica;
 }
+
  /* El color del corazón (click) */
 
  .grey {
@@ -147,6 +148,11 @@ section.detalleInfo ul.seg {
 section.detalleInfo p {
     font-family: helvetica;
 
+}
+
+.mediaType {
+    margin: 0px;
+    font-family: Helvetica;
 }
 
 /* REVIEWS */
@@ -382,7 +388,7 @@ hr.linea {
         font-size: 30px;
         color: white;
         font-family: helvetica;
-        padding: 0px 0px 10px 0px;
+        padding: 0px;
     }
     
     section.detalleInfo div.info a.idGenero {

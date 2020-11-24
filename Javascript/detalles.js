@@ -1,5 +1,5 @@
 window.onload = function() {
-
+    
 
     // //Posters: `https://image.tmdb.org/t/p/original/`
     // https://api.themoviedb.org/3/movie/{movie_id}?api_key=c3dcc0e9ef8f3864ee4f5ed844d151f8&language=en-US
@@ -55,6 +55,7 @@ window.onload = function() {
                             ${data.title}
                             <div id="agregarFav" class="uk-icon-link" uk-icon="heart"></div>
                         </h2>
+                        <h4 class="pelicula mediaType">Película</h4>
                         <a class="idGenero" href="detalles.html?tipo=generos&id=${data.genres[0].name}">${data.genres[0].name}</a>
                         
 
@@ -71,115 +72,39 @@ window.onload = function() {
                     </div>
                         `
 
-                // WEB STORAGE 
+            // WEB STORAGE pelis :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :)
                 var corazon = document.querySelector("#agregarFav");
                 var idPelisFavoritas = JSON.parse(localStorage.getItem("idPelisFavs"));
-                var idPelis = data.id;
-                
-                function agregarAFav() { 
-                    
-                    // ID DE PELÍCULA FAV
-                    if (idPelisFavoritas == null){
-                        idPelisFavoritas = [];
-                    }
-                    idPelisFavoritas.push(idPelis);
-                    localStorage.setItem("idPelisFavs", JSON.stringify(idPelisFavoritas));
-                    console.log(idPelisFavoritas);
-                    
-                }
-                
-                function sacarDeFav() {
-                    
-                    for (let i = 0; i < idPelisFavoritas.length; i++) {
-                        const element = idPelisFavoritas[i];
-                        
-                        
-                        var indexPelis = idPelisFavoritas.findIndex(item => item.idPelis === idPelis)
-                        idPelisFavoritas.splice(indexPelis,1)
-                            console.log(idPelisFavoritas);
-                    }
-
-                    
+                if (idPelisFavoritas == null) {
+                    idPelisFavoritas = [];
                 }
 
+                // Al cargar la página, si la posición del elemento es mayor a -1 poner el corazón rojo
+                if (idPelisFavoritas.indexOf(data.id) > -1) {
+                    corazon.classList.add("red");
+                }
+                // Click en el corazón
                 corazon.addEventListener("click", function () {
-                    
-                    if (this.classList.contains("red")) {
-                        // alert("sacar peli")
+                    // Si el corazón está en rojo...
+                    if (corazon.classList.contains("red")) {
                         this.classList.remove("red");
                         this.classList.add("grey");
-                        sacarDeFav();
+
+                        var indexPelis = idPelisFavoritas.indexOf(data.id);
+                        idPelisFavoritas.splice(indexPelis, 1);
+                        console.log(idPelisFavoritas);
                     }
-                    else {
+                    // Si el corazón no está en rojo...
+                    else{
                         this.classList.remove("grey");
                         this.classList.add("red");
-                        // alert("poner peli");
 
-                        agregarAFav();
+
+                        idPelisFavoritas.push(data.id);
+                        localStorage.setItem("idPelisFavs", JSON.stringify(idPelisFavoritas));
+                        console.log(idPelisFavoritas);
                     }
-                        
-                    
-                    // if (localStorage.getItem("is_reloaded") && agregarAFav()) {
-                    //     alert('Reloaded!');
-                    //     corazon.classList.remove("grey")
-                    //     corazon.classList.add("red")
-                    // }
-                    // else {
-                    //     corazon.classList.remove("red")
-                    //     corazon.classList.add("grey")
-                    // }
-                    
-                    
                 });
-
-
-
-//                     First step is to check sessionStorage for some pre-defined value and if it exists alert user:
-
-
-// Second step is to set sessionStorage to some value (for example true):
-
-// sessionStorage.setItem("is_reloaded", true);
-// Session values kept until page is closed so it will work only if page reloaded in a new tab with the site. You can also keep reload count the same way.
-
-
-
-                // ---------------------
-                // ID DE PELÍCULA FAV
-                // var idPelisFavoritas = JSON.parse(localStorage.getItem("idPelisFavs"));
-                //     if (idPelisFavoritas == null){
-                //         idPelisFavoritas = [];
-                //     }
-                //     idPelisFavoritas.push(data.id);
-                //     localStorage.setItem("idPelisFavs", JSON.stringify(idPelisFavoritas));
-                //     console.log(idPelisFavoritas);
-                // ---------------------
-
-
-
-
-                // removeEventListener('click', agregarFAV);
-                // traer el elemento con GET (para ver si hay elementos en el array)
-                    // si no hay: crear un array vacío
-                    // si hay algo: agregar el elemento al array: SET
-                // en la página de favs, recorrer el array y mostrar lo que hay adentro: GET
-
-  
-
-
-                // chequear el genero!
-                // No puedo poner actores ni director??
-                // Problema con pelis de horror, drama y thrillers
-                // window.localStorage.getItem("peliculasFav");
-                // console.log(localStorage.getItem("peliculasFav"));
-                // var arrayPelisFavoritas = ["avengers", "frozen"];
-                // window.localStorage.setItem("peliculaFav", JSON.stringify(arrayPelisFavoritas));
-                // var arrayTotalPelisFavoritas = JSON.parse(localStorage.getItem("peliculasFav"));
-                // console.log(arrayTotalPelisFavoritas);
-                
-                // arrayPelisFavoritas.push(data.poster_path);
-                // console.log(arrayPelisFavoritas);
-                // JSON.parse(window.localStorage.getItem("peliculasFav"));
             })
             .catch(function(error) {
                 console.log(`El error fue: ${error}`);          
@@ -244,6 +169,7 @@ window.onload = function() {
                         ${data.name}
                         <div id="agregarFav" class="uk-icon-link" uk-icon="heart"></div>
                     </h2>
+                    <h4 class="serie mediaType">Serie</h4>
                     <a class="idGenero" href="detalles.html?tipo=generos&id=${data.genres[0].name}">${data.genres[0].name}</a> 
                     <ul id="pri" class="uk-subnav uk-subnav-divider" uk-margin> 
                         <li>Calificación: ${data.vote_average}/10</li>
@@ -257,23 +183,39 @@ window.onload = function() {
                     <p>${data.overview}</p>
                 </div>
                 `
-                    // WEB STORAGE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                    var agregarAFav = document.querySelector("#agregarFav");
-                        
-                    agregarAFav.addEventListener("click", function () {
-                        this.style.color = "red";            
-                        
-                        window.localStorage.getItem("peliculasFav");
-                        console.log(localStorage.getItem("peliculasFav"));
-                        var arrayPelisFavoritas = [];
-                        window.localStorage.setItem("peliculaFav", JSON.stringify(arrayPelisFavoritas));
-    
-                        JSON.parse(window.localStorage.getItem("peliculasFav"));
-                    });
-            
+            // WEB STORAGE series :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :)
+            var corazon2 = document.querySelector("#agregarFav");
+            var idSeriesFavoritas = JSON.parse(localStorage.getItem("idSeriesFavs"));
+            if (idSeriesFavoritas == null) {
+                idSeriesFavoritas = [];
+            }
+
+            // Al cargar la página, si la posición del elemento es mayor a -1 poner el corazón rojo
+            if (idSeriesFavoritas.indexOf(data.id) > -1) {
+                corazon2.classList.add("red");
+            }
+            // Click en el corazón
+            corazon2.addEventListener("click", function () {
+                // Si el corazón está en rojo...
+                if (corazon2.classList.contains("red")) {
+                    this.classList.remove("red");
+                    this.classList.add("grey");
+
+                    var indexSeries = idSeriesFavoritas.indexOf(data.id);
+                    idSeriesFavoritas.splice(indexSeries, 1);
+                    console.log(idSeriesFavoritas);
+                }
+                // Si el corazón no está en rojo...
+                else {
+                    this.classList.remove("grey");
+                    this.classList.add("red");
 
 
-
+                    idSeriesFavoritas.push(data.id);
+                    localStorage.setItem("idSeriesFavs", JSON.stringify(idSeriesFavoritas));
+                    console.log(idSeriesFavoritas);
+                }
+            });
         })
         .catch(function(error) {
             console.log(`El error fue: ${error}`);          
