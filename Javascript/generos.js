@@ -2,12 +2,18 @@ window.onload = function () {
 
     var apiKey = "c3dcc0e9ef8f3864ee4f5ed844d151f8"
 
-    
-    
     var queryStringObj = new URLSearchParams(location.search);    
     var tipo = queryStringObj.get(`tipo`);
-    var h2 = document.querySelector (".titulo");
-    var h2Serie = document.querySelector (".tituloSerie")
+    
+    var inputSearch = document.querySelector(".inputBuscador");
+    inputSearch.style.display = "none";
+    var lupa = document.querySelector("#lupa");
+    lupa.addEventListener("mouseover", function () {
+        inputSearch.style.display = "block";
+    })
+    inputSearch.addEventListener("mouseout", function () {
+        inputSearch.style.display = "none";
+    })
 
 
     // --------------------------------- PELICULAS ---------------------------------
