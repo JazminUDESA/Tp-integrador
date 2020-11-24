@@ -1,35 +1,30 @@
 window.onload = function(){
 
+    // Buscar mobile
     var inputSearch = document.querySelector(".inputBuscador");
-    inputSearch.style.display = "none";
+    var buscador = document.querySelector(".buscador");
     var lupa = document.querySelector("#lupa");
+
+    if (screen.width >= 420 && screen.width <= 1023){
+        lupa.style.display = "none";
+        inputSearch.style.display = "none";
+    }
+
+    // Buscar desktop
+    inputSearch.style.visibility = "hidden";
+    
+    // Mouse over
     lupa.addEventListener("mouseover", function(){
+        inputSearch.style.visibility = "visible";
         inputSearch.style.display = "block";
     })
+    
+    // Mouse out
     inputSearch.addEventListener("mouseout", function () {
         inputSearch.style.display = "none";
-    })
-
-    // var iconos = document.querySelector("svg");
-
-    // iconos.addEventListener("mouseover", function () {
-    //     iconos.style.fill = "red";
-    // })
-    // Barra buscadora
-    // var lupa = document.querySelector("#lupa");
-    // lupa.addEventListener("mouseover", function () {
-    //     lupa.innerHTML = 
-    //     `div.container{:tabindex => "1"}
-    //         %div.search-container{:tabindex => "1"}
-    //             %input{:type => "text", :placeholder => "search"}
-    //             %a.button
-    //       %i.icon-search`
-    //     var searchInput = document.querySelector("#searchInput");
-    //     searchInput.style.fontSize = "16px";
-    //     searchInput.style.fontFamily = "Helvetica";
-    //     searchInput.style.fontWeight = "lighter";
-    //     searchInput.style.height = "33px"
-    // })
+    });
+    
+  
     
     
     var apiKey = `c3dcc0e9ef8f3864ee4f5ed844d151f8`;
@@ -41,9 +36,10 @@ window.onload = function(){
         })
         .then(function(data) {
             console.log(data);
-
+            
             for (let index = 0; index < data.results.length; index++) {
                 const element = data.results[index];
+
                 var ul = document.querySelector("#banner");
                 ul.innerHTML +=
                 `
@@ -69,6 +65,11 @@ window.onload = function(){
         .catch(function(error) {
             console.log(`El error fue: ${error}`);
         }) 
+        
+
+
+
+
 
         
     // Carrusel trending (https://developers.themoviedb.org/3/trending/get-trending)
@@ -167,8 +168,8 @@ window.onload = function(){
             }
         })
 
-    // Recomendación series con ID de Game Of Thrones (https://developers.themoviedb.org/3/tv/get-tv-recommendations)
-    fetch(`https://api.themoviedb.org/3/tv/1399/recommendations?api_key=${apiKey}`)
+    // Recomendación series con ID de "The Queen's Gambit" (https://developers.themoviedb.org/3/tv/get-tv-recommendations)
+    fetch(`https://api.themoviedb.org/3/tv/87739/recommendations?api_key=${apiKey}`)
         .then(function (response) {
             return response.json();
         })

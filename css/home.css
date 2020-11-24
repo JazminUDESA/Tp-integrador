@@ -424,7 +424,7 @@ body{
     /* float: left; */
 }
 
-input:focus, textarea:focus, select:focus{
+input:focus, textarea:focus, select:focus, button:focus{
         outline: none;
     }
 /* .botonSearch {
