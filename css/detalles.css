@@ -110,7 +110,19 @@ section.detalleInfo div.info h2 {
     color: white;
     font-family: helvetica;
 }
+ /* El color del corazón (click) */
 
+ .grey {
+    color: #999;
+}
+
+.red {
+    color: red;
+}
+
+
+
+/* ---------------------------------------------- */
 section.detalleInfo div.info h5 {
     margin: 0%;
     font-weight: bold;
@@ -185,7 +197,8 @@ section.detalleGenero div.imagenesGeneros {
 }
 
 section.detalleGenero div.imagenesGeneros img {
-    width: 32%;
+    width: 115px;
+    height: 162px;
     padding: 10px;
 }
 
@@ -417,7 +430,8 @@ hr.linea {
     }
 
     section.detalleGenero div.imagenesGeneros img {
-    width: 16%;
+    width: 183px;
+    height: 265px;
     padding: 10px;
     }
 

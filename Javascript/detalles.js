@@ -72,33 +72,93 @@ window.onload = function() {
                         `
 
                 // WEB STORAGE 
-                var agregarAFav = document.querySelector("#agregarFav");
-
-                agregarAFav.addEventListener("click", function agregarFAV() {
-                    this.style.color = "red";
-
-                    // POSTER DE PELÍCULA FAV
-                    var posterPelisFavoritas = JSON.parse(localStorage.getItem("posterPelisFavs"));
-                    if (posterPelisFavoritas == null){
-                        posterPelisFavoritas = [];
-                    }
-
-                    posterPelisFavoritas.push(data.poster_path);
-                    localStorage.setItem("posterPelisFavs", JSON.stringify(posterPelisFavoritas));
-                    console.log(posterPelisFavoritas);
-
+                var corazon = document.querySelector("#agregarFav");
+                var idPelisFavoritas = JSON.parse(localStorage.getItem("idPelisFavs"));
+                var idPelis = data.id;
+                
+                function agregarAFav() { 
+                    
                     // ID DE PELÍCULA FAV
-                    var idPelisFavoritas = JSON.parse(localStorage.getItem("idPelisFavs"));
                     if (idPelisFavoritas == null){
                         idPelisFavoritas = [];
                     }
-                    idPelisFavoritas.push(data.id);
+                    idPelisFavoritas.push(idPelis);
                     localStorage.setItem("idPelisFavs", JSON.stringify(idPelisFavoritas));
                     console.log(idPelisFavoritas);
-                });
+                    
+                }
                 
-                // removeEventListener('click', agregarFAV);
+                function sacarDeFav() {
+                    
+                    for (let i = 0; i < idPelisFavoritas.length; i++) {
+                        const element = idPelisFavoritas[i];
+                        
+                        
+                        var indexPelis = idPelisFavoritas.findIndex(item => item.idPelis === idPelis)
+                        idPelisFavoritas.splice(indexPelis,1)
+                            console.log(idPelisFavoritas);
+                    }
 
+                    
+                }
+
+                corazon.addEventListener("click", function () {
+                    
+                    if (this.classList.contains("red")) {
+                        // alert("sacar peli")
+                        this.classList.remove("red");
+                        this.classList.add("grey");
+                        sacarDeFav();
+                    }
+                    else {
+                        this.classList.remove("grey");
+                        this.classList.add("red");
+                        // alert("poner peli");
+
+                        agregarAFav();
+                    }
+                        
+                    
+                    // if (localStorage.getItem("is_reloaded") && agregarAFav()) {
+                    //     alert('Reloaded!');
+                    //     corazon.classList.remove("grey")
+                    //     corazon.classList.add("red")
+                    // }
+                    // else {
+                    //     corazon.classList.remove("red")
+                    //     corazon.classList.add("grey")
+                    // }
+                    
+                    
+                });
+
+
+
+//                     First step is to check sessionStorage for some pre-defined value and if it exists alert user:
+
+
+// Second step is to set sessionStorage to some value (for example true):
+
+// sessionStorage.setItem("is_reloaded", true);
+// Session values kept until page is closed so it will work only if page reloaded in a new tab with the site. You can also keep reload count the same way.
+
+
+
+                // ---------------------
+                // ID DE PELÍCULA FAV
+                // var idPelisFavoritas = JSON.parse(localStorage.getItem("idPelisFavs"));
+                //     if (idPelisFavoritas == null){
+                //         idPelisFavoritas = [];
+                //     }
+                //     idPelisFavoritas.push(data.id);
+                //     localStorage.setItem("idPelisFavs", JSON.stringify(idPelisFavoritas));
+                //     console.log(idPelisFavoritas);
+                // ---------------------
+
+
+
+
+                // removeEventListener('click', agregarFAV);
                 // traer el elemento con GET (para ver si hay elementos en el array)
                     // si no hay: crear un array vacío
                     // si hay algo: agregar el elemento al array: SET
@@ -210,8 +270,10 @@ window.onload = function() {
     
                         JSON.parse(window.localStorage.getItem("peliculasFav"));
                     });
-            // chequear el genero!
-            // No puedo poner actores ni director?
+            
+
+
+
         })
         .catch(function(error) {
             console.log(`El error fue: ${error}`);          
