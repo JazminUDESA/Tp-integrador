@@ -78,15 +78,51 @@ body{
     #favs a svg, #buscar a svg, #cuenta a svg {
         width: 31px;
     }
+
+    /*BUSCADOR*/
+    .buscador {
+        width: 400px;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .botonSearch {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    top: 20px;
+    }
+
+    .inputBuscador {
+        margin-right: 33px;
+        width: 343px;
+        background-color: #ffffff26;
+        border: none;
+        height: 27px;
+        padding: 0px 12px;
+        font-family: Helvetica;
+        font-size: 0.9rem;
+        font-weight: lighter;
+        color: white;
+    }
+
+    input:focus, textarea:focus, select:focus{
+        outline: none;
+    }
+
+    #lupa {
+        color: white;
+    }
  
 
-h3{
+article a h3 {
     color: rgb(209,209,209);
     text-align: left;
     font-size: 18px;
     font-family: Helvetica;
     margin: 0px;
     padding: 35px 0px 10px 10px;
+    text-decoration: none;
 }
 
 /*CARRUSEL*/
@@ -248,12 +284,12 @@ hr.linea {
     
     /*Tamaño carruseles pelis*/
     #pelisAccion, #pelisAventura, #pelisCs, #pelisComedia, #pelisDocu, #pelisDrama, #pelisFam, #pelisRomance, #pelisTerror, #pelisThrillers {
-        width: 55vw;
+        width: 60vw;
     }
 
     /*Tamaño carruseles series*/
     #seriesAccion, #seriesCs, #seriesComedia, #seriesCrimen, #seriesDocu, #seriesDrama, #seriesFam, #pelisRomance, #seriesMisterio, #seriesReality, #seriesTelenovela {
-        width: 55vw;
+        width: 60vw;
     }
 
 
@@ -273,6 +309,7 @@ hr.linea {
     div.autores {
         padding: 0px 0px 20px 0px;
     }
+    
     div.redes {
         display: flex;
         justify-content: flex-end;
@@ -285,7 +322,6 @@ hr.linea {
         margin-right: 70px;
     }
     
-
     div.logos {
         display: flex;
         align-items: center;

@@ -38,7 +38,10 @@
                 <a href="favoritos.html" uk-icon="heart"></a>
             </li>
             <li id="buscar">
-                <a href="" uk-icon="search"></a>
+                <div class="buscador">
+                    <input type="text" class="inputBuscador" placeholder="Buscar..." />
+                    <button class="botonSearch" type="submit"><span id="lupa" href="" uk-icon="search"></span></button>
+                </div>
             </li>
             <li id="cuenta">
                 <a href="" uk-icon="user"></a>
@@ -463,7 +466,7 @@
             </div>
     
             <div class="volver-inicio">
-                <a href="#ancla" class="uk-icon-link" uk-icon="chevron-up"></a>
+                <a href="#" uk-totop uk-scroll></a>
             </div>
     
             <div class="redes">
