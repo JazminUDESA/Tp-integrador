@@ -24,11 +24,6 @@
             <li id="logo">
                 <a href="home.html">
                     <img src="img/logo-transparente-cinemaweb.png" alt="ir a inicio">
-                    <!-- <picture>
-                        <source media="(min-width:1024px)" srcset="img/logo-transparente-cinemaweb.png">
-                        <source media="(min-width:420px)" srcset="img/logo-transparente-cuadrado-cinemaweb.png">
-                        <img src="img/logo-transparente-cuadrado-cinemaweb.png" alt="logo">
-                    </picture> -->
                 </a>
             </li>
             <li id="inicio">
@@ -62,10 +57,15 @@
                 <!-- JS -->
             </ul>
     
-            <a id="flechita" class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous
-                uk-slideshow-item="previous"></a>
-            <a id="flechita" class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next
-                uk-slideshow-item="next"></a>
+            <div class="uk-position-bottom-center uk-position-small">
+                <ul class="uk-dotnav">
+                    <li uk-slideshow-item="0"><a href="#">Item 1</a></li>
+                    <li uk-slideshow-item="1"><a href="#">Item 2</a></li>
+                    <li uk-slideshow-item="2"><a href="#">Item 3</a></li>
+                    <li uk-slideshow-item="3"><a href="#">Item 4</a></li>
+                    <li uk-slideshow-item="4"><a href="#">Item 5</a></li>
+                </ul>
+            </div>
         </div>    
     </article>
     
@@ -161,13 +161,13 @@
     </article>
     
     <!-- FOOTER -->
-    <footer>
-        <hr class="linea">
-        
+    <footer id="footer">
         <article class="footer-arriba">
             <div class="logos">
                 <img src="img/logo-transparente-cuadrado-cinemaweb.png" alt="logo CinemaWeb">
-                <img src="img/logo-tmdb.png" alt="">
+                <a href="https://www.themoviedb.org/">
+                    <img src="img/logo-tmdb.png" alt="">
+                </a>
             </div>
             
             <div class="volver-inicio">
@@ -175,9 +175,9 @@
             </div>
 
             <div class="redes">
-                <a href="#ancla" uk-icon="instagram"></a>
-                <a href="#ancla" uk-icon="facebook"></a>
-                <a href="#ancla" uk-icon="twitter"></a>
+                <a class="iconsRedes" href="#ancla" uk-icon="instagram"></a>
+                <a class="iconsRedes" href="#ancla" uk-icon="facebook"></a>
+                <a class="iconsRedes" href="#ancla" uk-icon="twitter"></a>
             </div>
         </article>
 

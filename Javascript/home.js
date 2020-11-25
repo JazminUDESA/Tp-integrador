@@ -2,7 +2,6 @@ window.onload = function(){
 
     // Buscar mobile
     var inputSearch = document.querySelector(".inputBuscador");
-    var buscador = document.querySelector(".buscador");
     var lupa = document.querySelector("#lupa");
 
     if (screen.width >= 420 && screen.width <= 1023){
@@ -24,7 +23,6 @@ window.onload = function(){
         inputSearch.style.display = "none";
     });
     
-  
     
     
     var apiKey = `c3dcc0e9ef8f3864ee4f5ed844d151f8`;
@@ -37,7 +35,7 @@ window.onload = function(){
         .then(function(data) {
             console.log(data);
             
-            for (let index = 0; index < data.results.length; index++) {
+            for (let index = 0; index < 5; index++) {
                 const element = data.results[index];
 
                 var ul = document.querySelector("#banner");

@@ -431,6 +431,26 @@ hr.linea {
     padding: 10px;
     }
 
+
+    /* FILTROS PÁG BÚSQUEDAS */
+    #filtros {
+        display: flex;
+        justify-content: center;
+        margin: 10px 0px;
+    }
+    .filtro {
+        font-family: Helvetica;
+        font-weight: lighter;
+        color:white!important;
+    }
+    .filtro:hover{
+        color: red!important;
+    }
+
+    .clickRed {
+        color: red;
+    }
+
     /* FOOTER */
     article.footer-arriba {
         grid-template-columns: 50% 10% 40%;

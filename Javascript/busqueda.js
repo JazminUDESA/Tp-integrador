@@ -4,6 +4,16 @@ window.onload = function () {
     var queryStringObj = new URLSearchParams(location.search);    
     var busqueda = queryStringObj.get(`busqueda`);
 
+    // Filtros
+    var filtros = document.querySelector("#filtros");
+    filtros.innerHTML += `  <li><span class="filtro" href"" id="peliculasFiltro" >Películas</span></li>
+                            <li><span class="filtro" href"" id="seriesFiltro">Series</span></li>
+                            <li><span class="filtro" href"" id="actoresFiltro">Actores</span></li>`
+
+    
+
+
+                      
     // ---------------------------------------------PELICULAS---------------------------------------
     fetch(`https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&page=1&query=${busqueda}`) 
 
@@ -22,7 +32,6 @@ window.onload = function () {
                         <img src="https://image.tmdb.org/t/p/original${element.poster_path}">
                     `
                 }
-
             }
 
         })
@@ -30,6 +39,8 @@ window.onload = function () {
             console.log(`El error fue: ${error}`);          
         })
 
+        
+        // ---------------------------------------------SERIES---------------------------------------
         fetch(`https://api.themoviedb.org/3/search/tv?api_key=${apiKey}&page=1&query=${busqueda}`) 
 
         .then(function(response) {
@@ -56,7 +67,7 @@ window.onload = function () {
             console.log(`El error fue: ${error}`);          
         })
 
-    // ---------------------------------------------SERIES---------------------------------------
+    // ---------------------------------------------ACTORES---------------------------------------
 
         fetch(`https://api.themoviedb.org/3/search/person?api_key=${apiKey}&page=1&query=${busqueda}`) 
 
@@ -83,5 +94,8 @@ window.onload = function () {
             console.log(`El error fue: ${error}`);          
         })
         
+        
+
+
         
 }
