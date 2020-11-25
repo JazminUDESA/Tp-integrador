@@ -1,4 +1,28 @@
 window.onload = function () {
+
+    // Buscar mobile
+    var inputSearch = document.querySelector(".inputBuscador");
+    var lupa = document.querySelector("#lupa");
+
+    if (screen.width >= 420 && screen.width <= 1023){
+        lupa.style.display = "none";
+        inputSearch.style.display = "none";
+    }
+
+    // Buscar desktop
+    inputSearch.style.visibility = "hidden";
+    
+    // Mouse over
+    lupa.addEventListener("mouseover", function(){
+        inputSearch.style.visibility = "visible";
+        inputSearch.style.display = "block";
+    })
+    
+    // Mouse out
+    inputSearch.addEventListener("mouseout", function () {
+        inputSearch.style.display = "none";
+    });
+
     var apiKey = `c3dcc0e9ef8f3864ee4f5ed844d151f8`
     
     // Películas favoritas
