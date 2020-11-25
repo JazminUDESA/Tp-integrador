@@ -63,14 +63,14 @@ window.onload = function() {
                             <div id="agregarFav" class="uk-icon-link" uk-icon="heart"></div>
                         </h2>
                         <h4 class="pelicula mediaType">Película</h4>
-                        <a class="idGenero" href="detalles.html?tipo=generos&id=${data.genres[0].name}">${data.genres[0].name}</a>
+                        <a class="idGenero" href="detalles.html?tipo=generos&id=${data.genres[0].id}">${data.genres[0].name}</a>
                         <p id="especificaciones">Calificación: ${data.vote_average}/10 | ${data.runtime} min. | Estreno: ${data.release_date}</p>
                         <div>
                         <h5>Sinopsis:</h5>
                             <p>${data.overview}</p>
                         </div>
                         `
-
+                
             // WEB STORAGE pelis :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :)
                 var corazon = document.querySelector("#agregarFav");
                 var idPelisFavoritas = JSON.parse(localStorage.getItem("idPelisFavs"));
@@ -328,8 +328,6 @@ window.onload = function() {
 
         // D E T A L L E S      G E N E R O S
     function contenidoGeneros () {
-
-        
         
         //FETCH DEL DETALLE DE GENEROS - no trae el nombre del genero, si hago genero por genero es un monton
         fetch(`https://api.themoviedb.org/3/discover/tv?api_key=${apiKey}&with_genres=${id}&language=en`) 
@@ -345,7 +343,6 @@ window.onload = function() {
 
                 var sectionGenero = document.querySelector(".detalleGenero")
                 sectionGenero.innerHTML += `
-                <!-- <h2>Título género</h2> -->
                 <div class="imagenesGeneros">
                     <img src="https://image.tmdb.org/t/p/original/${element}" alt="">
                 </div>
@@ -364,7 +361,46 @@ window.onload = function() {
         var section = document.querySelector(".detalleInfo") 
         section.style.display = "none";
 
+        fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&with_genres=${id}&language=en`)
+
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                console.log(data);
+
+                for (let index = 0; index < data.results.length; index++) {
+                    const element = data.results[index].poster_path;
+
+                    var sectionGenero = document.querySelector(".detalleGenero")
+                    sectionGenero.innerHTML += `
+                <div class="imagenesGeneros">
+                    <img src="https://image.tmdb.org/t/p/original/${element}" alt="">
+                </div>
+                `
+                }
+
+            })
+
+            .catch(function (error) {
+                console.log(`El error fue: ${error}`);
+            })
+
+        var divReviews = document.querySelector(".reviews");
+        divReviews.style.display = "none";
+
+        var section = document.querySelector(".detalleInfo")
+        section.style.display = "none";
+
     }
+
+    var texto = document.querySelector (".recomendadas")
+    if (tipo == "generos") {
+        texto.style.display="none";
+    }
+
+    
+
 
     // // D E T A L L E S      G É N E R O S ------> PARA CHEQUEAR
 
