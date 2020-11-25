@@ -3,111 +3,97 @@ body{
 }
 
 /* HEADER */
-    header ul {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 15px;
-        grid-template-areas: "logo logo logo"
-                             "inicio peliculas series"
-                             "favs buscar cuenta";
-        box-sizing: border-box;
-        list-style-type: none;
-        margin: 0px;
-        padding: 0px;  
-    }
-    
-    header ul li {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+header {
+    padding-bottom: 30px;
+}
+header ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
+    grid-template-areas:    "logo logo logo"
+                            "inicio peliculas series"
+                            "favs buscar cuenta";
+    box-sizing: border-box;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+header ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Asignación área */
+#logo {
+    grid-area: logo;
+}
+#inicio {
+    grid-area: inicio;
+}
+#peliculas {
+    grid-area: peliculas;
+}
+#series {
+    grid-area: series;
+}
+#favs {
+    grid-area: favs;
+    color: white;
+}
+#buscar {
+    grid-area: buscar;
+    color: white;
+}
+#cuenta {
+    grid-area: cuenta;
+    color: white;
+    padding-right: 12px;
+}
 
-    /*Asignación áreas*/
-    #logo {
-        grid-area: logo;
-    }
-    #inicio {
-        grid-area: inicio;
-    }
-    #peliculas {
-        grid-area: peliculas;
-    }
-    #series {
-        grid-area: series;
-    }
-    #favs {
-        grid-area: favs;
-        color: red;
-    }
-    #buscar {
-        grid-area: buscar;
-        color: white;
-    }
-    #cuenta {
-        grid-area: cuenta;
-        color: white;
-        padding-right: 12px;
-    }
+/* Logo */
+#logo img {
+    width: 400px;
+    padding-top: 30px;
+}
+header ul li#logo {
+    display: flex;
+    justify-content: center;
+}
 
-    /*Logo*/
-    #logo img {
-        width: 400px;
-        padding-top: 30px;
-    }
-    
-    header ul li#logo {
-        display: flex;
-        justify-content: center;
-    }
-    
-    /*Hipervínculos*/
-    header ul li a{
-        text-decoration: none;
-        font-family: Helvetica;
-        font-size: 1.5rem;
-        font-weight: lighter;
-        color: white;
-    }
+/* Hipervínculos */
+header ul li a {
+    text-decoration: none;
+    font-family: Helvetica;
+    font-size: 1.5rem;
+    font-weight: lighter;
+    color: white;
+}
 
-    /*Iconos*/
-    #favs a svg, #buscar a svg, #cuenta a svg {
-        width: 31px;
-    }
+/* Íconos */
+#favs a svg, #buscar a svg, #cuenta a svg{
+    width: 31px;
+}
 
-    /*BUSCADOR*/
-    .buscador {
-        width: 400px;
-        display: flex;
-        justify-content: flex-end;
-    }
+/* FAVORITOS */
+h2 {
+    font-family: helvetica;
+    color: rgb(209,209,209);
+    font-size: 18px;
+    margin: 0%;
+    padding: 20px 30px 5px 30px;
+}
 
-    .botonSearch {
-    position: absolute;
-    background-color: transparent;
-    border: none;
-    top: 20px;
-    }
+div#divPelisFavoritas, div#divSeriesFavoritas {
+    flex-wrap: wrap;
+    padding: 5px 30px 20px 30px;
+    margin: 0px;
+}
 
-    .inputBuscador {
-        margin-right: 33px;
-        width: 343px;
-        background-color: #ffffff26;
-        border: none;
-        height: 27px;
-        padding: 0px 12px;
-        font-family: Helvetica;
-        font-size: 0.9rem;
-        font-weight: lighter;
-        color: white;
-    }
-
-    input:focus, textarea:focus, select:focus{
-        outline: none;
-    }
-
-    #lupa {
-        color: white;
-    }
+div#divPelisFavoritas img, div#divSeriesFavoritas img {
+    width: 115px;
+    height: 162px;
+    padding: 10px;
+} 
     
 
 /* FOOTER */
@@ -196,35 +182,52 @@ body{
     }
     header ul{
         height: 60px;
-         grid-template-columns: 15% 5% 7% 5.5% 3.5% 55% 6%;
+        grid-template-columns: 15% 5% 7% 5.5% 3.5% 55% 6%;
         grid-gap: 7px;
         grid-template-areas: "logo inicio peliculas series favs buscar cuenta";
+        /* background-color: rgba(0, 0, 0, 0.1); */
         background-image: linear-gradient(to bottom, #000000, #ffffff00);
         padding: 0% 2%;
         align-items: center;
     }
 
-    header ul li{
+    header ul li {
         justify-content: flex-end;
     }
 
-    header ul li a{
+    header ul li a {
         font-size: 1rem;
     }
+    header ul li a:hover {
+        color: #ffffffad;
+        text-decoration: none!important;
+    }
+   
 
-    /*Logo*/
-    #logo img{
+    /* Logo */
+    #logo img {
         width: 200px;
         padding: 0px;
     }
-
-    /*Iconos*/
+    /* Iconos */
     #favs a svg, #buscar a svg,#cuenta a svg{
         color: white;
         width: auto;
     }
     #cuenta a svg{
         padding-right: 12px;
+    }
+    #favs a svg:hover {
+        color: #ffffffad;
+    }
+    #buscar span svg:hover {
+        color: #ffffffad;
+    }
+    #buscar span {
+        color: white
+    }
+    #cuenta a svg:hover {
+        color: #ffffffad;
     }
     
     /* espacio para header */
@@ -297,6 +300,39 @@ body{
 
     div.logos img {
     width: 45px;
+    }
+
+    /* Buscador */
+    .buscador {
+        /* float: right; */
+        width: 400px;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .botonSearch {
+        position: absolute;
+        background-color: transparent;
+        border: none;
+        top: 20px;
+    }
+
+    .inputBuscador {
+        margin-right: 33px;
+        width: 343px;
+        background-color: #ffffff26;
+        border: none;
+        height: 27px;
+        padding: 0px 12px;
+        font-family: Helvetica;
+        font-size: 0.9rem;
+        font-weight: lighter;
+        color: white;
+        /* float: left; */
+    }
+
+    input:focus, textarea:focus, select:focus, button:focus{
+        outline: none;
     }
 
 
