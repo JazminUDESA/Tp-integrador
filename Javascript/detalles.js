@@ -59,7 +59,7 @@ window.onload = function() {
                         <a class="idGenero" href="detalles.html?tipo=generos&id=${data.genres[0].name}">${data.genres[0].name}</a>
                         
 
-                        <ul id="pri" class="uk-subnav uk-subnav-divider" uk-margin> 
+                        <ul id="especificaciones" class="uk-subnav uk-subnav-divider" uk-margin> 
                             <li>Calificación: ${data.vote_average}/10</li>
                             <li>${data.runtime} min.</li>
                             <li>${data.release_date}</li>
@@ -124,6 +124,12 @@ window.onload = function() {
                     const element = data.results[index].author;
                     var contenido = data.results[index].content;
                     
+                    var divsinReseña = document.querySelector(".sinReseña")
+
+                    if (data.results.length > 0) {
+                        divsinReseña.style.display = "none";
+                    }
+
                     var div = document.querySelector(".todaslasreseñas")
                     div.innerHTML += `
                         <article id="reseña" class="uk-comment uk-comment-primary">
@@ -147,6 +153,35 @@ window.onload = function() {
                 console.log(`El error fue: ${error}`);
             })
 
+        // FETCH RECOMENDADOS
+
+        fetch(`https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=${apiKey}`)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data);
+            var recomendadasMovies = document.querySelector("#recomendadasMovies");
+            for (let i = 0; i < data.results.length; i++) {
+                const element = data.results[i];
+
+                recomendadasMovies.innerHTML += `
+                    <h3 class="titulosGeneros">Porque te gustó Avengers: Endgame</h3 class="titulosGeneros">
+                    <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="sets: true">
+                        <ul id="recomendadasMovies" class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@m">
+                            <!-- JS -->
+                        </ul>
+                
+                        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous
+                            uk-slider-item="previous"></a>
+                        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next
+                            uk-slider-item="next"></a>
+                    </div>
+                `
+
+            }
+        })
+        
     }
         
         // D E T A L L E S      S E R I E S 
@@ -169,18 +204,13 @@ window.onload = function() {
                         ${data.name}
                         <div id="agregarFav" class="uk-icon-link" uk-icon="heart"></div>
                     </h2>
-                    <h4 class="serie mediaType">Serie</h4>
+                    <h4 class="seriemediaType">Serie</h4>
                     <a class="idGenero" href="detalles.html?tipo=generos&id=${data.genres[0].name}">${data.genres[0].name}</a> 
-                    <ul id="pri" class="uk-subnav uk-subnav-divider" uk-margin> 
-                        <li>Calificación: ${data.vote_average}/10</li>
-                        <li>${data.number_of_seasons} temporadas</li>
-                        <li>Primera emisión: ${data.first_air_date}</li>
-                    </ul>
-                    <ul class="seg">
-                        <li type="none">Director: Christopher Nolan</li>
-                        <li type="none">Actores: Christian Bale, Katie Holmes, ...</li>
-                    </ul>
-                    <p>${data.overview}</p>
+                    <p id="especificaciones">Calificación: ${data.vote_average}/10 | ${data.number_of_seasons} temporadas | Primera emisión: ${data.first_air_date}</p>
+                    <div>
+                        <h5>Sinopsis:</h5>
+                        <p>${data.overview}</p>
+                    </div>
                 </div>
                 `
             // WEB STORAGE series :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :)
@@ -232,25 +262,31 @@ window.onload = function() {
             console.log(data);
 
             for (let index = 0; index < 10; index++) {
-                const element = data.results[index].author;
+                const autor = data.results[index].author;
                 var contenido = data.results[index].content;
-
+                // var vacio = data.total_results[index];
+                 
                 var div = document.querySelector(".todaslasreseñas")
+                var divsinReseña = document.querySelector(".sinReseña")
+
+                if (data.results.length > 0) {
+                    divsinReseña.style.display = "none";
+                }
+
                 div.innerHTML += `
                     <article id="reseña" class="uk-comment uk-comment-primary">
                         <header id="paraReview" class="uk-comment-header">
                             <div class="uk-grid-medium uk-flex-middle" uk-grid>
                                 <div class="uk-width-expand">
-                                    <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">${element}</a></h4>
+                                    <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">${autor}</a></h4>
                                 </div>
                             </div>
                         </header>
                         <div class="uk-comment-body">
                             <p>${contenido}</p>
-                    </div>
+                        </div>
                     </article>
                     `
-                
             }
         })
         .catch(function(error) {
@@ -273,30 +309,17 @@ window.onload = function() {
         .then(function(data) {
             console.log(data);
 
-            var sectionGenero = document.querySelector(".detalleGenero")
-            sectionGenero.innerHTML += `
-            <h2>Título género</h2>
-            <div class="imagenesGeneros">
-                <img src="https://image.tmdb.org/t/p/original/${data.results[0].poster_path}" alt="">
-                <img src="https://image.tmdb.org/t/p/original/${data.results[1].poster_path}" alt="">
-                <img src="https://image.tmdb.org/t/p/original/${data.results[2].poster_path}" alt="">
-                <img src="https://image.tmdb.org/t/p/original/${data.results[3].poster_path}" alt="">
-                <img src="https://image.tmdb.org/t/p/original/${data.results[4].poster_path}" alt="">
-                <img src="https://image.tmdb.org/t/p/original/${data.results[5].poster_path}" alt="">
-                <img src="https://image.tmdb.org/t/p/original/${data.results[6].poster_path}" alt="">
-                <img src="https://image.tmdb.org/t/p/original/${data.results[7].poster_path}" alt="">
-                <img src="https://image.tmdb.org/t/p/original/${data.results[8].poster_path}" alt="">
-                <img src="https://image.tmdb.org/t/p/original/${data.results[9].poster_path}" alt="">
-                <img src="https://image.tmdb.org/t/p/original/${data.results[10].poster_path}" alt="">
-                <img src="https://image.tmdb.org/t/p/original/${data.results[11].poster_path}" alt="">
-                <img src="https://image.tmdb.org/t/p/original/${data.results[12].poster_path}" alt="">
-                <img src="https://image.tmdb.org/t/p/original/${data.results[13].poster_path}" alt="">
-                <img src="https://image.tmdb.org/t/p/original/${data.results[15].poster_path}" alt="">
-                <img src="https://image.tmdb.org/t/p/original/${data.results[16].poster_path}" alt="">
-                <img src="https://image.tmdb.org/t/p/original/${data.results[17].poster_path}" alt="">
-                <img src="https://image.tmdb.org/t/p/original/${data.results[18].poster_path}" alt="">
-            </div>
-            `
+            for (let index = 0; index < data.results.length; index++) {
+                const element = data.results[index].poster_path;
+
+                var sectionGenero = document.querySelector(".detalleGenero")
+                sectionGenero.innerHTML += `
+                <!-- <h2>Título género</h2> -->
+                <div class="imagenesGeneros">
+                    <img src="https://image.tmdb.org/t/p/original/${element}" alt="">
+                </div>
+                `    
+            }
                 
         })
 

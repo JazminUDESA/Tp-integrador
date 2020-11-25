@@ -46,7 +46,7 @@ window.onload = function () {
 
                 var divSeriesFavoritas = document.querySelector("#divSeriesFavoritas");
                 divSeriesFavoritas.innerHTML += 
-                `<a class="agregarPosterSerieFav" href="detalles.html?tipo=peliculas&id=${id}">
+                `<a class="agregarPosterSerieFav" href="detalles.html?tipo=series&id=${id}">
                     <img src="https://image.tmdb.org/t/p/original${data.poster_path}">
                 </a>`;
             })

@@ -124,29 +124,47 @@ section.detalleInfo div.info h2 {
 
 
 /* ---------------------------------------------- */
-section.detalleInfo div.info h5 {
+section.detalleInfo div.info a {
     margin: 0%;
     font-weight: bold;
     color: red;
     font-family: helvetica;
 }
 
-section.detalle ul#pri {
-    font-size: 15px;
+section.detalleInfo div.info h4.seriemediaType {
     font-family: helvetica;
-
+    color: rgba(255, 255, 255, 0.301);
+    margin: 0px;
 }
 
-section.detalleInfo ul.seg {
+section.detalleInfo div.info p#especificaciones {
+    font-size: 12px;
+    font-family: helvetica;
+    color: rgba(255, 255, 255, 0.301);
+    padding: 35px 0px;
+    margin: 0px;
+
+}
+section.detalleInfo div.info div h5 {
+    font-family: helvetica;
+    color: white;
+    margin: 0px;
+}
+
+
+/* section.detalleInfo ul.seg {
     font-size: 15px;
     font-family: helvetica;
 
     margin: 0%;
     padding: 0%;
-}
+} */
 
-section.detalleInfo p {
+section.detalleInfo div p {
     font-family: helvetica;
+    color: white;
+    padding: 15px 0px;
+    margin: 0px;
 
 }
 
@@ -170,7 +188,7 @@ div.reviews h2 {
     padding: 20px 0px 20px;
 }
 
-div.reviews div.todaslasreseñas article#reseña {
+div.reviews div.todaslasreseñas article#reseña, div.sinReseña article#reseña{
     background-color: rgb(8, 8, 8);
     padding: 30px;
     margin: 0px 0px 30px;
@@ -389,17 +407,13 @@ hr.linea {
         padding: 0px 0px 15px 0px;
     }
     
-    section.detalleInfo ul#pri {
+    section.detalleInfo div.info p#especificaciones {
         font-size: 15px;
         font-family: helvetica;
-        padding: 0px 0px 15px 0px;
-    }
+        color: rgba(255, 255, 255, 0.301);
+        padding: 30px 0px;
+        margin: 0px;
     
-    section.detalleInfo ul.seg {
-        font-size: 15px;
-        font-family: helvetica;
-        margin: 0%;
-        padding: 0px 0px 15px 0px;
     }
     
     section.detalleInfo p {
