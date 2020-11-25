@@ -4,125 +4,75 @@ body{
 }
 
 /* HEADER */
-    header {
-        padding-bottom: 30px;
-    }
-
-    header ul {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 15px;
-        grid-template-areas: "logo logo logo"
-                             "inicio peliculas series"
-                             "favs buscar cuenta";
-        box-sizing: border-box;
-        list-style-type: none;
-        margin: 0px;
-        padding: 0px;            
-    }
-
-    header ul li {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    /*Asignación áreas*/
-    #logo {
-        grid-area: logo;
-    }
-    #inicio {
-        grid-area: inicio;
-    }
-    #peliculas {
-        grid-area: peliculas;
-    }
-    #series {
-        grid-area: series;
-    }
-    #favs {
-        grid-area: favs;
-        color: white;
-    }
-    #buscar {
-        grid-area: buscar;
-        color: white;
-    }
-    #cuenta {
-        grid-area: cuenta;
-        color: white;
-        padding-right: 12px;
-    }
-
-    /*Logo*/
-    #logo img {
-        width: 400px;
-        padding-top: 30px;
-    }
-    
-    header ul li#logo {
-        display: flex;
-        justify-content: center;
-    }
-    
-    /*Hipervínculos*/
-    header ul li a{
-        text-decoration: none;
-        font-family: Helvetica;
-        font-size: 1.5rem;
-        font-weight: lighter;
-        color: white;
-    }
-
-    /*Iconos*/
-    #favs a svg, #buscar a svg, #cuenta a svg {
-        width: 31px;
-    }
-
-    /*BUSCADOR*/
-    .buscador {
-        width: 400px;
-        display: flex;
-        justify-content: flex-end;
-    }
-
-    .botonSearch {
-    position: absolute;
-    background-color: transparent;
-    border: none;
-    top: 20px;
-    }
-
-    .inputBuscador {
-        margin-right: 33px;
-        width: 343px;
-        background-color: #ffffff26;
-        border: none;
-        height: 27px;
-        padding: 0px 12px;
-        font-family: Helvetica;
-        font-size: 0.9rem;
-        font-weight: lighter;
-        color: white;
-    }
-
-    input:focus, textarea:focus, select:focus{
-        outline: none;
-    }
-
-    #lupa {
-        color: white;
-    }
- 
-
-article a h3 {
-    color: rgb(209,209,209);
-    text-align: left;
-    font-size: 18px;
-    font-family: Helvetica;
+header {
+    padding-bottom: 30px;
+}
+header ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
+    grid-template-areas:    "logo logo logo"
+                            "inicio peliculas series"
+                            "favs buscar cuenta";
+    box-sizing: border-box;
+    list-style-type: none;
     margin: 0px;
-    padding: 35px 0px 10px 10px;
+    padding: 0px;
+}
+header ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Asignación área */
+#logo {
+    grid-area: logo;
+}
+#inicio {
+    grid-area: inicio;
+}
+#peliculas {
+    grid-area: peliculas;
+}
+#series {
+    grid-area: series;
+}
+#favs {
+    grid-area: favs;
+    color: white;
+}
+#buscar {
+    grid-area: buscar;
+    color: white;
+}
+#cuenta {
+    grid-area: cuenta;
+    color: white;
+    padding-right: 12px;
+}
+
+/* Logo */
+#logo img {
+    width: 400px;
+    padding-top: 30px;
+}
+header ul li#logo {
+    display: flex;
+    justify-content: center;
+}
+
+/* Hipervínculos */
+header ul li a {
     text-decoration: none;
+    font-family: Helvetica;
+    font-size: 1.5rem;
+    font-weight: lighter;
+    color: white;
+}
+
+/* Íconos */
+#favs a svg, #buscar a svg, #cuenta a svg{
+    width: 31px;
 }
 
 /*CARRUSEL*/
@@ -156,75 +106,75 @@ a.linkTituloBanner {
 
 
 
-/* FOOTER*/
-article.footer-arriba {
-    display: grid;
-    grid-template-columns: 2fr 1fr 2fr;
-    justify-content: space-between;
-    padding: 0% 3% 0% 3%;
-}
+/* FOOTER */
+    /* Footer arriba (legales y redes) */
+    article.footer-arriba {
+        display: grid;
+        grid-template-columns: 2fr 1fr 2fr;
+        justify-content: space-between;
+        padding: 0% 3% 0% 3%;
+    }
+        /* Legales */
+        footer div.legales {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            padding: 10px 20px 0px 30px;
+        }
+            /* Texto hipervínculo legales */
+            footer div.legales a {
+                margin: 0px;
+                padding: 5px;
+                color: grey;
+                font-size: 12px;
+                font-family: Helvetica;
+                text-decoration: none;
+            }
+        /* Redes */
+        footer div.redes {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            padding: 20px 0px 10px 0px;
+        }
 
-div.piedepagina {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    padding: 10px 20px 0px 30px;
-}
-
-div.piedepagina a {
-    color: grey;
-    font-size: 12px;
-    text-decoration: none;
-    font-family: Helvetica;
-    padding: 5px;
-    margin: 0px;
-}
-
-div.redes {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center; 
-    padding: 20px 0px 10px 0px;
-}
-
-
-div.logos {
+    div.logos {
     display: flex;
     align-items: center;
     gap: 30px;
     margin-left: 5px;
-}
+    }
 
-div.logos img {
+    div.logos img {
     width: 20px;
-}
+    }
+        /* Volver a arriba */
+            div.volver-inicio {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 20px 0px 10px 0px;
+            }
 
-div.volver-inicio {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 0px 10px 0px;
-}
+    /* Nombres alumnas */
+    footer div.nombres-alumnas {
+        display: flex;
+        justify-content: center;
+        padding: 0px 0px 20px 0px;
+    }
+        /* Texto hipervínculo de los nombres */
+        footer div.nombres-alumnas a {
+            margin: 0px;
+            padding: 5px;
+            color: grey;
+            font-size: 12px;
+            font-family: Helvetica;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-
-div.autores {
-    display: flex;
-    justify-content: center;
-    padding: 0px 0px 20px 0px;
-}
-
-div.autores a {
-    margin: 0px;
-    padding: 5px;
-    color: grey;
-    font-size: 12px;
-    font-family: Helvetica;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-hr.linea {
+    hr.linea {
     color: grey;
     border-color: grey;
     margin: 0%;
@@ -234,38 +184,42 @@ hr.linea {
 
 /* DESKTOP ----------------------------------------------------- */
 @media only screen and (min-width: 1024px) {
-/* HEADER */
+    /* HEADER */
     header {
         position: fixed;
         z-index: 1000;
         width: 100%;
     }
-
     header ul{
         height: 60px;
-         grid-template-columns: 15% 5% 7% 5.5% 3.5% 55% 6%;
+        grid-template-columns: 15% 5% 7% 5.5% 3.5% 55% 6%;
         grid-gap: 7px;
         grid-template-areas: "logo inicio peliculas series favs buscar cuenta";
+        /* background-color: rgba(0, 0, 0, 0.1); */
         background-image: linear-gradient(to bottom, #000000, #ffffff00);
         padding: 0% 2%;
         align-items: center;
     }
 
-    header ul li{
+    header ul li {
         justify-content: flex-end;
     }
 
-    header ul li a{
+    header ul li a {
         font-size: 1rem;
     }
+    header ul li a:hover {
+        color: #ffffffad;
+        text-decoration: none!important;
+    }
+   
 
-    /*Logo*/
-    #logo img{
+    /* Logo */
+    #logo img {
         width: 200px;
         padding: 0px;
     }
-
-    /*Iconos*/
+    /* Iconos */
     #favs a svg, #buscar a svg,#cuenta a svg{
         color: white;
         width: auto;
@@ -273,6 +227,19 @@ hr.linea {
     #cuenta a svg{
         padding-right: 12px;
     }
+    #favs a svg:hover {
+        color: #ffffffad;
+    }
+    #buscar span svg:hover {
+        color: #ffffffad;
+    }
+    #buscar span {
+        color: white
+    }
+    #cuenta a svg:hover {
+        color: #ffffffad;
+    }
+
 
     /*CARRUSEL MÁS POPULARES*/
     #titulo-estrenos{
@@ -293,32 +260,38 @@ hr.linea {
     }
 
 
-    /*FOOTER*/
+    /* FOOTER */
     article.footer-arriba {
         grid-template-columns: 50% 10% 40%;
         justify-content: space-between;
-    }
-
-    div.piedepagina {
-        display: flex;
-        flex-direction: row;
-        padding: 0px;
-        justify-content: space-around;
-    }
-
-    div.autores {
-        padding: 0px 0px 20px 0px;
+        margin-top: 50px;
     }
     
-    div.redes {
+    
+    /* Reducir tamaño del contenedor de redes */
+    footer div.redes {
         display: flex;
         justify-content: flex-end;
         padding: 20px 0px 10px 0px;
         gap: 70px;
     }
 
+    .iconsRedes:hover {
+        color: red;
+    }
+    div.nombres-alumnas {
+        padding: 20px 0px 20px 0px;
+    }
+
+    footer div.legales {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 0px;
+    }
+
     div.volver-inicio {
-        padding: 10px 0px 10px 0px;
+        padding: 10px 0px 30px 0px;
         margin-right: 70px;
     }
     
@@ -330,8 +303,41 @@ hr.linea {
     }
 
     div.logos img {
-    width: 25px;
+    width: 45px;
     }
 
+    /* Buscador */
+    .buscador {
+        /* float: right; */
+        width: 400px;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .botonSearch {
+        position: absolute;
+        background-color: transparent;
+        border: none;
+        top: 20px;
+    }
+
+    .inputBuscador {
+        margin-right: 33px;
+        width: 343px;
+        background-color: #ffffff26;
+        border: none;
+        height: 27px;
+        padding: 0px 12px;
+        font-family: Helvetica;
+        font-size: 0.9rem;
+        font-weight: lighter;
+        color: white;
+        /* float: left; */
+    }
+
+    input:focus, textarea:focus, select:focus, button:focus{
+        outline: none;
+        
+    }
 
 }

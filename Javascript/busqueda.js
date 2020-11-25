@@ -4,6 +4,8 @@ window.onload = function () {
     var queryStringObj = new URLSearchParams(location.search);    
     var busqueda = queryStringObj.get(`busqueda`);
 
+
+    
     // Filtros
     var filtros = document.querySelector("#filtros");
     filtros.innerHTML += `  <li><span class="filtro" href"" id="peliculasFiltro" >Películas</span></li>

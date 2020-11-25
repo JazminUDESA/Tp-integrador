@@ -64,19 +64,11 @@ window.onload = function() {
                         </h2>
                         <h4 class="pelicula mediaType">Película</h4>
                         <a class="idGenero" href="detalles.html?tipo=generos&id=${data.genres[0].name}">${data.genres[0].name}</a>
-                        
-
-                        <ul id="especificaciones" class="uk-subnav uk-subnav-divider" uk-margin> 
-                            <li>Calificación: ${data.vote_average}/10</li>
-                            <li>${data.runtime} min.</li>
-                            <li>${data.release_date}</li>
-                        </ul>
-                        <ul class="seg">
-                            <li type="none">Director: Christopher Nolan</li>
-                            <li type="none">Actores: Christian Bale, Katie Holmes, ...</li>
-                        </ul>
-                        <p>${data.overview}</p>
-                    </div>
+                        <p id="especificaciones">Calificación: ${data.vote_average}/10 | ${data.runtime} min. | Estreno: ${data.release_date}</p>
+                        <div>
+                        <h5>Sinopsis:</h5>
+                            <p>${data.overview}</p>
+                        </div>
                         `
 
             // WEB STORAGE pelis :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :)
@@ -168,14 +160,15 @@ window.onload = function() {
         })
         .then(function (data) {
             console.log(data);
+
             var carruselRecomendadas = document.querySelector("#carruselRecomendadas");
             for (let i = 0; i < data.results.length; i++) {
                 const element = data.results[i];
 
-                var divsinReseña = document.querySelector(".sinReseña")
+                var divsinRecomendaciones = document.querySelector(".sinRecomendaciones")
 
                 if (data.results.length > 0) {
-                    divsinReseña.style.display = "none";
+                    divsinRecomendaciones.style.display = "none";
                 }
 
                 carruselRecomendadas.innerHTML += `
@@ -271,7 +264,6 @@ window.onload = function() {
             for (let index = 0; index < 10; index++) {
                 const autor = data.results[index].author;
                 var contenido = data.results[index].content;
-                // var vacio = data.total_results[index];
                  
                 var div = document.querySelector(".todaslasreseñas")
                 var divsinReseña = document.querySelector(".sinReseña")
@@ -313,10 +305,10 @@ window.onload = function() {
             for (let i = 0; i < data.results.length; i++) {
                 const element = data.results[i];
 
-                var divsinReseña = document.querySelector(".sinReseña")
+                var divsinRecomendaciones = document.querySelector(".sinRecomendaciones")
 
                 if (data.results.length > 0) {
-                    divsinReseña.style.display = "none";
+                    divsinRecomendaciones.style.display = "none";
                 }
 
                 carruselRecomendadas.innerHTML += `

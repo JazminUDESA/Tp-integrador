@@ -38,10 +38,10 @@
                 <a href="favoritos.html" uk-icon="heart"></a>
             </li>
             <li id="buscar">
-                <div class="buscador">
-                    <input type="text" class="inputBuscador" placeholder="Buscar..." />
-                    <button class="botonSearch" type="submit"><span id="lupa" href="" uk-icon="search"></span></button>
-                </div>
+                <form action="busqueda.html" method="GET" class="buscador">
+                    <input type="text" class="inputBuscador" name="busqueda" placeholder="Buscar..."/>
+                    <button  class="botonSearch" type="submit"><span id="lupa" href="" uk-icon="search"></span></button>
+                </form>
             </li>
             <li id="cuenta">
                 <a href="" uk-icon="user"></a>
@@ -455,29 +455,27 @@
 
 
     <!--FOOTER-->
-    <footer class="footer">
-        
-        <hr class="linea">
-    
+    <footer id="footer">
         <article class="footer-arriba">
             <div class="logos">
                 <img src="img/logo-transparente-cuadrado-cinemaweb.png" alt="logo CinemaWeb">
-                <img src="img/logo-tmdb.png" alt="">
+                <a href="https://www.themoviedb.org/">
+                    <img src="img/logo-tmdb.png" alt="">
+                </a>
             </div>
-    
+            
             <div class="volver-inicio">
                 <a href="#" uk-totop uk-scroll></a>
             </div>
-    
-            <div class="redes">
-                <a href="#ancla" uk-icon="instagram"></a>
-                <a href="#ancla" uk-icon="facebook"></a> 
-                <a href="#ancla" uk-icon="twitter"></a> 
-            </div>
 
+            <div class="redes">
+                <a class="iconsRedes" href="#ancla" uk-icon="instagram"></a>
+                <a class="iconsRedes" href="#ancla" uk-icon="facebook"></a>
+                <a class="iconsRedes" href="#ancla" uk-icon="twitter"></a>
+            </div>
         </article>
 
-        <div class="piedepagina">
+        <div class="legales">
             <ul class="uk-breadcrumb">
                 <li><a href="">Términos y Condiciones</a></li>
                 <li><a href="">Contacto</a></li>
@@ -485,7 +483,7 @@
             </ul>
         </div>
 
-        <div class="autores">
+        <div class="nombres-alumnas">
             <a href="">© María Paula Herrera</a>
             <a href="">© Catalina Soncini Viola</a>
             <a href="">© Jazmín Suárez</a>
