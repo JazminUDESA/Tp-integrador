@@ -181,9 +181,8 @@ div.reviews {
 
 div.reviews h2 {
     font-family: helvetica;
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
+    color: rgb(209,209,209);
+    font-size: 18px;
     margin: 0%;
     padding: 20px 0px 20px;
 }
@@ -197,6 +196,8 @@ div.reviews div.todaslasreseñas article#reseña, div.sinReseña article#reseña
 div.reviews div.todaslasreseñas article#reseña h4 {
     color: red;
 }
+
+
 
 /* DETALLE DE GÉNERO */
 section.detalleGenero {
@@ -224,6 +225,15 @@ section.detalleGenero div.imagenesGeneros img {
     width: 115px;
     height: 162px;
     padding: 10px;
+}
+
+/* recomendadas */
+div.recomendadas h2.tituloRecomendadas {
+    font-family: helvetica;
+    color: rgb(209,209,209);
+    font-size: 18px;
+    margin: 0%;
+    padding: 20px 0px 20px 10px;
 }
 
 
@@ -425,6 +435,19 @@ hr.linea {
 
     div.reviews {
         padding: 10px 100px 10px 100px;
+    }
+
+    /*recomendadas */
+    div.recomendadas h2.tituloRecomendadas {
+        font-family: helvetica;
+        color: rgb(209,209,209);
+        font-size: 18px;
+        margin: 0%;
+        padding: 20px 0px 20px 10px;
+    }
+
+    ul#carruselRecomendadas {
+        width: 50vw;
     }
 
     /* DETALLE DE GÉNERO */

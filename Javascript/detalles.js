@@ -161,23 +161,17 @@ window.onload = function() {
         })
         .then(function (data) {
             console.log(data);
-            var recomendadasMovies = document.querySelector("#recomendadasMovies");
+            var carruselRecomendadas = document.querySelector("#carruselRecomendadas");
             for (let i = 0; i < data.results.length; i++) {
                 const element = data.results[i];
 
-                recomendadasMovies.innerHTML += `
-                    <h3 class="titulosGeneros">Porque te gustó Avengers: Endgame</h3 class="titulosGeneros">
-                    <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="sets: true">
-                        <ul id="recomendadasMovies" class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@m">
-                            <!-- JS -->
-                        </ul>
-                
-                        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous
-                            uk-slider-item="previous"></a>
-                        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next
-                            uk-slider-item="next"></a>
-                    </div>
-                `
+                carruselRecomendadas.innerHTML += `
+                    <li>
+                        <a href="detalles.html?tipo=peliculas&id=${element.id}">
+                            <img src="https://image.tmdb.org/t/p/original${element.poster_path}">
+                        </a>
+                    </li>
+                    `
 
             }
         })
