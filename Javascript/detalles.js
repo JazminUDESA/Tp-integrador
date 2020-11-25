@@ -171,14 +171,15 @@ window.onload = function() {
                     divsinRecomendaciones.style.display = "none";
                 }
 
-                carruselRecomendadas.innerHTML += `
-                    <li>
-                        <a href="detalles.html?tipo=peliculas&id=${element.id}">
-                            <img src="https://image.tmdb.org/t/p/original${element.poster_path}">
-                        </a>
-                    </li>
-                    `
-
+                if (element.poster_path !== null) {
+                    carruselRecomendadas.innerHTML += `
+                        <li>
+                            <a href="detalles.html?tipo=peliculas&id=${element.id}">
+                                <img src="https://image.tmdb.org/t/p/original${element.poster_path}">
+                            </a>
+                        </li>
+                        `
+                }
             }
         })
         
@@ -311,14 +312,15 @@ window.onload = function() {
                     divsinRecomendaciones.style.display = "none";
                 }
 
-                carruselRecomendadas.innerHTML += `
-                    <li>
-                        <a href="detalles.html?tipo=series&id=${element.id}">
-                            <img src="https://image.tmdb.org/t/p/original${element.poster_path}">
-                        </a>
-                    </li>
-                    `
-
+                if (element.poster_path !== null) {
+                    carruselRecomendadas.innerHTML += `
+                        <li>
+                            <a href="detalles.html?tipo=series&id=${element.id}">
+                                <img src="https://image.tmdb.org/t/p/original${element.poster_path}">
+                            </a>
+                        </li>
+                        `
+                }
             }
         })
 
