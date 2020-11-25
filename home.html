@@ -20,7 +20,7 @@
 <body>
     <!-- HEADER -->
     <header>
-        <ul>
+        <ul class="ulHeader">
             <li id="logo">
                 <a href="home.html">
                     <img src="img/logo-transparente-cinemaweb.png" alt="ir a inicio">
@@ -39,8 +39,10 @@
                 <a href="favoritos.html" uk-icon="heart"></a>
             </li>
             <li id="buscar">
-                <form action="busqueda.html" method="GET" class="buscador">
-                    <input type="text" class="inputBuscador" name="busqueda" placeholder="Buscar..."/>
+                <form class="buscador" action="busqueda.html" method="GET">
+                    <div class="divInput">
+                        <input  class="inputBuscador" type="text" name="busqueda" placeholder="Buscar..."/>
+                    </div>
                     <button  class="botonSearch" type="submit"><span id="lupa" href="" uk-icon="search"></span></button>
                 </form>
             </li>
@@ -58,7 +60,7 @@
             </ul>
     
             <div class="uk-position-bottom-center uk-position-small">
-                <ul class="uk-dotnav">
+                <ul id="puntitos" class="uk-dotnav">
                     <li uk-slideshow-item="0"><a href="#">Item 1</a></li>
                     <li uk-slideshow-item="1"><a href="#">Item 2</a></li>
                     <li uk-slideshow-item="2"><a href="#">Item 3</a></li>

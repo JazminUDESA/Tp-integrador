@@ -4,10 +4,11 @@ body{
 }
 /* Inicio de sesión */
     #bodyForm {
+        background-image: linear-gradient(to right bottom, #2a2b2b, #212222, #191919, #0f0f0f, #000000);
         display: flex;
         align-items: center;
         flex-direction: column;
-        background-image: linear-gradient(to right bottom, #2a2b2b, #212222, #191919, #0f0f0f, #000000);
+        height: 100vh;
         /* background-image: linear-gradient(to bottom, #e7442e, #b73227, #88221e, #5c1414, #330801); */
     }
     #form {
@@ -17,6 +18,7 @@ body{
         color: white;
         width: 60%;
         padding: 0px 30px 30px 30px;
+        box-sizing: border-box;
     }
     #bodyForm div {
         display: flex;
@@ -24,6 +26,7 @@ body{
         justify-content: center;
         width: 100%;
         padding-bottom: 20px;
+        box-sizing: border-box;
     }
     #bodyForm div img {
         padding-top: 60px;
@@ -36,55 +39,64 @@ body{
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-top: 20px;
     }
 
-    #form a {
+    .olvidoPassword {
         font-family: Helvetica;
         font-weight: lighter;
         text-decoration: none;
-        color: #e7442e;
-        font-size: 1.2rem;
-        margin-bottom: 12%;
+        color: #ffffff38;
+        font-size: 0.9rem;
+        margin: 12% 0%;
+    }
+    #bodyForm input::placeholder {
+        color: #ffffff7c;
     }
     [name=email], [name=password] {
-        padding: 8px;
-        margin-top: 5px;
-        width: 90%;
-        font-family: Helvetica;
-        border: 1px solid white;
-        background-color: #ffffff1f;
-        font-size: 1.3rem;
+        height: 33px;
+        border-radius: 4px;
+        border: none;
+        font-family: helvetica;
+        font-weight: lighter;
+        font-size: 0.9rem;
+        width: 150%;
+        padding: 5px 15px;
         color: white;
+        background-color: #ffffff2b;
     }
+    
     #form h3 .password {
         margin: 30px 0px;
     }
     .submit, .registrarse {
         display: inline-block;
         padding: 8px 19px;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         cursor: pointer;
         text-align: center;
         text-decoration: none;
         outline: none;
-        color: black;
+        color: white;
         border: none;
         border-radius: 8px;
-        background-color: #ffffffa8;
+        background-color: #e7442e;
         font-family: helvetica;
         margin-bottom: 13%;
         font-weight: lighter;
-
     }
-    .submit:hover, .registrarse:hover {
+    .registro {
+        margin: 0px;
+        font-size: 1rem;
         color: white;
-        background-color: #e7442e;
+        font-family: helvetica;
+        text-decoration: none;
     }
     
-/* Video intro CW */
-    #video {
-        width: 100%;
-    }
+    /* Video intro CW */
+        #video {
+            width: 100%;
+        }
 
 
 /* HEADER */
@@ -159,13 +171,57 @@ body{
         width: 31px;
     }
 
+    /* Buscador mobile */
+    .botonSearchMobile {
+        width: 52px;
+        background-color: transparent;
+        color: white;
+        border: none;
+    }
+    .botonSearchMobile:focus{
+        outline: none;
+    }
+    .botonSearchMobileInputAbierto:focus{
+        outline: none;
+    }
+    .botonSearchMobileInputAbierto {
+        position: absolute;
+        top: 174px;
+        width: 20%;
+        right: 168.5px;
+        border: none;
+    }
+    
+    #lupa svg {
+        width: 30px;
+    }
+    
+   .inputBuscadorMobile {
+        position: relative;
+        color: white;
+        top: 66px;
+        width: 200%;
+        height: 30px;
+        right: 76px;
+        padding: 1px 11px;
+        background-color: #ffffff1f;
+        border: none;
+        font-family: helvetica;
+        font-weight: lighter;
+        font-size: 1rem;
+        border: none;
+   }
+   .inputBuscadorMobile:focus {
+       outline: none;
+   }
+
+   .headerRelative {
+       position: relative;
+       margin-bottom: 70px;
+       /* background-color: yellow */
+   }
 
 /* BANNER */
-    /* Flechitas */
-    a#flechita {
-        color: white;
-        font-weight: bold;
-    }
     /* Títulos */
     #titulosBanner {
         display: flex;
@@ -183,10 +239,12 @@ body{
         text-align: left;
         font-weight: bold;
         font-size: 1.5rem;
+        margin-bottom: 30px;
     }
     a.linkTituloBanner {
         text-decoration: none;
     }
+    
 
 
 
@@ -274,34 +332,44 @@ body{
     
 /* Inicio sesión */
     #bodyForm {
-        width: 100%;
-        min-height: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
     }
     #form {
         width: 100%;
+        margin-bottom: 80px;
     }
     #bodyForm div img  {
         width: 30%;
         padding: 0px;
     }
     div#logoCWSesion {
-        padding: 80px;
+        padding: 80px 80px 20px 80px;
     }
     #bodyForm #form h3 {
         font-size: 1.1rem;
     }
     #bodyForm #form a {
         font-size: 1rem;
-        margin: 10px;
+        margin: 30px 0px 20px 0px;
+    }
+    #bodyForm #form a:hover {
+        color: rgba(255, 255, 255, 0.596);
+        text-decoration: none;
     }
     #email, #contrasena{
-        font-size: 0.8rem;
+        font-size: 1rem;
         padding: 6px 10px;
         width: 150%;
     }
     .submit, .registrarse {
         width: 160px;
         margin: 10px;
+    }
+    .submit:hover, .registrarse:hover {
+        color: rgba(255, 255, 255, 0.555);
+        background-color: #e7442e8c;
     }
 
 /* HEADER */
@@ -359,7 +427,9 @@ body{
     #cuenta a svg:hover {
         color: #ffffffad;
     }
-
+    #lupa svg {
+        width: 100%;
+    }
  
 /* BANNER */
     /* Títulos Banner */
@@ -424,35 +494,32 @@ body{
 
     
 /* Buscador */
-.buscador {
-    /* float: right; */
-    width: 400px;
-    display: flex;
-    justify-content: flex-end;
-}
+    .buscador {
+        width: 400px;
+        display: flex;
+        justify-content: flex-end;
+    }
 
-.botonSearch {
-    position: absolute;
-    background-color: transparent;
-    border: none;
-    top: 20px;
-}
+    .botonSearchDesktop {
+        position: absolute;
+        background-color: transparent;
+        border: none;
+        top: 20px;
+    }
 
-.inputBuscador {
-    margin-right: 33px;
-    width: 343px;
-    background-color: #ffffff26;
-    border: none;
-    height: 27px;
-    padding: 0px 12px;
-    font-family: Helvetica;
-    font-size: 0.9rem;
-    font-weight: lighter;
-    color: white;
-    /* float: left; */
-}
-
-input:focus, textarea:focus, select:focus, button:focus{
+    .inputBuscadorDesktop {
+        margin-right: 33px;
+        width: 343px;
+        background-color: #ffffff26;
+        border: none;
+        height: 27px;
+        padding: 0px 12px;
+        font-family: Helvetica;
+        font-size: 0.9rem;
+        font-weight: lighter;
+        color: white;
+    }
+    .inputBuscadorDesktop:focus, textarea:focus, select:focus, button:focus{
         outline: none;
     }
 }

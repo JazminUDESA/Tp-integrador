@@ -8,6 +8,10 @@ window.onload = function(){
     // Ocultar video intro al inicio
     video.style.display = "none";
     
+    // Hacer click en input
+    
+
+
     // Al iniciar sesión, redirigir a intro video
     iniciarSesion.addEventListener("click", function () {
         form.style.display = "none";
