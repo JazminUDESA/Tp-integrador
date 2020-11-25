@@ -333,6 +333,9 @@ window.onload = function () {
         var sectionSeries = document.querySelector("#secSer");
         sectionSeries.style.display = "none";
 
+        var peliculasHeader = document.querySelector("#peliculasHeader");
+        peliculasHeader.style.color = "red";
+
     }
     
     // --------------------------------- SERIES --------------------------------- 
@@ -642,6 +645,9 @@ window.onload = function () {
 
         var sectionPelis = document.querySelector("#secPel");
         sectionPelis.style.display = "none";
+
+        var seriesHeader = document.querySelector("#seriesHeader");
+        seriesHeader.style.color = "red";
 
     }
 

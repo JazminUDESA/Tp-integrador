@@ -1,21 +1,28 @@
 window.onload = function() {
     
+    // Buscar mobile
+    var inputSearch = document.querySelector(".inputBuscador");
+    var lupa = document.querySelector("#lupa");
 
-    // //Posters: `https://image.tmdb.org/t/p/original/`
-    // https://api.themoviedb.org/3/movie/{movie_id}?api_key=c3dcc0e9ef8f3864ee4f5ed844d151f8&language=en-US
+    if (screen.width >= 420 && screen.width <= 1023){
+        lupa.style.display = "none";
+        inputSearch.style.display = "none";
+    }
 
-    // REQUISITOS DETALLES!
-    // PELÍCULAS: Imagen de Portada +
-    //            Nombre +
-    //            Promedio de votos +
-    //            (HARD)Reviews de la película - (ver pregunta)
-    // 
-    // SERIES: Imagen de la serie +
-    //         Nombre de la serie +Nombre del género (h
-    //         ipervínculo al detalle del genero) +
-    //         Fecha de salida + (de estreno?)
-
+    // Buscar desktop
+    inputSearch.style.visibility = "hidden";
     
+    // Mouse over
+    lupa.addEventListener("mouseover", function(){
+        inputSearch.style.visibility = "visible";
+        inputSearch.style.display = "block";
+    })
+    
+    // Mouse out
+    inputSearch.addEventListener("mouseout", function () {
+        inputSearch.style.display = "none";
+    });
+
     var apiKey = `c3dcc0e9ef8f3864ee4f5ed844d151f8`
     var queryStringObj = new URLSearchParams(location.search);    
     var id = queryStringObj.get(`id`);

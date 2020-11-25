@@ -186,4 +186,7 @@ window.onload = function(){
             }
         })
 
+    var inicioHeader = document.querySelector("#inicioHeader");
+    inicioHeader.style.color = "red";
+
 }
