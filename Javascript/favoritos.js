@@ -81,7 +81,7 @@ window.onload = function () {
     
     // poner el corazoncito rojo (porque esta en la pag de favs)
     var favsHeader = document.querySelector("#favsHeader");
-    favsHeader.style.color = "red"; 
+    favsHeader.style.color = "grey"; 
 
     
 }

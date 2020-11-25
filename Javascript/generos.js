@@ -334,7 +334,7 @@ window.onload = function () {
         sectionSeries.style.display = "none";
 
         var peliculasHeader = document.querySelector("#peliculasHeader");
-        peliculasHeader.style.color = "red";
+        peliculasHeader.style.color = "grey";
 
     }
     
@@ -647,7 +647,7 @@ window.onload = function () {
         sectionPelis.style.display = "none";
 
         var seriesHeader = document.querySelector("#seriesHeader");
-        seriesHeader.style.color = "red";
+        seriesHeader.style.color = "grey";
 
     }
 
@@ -659,7 +659,7 @@ window.onload = function () {
         armarSeries ()
     }
    
-    // serie.style.display = "none"
+    
        
     
     
