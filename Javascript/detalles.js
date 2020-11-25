@@ -165,6 +165,12 @@ window.onload = function() {
             for (let i = 0; i < data.results.length; i++) {
                 const element = data.results[i];
 
+                var divsinReseña = document.querySelector(".sinReseña")
+
+                if (data.results.length > 0) {
+                    divsinReseña.style.display = "none";
+                }
+
                 carruselRecomendadas.innerHTML += `
                     <li>
                         <a href="detalles.html?tipo=peliculas&id=${element.id}">
@@ -282,9 +288,39 @@ window.onload = function() {
                     </article>
                     `
             }
+            
         })
         .catch(function(error) {
             console.log(`El error fue: ${error}`);
+        })
+
+        // FETCH RECOMENDADOS
+
+        fetch(`https://api.themoviedb.org/3/tv/${id}/recommendations?api_key=${apiKey}`)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data);
+            var carruselRecomendadas = document.querySelector("#carruselRecomendadas");
+            for (let i = 0; i < data.results.length; i++) {
+                const element = data.results[i];
+
+                var divsinReseña = document.querySelector(".sinReseña")
+
+                if (data.results.length > 0) {
+                    divsinReseña.style.display = "none";
+                }
+
+                carruselRecomendadas.innerHTML += `
+                    <li>
+                        <a href="detalles.html?tipo=series&id=${element.id}">
+                            <img src="https://image.tmdb.org/t/p/original${element.poster_path}">
+                        </a>
+                    </li>
+                    `
+
+            }
         })
 
     }
