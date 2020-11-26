@@ -17,9 +17,11 @@ window.onload = function () {
     
     // Filtros
     var filtros = document.querySelector("#filtros");
-    filtros.innerHTML += `  <li><span class="filtro" href"" id="peliculasFiltro">Películas</span></li>
-                            <li><span class="filtro" href"" id="seriesFiltro">Series</span></li>
-                            <li><span class="filtro" href"" id="actoresFiltro">Actores</span></li>`
+    filtros.innerHTML += `<ul id="resulFil" class= "uk-breadcrumb"
+                            <li><span class="filtro" href"" id="peliculasFiltro"><a class="link" href="busqueda.html?#resultadosPeliculas">Películas</a></span></li>
+                            <li><span class="filtro" href"" id="seriesFiltro"><a class= "link" href="busqueda.html?#resultadosSeries">Series</a></span></li>
+                            <li><span class="filtro" href"" id="actoresFiltro"><a class="link" href="busqueda.html?#resultadosActores">Actores</a></span></li>
+                        </ul>`
 
     
 
