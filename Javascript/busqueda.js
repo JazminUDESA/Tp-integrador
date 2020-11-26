@@ -22,7 +22,7 @@ window.onload = function () {
                 <a href="favoritos.html?nombre=${nombreQS}" uk-icon="heart"></a>
             </li>
             <li id="buscar">
-                <form class="buscador" action="busqueda.html" method="GET">
+                <form class="buscador" action="busqueda.html?nombre=${nombreQS}" method="GET">
                     <div class="divInput">
                         <input  class="inputBuscador" type="text" name="busqueda" placeholder="Buscar..."/>
                     </div>
@@ -143,7 +143,12 @@ window.onload = function () {
         })
         
         
+    //SPINNER
 
-
-        
+    var desaparecer = document.querySelector(".seccionSpinner")
+    setTimeout(hideElement, 2000) //milliseconds until timeout//
+    function hideElement() {
+        desaparecer.style.display = 'none'
+    }
 }
+    
