@@ -448,6 +448,10 @@ a.link {
         padding: 0px 0px 15px 0px;
     }
 
+    #agregarFav:hover{
+        color:red;
+    }
+
     /* REVIEWS */
 
     div.reviews {

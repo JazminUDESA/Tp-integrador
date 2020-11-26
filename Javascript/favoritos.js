@@ -1,38 +1,5 @@
 window.onload = function () {
-    // Agregar el nombre al QS de header
-    var queryStringObj = new URLSearchParams(location.search);
-    var nombreQS = queryStringObj.get(`nombre`);
-    var header = document.querySelector(".ulHeader");
-    header.innerHTML += `
-            <li id="logo">
-                <a href="home.html?nombre=${nombreQS}">
-                    <img src="img/logo-transparente-cinemaweb.png" alt="ir a inicio">
-                </a>
-            </li>
-            <li id="inicio">
-                <a id="inicioHeader" href="home.html?nombre=${nombreQS}">Inicio</a>
-            </li>
-            <li id="peliculas">
-                <a href="generos.html?nombre=${nombreQS}&tipo=peliculas">Películas</a>
-            </li>
-            <li id="series">
-                <a href="generos.html?nombre=${nombreQS}&tipo=series">Series</a>
-            </li>
-            <li id="favs">
-                <a href="favoritos.html?nombre=${nombreQS}" uk-icon="heart"></a>
-            </li>
-            <li id="buscar">
-                <form class="buscador" action="busqueda.html?nombre=${nombreQS}" method="GET">
-                    <div class="divInput">
-                        <input  class="inputBuscador" type="text" name="busqueda" placeholder="Buscar..."/>
-                    </div>
-                    <button  class="botonSearch" type="submit"><span id="lupa" href="" uk-icon="search"></span></button>
-                </form>
-            </li>
-            <li id="cuenta">
-                <a href="" uk-icon="user"></a>
-            </li>
-    `
+
     // Buscar mobile
     var inputSearch = document.querySelector(".inputBuscador");
     var lupa = document.querySelector("#lupa");
@@ -57,11 +24,9 @@ window.onload = function () {
     });
 
 
-    // Título favoritos de NOMBRE
-    var queryStringObj = new URLSearchParams(location.search);
-    var nombreQS = queryStringObj.get(`nombre`);
+    // Título favoritos de NOMBRE!!!!!!
     var tituloFavoritosDe = document.querySelector("#tituloFavoritosDe");
-    tituloFavoritosDe.innerHTML = `Favoritos de ${nombreQS}`;
+    tituloFavoritosDe.innerHTML = `Favoritos de AGREGAR NOMBRE`;
 
 
     var apiKey = `c3dcc0e9ef8f3864ee4f5ed844d151f8`
@@ -87,6 +52,7 @@ window.onload = function () {
                 `<a class="agregarPosterPeliFav" href="detalles.html?tipo=peliculas&id=${id}">
                 <img src="https://image.tmdb.org/t/p/original${data.poster_path}">
                 </a>`;
+
             })
             .catch(function(error) {
                 console.log(`El error fue: ${error}`);          
@@ -119,10 +85,4 @@ window.onload = function () {
                 console.log(`El error fue: ${error}`);          
             })    
     }
-    
-    // poner el corazoncito rojo (porque esta en la pag de favs)
-    var favsHeader = document.querySelector("#favsHeader");
-    favsHeader.style.color = "grey"; 
-
-    
 }

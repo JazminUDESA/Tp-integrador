@@ -22,7 +22,34 @@
     <!-- HEADER -->
     <header>
         <ul class="ulHeader">
-            <!-- JS -->
+            <li id="logo">
+                <a href="home.html">
+                    <img src="img/logo-transparente-cinemaweb.png" alt="ir a inicio">
+                </a>
+            </li>
+            <li id="inicio">
+                <a id="inicioHeader" href="home.html">Inicio</a>
+            </li>
+            <li id="peliculas">
+                <a href="generos.html?tipo=peliculas">Películas</a>
+            </li>
+            <li id="series">
+                <a href="generos.html?tipo=series">Series</a>
+            </li>
+            <li id="favs">
+                <a href="favoritos.html" uk-icon="heart"></a>
+            </li>
+            <li id="buscar">
+                <form class="buscador" action="busqueda.html" method="GET">
+                    <div class="divInput">
+                        <input class="inputBuscador" type="text" name="busqueda" placeholder="Buscar..." />
+                    </div>
+                    <button class="botonSearch" type="submit"><span id="lupa" href="" uk-icon="search"></span></button>
+                </form>
+            </li>
+            <li id="cuenta">
+                <a href="" uk-icon="user"></a>
+            </li>
         </ul>
     </header>
 
