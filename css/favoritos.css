@@ -71,9 +71,10 @@ header ul li a {
 
 /* Íconos */
 #favs a svg, #buscar a svg, #cuenta a svg{
+    color: white!important;
     width: 31px;
-    color: grey;
 }
+
 
 /* FAVORITOS */
 h2 {
@@ -225,9 +226,9 @@ div#divPelisFavoritas img, div#divSeriesFavoritas img {
         width: 200px;
         padding: 0px;
     }
-    /* Iconos */
-    #favs a svg, #buscar a svg,#cuenta a svg{
-        color: grey;
+    
+    #favs a svg {
+        color: grey!important;
         width: auto;
     }
     #cuenta a svg{
