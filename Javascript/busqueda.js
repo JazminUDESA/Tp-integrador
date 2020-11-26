@@ -4,11 +4,20 @@ window.onload = function () {
     var queryStringObj = new URLSearchParams(location.search);    
     var busqueda = queryStringObj.get(`busqueda`);
 
+    var inputSearch = document.querySelector(".inputBuscador");
+    inputSearch.style.display = "none";
+    var lupa = document.querySelector("#lupa");
+    lupa.addEventListener("mouseover", function () {
+        inputSearch.style.display = "block";
+    })
+    inputSearch.addEventListener("mouseout", function () {
+        inputSearch.style.display = "none";
+    })
 
     
     // Filtros
     var filtros = document.querySelector("#filtros");
-    filtros.innerHTML += `  <li><span class="filtro" href"" id="peliculasFiltro" >Películas</span></li>
+    filtros.innerHTML += `  <li><span class="filtro" href"" id="peliculasFiltro">Películas</span></li>
                             <li><span class="filtro" href"" id="seriesFiltro">Series</span></li>
                             <li><span class="filtro" href"" id="actoresFiltro">Actores</span></li>`
 

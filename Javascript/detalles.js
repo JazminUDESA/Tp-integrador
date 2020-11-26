@@ -26,6 +26,8 @@ window.onload = function() {
     var apiKey = `c3dcc0e9ef8f3864ee4f5ed844d151f8`
     var queryStringObj = new URLSearchParams(location.search);    
     var id = queryStringObj.get(`id`);
+    var idGen = queryStringObj.get(`idGenero`);
+    var idGenPel = queryStringObj.get(`idGeneroPel`);
     var tipo = queryStringObj.get(`tipo`);
         
         if (tipo == "peliculas") {
@@ -41,8 +43,7 @@ window.onload = function() {
         }
     
 
-
-      // D E T A L L E S      P E L Í C U L A S  
+// D E T A L L E S      P E L Í C U L A S  
     function contenidoMovies () {
         
         //FETCH DEL DETALLE DE LA PELI
@@ -63,13 +64,12 @@ window.onload = function() {
                             <div id="agregarFav" class="uk-icon-link" uk-icon="heart"></div>
                         </h2>
                         <h4 class="pelicula mediaType">Película</h4>
-                        <a class="idGenero" href="detalles.html?tipo=generos&id=${data.genres[0].id}">${data.genres[0].name}</a>
+                        <a class="idGenero" href="detalles.html?tipo=generos&idGenero=${data.genres[0].id}">${data.genres[0].name}</a>
                         <p id="especificaciones">Calificación: ${data.vote_average}/10 | ${data.runtime} min. | Estreno: ${data.release_date}</p>
                         <div>
                         <h5>Sinopsis:</h5>
                             <p>${data.overview}</p>
-                        </div>
-                        `
+                        </div>`
                 
             // WEB STORAGE pelis :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :) :)
                 var corazon = document.querySelector("#agregarFav");
@@ -142,8 +142,7 @@ window.onload = function() {
                             <div class="uk-comment-body">
                                 <p>${contenido}</p>
                             </div>
-                        </article>
-                    `
+                        </article>`
                 }
             
             })
@@ -177,15 +176,15 @@ window.onload = function() {
                             <a href="detalles.html?tipo=peliculas&id=${element.id}">
                                 <img src="https://image.tmdb.org/t/p/original${element.poster_path}">
                             </a>
-                        </li>
-                        `
+                        </li>`
                 }
             }
         })
         
     }
         
-        // D E T A L L E S      S E R I E S 
+    
+    // D E T A L L E S      S E R I E S 
     function contenidoSeries () {
         
         //FETCH DEL DETALLE DE LA SERIE
@@ -285,8 +284,7 @@ window.onload = function() {
                         <div class="uk-comment-body">
                             <p>${contenido}</p>
                         </div>
-                    </article>
-                    `
+                    </article> `
             }
             
         })
@@ -318,80 +316,579 @@ window.onload = function() {
                             <a href="detalles.html?tipo=series&id=${element.id}">
                                 <img src="https://image.tmdb.org/t/p/original${element.poster_path}">
                             </a>
-                        </li>
-                        `
+                        </li>`
                 }
             }
         })
 
     }
 
-        // D E T A L L E S      G E N E R O S
+    
+    
+    // D E T A L L E S      G E N E R O S
+    var titulo = document.querySelector(".tituloGenero");
     function contenidoGeneros () {
+
+        if (tipo == "generos" && idGen=="28"){
         
-        //FETCH DEL DETALLE DE GENEROS - no trae el nombre del genero, si hago genero por genero es un monton
-        fetch(`https://api.themoviedb.org/3/discover/tv?api_key=${apiKey}&with_genres=${id}&language=en`) 
+            fetch(`https://api.themoviedb.org/3/discover/movie?api_key=c3dcc0e9ef8f3864ee4f5ed844d151f8&with_genres=28&language=en`)
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    console.log(data);
 
-        .then(function(response) {
-            return response.json();
-        })
-        .then(function(data) {
-            console.log(data);
+                    for (let index = 0; index < 20; index++) {
+                        const element = data.results[index];
+                        var elId = data.results[index].id;
 
-            for (let index = 0; index < data.results.length; index++) {
-                const element = data.results[index].poster_path;
+                        var sectionGenero = document.querySelector(".detalleGenero")
+                        sectionGenero.innerHTML += `
+                    <div class="imagenesGeneros">
+                    <a href="detalles.html?tipo=peliculas&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element.poster_path}" alt=""></a>
+                    </div>`
 
-                var sectionGenero = document.querySelector(".detalleGenero")
-                sectionGenero.innerHTML += `
-                <div class="imagenesGeneros">
-                    <img src="https://image.tmdb.org/t/p/original/${element}" alt="">
-                </div>
-                `    
-            }
-                
-        })
+                    
+                    }
+                    titulo.innerHTML += `Acción`
 
-        .catch(function(error) {
-            console.log(`El error fue: ${error}`);          
-        })
+                })
+                .catch(function (error) {
+                    console.log(`El error fue: ${error}`);
+                })
+        }
+
+        else if (tipo == "generos" && idGen == "10759") {
+
+            fetch(`https://api.themoviedb.org/3/discover/tv?api_key=c3dcc0e9ef8f3864ee4f5ed844d151f8&with_genres=10759&language=en`)
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    console.log(data);
+
+                    for (let index = 0; index < 20; index++) {
+                        const element = data.results[index];
+                        var elId = data.results[index].id;
+
+                        var sectionGenero = document.querySelector(".detalleGenero")
+                        sectionGenero.innerHTML += `
+                    <div class="imagenesGeneros">
+                    <a href="detalles.html?tipo=peliculas&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element.poster_path}" alt=""></a>
+                    </div>`
+
+
+                    }
+                    titulo.innerHTML += `Acción y aventura`
+
+                })
+                .catch(function (error) {
+                    console.log(`El error fue: ${error}`);
+                })
+        }
+
+        if (tipo == "generos" && idGen == "12") {
+
+            fetch(`https://api.themoviedb.org/3/discover/movie?api_key=c3dcc0e9ef8f3864ee4f5ed844d151f8&with_genres=12&language=en`)
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    console.log(data);
+
+                    for (let index = 0; index < 20; index++) {
+                        const element = data.results[index];
+                        var elId = data.results[index].id;
+
+                        var sectionGenero = document.querySelector(".detalleGenero")
+                        sectionGenero.innerHTML += `
+                    <div class="imagenesGeneros">
+                    <a href="detalles.html?tipo=peliculas&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element.poster_path}" alt=""></a>
+                    </div>`
+
+
+                    }
+                    titulo.innerHTML += `Aventuras`
+
+                })
+                .catch(function (error) {
+                    console.log(`El error fue: ${error}`);
+                })
+        }
+
+        else if (tipo == "generos" && idGen == "10765") {
+
+            fetch(`https://api.themoviedb.org/3/discover/tv?api_key=c3dcc0e9ef8f3864ee4f5ed844d151f8&with_genres=10765&language=en`)
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    console.log(data);
+
+                    for (let index = 0; index < 20; index++) {
+                        const element = data.results[index];
+                        var elId = data.results[index].id;
+
+                        var sectionGenero = document.querySelector(".detalleGenero")
+                        sectionGenero.innerHTML += `
+                    <div class="imagenesGeneros">
+                    <a href="detalles.html?tipo=peliculas&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element.poster_path}" alt=""></a>
+                    </div>`
+
+
+                    }
+                    titulo.innerHTML += `Ciencia ficción`
+
+                })
+                .catch(function (error) {
+                    console.log(`El error fue: ${error}`);
+                })
+        }
+
+        if (tipo == "generos" && idGen == "878") {
+
+            fetch(`https://api.themoviedb.org/3/discover/movie?api_key=c3dcc0e9ef8f3864ee4f5ed844d151f8&with_genres=878&language=en`)
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    console.log(data);
+
+                    for (let index = 0; index < 20; index++) {
+                        const element = data.results[index];
+                        var elId = data.results[index].id;
+
+                        var sectionGenero = document.querySelector(".detalleGenero")
+                        sectionGenero.innerHTML += `
+                    <div class="imagenesGeneros">
+                    <a href="detalles.html?tipo=peliculas&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element.poster_path}" alt=""></a>
+                    </div>`
+                    }
+                    titulo.innerHTML += `Ciencia ficción`
+
+                })
+                .catch(function (error) {
+                    console.log(`El error fue: ${error}`);
+                })
+        }
+
+        else if (tipo == "generos" && idGen == "35") {
+
+            fetch(`https://api.themoviedb.org/3/discover/tv?api_key=c3dcc0e9ef8f3864ee4f5ed844d151f8&with_genres=35&language=en`)
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    console.log(data);
+
+                    for (let index = 0; index < 20; index++) {
+                        const element = data.results[index];
+                        var elId = data.results[index].id;
+
+                        var sectionGenero = document.querySelector(".detalleGenero")
+                        sectionGenero.innerHTML += `
+                    <div class="imagenesGeneros">
+                    <a href="detalles.html?tipo=peliculas&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element.poster_path}" alt=""></a>
+                    </div>`
+                    }
+                    titulo.innerHTML += `Comedias`
+                })
+                .catch(function (error) {
+                    console.log(`El error fue: ${error}`);
+                })
+        }
+
+        if (tipo == "generos" && idGenPel == "35") {
+
+            fetch(`https://api.themoviedb.org/3/discover/movie?api_key=c3dcc0e9ef8f3864ee4f5ed844d151f8&with_genres=35&language=en`)
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    console.log(data);
+
+                    for (let index = 0; index < 20; index++) {
+                        const element = data.results[index];
+                        var elId = data.results[index].id;
+
+                        var sectionGenero = document.querySelector(".detalleGenero")
+                        sectionGenero.innerHTML += `
+                    <div class="imagenesGeneros">
+                    <a href="detalles.html?tipo=peliculas&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element.poster_path}" alt=""></a>
+                    </div>`
+                    }
+                    titulo.innerHTML += `Comedias`
+
+                })
+                .catch(function (error) {
+                    console.log(`El error fue: ${error}`);
+                })
+        }
+
+        else if (tipo == "generos" && idGen == "80") {
+
+            fetch(`https://api.themoviedb.org/3/discover/tv?api_key=c3dcc0e9ef8f3864ee4f5ed844d151f8&with_genres=80&language=en`)
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    console.log(data);
+
+                    for (let index = 0; index < 20; index++) {
+                        const element = data.results[index];
+                        var elId = data.results[index].id;
+
+                        var sectionGenero = document.querySelector(".detalleGenero")
+                        sectionGenero.innerHTML += `
+                    <div class="imagenesGeneros">
+                    <a href="detalles.html?tipo=peliculas&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element.poster_path}" alt=""></a>
+                    </div>`
+
+                        
+                    }
+                    titulo.innerHTML += `Crimen`
+
+                })
+                .catch(function (error) {
+                    console.log(`El error fue: ${error}`);
+                })
+        }
+
+        if (tipo == "generos" && idGen == "99") {
+
+            fetch(`https://api.themoviedb.org/3/discover/movie?api_key=c3dcc0e9ef8f3864ee4f5ed844d151f8&with_genres=99&language=en`)
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    console.log(data);
+
+                    for (let index = 0; index < 20; index++) {
+                        const element = data.results[index];
+                        var elId = data.results[index].id;
+
+                        var sectionGenero = document.querySelector(".detalleGenero")
+                        sectionGenero.innerHTML += `
+                    <div class="imagenesGeneros">
+                    <a href="detalles.html?tipo=peliculas&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element.poster_path}" alt=""></a>
+                    </div>`
+                    }
+
+                    titulo.innerHTML += `Documentales`
+                })
+                .catch(function (error) {
+                    console.log(`El error fue: ${error}`);
+                })
+        }
+
+        else if (tipo == "generos" && idGen == "99") {
+
+            fetch(`https://api.themoviedb.org/3/discover/tv?api_key=c3dcc0e9ef8f3864ee4f5ed844d151f8&with_genres=99&language=en`)
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    console.log(data);
+
+                    for (let index = 0; index < 20; index++) {
+                        const element = data.results[index];
+                        var elId = data.results[index].id;
+
+                        var sectionGenero = document.querySelector(".detalleGenero")
+                        sectionGenero.innerHTML += `
+                    <div class="imagenesGeneros">
+                    <a href="detalles.html?tipo=peliculas&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element.poster_path}" alt=""></a>
+                    </div>`
+                    }
+                    titulo.innerHTML += `Documentales`
+
+                })
+                .catch(function (error) {
+                    console.log(`El error fue: ${error}`);
+                })
+        }
+
+        if (tipo == "generos" && idGenPel == "18") {
+
+            fetch(`https://api.themoviedb.org/3/discover/movie?api_key=c3dcc0e9ef8f3864ee4f5ed844d151f8&with_genres=18&language=en`)
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    console.log(data);
+
+                    for (let index = 0; index < 20; index++) {
+                        const element = data.results[index];
+                        var elId = data.results[index].id;
+
+                        var sectionGenero = document.querySelector(".detalleGenero")
+                        sectionGenero.innerHTML += `
+                    <div class="imagenesGeneros">
+                    <a href="detalles.html?tipo=peliculas&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element.poster_path}" alt=""></a>
+                    </div>`
+                    }
+
+                    titulo.innerHTML += `Dramas`
+                })
+                .catch(function (error) {
+                    console.log(`El error fue: ${error}`);
+                })
+        }
+
+        else if (tipo == "generos" && idGen == "18") {
+
+            fetch(`https://api.themoviedb.org/3/discover/tv?api_key=c3dcc0e9ef8f3864ee4f5ed844d151f8&with_genres=18&language=en`)
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    console.log(data);
+
+                    for (let index = 0; index < 20; index++) {
+                        const element = data.results[index];
+                        var elId = data.results[index].id;
+
+                        var sectionGenero = document.querySelector(".detalleGenero")
+                        sectionGenero.innerHTML += `
+                    <div class="imagenesGeneros">
+                    <a href="detalles.html?tipo=series&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element.poster_path}" alt=""></a>
+                    </div>`
+                    }
+                    titulo.innerHTML += `Dramas`
+
+                })
+                .catch(function (error) {
+                    console.log(`El error fue: ${error}`);
+                })
+        }
+
+        if (tipo == "generos" && idGenPel == "10751") {
+
+            fetch(`https://api.themoviedb.org/3/discover/movie?api_key=c3dcc0e9ef8f3864ee4f5ed844d151f8&with_genres=10751&language=en`)
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    console.log(data);
+
+                    for (let index = 0; index < 20; index++) {
+                        const element = data.results[index];
+                        var elId = data.results[index].id;
+
+                        var sectionGenero = document.querySelector(".detalleGenero")
+                        sectionGenero.innerHTML += `
+                    <div class="imagenesGeneros">
+                    <a href="detalles.html?tipo=peliculas&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element.poster_path}" alt=""></a>
+                    </div>`
+                    }
+                    titulo.innerHTML += `Familiares`
+
+                })
+                .catch(function (error) {
+                    console.log(`El error fue: ${error}`);
+                })
+        }
+
+        else if (tipo == "generos" && idGen == "10751") {
+
+            fetch(`https://api.themoviedb.org/3/discover/tv?api_key=c3dcc0e9ef8f3864ee4f5ed844d151f8&with_genres=10751&language=en`)
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    console.log(data);
+
+                    for (let index = 0; index < 20; index++) {
+                        const element = data.results[index];
+                        var elId = data.results[index].id;
+
+                        var sectionGenero = document.querySelector(".detalleGenero")
+                        sectionGenero.innerHTML += `
+                    <div class="imagenesGeneros">
+                    <a href="detalles.html?tipo=peliculas&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element.poster_path}" alt=""></a>
+                    </div>`
+
+
+                    }
+                    titulo.innerHTML += `Familiares`
+
+                })
+                .catch(function (error) {
+                    console.log(`El error fue: ${error}`);
+                })
+        }
+
+        if (tipo == "generos" && idGen == "10749") {
+
+            fetch(`https://api.themoviedb.org/3/discover/movie?api_key=c3dcc0e9ef8f3864ee4f5ed844d151f8&with_genres=10749&language=en`)
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    console.log(data);
+
+                    for (let index = 0; index < 20; index++) {
+                        const element = data.results[index];
+                        var elId = data.results[index].id;
+
+                        var sectionGenero = document.querySelector(".detalleGenero")
+                        sectionGenero.innerHTML += `
+                    <div class="imagenesGeneros">
+                    <a href="detalles.html?tipo=peliculas&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element.poster_path}" alt=""></a>
+                    </div>`
+                    }
+
+                    titulo.innerHTML += `Romance`
+                })
+                .catch(function (error) {
+                    console.log(`El error fue: ${error}`);
+                })
+        }
+
+        else if (tipo == "generos" && idGen == "9648") {
+
+            fetch(`https://api.themoviedb.org/3/discover/tv?api_key=c3dcc0e9ef8f3864ee4f5ed844d151f8&with_genres=9648&language=en`)
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    console.log(data);
+
+                    for (let index = 0; index < 20; index++) {
+                        const element = data.results[index];
+                        var elId = data.results[index].id;
+
+                        var sectionGenero = document.querySelector(".detalleGenero")
+                        sectionGenero.innerHTML += `
+                    <div class="imagenesGeneros">
+                    <a href="detalles.html?tipo=peliculas&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element.poster_path}" alt=""></a>
+                    </div>`
+
+
+                    }
+
+                    titulo.innerHTML += `Misterio`
+                })
+                .catch(function (error) {
+                    console.log(`El error fue: ${error}`);
+                })
+        }
+
+        if (tipo == "generos" && idGen == "27") {
+
+            fetch(`https://api.themoviedb.org/3/discover/movie?api_key=c3dcc0e9ef8f3864ee4f5ed844d151f8&with_genres=27&language=en`)
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    console.log(data);
+
+                    for (let index = 0; index < 20; index++) {
+                        const element = data.results[index];
+                        var elId = data.results[index].id;
+
+                        var sectionGenero = document.querySelector(".detalleGenero")
+                        sectionGenero.innerHTML += `
+                    <div class="imagenesGeneros">
+                    <a href="detalles.html?tipo=peliculas&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element.poster_path}" alt=""></a>
+                    </div>`
+                    }
+
+                    titulo.innerHTML += `Terror`
+                })
+                .catch(function (error) {
+                    console.log(`El error fue: ${error}`);
+                })
+        }
+
+        else if (tipo == "generos" && idGen == "10767") {
+
+            fetch(`https://api.themoviedb.org/3/discover/tv?api_key=c3dcc0e9ef8f3864ee4f5ed844d151f8&with_genres=10767&language=en`)
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    console.log(data);
+
+                    for (let index = 0; index < 20; index++) {
+                        const element = data.results[index];
+                        var elId = data.results[index].id;
+
+                        var sectionGenero = document.querySelector(".detalleGenero")
+                        sectionGenero.innerHTML += `
+                    <div class="imagenesGeneros">
+                    <a href="detalles.html?tipo=peliculas&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element.poster_path}" alt=""></a>
+                    </div>`
+
+
+                    }
+
+                    titulo.innerHTML += `Reality TV y entrevistas`
+                })
+                .catch(function (error) {
+                    console.log(`El error fue: ${error}`);
+                })
+        }
+
+        if (tipo == "generos" && idGen == "53") {
+
+            fetch(`https://api.themoviedb.org/3/discover/movie?api_key=c3dcc0e9ef8f3864ee4f5ed844d151f8&with_genres=53&language=en`)
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    console.log(data);
+
+                    for (let index = 0; index < 20; index++) {
+                        const element = data.results[index];
+                        var elId = data.results[index].id;
+
+                        var sectionGenero = document.querySelector(".detalleGenero")
+                        sectionGenero.innerHTML += `
+                    <div class="imagenesGeneros">
+                    <a href="detalles.html?tipo=peliculas&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element.poster_path}" alt=""></a>
+                    </div>`
+                    }
+                    titulo.innerHTML += `Thrillers`
+
+                })
+                .catch(function (error) {
+                    console.log(`El error fue: ${error}`);
+                })
+        }
+
+        else if (tipo == "generos" && idGen == "10766") {
+
+            fetch(`https://api.themoviedb.org/3/discover/tv?api_key=c3dcc0e9ef8f3864ee4f5ed844d151f8&with_genres=10766&language=en`)
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    console.log(data);
+
+                    for (let index = 0; index < 20; index++) {
+                        const element = data.results[index];
+                        var elId = data.results[index].id;
+
+                        var sectionGenero = document.querySelector(".detalleGenero")
+                        sectionGenero.innerHTML += `
+                    <div class="imagenesGeneros">
+                    <a href="detalles.html?tipo=peliculas&id=${elId}"><img src="https://image.tmdb.org/t/p/original${element.poster_path}" alt=""></a>
+                    </div>`
+                    }
+                    titulo.innerHTML += `Telenovelas`
+
+                })
+                .catch(function (error) {
+                    console.log(`El error fue: ${error}`);
+                })
+        }
 
         var divReviews = document.querySelector(".reviews");
         divReviews.style.display = "none";
 
         var section = document.querySelector(".detalleInfo") 
         section.style.display = "none";
-
-        fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&with_genres=${id}&language=en`)
-
-            .then(function (response) {
-                return response.json();
-            })
-            .then(function (data) {
-                console.log(data);
-
-                for (let index = 0; index < data.results.length; index++) {
-                    const element = data.results[index].poster_path;
-
-                    var sectionGenero = document.querySelector(".detalleGenero")
-                    sectionGenero.innerHTML += `
-                <div class="imagenesGeneros">
-                    <img src="https://image.tmdb.org/t/p/original/${element}" alt="">
-                </div>
-                `
-                }
-
-            })
-
-            .catch(function (error) {
-                console.log(`El error fue: ${error}`);
-            })
-
-        var divReviews = document.querySelector(".reviews");
-        divReviews.style.display = "none";
-
-        var section = document.querySelector(".detalleInfo")
-        section.style.display = "none";
-
     }
 
     var texto = document.querySelector (".recomendadas")
@@ -399,7 +896,8 @@ window.onload = function() {
         texto.style.display="none";
     }
 
-    
+
+
 
 
     // // D E T A L L E S      G É N E R O S ------> PARA CHEQUEAR

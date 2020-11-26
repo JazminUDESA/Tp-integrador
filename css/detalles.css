@@ -4,10 +4,10 @@ body{
 }
 
 /* HEADER */
-header#elHeader#elHeader {
+header{
     padding-bottom: 30px;
 }
-header#elHeader ul {
+header ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 15px;
@@ -19,7 +19,7 @@ header#elHeader ul {
     margin: 0px;
     padding: 0px;
 }
-header#elHeader ul li {
+header ul li {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -56,13 +56,13 @@ header#elHeader ul li {
     width: 400px;
     padding-top: 30px;
 }
-header#elHeader ul li#logo {
+header ul li#logo {
     display: flex;
     justify-content: center;
 }
 
 /* Hipervínculos */
-header#elHeader ul li a {
+header ul li a {
     text-decoration: none;
     font-family: Helvetica;
     font-size: 1.5rem;
@@ -114,6 +114,10 @@ section.detalleInfo div.info h2 {
     color: red;
 }
 
+/*Títulos de los géneros de peliculas/series*/
+.tituloGenero {
+    color: white;
+}
 
 
 /* ---------------------------------------------- */
@@ -310,12 +314,12 @@ div.recomendadas h2.tituloRecomendadas {
 @media only screen and (min-width: 1024px) {
     
     /* HEADER */
-    header#elHeader {
+    header {
         position: fixed;
         z-index: 1000;
         width: 100%;
     }
-    header#elHeader ul{
+    header ul{
         height: 60px;
         grid-template-columns: 15% 5% 7% 5.5% 3.5% 55% 6%;
         grid-gap: 7px;
@@ -326,14 +330,14 @@ div.recomendadas h2.tituloRecomendadas {
         align-items: center;
     }
 
-    header#elHeader ul li {
+    header ul li {
         justify-content: flex-end;
     }
 
-    header#elHeader ul li a {
+    header ul li a {
         font-size: 1rem;
     }
-    header#elHeader ul li a:hover {
+    header ul li a:hover {
         color: #ffffffad;
         text-decoration: none!important;
     }
@@ -458,6 +462,14 @@ div.recomendadas h2.tituloRecomendadas {
     padding: 10px;
     }
 
+    /*Títulos de los géneros de peliculas/series*/
+    .tituloGenero {
+        font-size: 24px;
+        margin-left: 30px;
+        padding-left: 80px;
+        margin-bottom: 0px;
+    }
+
 
     /* FILTROS PÁG BÚSQUEDAS */
     #filtros {
@@ -482,7 +494,7 @@ div.recomendadas h2.tituloRecomendadas {
     article.footer-arriba {
         grid-template-columns: 50% 10% 40%;
         justify-content: space-between;
-        margin-top: 50px;
+        margin-top: 10px;
     }
     
     
@@ -521,7 +533,7 @@ div.recomendadas h2.tituloRecomendadas {
     }
 
     div.logos img {
-    width: 45px;
+    width: 35px;
     }
     
     /* Buscador */

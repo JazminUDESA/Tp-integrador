@@ -15,6 +15,8 @@ window.onload = function () {
         inputSearch.style.display = "none";
     })
 
+    //https://api.themoviedb.org/3/genre/movie/list?api_key=c3dcc0e9ef8f3864ee4f5ed844d151f8&language=en-US
+
 
     // --------------------------------- PELICULAS ---------------------------------
     function armarPelis () {

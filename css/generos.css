@@ -104,7 +104,14 @@ a.linkTituloBanner {
     text-decoration: none;
 }
 
-
+a h3{
+    color: white;
+    margin: 0px;
+    margin-top: 40px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
 
 /* FOOTER */
     /* Footer arriba (legales y redes) */
@@ -264,7 +271,7 @@ a.linkTituloBanner {
     article.footer-arriba {
         grid-template-columns: 50% 10% 40%;
         justify-content: space-between;
-        margin-top: 50px;
+        margin-top: 10px;
     }
     
     
@@ -303,7 +310,7 @@ a.linkTituloBanner {
     }
 
     div.logos img {
-    width: 45px;
+    width: 35px;
     }
 
     /* Buscador */
