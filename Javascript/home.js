@@ -13,16 +13,16 @@ window.onload = function(){
                 <a id="inicioHeader" href="home.html?nombre=${nombreQS}">Inicio</a>
             </li>
             <li id="peliculas">
-                <a href="generos.html?nombre=${nombreQS}&tipo=peliculas">Películas</a>
+                <a id="peliculasTit" href="generos.html?nombre=${nombreQS}&tipo=peliculas">Películas</a>
             </li>
             <li id="series">
-                <a href="generos.html?nombre=${nombreQS}&tipo=series">Series</a>
+                <a id="seriesTit" href="generos.html?nombre=${nombreQS}&tipo=series">Series</a>
             </li>
             <li id="favs">
                 <a href="favoritos.html?nombre=${nombreQS}" uk-icon="heart"></a>
             </li>
             <li id="buscar">
-                <form class="buscador" action="busqueda.html" method="GET">
+                <form class="buscador" action="busqueda.html?nombre=${nombreQS}" method="GET">
                     <div class="divInput">
                         <input  class="inputBuscador" type="text" name="busqueda" placeholder="Buscar..."/>
                     </div>

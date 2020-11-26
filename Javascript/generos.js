@@ -13,10 +13,10 @@ window.onload = function () {
                 <a id="inicioHeader" href="home.html?nombre=${nombreQS}">Inicio</a>
             </li>
             <li id="peliculas">
-                <a href="generos.html?nombre=${nombreQS}&tipo=peliculas">Películas</a>
+                <a id="peliculasTit" href="generos.html?nombre=${nombreQS}&tipo=peliculas">Películas</a>
             </li>
             <li id="series">
-                <a href="generos.html?nombre=${nombreQS}&tipo=series">Series</a>
+                <a id="seriesTit" href="generos.html?nombre=${nombreQS}&tipo=series">Series</a>
             </li>
             <li id="favs">
                 <a href="favoritos.html?nombre=${nombreQS}" uk-icon="heart"></a>
@@ -370,7 +370,7 @@ window.onload = function () {
         var sectionSeries = document.querySelector("#secSer");
         sectionSeries.style.display = "none";
 
-        var peliculasHeader = document.querySelector("#peliculasHeader");
+        var peliculasHeader = document.querySelector("#peliculasTit");
         peliculasHeader.style.color = "grey";
 
     }
@@ -515,8 +515,6 @@ window.onload = function () {
                         </li>
                     `
                 }
-
-
             })
             .catch(function (error) {
                 console.log(`El error fue: ${error}`);
@@ -568,8 +566,6 @@ window.onload = function () {
                         </li>
                     `
                 }
-
-
             })
             .catch(function (error) {
                 console.log(`El error fue: ${error}`);
@@ -594,8 +590,6 @@ window.onload = function () {
                         </li>
                     `
                 }
-
-
             })
             .catch(function (error) {
                 console.log(`El error fue: ${error}`);
@@ -620,8 +614,6 @@ window.onload = function () {
                         </li>
                     `
                 }
-
-
             })
             .catch(function (error) {
                 console.log(`El error fue: ${error}`);
@@ -646,8 +638,6 @@ window.onload = function () {
                         </li>
                     `
                 }
-
-
             })
             .catch(function (error) {
                 console.log(`El error fue: ${error}`);
@@ -672,8 +662,6 @@ window.onload = function () {
                         </li>
                     `
                 }
-
-
             })
             .catch(function (error) {
                 console.log(`El error fue: ${error}`);
@@ -683,13 +671,12 @@ window.onload = function () {
         var sectionPelis = document.querySelector("#secPel");
         sectionPelis.style.display = "none";
 
-        var seriesHeader = document.querySelector("#seriesHeader");
+        var seriesHeader = document.querySelector("#seriesTit");
         seriesHeader.style.color = "grey";
 
     }
 
-    if (tipo == "peliculas") {
-            
+    if (tipo == "peliculas") {            
         armarPelis ()
     }
     else {

@@ -22,7 +22,7 @@ window.onload = function() {
                 <a href="favoritos.html?nombre=${nombreQS}" uk-icon="heart"></a>
             </li>
             <li id="buscar">
-                <form class="buscador" action="busqueda.html" method="GET">
+                <form class="buscador" action="busqueda.html?nombre=${nombreQS}" method="GET">
                     <div class="divInput">
                         <input  class="inputBuscador" type="text" name="busqueda" placeholder="Buscar..."/>
                     </div>
@@ -165,13 +165,13 @@ window.onload = function() {
                     var div = document.querySelector(".todaslasreseñas")
                     div.innerHTML += `
                         <article id="reseña" class="uk-comment uk-comment-primary">
-                            <header id="paraReview" class="uk-comment-header">
+                            
                                 <div class="uk-grid-medium uk-flex-middle" uk-grid>
                                     <div class="uk-width-expand">
-                                        <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">${element}</a></h4>
+                                        <h4 class="uk-comment-title uk-margin-remove">${element}</h4>
                                     </div>
                                 </div>
-                            </header>
+                           
                             <div class="uk-comment-body">
                                 <p>${contenido}</p>
                             </div>
@@ -307,13 +307,13 @@ window.onload = function() {
 
                 div.innerHTML += `
                     <article id="reseña" class="uk-comment uk-comment-primary">
-                        <header id="paraReview" class="uk-comment-header">
+                    
                             <div class="uk-grid-medium uk-flex-middle" uk-grid>
                                 <div class="uk-width-expand">
-                                    <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">${autor}</a></h4>
+                                    <h4 class="uk-comment-title uk-margin-remove">${autor}</h4>
                                 </div>
                             </div>
-                        </header>
+                        
                         <div class="uk-comment-body">
                             <p>${contenido}</p>
                         </div>

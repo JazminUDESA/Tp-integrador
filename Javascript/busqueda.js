@@ -22,7 +22,7 @@ window.onload = function () {
                 <a href="favoritos.html?nombre=${nombreQS}" uk-icon="heart"></a>
             </li>
             <li id="buscar">
-                <form class="buscador" action="busqueda.html" method="GET">
+                <form class="buscador" action="busqueda.html?nombre=${nombreQS}" method="GET">
                     <div class="divInput">
                         <input  class="inputBuscador" type="text" name="busqueda" placeholder="Buscar..."/>
                     </div>
@@ -77,7 +77,7 @@ window.onload = function () {
                 if (element.poster_path !== null) {
                     var resultadosPeliculas = document.querySelector("#resultadosPeliculas")
                     resultadosPeliculas.innerHTML += `
-                        <img src="https://image.tmdb.org/t/p/original${element.poster_path}">
+                        <a href="detalles.html?tipo=peliculas&id=${element.id}"><img src="https://image.tmdb.org/t/p/original${element.poster_path}"></a>
                     `
                 }
             }
@@ -104,7 +104,7 @@ window.onload = function () {
                         var resultadosSeries = document.querySelector("#resultadosSeries");
                         resultadosSeries.style.backgroundColor = "transparent"
                         resultadosSeries.innerHTML += `
-                            <img src="https://image.tmdb.org/t/p/original${element.poster_path}">
+                            <a href="detalles.html?tipo=peliculas&id=${element.id}"><img src="https://image.tmdb.org/t/p/original${element.poster_path}"></a>
                         `
                     }
 
@@ -143,7 +143,20 @@ window.onload = function () {
         })
         
         
+    //SPINNER
+    function display() {
+        var aparecer = document.querySelector(".detalleGenero");
+        aparecer.style.visibility = "visible";
+
+    }
 
 
-        
+    setTimeout(hideElement, 2000)
+    var desaparecer = document.querySelector(".seccionSpinner");
+    function hideElement() {
+        desaparecer.style.display = 'none';
+        display();
+    }
 }
+    
+
