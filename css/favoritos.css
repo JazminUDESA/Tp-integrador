@@ -69,6 +69,11 @@ header ul li a {
     color: white;
 }
 
+header ul li a:hover {
+        color: #ffffffad;
+        text-decoration: none!important;
+    }
+
 /* Íconos */
 #favs a svg, #buscar a svg, #cuenta a svg{
     color: white!important;
@@ -215,10 +220,7 @@ div#divPelisFavoritas img, div#divSeriesFavoritas img {
     header ul li a {
         font-size: 1rem;
     }
-    header ul li a:hover {
-        color: #ffffffad;
-        text-decoration: none!important;
-    }
+    
    
 
     /* Logo */

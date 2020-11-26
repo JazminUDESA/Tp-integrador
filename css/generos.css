@@ -24,6 +24,12 @@ header ul li {
     align-items: center;
     justify-content: center;
 }
+
+header ul li a:hover {
+    color: #ffffffad;
+    text-decoration: none!important;
+}
+
 /* Asignación área */
 #logo {
     grid-area: logo;
@@ -111,6 +117,10 @@ a h3{
     margin-left: 10px;
     margin-bottom: 10px;
     font-size: 24px;
+}
+
+a.titGen:hover {
+    text-decoration: none!important;
 }
 
 /* FOOTER */
@@ -215,11 +225,7 @@ a h3{
     header ul li a {
         font-size: 1rem;
     }
-    header ul li a:hover {
-        color: #ffffffad;
-        text-decoration: none!important;
-    }
-   
+    
 
     /* Logo */
     #logo img {
