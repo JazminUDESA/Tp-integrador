@@ -1,4 +1,39 @@
 window.onload = function () {
+    // Agregar el nombre al QS de header
+    var queryStringObj = new URLSearchParams(location.search);
+    var nombreQS = queryStringObj.get(`nombre`);
+    var header = document.querySelector(".ulHeader");
+    header.innerHTML += `
+            <li id="logo">
+                <a href="home.html?nombre=${nombreQS}">
+                    <img src="img/logo-transparente-cinemaweb.png" alt="ir a inicio">
+                </a>
+            </li>
+            <li id="inicio">
+                <a id="inicioHeader" href="home.html?nombre=${nombreQS}">Inicio</a>
+            </li>
+            <li id="peliculas">
+                <a href="generos.html?nombre=${nombreQS}&tipo=peliculas">Películas</a>
+            </li>
+            <li id="series">
+                <a href="generos.html?nombre=${nombreQS}&tipo=series">Series</a>
+            </li>
+            <li id="favs">
+                <a href="favoritos.html?nombre=${nombreQS}" uk-icon="heart"></a>
+            </li>
+            <li id="buscar">
+                <form class="buscador" action="busqueda.html" method="GET">
+                    <div class="divInput">
+                        <input  class="inputBuscador" type="text" name="busqueda" placeholder="Buscar..."/>
+                    </div>
+                    <button  class="botonSearch" type="submit"><span id="lupa" href="" uk-icon="search"></span></button>
+                </form>
+            </li>
+            <li id="cuenta">
+                <a href="" uk-icon="user"></a>
+            </li>
+    `
+
     
     var apiKey = `c3dcc0e9ef8f3864ee4f5ed844d151f8`
     var queryStringObj = new URLSearchParams(location.search);    
