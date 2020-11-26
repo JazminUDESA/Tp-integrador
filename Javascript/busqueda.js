@@ -77,7 +77,7 @@ window.onload = function () {
                 if (element.poster_path !== null) {
                     var resultadosPeliculas = document.querySelector("#resultadosPeliculas")
                     resultadosPeliculas.innerHTML += `
-                        <img src="https://image.tmdb.org/t/p/original${element.poster_path}">
+                        <a href="detalles.html?tipo=peliculas&id=${element.id}"><img src="https://image.tmdb.org/t/p/original${element.poster_path}"></a>
                     `
                 }
             }
@@ -104,7 +104,7 @@ window.onload = function () {
                         var resultadosSeries = document.querySelector("#resultadosSeries");
                         resultadosSeries.style.backgroundColor = "transparent"
                         resultadosSeries.innerHTML += `
-                            <img src="https://image.tmdb.org/t/p/original${element.poster_path}">
+                            <a href="detalles.html?tipo=peliculas&id=${element.id}"><img src="https://image.tmdb.org/t/p/original${element.poster_path}"></a>
                         `
                     }
 
@@ -144,11 +144,19 @@ window.onload = function () {
         
         
     //SPINNER
+    function display() {
+        var aparecer = document.querySelector(".detalleGenero");
+        aparecer.style.visibility = "visible";
 
-    var desaparecer = document.querySelector(".seccionSpinner")
-    setTimeout(hideElement, 2000) //milliseconds until timeout//
+    }
+
+
+    setTimeout(hideElement, 2000)
+    var desaparecer = document.querySelector(".seccionSpinner");
     function hideElement() {
-        desaparecer.style.display = 'none'
+        desaparecer.style.display = 'none';
+        display();
     }
 }
     
+
