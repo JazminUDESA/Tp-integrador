@@ -80,6 +80,9 @@ header ul li a:hover {
     width: 31px;
 }
 
+#favs a svg {
+    color: grey!important;
+}
 /* Buscador mobile */
     .botonSearchMobile {
         width: 52px;
