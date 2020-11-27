@@ -120,7 +120,7 @@ window.onload = function() {
             .then(function (data) {
                 console.log(data);
 
-                for (let index = 0; index < 5; index++) {
+                for (let index = 0; index < data.results.length; index++) {
                     const element = data.results[index].author;
                     var contenido = data.results[index].content;
                     
@@ -262,7 +262,7 @@ window.onload = function() {
         .then(function (data) {
             console.log(data);
 
-            for (let index = 0; index < 10; index++) {
+            for (let index = 0; index < data.results.length; index++) {
                 const autor = data.results[index].author;
                 var contenido = data.results[index].content;
                  
