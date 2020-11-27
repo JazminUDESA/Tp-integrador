@@ -88,28 +88,42 @@ window.onload = function () {
     resultadosPeliculas();
     resultadosSeries();
     resultadosActores();
-    
+
+    // Filtros
+    var filtros = document.querySelector("#filtros");
+    filtros.innerHTML += `<ul id="resulFil" class= "uk-breadcrumb"
+                            <li><span class="filtro" href"" id="peliculasFiltro"><a class="link" href="busqueda.html?filtro=peliculas">Películas</a></span></li>
+                            <li><span class="filtro" href"" id="seriesFiltro"><a class= "link" href="busqueda.html?filtro=series">Series</a></span></li>
+                            <li><span class="filtro" href"" id="actoresFiltro"><a class="link" href="busqueda.html?filtro=actores">Actores</a></span></li>
+                        </ul>`
+
     var filtroQS = queryStringObj.get(`filtro`);
     var seccionPelis = document.querySelector("#peliculasFiltro");
     var seccionSeries = document.querySelector("#seriesFiltro");
     var seccionActores = document.querySelector("#actoresFiltro");
-    filtros.addEventListener("click", function () {
-        if (filtroQS == "peliculas") {
+
+    seccionPelis.addEventListener("click", function () {
+        if(filtroQS == "peliculas"){
             resultadosPeliculas();
-            seccionSeries.style.display = none;
-            seccionActores.style.display = none;
+            seccionSeries.style.display = "none";
+            seccionActores.style.display = "none";
         }
-        else if (filtroQS == "series") {
-            resultadosSeries();
-            seccionPelis.style.display = none;
-            seccionActores.style.display = none;
-        }
-        else {
-            resultadosActores();
-            seccionSeries.style.display = none;
-            seccionPelis.style.display = none;
-        }
-    })
+    });
+
+    seccionSeries.addEventListener("click", function () {
+        
+        resultadosSeries();
+        seccionPelis.style.display = "none";
+        seccionActores.style.display = "none";
+    });
+
+    seccionActores.addEventListener("click", function () {
+        resultadosActores();
+        seccionSeries.style.display = "none";
+        seccionPelis.style.display = "none";
+    });
+
+
     // ---------------------------------------------PELICULAS---------------------------------------
     function resultadosPeliculas () {
         fetch(`https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&page=1&query=${busqueda}`) 
@@ -194,15 +208,7 @@ window.onload = function () {
             console.log(`El error fue: ${error}`);          
         })
     }
-        
-    // Filtros
-    var filtros = document.querySelector("#filtros");
-    filtros.innerHTML += `<ul id="resulFil" class= "uk-breadcrumb"
-                            <li><span class="filtro" href"" id="peliculasFiltro"><a class="link" href="busqueda.html?filtro=peliculas">Películas</a></span></li>
-                            <li><span class="filtro" href"" id="seriesFiltro"><a class= "link" href="busqueda.html?filtro=series">Series</a></span></li>
-                            <li><span class="filtro" href"" id="actoresFiltro"><a class="link" href="busqueda.html?filtro=actores">Actores</a></span></li>
-                        </ul>`
-
+    
     
 
     
@@ -214,7 +220,6 @@ window.onload = function () {
         aparecer.style.visibility = "visible";
 
     }
-
 
     setTimeout(hideElement, 2000)
     var desaparecer = document.querySelector(".seccionSpinner");
