@@ -171,6 +171,10 @@ body{
         text-decoration: none!important;
     }
 
+    #cuenta div svg:hover {
+        color: grey!important;
+    }
+
     /* Íconos */
     #favs a svg, #buscar a svg, #cuenta a svg{
         width: 31px;
@@ -250,7 +254,12 @@ body{
         text-decoration: none;
     }
     
-       
+    #home article h3.titulosGeneros {
+        padding: 40px 0px 8px 20px;
+        margin: 0px;
+        color: white;
+    }   
+
 /* FOOTER */
     /* Footer arriba (legales y redes) */
     article.footer-arriba {
@@ -440,13 +449,7 @@ body{
         width: 50vw;    
     }
 
-h3.titulosGeneros {
-    color: white;
-    margin: 0px;
-    margin-top: 40px;
-    margin-left: 10px;
-    margin-bottom: 10px;
-}
+
 
     
 /* FOOTER */

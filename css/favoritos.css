@@ -80,6 +80,55 @@ header ul li a:hover {
     width: 31px;
 }
 
+/* Buscador mobile */
+    .botonSearchMobile {
+        width: 52px;
+        background-color: transparent;
+        color: white;
+        border: none;
+    }
+    .botonSearchMobile:focus{
+        outline: none;
+    }
+    .botonSearchMobileInputAbierto:focus{
+        outline: none;
+    }
+    .botonSearchMobileInputAbierto {
+        position: absolute;
+        top: 174px;
+        width: 20%;
+        right: 168.5px;
+        border: none;
+    }
+    
+    #lupa svg {
+        width: 30px;
+    }
+    
+   .inputBuscadorMobile {
+        position: relative;
+        color: white;
+        top: 66px;
+        width: 200%;
+        height: 30px;
+        right: 76px;
+        padding: 1px 11px;
+        background-color: #ffffff1f;
+        border: none;
+        font-family: helvetica;
+        font-weight: lighter;
+        font-size: 1rem;
+        border: none;
+   }
+   .inputBuscadorMobile:focus {
+       outline: none;
+   }
+
+   .headerRelative {
+       position: relative;
+       margin-bottom: 70px;
+       /* background-color: yellow */
+   }
 
 /* FAVORITOS */
 h2 {
@@ -248,6 +297,9 @@ div#divPelisFavoritas img, div#divSeriesFavoritas img {
     #cuenta a svg:hover {
         color: #ffffffad;
     }
+    #cuenta div svg:hover {
+        color: grey!important;
+    }
     
     /* espacio para header */
     div#espacio {
@@ -355,6 +407,9 @@ div#divPelisFavoritas img, div#divSeriesFavoritas img {
 
     input:focus, textarea:focus, select:focus, button:focus{
         outline: none;
+    }
+    #lupa svg {
+        width: 20px;
     }
 
 

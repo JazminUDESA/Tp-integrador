@@ -55,7 +55,21 @@ window.onload = function(){
         });
     }
    
-    
+    // Click en cuenta
+    var usuario = document.querySelector("#cuenta");
+    usuario.addEventListener("click", function (e) {
+        var preguntaCerrarSesion = confirm("¿Estás seguro que deseas cerrar sesión?");
+        if (preguntaCerrarSesion){
+            sessionStorage.clear("nombreUsuario");
+            console.log(`Usuario: ${sessionStorage.getItem('nombreUsuario')}`);
+            window.location.href = "sesion.html"
+        }
+        else {
+            console.log(`El usuario @${sessionStorage.getItem('nombreUsuario')} no cerró sesión`);
+            return false;
+        }
+        
+    })
     
     var apiKey = `c3dcc0e9ef8f3864ee4f5ed844d151f8`;
 
@@ -107,8 +121,8 @@ window.onload = function(){
 
 
         
-    // Carrusel trending (https://developers.themoviedb.org/3/trending/get-trending)
-    fetch(`https://api.themoviedb.org/3/trending/all/week?api_key=${apiKey}`)
+    // Carrusel trending PELÍCULAS (https://developers.themoviedb.org/3/trending/get-trending)
+    fetch(`https://api.themoviedb.org/3/trending/movie/week?api_key=${apiKey}`)
         .then(function (response) {
             return response.json();
         })
@@ -118,23 +132,37 @@ window.onload = function(){
             for (let i = 0; i < data.results.length; i++) {
                 const element = data.results[i];
                 var ulTrendingMovie = document.querySelector("#trendingMovies"); 
-                var ulTrendingTV = document.querySelector("#trendingTV");
-                
-                if ( element.media_type == "movie"){
+            
                     ulTrendingMovie.innerHTML += 
                     `<li>
                         <a href="detalles.html?tipo=peliculas&id=${element.id}">
                             <img src="https://image.tmdb.org/t/p/original${element.poster_path}">
                         </a>
                     </li>`
-                } else if ( element.media_type == "tv") {
+            }
+        })
+        .catch (function(error) {
+                console.log(`El error fue: ${error}`);
+        }) 
+
+    // Carrusel trending SERIES (https://developers.themoviedb.org/3/trending/get-trending)
+    fetch(`https://api.themoviedb.org/3/trending/tv/week?api_key=${apiKey}`)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data);
+            
+            for (let i = 0; i < data.results.length; i++) {
+                const element = data.results[i];
+                var ulTrendingTV = document.querySelector("#trendingTV");
+            
                     ulTrendingTV.innerHTML +=
                         `<li>
                             <a href="detalles.html?tipo=series&id=${element.id}">
                                 <img src="https://image.tmdb.org/t/p/original${element.poster_path}">
                             </a>
                         </li>`
-                }
             }
         })
         .catch (function(error) {

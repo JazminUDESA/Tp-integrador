@@ -80,6 +80,55 @@ header ul li a {
 #favs a svg, #buscar a svg, #cuenta a svg{
     width: 31px;
 }
+/* Buscador mobile */
+    .botonSearchMobile {
+        width: 52px;
+        background-color: transparent;
+        color: white;
+        border: none;
+    }
+    .botonSearchMobile:focus{
+        outline: none;
+    }
+    .botonSearchMobileInputAbierto:focus{
+        outline: none;
+    }
+    .botonSearchMobileInputAbierto {
+        position: absolute;
+        top: 174px;
+        width: 20%;
+        right: 168.5px;
+        border: none;
+    }
+    
+    #lupa svg {
+        width: 30px;
+    }
+    
+   .inputBuscadorMobile {
+        position: relative;
+        color: white;
+        top: 66px;
+        width: 200%;
+        height: 30px;
+        right: 76px;
+        padding: 1px 11px;
+        background-color: #ffffff1f;
+        border: none;
+        font-family: helvetica;
+        font-weight: lighter;
+        font-size: 1rem;
+        border: none;
+   }
+   .inputBuscadorMobile:focus {
+       outline: none;
+   }
+
+   .headerRelative {
+       position: relative;
+       margin-bottom: 70px;
+       /* background-color: yellow */
+   }
 
 /*CARRUSEL*/
 a#flechita {
@@ -117,6 +166,9 @@ a h3{
     margin-left: 10px;
     margin-bottom: 10px;
     font-size: 24px;
+    padding: 40px 0px 8px 20px;
+    margin: 0px;
+    color: white;
 }
 
 a.titGen:hover {
@@ -252,7 +304,9 @@ a.titGen:hover {
     #cuenta a svg:hover {
         color: #ffffffad;
     }
-
+    #cuenta div svg:hover {
+        color: grey!important;
+    }
 
     /*CARRUSEL MÁS POPULARES*/
     #titulo-estrenos{
@@ -351,6 +405,9 @@ a.titGen:hover {
     input:focus, textarea:focus, select:focus, button:focus{
         outline: none;
         
+    }
+    #lupa svg {
+        width: 20px;
     }
 
 }
